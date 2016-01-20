@@ -1,8 +1,10 @@
 
 // 32-bit OR GATE
-
+// ////////////////
+// Uses generate statement and or_gate to create 32-bit OR gate
+// 
 // Questions: are always statements allowed/useful/necessary?
-
+// ///////////////
 
 module or_32 (a, b, z)
 
