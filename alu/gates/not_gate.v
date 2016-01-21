@@ -12,7 +12,6 @@ output z;
 
 // Implementation
 
-always @(a)
     begin
         assign z = ~a;
     end
