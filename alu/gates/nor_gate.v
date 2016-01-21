@@ -1,6 +1,6 @@
-/*
-NOR GATE
-*/
+
+// NOR GATE
+
 
 // Assuming it is okay to make NOR using operators instead of building from OR and NOT gates
 

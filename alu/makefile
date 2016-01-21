@@ -1,5 +1,5 @@
 # ALU Components
-#SOURCE = shifter.v flag_setter.v
+SOURCE = shifter.v flag_setter.v
 IVERILOG = iverilog
 VVP = vvp
 WAVE = gtkwave
