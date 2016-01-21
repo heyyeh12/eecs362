@@ -6,7 +6,7 @@
 // Question: is this how you use a module in a module?
 // /////////////////////
 
-module and_32 (a, b, z)
+module and_32 (a, b, z);
 
 // Ports
 
