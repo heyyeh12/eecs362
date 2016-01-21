@@ -18,7 +18,8 @@ module and_32 (a, b, z);
     genvar i;
     generate
         for(i=0; i<32; i=i+1)
-            and_gate bit_i (a[i], b[i], z[i]);
+	begin : anding
+            and_gate AND(a[i], b[i], z[i]);
         end
     endgenerate
 endmodule

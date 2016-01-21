@@ -11,6 +11,6 @@ module and_gate (a, b, z);
     output z;
 
 // Implementation
-    assign z = a && b;
+    assign z = a & b;
 
 endmodule

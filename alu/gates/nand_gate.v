@@ -3,7 +3,7 @@
 
 // Assuming we can use operators and not having to build from AND and NOT gates
 
-module nand_gate (a, b, z)
+module nand_gate (a, b, z);
 
 // Ports
 
@@ -12,8 +12,6 @@ output z;
 
 // Implementation
 
-always @(a or b)
-    begin
-        assign z = ~(a & b);
-    end
+assign z = ~(a & b);
+
 endmodule

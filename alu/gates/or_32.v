@@ -6,7 +6,7 @@
 // Questions: are always statements allowed/useful/necessary?
 // ///////////////
 
-module or_32 (a, b, z)
+module or_32 (a, b, z);
 
 // Ports
 
@@ -17,7 +17,8 @@ module or_32 (a, b, z)
     genvar i;
     generate
         for(i=0; i<32; i=i+1)
-            or_gate bit_i (a[i], b[i], z[i]);
+	begin : oring
+            or_gate OR(a[i], b[i], z[i]);
         end
     endgenerate
 endmodule

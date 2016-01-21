@@ -3,7 +3,7 @@ XOR GATE
 */
 
 
-module or_gate (a, b, z)
+module xor_gate (a, b, z);
 
 // Ports
 
@@ -11,7 +11,6 @@ input a, b;
 output z;
 
 // Implementation
-    begin
-        assign z = a ^ b;
-    end
+assign z = a ^ b;
+
 endmodule

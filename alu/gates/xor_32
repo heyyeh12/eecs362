@@ -1,0 +1,448 @@
+#! /vol/ece303/bin/vvp
+:ivl_version "0.9.5 " "(v0_9_5)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x1da11a0 .scope module, "testbench" "testbench" 2 1;
+ .timescale 0 0;
+v0x1dd7d90_0 .var "A", 31 0;
+v0x1dd7e60_0 .var "B", 31 0;
+RS_0x7f5016722278/0/0 .resolv tri, L_0x1dd8330, L_0x1dd86b0, L_0x1dd8af0, L_0x1dd8e70;
+RS_0x7f5016722278/0/4 .resolv tri, L_0x1dd9230, L_0x1dd95f0, L_0x1dd96e0, L_0x1dd9ef0;
+RS_0x7f5016722278/0/8 .resolv tri, L_0x1dd9fe0, L_0x1dda600, L_0x1dda6f0, L_0x1ddad00;
+RS_0x7f5016722278/0/12 .resolv tri, L_0x1ddadf0, L_0x1ddb440, L_0x1dd9a20, L_0x1ddba60;
+RS_0x7f5016722278/0/16 .resolv tri, L_0x1ddbde0, L_0x1ddc240, L_0x1ddc5e0, L_0x1ddc930;
+RS_0x7f5016722278/0/20 .resolv tri, L_0x1ddcce0, L_0x1ddd060, L_0x1ddd1c0, L_0x1ddd710;
+RS_0x7f5016722278/0/24 .resolv tri, L_0x1ddd8a0, L_0x1dde040, L_0x1dde3c0, L_0x1dde220;
+RS_0x7f5016722278/0/28 .resolv tri, L_0x1dde600, L_0x1ddedb0, L_0x1ddb910, L_0x1ddbca0;
+RS_0x7f5016722278/1/0 .resolv tri, RS_0x7f5016722278/0/0, RS_0x7f5016722278/0/4, RS_0x7f5016722278/0/8, RS_0x7f5016722278/0/12;
+RS_0x7f5016722278/1/4 .resolv tri, RS_0x7f5016722278/0/16, RS_0x7f5016722278/0/20, RS_0x7f5016722278/0/24, RS_0x7f5016722278/0/28;
+RS_0x7f5016722278 .resolv tri, RS_0x7f5016722278/1/0, RS_0x7f5016722278/1/4, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>;
+v0x1dd7f10_0 .net8 "Z", 31 0, RS_0x7f5016722278; 32 drivers
+S_0x1da0c60 .scope module, "xor_32" "xor_32" 2 6, 3 3, S_0x1da11a0;
+ .timescale 0 0;
+v0x1dd7b90_0 .net "a", 31 0, v0x1dd7d90_0; 1 drivers
+v0x1dd7c50_0 .net "b", 31 0, v0x1dd7e60_0; 1 drivers
+v0x1dd7cf0_0 .alias "z", 31 0, v0x1dd7f10_0;
+L_0x1dd80b0 .part v0x1dd7d90_0, 0, 1;
+L_0x1dd81f0 .part v0x1dd7e60_0, 0, 1;
+L_0x1dd8330 .part/pv L_0x1dd7fc0, 0, 1, 32;
+L_0x1dd84d0 .part v0x1dd7d90_0, 1, 1;
+L_0x1dd85c0 .part v0x1dd7e60_0, 1, 1;
+L_0x1dd86b0 .part/pv L_0x1dd8470, 1, 1, 32;
+L_0x1dd8840 .part v0x1dd7d90_0, 2, 1;
+L_0x1dd89c0 .part v0x1dd7e60_0, 2, 1;
+L_0x1dd8af0 .part/pv L_0x1dd87e0, 2, 1, 32;
+L_0x1dd8c80 .part v0x1dd7d90_0, 3, 1;
+L_0x1dd8dd0 .part v0x1dd7e60_0, 3, 1;
+L_0x1dd8e70 .part/pv L_0x1dd8c20, 3, 1, 32;
+L_0x1dd8fd0 .part v0x1dd7d90_0, 4, 1;
+L_0x1dd90c0 .part v0x1dd7e60_0, 4, 1;
+L_0x1dd9230 .part/pv L_0x1dd8d70, 4, 1, 32;
+L_0x1dd9380 .part v0x1dd7d90_0, 5, 1;
+L_0x1dd9500 .part v0x1dd7e60_0, 5, 1;
+L_0x1dd95f0 .part/pv L_0x1dd9320, 5, 1, 32;
+L_0x1dd9780 .part v0x1dd7d90_0, 6, 1;
+L_0x1dd9980 .part v0x1dd7e60_0, 6, 1;
+L_0x1dd96e0 .part/pv L_0x1dd9470, 6, 1, 32;
+L_0x1dd9cf0 .part v0x1dd7d90_0, 7, 1;
+L_0x1dd9b30 .part v0x1dd7e60_0, 7, 1;
+L_0x1dd9ef0 .part/pv L_0x1dd8b90, 7, 1, 32;
+L_0x1dda0b0 .part v0x1dd7d90_0, 8, 1;
+L_0x1dda150 .part v0x1dd7e60_0, 8, 1;
+L_0x1dd9fe0 .part/pv L_0x1dd9de0, 8, 1, 32;
+L_0x1dda3d0 .part v0x1dd7d90_0, 9, 1;
+L_0x1dda240 .part v0x1dd7e60_0, 9, 1;
+L_0x1dda600 .part/pv L_0x1dda370, 9, 1, 32;
+L_0x1dda7f0 .part v0x1dd7d90_0, 10, 1;
+L_0x1dda890 .part v0x1dd7e60_0, 10, 1;
+L_0x1dda6f0 .part/pv L_0x1dda4c0, 10, 1, 32;
+L_0x1ddaaf0 .part v0x1dd7d90_0, 11, 1;
+L_0x1dda980 .part v0x1dd7e60_0, 11, 1;
+L_0x1ddad00 .part/pv L_0x1ddaa90, 11, 1, 32;
+L_0x1ddac40 .part v0x1dd7d90_0, 12, 1;
+L_0x1ddaf70 .part v0x1dd7e60_0, 12, 1;
+L_0x1ddadf0 .part/pv L_0x1ddabe0, 12, 1, 32;
+L_0x1ddb200 .part v0x1dd7d90_0, 13, 1;
+L_0x1ddb060 .part v0x1dd7e60_0, 13, 1;
+L_0x1ddb440 .part/pv L_0x1ddb1a0, 13, 1, 32;
+L_0x1ddb350 .part v0x1dd7d90_0, 14, 1;
+L_0x1dd9870 .part v0x1dd7e60_0, 14, 1;
+L_0x1dd9a20 .part/pv L_0x1ddb2f0, 14, 1, 32;
+L_0x1dd9c40 .part v0x1dd7d90_0, 15, 1;
+L_0x1ddb530 .part v0x1dd7e60_0, 15, 1;
+L_0x1ddba60 .part/pv L_0x1dd9be0, 15, 1, 32;
+L_0x1ddbf70 .part v0x1dd7d90_0, 16, 1;
+L_0x1ddc060 .part v0x1dd7e60_0, 16, 1;
+L_0x1ddbde0 .part/pv L_0x1ddbb50, 16, 1, 32;
+L_0x1ddc2f0 .part v0x1dd7d90_0, 17, 1;
+L_0x1ddc150 .part v0x1dd7e60_0, 17, 1;
+L_0x1ddc240 .part/pv L_0x1ddbed0, 17, 1, 32;
+L_0x1ddc440 .part v0x1dd7d90_0, 18, 1;
+L_0x1ddc7a0 .part v0x1dd7e60_0, 18, 1;
+L_0x1ddc5e0 .part/pv L_0x1ddc3e0, 18, 1, 32;
+L_0x1ddca10 .part v0x1dd7d90_0, 19, 1;
+L_0x1ddc840 .part v0x1dd7e60_0, 19, 1;
+L_0x1ddc930 .part/pv L_0x1ddc6d0, 19, 1, 32;
+L_0x1ddcb10 .part v0x1dd7d90_0, 20, 1;
+L_0x1ddced0 .part v0x1dd7e60_0, 20, 1;
+L_0x1ddcce0 .part/pv L_0x1ddcab0, 20, 1, 32;
+L_0x1ddce30 .part v0x1dd7d90_0, 21, 1;
+L_0x1ddcf70 .part v0x1dd7e60_0, 21, 1;
+L_0x1ddd060 .part/pv L_0x1ddcdd0, 21, 1, 32;
+L_0x1ddd440 .part v0x1dd7d90_0, 22, 1;
+L_0x1ddd530 .part v0x1dd7e60_0, 22, 1;
+L_0x1ddd1c0 .part/pv L_0x1ddd3e0, 22, 1, 32;
+L_0x1ddd310 .part v0x1dd7d90_0, 23, 1;
+L_0x1ddd620 .part v0x1dd7e60_0, 23, 1;
+L_0x1ddd710 .part/pv L_0x1ddd2b0, 23, 1, 32;
+L_0x1dddb50 .part v0x1dd7d90_0, 24, 1;
+L_0x1dddbf0 .part v0x1dd7e60_0, 24, 1;
+L_0x1ddd8a0 .part/pv L_0x1dddaf0, 24, 1, 32;
+L_0x1ddd9f0 .part v0x1dd7d90_0, 25, 1;
+L_0x1dddf50 .part v0x1dd7e60_0, 25, 1;
+L_0x1dde040 .part/pv L_0x1ddd990, 25, 1, 32;
+L_0x1dddd40 .part v0x1dd7d90_0, 26, 1;
+L_0x1ddde30 .part v0x1dd7e60_0, 26, 1;
+L_0x1dde3c0 .part/pv L_0x1dddce0, 26, 1, 32;
+L_0x1dde510 .part v0x1dd7d90_0, 27, 1;
+L_0x1dde130 .part v0x1dd7e60_0, 27, 1;
+L_0x1dde220 .part/pv L_0x1dde4b0, 27, 1, 32;
+L_0x1dde8b0 .part v0x1dd7d90_0, 28, 1;
+L_0x1dde950 .part v0x1dd7e60_0, 28, 1;
+L_0x1dde600 .part/pv L_0x1dde310, 28, 1, 32;
+L_0x1dde750 .part v0x1dd7d90_0, 29, 1;
+L_0x1dded10 .part v0x1dd7e60_0, 29, 1;
+L_0x1ddedb0 .part/pv L_0x1dde6f0, 29, 1, 32;
+L_0x1ddeaa0 .part v0x1dd7d90_0, 30, 1;
+L_0x1ddeb90 .part v0x1dd7e60_0, 30, 1;
+L_0x1ddb910 .part/pv L_0x1ddea40, 30, 1, 32;
+L_0x1ddb9b0 .part v0x1dd7d90_0, 31, 1;
+L_0x1ddbbb0 .part v0x1dd7e60_0, 31, 1;
+L_0x1ddbca0 .part/pv L_0x1dd91b0, 31, 1, 32;
+S_0x1dd7710 .scope generate, "xoring[0]" "xoring[0]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd7808 .param/l "i" 3 14, +C4<00>;
+S_0x1dd78c0 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd7710;
+ .timescale 0 0;
+L_0x1dd7fc0 .functor XOR 1, L_0x1dd80b0, L_0x1dd81f0, C4<0>, C4<0>;
+v0x1dd79b0_0 .net "a", 0 0, L_0x1dd80b0; 1 drivers
+v0x1dd7a50_0 .net "b", 0 0, L_0x1dd81f0; 1 drivers
+v0x1dd7af0_0 .net "z", 0 0, L_0x1dd7fc0; 1 drivers
+S_0x1dd7290 .scope generate, "xoring[1]" "xoring[1]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd7388 .param/l "i" 3 14, +C4<01>;
+S_0x1dd7440 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd7290;
+ .timescale 0 0;
+L_0x1dd8470 .functor XOR 1, L_0x1dd84d0, L_0x1dd85c0, C4<0>, C4<0>;
+v0x1dd7530_0 .net "a", 0 0, L_0x1dd84d0; 1 drivers
+v0x1dd75d0_0 .net "b", 0 0, L_0x1dd85c0; 1 drivers
+v0x1dd7670_0 .net "z", 0 0, L_0x1dd8470; 1 drivers
+S_0x1dd6e10 .scope generate, "xoring[2]" "xoring[2]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd6f08 .param/l "i" 3 14, +C4<010>;
+S_0x1dd6fc0 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd6e10;
+ .timescale 0 0;
+L_0x1dd87e0 .functor XOR 1, L_0x1dd8840, L_0x1dd89c0, C4<0>, C4<0>;
+v0x1dd70b0_0 .net "a", 0 0, L_0x1dd8840; 1 drivers
+v0x1dd7150_0 .net "b", 0 0, L_0x1dd89c0; 1 drivers
+v0x1dd71f0_0 .net "z", 0 0, L_0x1dd87e0; 1 drivers
+S_0x1dd6990 .scope generate, "xoring[3]" "xoring[3]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd6a88 .param/l "i" 3 14, +C4<011>;
+S_0x1dd6b40 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd6990;
+ .timescale 0 0;
+L_0x1dd8c20 .functor XOR 1, L_0x1dd8c80, L_0x1dd8dd0, C4<0>, C4<0>;
+v0x1dd6c30_0 .net "a", 0 0, L_0x1dd8c80; 1 drivers
+v0x1dd6cd0_0 .net "b", 0 0, L_0x1dd8dd0; 1 drivers
+v0x1dd6d70_0 .net "z", 0 0, L_0x1dd8c20; 1 drivers
+S_0x1dd6510 .scope generate, "xoring[4]" "xoring[4]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd6608 .param/l "i" 3 14, +C4<0100>;
+S_0x1dd66c0 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd6510;
+ .timescale 0 0;
+L_0x1dd8d70 .functor XOR 1, L_0x1dd8fd0, L_0x1dd90c0, C4<0>, C4<0>;
+v0x1dd67b0_0 .net "a", 0 0, L_0x1dd8fd0; 1 drivers
+v0x1dd6850_0 .net "b", 0 0, L_0x1dd90c0; 1 drivers
+v0x1dd68f0_0 .net "z", 0 0, L_0x1dd8d70; 1 drivers
+S_0x1dd6090 .scope generate, "xoring[5]" "xoring[5]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd6188 .param/l "i" 3 14, +C4<0101>;
+S_0x1dd6240 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd6090;
+ .timescale 0 0;
+L_0x1dd9320 .functor XOR 1, L_0x1dd9380, L_0x1dd9500, C4<0>, C4<0>;
+v0x1dd6330_0 .net "a", 0 0, L_0x1dd9380; 1 drivers
+v0x1dd63d0_0 .net "b", 0 0, L_0x1dd9500; 1 drivers
+v0x1dd6470_0 .net "z", 0 0, L_0x1dd9320; 1 drivers
+S_0x1dd5c10 .scope generate, "xoring[6]" "xoring[6]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd5d08 .param/l "i" 3 14, +C4<0110>;
+S_0x1dd5dc0 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd5c10;
+ .timescale 0 0;
+L_0x1dd9470 .functor XOR 1, L_0x1dd9780, L_0x1dd9980, C4<0>, C4<0>;
+v0x1dd5eb0_0 .net "a", 0 0, L_0x1dd9780; 1 drivers
+v0x1dd5f50_0 .net "b", 0 0, L_0x1dd9980; 1 drivers
+v0x1dd5ff0_0 .net "z", 0 0, L_0x1dd9470; 1 drivers
+S_0x1dd5790 .scope generate, "xoring[7]" "xoring[7]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd5888 .param/l "i" 3 14, +C4<0111>;
+S_0x1dd5940 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd5790;
+ .timescale 0 0;
+L_0x1dd8b90 .functor XOR 1, L_0x1dd9cf0, L_0x1dd9b30, C4<0>, C4<0>;
+v0x1dd5a30_0 .net "a", 0 0, L_0x1dd9cf0; 1 drivers
+v0x1dd5ad0_0 .net "b", 0 0, L_0x1dd9b30; 1 drivers
+v0x1dd5b70_0 .net "z", 0 0, L_0x1dd8b90; 1 drivers
+S_0x1dd5310 .scope generate, "xoring[8]" "xoring[8]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd5408 .param/l "i" 3 14, +C4<01000>;
+S_0x1dd54c0 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd5310;
+ .timescale 0 0;
+L_0x1dd9de0 .functor XOR 1, L_0x1dda0b0, L_0x1dda150, C4<0>, C4<0>;
+v0x1dd55b0_0 .net "a", 0 0, L_0x1dda0b0; 1 drivers
+v0x1dd5650_0 .net "b", 0 0, L_0x1dda150; 1 drivers
+v0x1dd56f0_0 .net "z", 0 0, L_0x1dd9de0; 1 drivers
+S_0x1dd4e90 .scope generate, "xoring[9]" "xoring[9]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd4f88 .param/l "i" 3 14, +C4<01001>;
+S_0x1dd5040 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd4e90;
+ .timescale 0 0;
+L_0x1dda370 .functor XOR 1, L_0x1dda3d0, L_0x1dda240, C4<0>, C4<0>;
+v0x1dd5130_0 .net "a", 0 0, L_0x1dda3d0; 1 drivers
+v0x1dd51d0_0 .net "b", 0 0, L_0x1dda240; 1 drivers
+v0x1dd5270_0 .net "z", 0 0, L_0x1dda370; 1 drivers
+S_0x1dd4a10 .scope generate, "xoring[10]" "xoring[10]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd4b08 .param/l "i" 3 14, +C4<01010>;
+S_0x1dd4bc0 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd4a10;
+ .timescale 0 0;
+L_0x1dda4c0 .functor XOR 1, L_0x1dda7f0, L_0x1dda890, C4<0>, C4<0>;
+v0x1dd4cb0_0 .net "a", 0 0, L_0x1dda7f0; 1 drivers
+v0x1dd4d50_0 .net "b", 0 0, L_0x1dda890; 1 drivers
+v0x1dd4df0_0 .net "z", 0 0, L_0x1dda4c0; 1 drivers
+S_0x1dd4590 .scope generate, "xoring[11]" "xoring[11]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd4688 .param/l "i" 3 14, +C4<01011>;
+S_0x1dd4740 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd4590;
+ .timescale 0 0;
+L_0x1ddaa90 .functor XOR 1, L_0x1ddaaf0, L_0x1dda980, C4<0>, C4<0>;
+v0x1dd4830_0 .net "a", 0 0, L_0x1ddaaf0; 1 drivers
+v0x1dd48d0_0 .net "b", 0 0, L_0x1dda980; 1 drivers
+v0x1dd4970_0 .net "z", 0 0, L_0x1ddaa90; 1 drivers
+S_0x1dd4110 .scope generate, "xoring[12]" "xoring[12]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd4208 .param/l "i" 3 14, +C4<01100>;
+S_0x1dd42c0 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd4110;
+ .timescale 0 0;
+L_0x1ddabe0 .functor XOR 1, L_0x1ddac40, L_0x1ddaf70, C4<0>, C4<0>;
+v0x1dd43b0_0 .net "a", 0 0, L_0x1ddac40; 1 drivers
+v0x1dd4450_0 .net "b", 0 0, L_0x1ddaf70; 1 drivers
+v0x1dd44f0_0 .net "z", 0 0, L_0x1ddabe0; 1 drivers
+S_0x1dd3c90 .scope generate, "xoring[13]" "xoring[13]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd3d88 .param/l "i" 3 14, +C4<01101>;
+S_0x1dd3e40 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd3c90;
+ .timescale 0 0;
+L_0x1ddb1a0 .functor XOR 1, L_0x1ddb200, L_0x1ddb060, C4<0>, C4<0>;
+v0x1dd3f30_0 .net "a", 0 0, L_0x1ddb200; 1 drivers
+v0x1dd3fd0_0 .net "b", 0 0, L_0x1ddb060; 1 drivers
+v0x1dd4070_0 .net "z", 0 0, L_0x1ddb1a0; 1 drivers
+S_0x1dd3810 .scope generate, "xoring[14]" "xoring[14]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd3908 .param/l "i" 3 14, +C4<01110>;
+S_0x1dd39c0 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd3810;
+ .timescale 0 0;
+L_0x1ddb2f0 .functor XOR 1, L_0x1ddb350, L_0x1dd9870, C4<0>, C4<0>;
+v0x1dd3ab0_0 .net "a", 0 0, L_0x1ddb350; 1 drivers
+v0x1dd3b50_0 .net "b", 0 0, L_0x1dd9870; 1 drivers
+v0x1dd3bf0_0 .net "z", 0 0, L_0x1ddb2f0; 1 drivers
+S_0x1dd3390 .scope generate, "xoring[15]" "xoring[15]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd3488 .param/l "i" 3 14, +C4<01111>;
+S_0x1dd3540 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd3390;
+ .timescale 0 0;
+L_0x1dd9be0 .functor XOR 1, L_0x1dd9c40, L_0x1ddb530, C4<0>, C4<0>;
+v0x1dd3630_0 .net "a", 0 0, L_0x1dd9c40; 1 drivers
+v0x1dd36d0_0 .net "b", 0 0, L_0x1ddb530; 1 drivers
+v0x1dd3770_0 .net "z", 0 0, L_0x1dd9be0; 1 drivers
+S_0x1dd2f10 .scope generate, "xoring[16]" "xoring[16]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd3008 .param/l "i" 3 14, +C4<010000>;
+S_0x1dd30c0 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd2f10;
+ .timescale 0 0;
+L_0x1ddbb50 .functor XOR 1, L_0x1ddbf70, L_0x1ddc060, C4<0>, C4<0>;
+v0x1dd31b0_0 .net "a", 0 0, L_0x1ddbf70; 1 drivers
+v0x1dd3250_0 .net "b", 0 0, L_0x1ddc060; 1 drivers
+v0x1dd32f0_0 .net "z", 0 0, L_0x1ddbb50; 1 drivers
+S_0x1dd2a90 .scope generate, "xoring[17]" "xoring[17]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd2b88 .param/l "i" 3 14, +C4<010001>;
+S_0x1dd2c40 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd2a90;
+ .timescale 0 0;
+L_0x1ddbed0 .functor XOR 1, L_0x1ddc2f0, L_0x1ddc150, C4<0>, C4<0>;
+v0x1dd2d30_0 .net "a", 0 0, L_0x1ddc2f0; 1 drivers
+v0x1dd2dd0_0 .net "b", 0 0, L_0x1ddc150; 1 drivers
+v0x1dd2e70_0 .net "z", 0 0, L_0x1ddbed0; 1 drivers
+S_0x1dd2610 .scope generate, "xoring[18]" "xoring[18]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd2708 .param/l "i" 3 14, +C4<010010>;
+S_0x1dd27c0 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd2610;
+ .timescale 0 0;
+L_0x1ddc3e0 .functor XOR 1, L_0x1ddc440, L_0x1ddc7a0, C4<0>, C4<0>;
+v0x1dd28b0_0 .net "a", 0 0, L_0x1ddc440; 1 drivers
+v0x1dd2950_0 .net "b", 0 0, L_0x1ddc7a0; 1 drivers
+v0x1dd29f0_0 .net "z", 0 0, L_0x1ddc3e0; 1 drivers
+S_0x1dd2190 .scope generate, "xoring[19]" "xoring[19]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd2288 .param/l "i" 3 14, +C4<010011>;
+S_0x1dd2340 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd2190;
+ .timescale 0 0;
+L_0x1ddc6d0 .functor XOR 1, L_0x1ddca10, L_0x1ddc840, C4<0>, C4<0>;
+v0x1dd2430_0 .net "a", 0 0, L_0x1ddca10; 1 drivers
+v0x1dd24d0_0 .net "b", 0 0, L_0x1ddc840; 1 drivers
+v0x1dd2570_0 .net "z", 0 0, L_0x1ddc6d0; 1 drivers
+S_0x1dd1d10 .scope generate, "xoring[20]" "xoring[20]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd1e08 .param/l "i" 3 14, +C4<010100>;
+S_0x1dd1ec0 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd1d10;
+ .timescale 0 0;
+L_0x1ddcab0 .functor XOR 1, L_0x1ddcb10, L_0x1ddced0, C4<0>, C4<0>;
+v0x1dd1fb0_0 .net "a", 0 0, L_0x1ddcb10; 1 drivers
+v0x1dd2050_0 .net "b", 0 0, L_0x1ddced0; 1 drivers
+v0x1dd20f0_0 .net "z", 0 0, L_0x1ddcab0; 1 drivers
+S_0x1dd1890 .scope generate, "xoring[21]" "xoring[21]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd1988 .param/l "i" 3 14, +C4<010101>;
+S_0x1dd1a40 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd1890;
+ .timescale 0 0;
+L_0x1ddcdd0 .functor XOR 1, L_0x1ddce30, L_0x1ddcf70, C4<0>, C4<0>;
+v0x1dd1b30_0 .net "a", 0 0, L_0x1ddce30; 1 drivers
+v0x1dd1bd0_0 .net "b", 0 0, L_0x1ddcf70; 1 drivers
+v0x1dd1c70_0 .net "z", 0 0, L_0x1ddcdd0; 1 drivers
+S_0x1dd1410 .scope generate, "xoring[22]" "xoring[22]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd1508 .param/l "i" 3 14, +C4<010110>;
+S_0x1dd15c0 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd1410;
+ .timescale 0 0;
+L_0x1ddd3e0 .functor XOR 1, L_0x1ddd440, L_0x1ddd530, C4<0>, C4<0>;
+v0x1dd16b0_0 .net "a", 0 0, L_0x1ddd440; 1 drivers
+v0x1dd1750_0 .net "b", 0 0, L_0x1ddd530; 1 drivers
+v0x1dd17f0_0 .net "z", 0 0, L_0x1ddd3e0; 1 drivers
+S_0x1dd0f90 .scope generate, "xoring[23]" "xoring[23]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd1088 .param/l "i" 3 14, +C4<010111>;
+S_0x1dd1140 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd0f90;
+ .timescale 0 0;
+L_0x1ddd2b0 .functor XOR 1, L_0x1ddd310, L_0x1ddd620, C4<0>, C4<0>;
+v0x1dd1230_0 .net "a", 0 0, L_0x1ddd310; 1 drivers
+v0x1dd12d0_0 .net "b", 0 0, L_0x1ddd620; 1 drivers
+v0x1dd1370_0 .net "z", 0 0, L_0x1ddd2b0; 1 drivers
+S_0x1dd0b10 .scope generate, "xoring[24]" "xoring[24]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd0c08 .param/l "i" 3 14, +C4<011000>;
+S_0x1dd0cc0 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd0b10;
+ .timescale 0 0;
+L_0x1dddaf0 .functor XOR 1, L_0x1dddb50, L_0x1dddbf0, C4<0>, C4<0>;
+v0x1dd0db0_0 .net "a", 0 0, L_0x1dddb50; 1 drivers
+v0x1dd0e50_0 .net "b", 0 0, L_0x1dddbf0; 1 drivers
+v0x1dd0ef0_0 .net "z", 0 0, L_0x1dddaf0; 1 drivers
+S_0x1dd0690 .scope generate, "xoring[25]" "xoring[25]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd0788 .param/l "i" 3 14, +C4<011001>;
+S_0x1dd0840 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd0690;
+ .timescale 0 0;
+L_0x1ddd990 .functor XOR 1, L_0x1ddd9f0, L_0x1dddf50, C4<0>, C4<0>;
+v0x1dd0930_0 .net "a", 0 0, L_0x1ddd9f0; 1 drivers
+v0x1dd09d0_0 .net "b", 0 0, L_0x1dddf50; 1 drivers
+v0x1dd0a70_0 .net "z", 0 0, L_0x1ddd990; 1 drivers
+S_0x1dd0210 .scope generate, "xoring[26]" "xoring[26]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dd0308 .param/l "i" 3 14, +C4<011010>;
+S_0x1dd03c0 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dd0210;
+ .timescale 0 0;
+L_0x1dddce0 .functor XOR 1, L_0x1dddd40, L_0x1ddde30, C4<0>, C4<0>;
+v0x1dd04b0_0 .net "a", 0 0, L_0x1dddd40; 1 drivers
+v0x1dd0550_0 .net "b", 0 0, L_0x1ddde30; 1 drivers
+v0x1dd05f0_0 .net "z", 0 0, L_0x1dddce0; 1 drivers
+S_0x1dcfd90 .scope generate, "xoring[27]" "xoring[27]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dcfe88 .param/l "i" 3 14, +C4<011011>;
+S_0x1dcff40 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dcfd90;
+ .timescale 0 0;
+L_0x1dde4b0 .functor XOR 1, L_0x1dde510, L_0x1dde130, C4<0>, C4<0>;
+v0x1dd0030_0 .net "a", 0 0, L_0x1dde510; 1 drivers
+v0x1dd00d0_0 .net "b", 0 0, L_0x1dde130; 1 drivers
+v0x1dd0170_0 .net "z", 0 0, L_0x1dde4b0; 1 drivers
+S_0x1dcf910 .scope generate, "xoring[28]" "xoring[28]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dcfa08 .param/l "i" 3 14, +C4<011100>;
+S_0x1dcfac0 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dcf910;
+ .timescale 0 0;
+L_0x1dde310 .functor XOR 1, L_0x1dde8b0, L_0x1dde950, C4<0>, C4<0>;
+v0x1dcfbb0_0 .net "a", 0 0, L_0x1dde8b0; 1 drivers
+v0x1dcfc50_0 .net "b", 0 0, L_0x1dde950; 1 drivers
+v0x1dcfcf0_0 .net "z", 0 0, L_0x1dde310; 1 drivers
+S_0x1dcf490 .scope generate, "xoring[29]" "xoring[29]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dcf588 .param/l "i" 3 14, +C4<011101>;
+S_0x1dcf640 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dcf490;
+ .timescale 0 0;
+L_0x1dde6f0 .functor XOR 1, L_0x1dde750, L_0x1dded10, C4<0>, C4<0>;
+v0x1dcf730_0 .net "a", 0 0, L_0x1dde750; 1 drivers
+v0x1dcf7d0_0 .net "b", 0 0, L_0x1dded10; 1 drivers
+v0x1dcf870_0 .net "z", 0 0, L_0x1dde6f0; 1 drivers
+S_0x1dcf010 .scope generate, "xoring[30]" "xoring[30]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1dcf108 .param/l "i" 3 14, +C4<011110>;
+S_0x1dcf1c0 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1dcf010;
+ .timescale 0 0;
+L_0x1ddea40 .functor XOR 1, L_0x1ddeaa0, L_0x1ddeb90, C4<0>, C4<0>;
+v0x1dcf2b0_0 .net "a", 0 0, L_0x1ddeaa0; 1 drivers
+v0x1dcf350_0 .net "b", 0 0, L_0x1ddeb90; 1 drivers
+v0x1dcf3f0_0 .net "z", 0 0, L_0x1ddea40; 1 drivers
+S_0x1da1d60 .scope generate, "xoring[31]" "xoring[31]" 3 14, 3 14, S_0x1da0c60;
+ .timescale 0 0;
+P_0x1db2348 .param/l "i" 3 14, +C4<011111>;
+S_0x1da1820 .scope module, "XOR" "xor_gate" 3 16, 4 6, S_0x1da1d60;
+ .timescale 0 0;
+L_0x1dd91b0 .functor XOR 1, L_0x1ddb9b0, L_0x1ddbbb0, C4<0>, C4<0>;
+v0x1d8a370_0 .net "a", 0 0, L_0x1ddb9b0; 1 drivers
+v0x1dceed0_0 .net "b", 0 0, L_0x1ddbbb0; 1 drivers
+v0x1dcef70_0 .net "z", 0 0, L_0x1dd91b0; 1 drivers
+    .scope S_0x1da11a0;
+T_0 ;
+    %vpi_call 2 9 "$monitor", "A = %d B = %d Z = %d", v0x1dd7d90_0, v0x1dd7e60_0, v0x1dd7f10_0;
+    %delay 0, 0;
+    %movi 8, 15, 32;
+    %set/v v0x1dd7d90_0, 8, 32;
+    %movi 8, 7, 32;
+    %set/v v0x1dd7e60_0, 8, 32;
+    %delay 1, 0;
+    %movi 8, 7, 32;
+    %set/v v0x1dd7d90_0, 8, 32;
+    %movi 8, 2, 32;
+    %set/v v0x1dd7e60_0, 8, 32;
+    %delay 1, 0;
+    %movi 8, 15, 32;
+    %set/v v0x1dd7d90_0, 8, 32;
+    %movi 8, 8, 32;
+    %set/v v0x1dd7e60_0, 8, 32;
+    %delay 1, 0;
+    %movi 8, 255, 32;
+    %set/v v0x1dd7d90_0, 8, 32;
+    %movi 8, 15, 32;
+    %set/v v0x1dd7e60_0, 8, 32;
+    %delay 1, 0;
+    %movi 8, 28, 32;
+    %set/v v0x1dd7d90_0, 8, 32;
+    %movi 8, 12, 32;
+    %set/v v0x1dd7e60_0, 8, 32;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "xor_32_tb.v";
+    "xor_32.v";
+    "xor_gate.v";

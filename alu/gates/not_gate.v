@@ -3,7 +3,7 @@
 
 
 
-module not_gate (a, z)
+module not_gate (a, z);
 
 // Ports
 
@@ -12,8 +12,6 @@ output z;
 
 // Implementation
 
-always @(a)
-    begin
-        assign z = ~a;
-    end
+assign z = ~a;
+
 endmodule

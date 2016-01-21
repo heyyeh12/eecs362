@@ -5,10 +5,7 @@ module mux2to1 (src0, src1, sel, z);
     input [N_BITS-1:0] src0, src1;
     input sel;
     output [N_BITS-1:0] z;
-
-    wire [N_BITS-1:0] z;
-
-    assign z = sel ? a : b;
+    assign z = (sel) ? src1 : src0;
 endmodule
 
 /* 4 to 1 mux for N_BITS sources */

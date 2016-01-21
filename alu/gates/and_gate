@@ -1,0 +1,40 @@
+#! /vol/ece303/bin/vvp
+:ivl_version "0.9.5 " "(v0_9_5)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x1c31ec0 .scope module, "testbench" "testbench" 2 1;
+ .timescale 0 0;
+v0x1c56950_0 .var "A", 0 0;
+v0x1c56a20_0 .var "B", 0 0;
+v0x1c56ad0_0 .net "Z", 0 0, L_0x1c56b80; 1 drivers
+S_0x1c31fb0 .scope module, "and_gate" "and_gate" 2 6, 3 7, S_0x1c31ec0;
+ .timescale 0 0;
+L_0x1c56b80 .functor AND 1, v0x1c56950_0, v0x1c56a20_0, C4<1>, C4<1>;
+v0x1c320a0_0 .net "a", 0 0, v0x1c56950_0; 1 drivers
+v0x1c56810_0 .net "b", 0 0, v0x1c56a20_0; 1 drivers
+v0x1c568b0_0 .alias "z", 0 0, v0x1c56ad0_0;
+    .scope S_0x1c31ec0;
+T_0 ;
+    %vpi_call 2 9 "$monitor", "A = %b B = %b Z = %b", v0x1c56950_0, v0x1c56a20_0, v0x1c56ad0_0;
+    %delay 0, 0;
+    %set/v v0x1c56950_0, 0, 1;
+    %set/v v0x1c56a20_0, 0, 1;
+    %delay 1, 0;
+    %set/v v0x1c56950_0, 0, 1;
+    %set/v v0x1c56a20_0, 1, 1;
+    %delay 1, 0;
+    %set/v v0x1c56950_0, 1, 1;
+    %set/v v0x1c56a20_0, 0, 1;
+    %delay 1, 0;
+    %set/v v0x1c56950_0, 1, 1;
+    %set/v v0x1c56a20_0, 1, 1;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "and_gate_tb.v";
+    "and_gate.v";

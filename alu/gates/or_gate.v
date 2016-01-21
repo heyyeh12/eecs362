@@ -2,7 +2,7 @@
 OR GATE
 */
 
-module or_gate (a, b, z)
+module or_gate (a, b, z);
 
 // Ports
 
@@ -11,8 +11,6 @@ output z;
 
 // Implementation
 
-always @(a or b)
-    begin
-        assign z = a | b;
-    end
+assign z = a | b;
+
 endmodule
