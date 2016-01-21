@@ -12,7 +12,5 @@ output z;
 
 // Implementation
 
-    begin
-        assign z = ~a;
-    end
+assign z = ~a;
 endmodule
