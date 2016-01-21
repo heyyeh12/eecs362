@@ -3,7 +3,7 @@
 
 
 
-module not_gate (a, z)
+module not_gate (a, z);
 
 // Ports
 
