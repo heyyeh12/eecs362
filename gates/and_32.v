@@ -5,7 +5,7 @@
 //
 // Question: is this how you use a module in a module?
 // /////////////////////
-
+`include "and_gate.v"
 module and_32 (a, b, z);
 
 // Ports

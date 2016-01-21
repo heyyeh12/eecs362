@@ -1,5 +1,5 @@
 // 32-bit XOR GATE
-
+`include "xor_gate.v"
 module xor_32 (a, b, z);
 
 // Ports

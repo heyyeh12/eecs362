@@ -5,7 +5,7 @@
 // 
 // Questions: are always statements allowed/useful/necessary?
 // ///////////////
-
+`include "or_gate.v"
 module or_32 (a, b, z);
 
 // Ports
