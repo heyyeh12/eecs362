@@ -1,20 +1,14 @@
 # ALU Components
-SOURCE = shifter.v flag_setter.v
+SOURCES = shifter.vvp
 IVERILOG = iverilog
-VVP = vvp
-WAVE = gtkwave
 
-all: alu.vcd
+all: $(SOURCES)
 
-alu.vvp: $(SOURCE)
-	$(IVERILOG) -o alu.vvp $(SOURCE)
-	# might need -o alu.vvp -s alu_tb $(SOURCE)
+# e.g. iverilog -o and_gate.vvp and_gate.v and_gate_tb.v
+$(SOURCES) : %.vvp : %.v %_tb.v
+	$(IVERILOG) -o $@ $^
 
-alu.vcd: alu.vvp
-	$(VVP) alu.vvp
-
-view: all
-	$(WAVE) alu.vcd
+.PHONY: clean
 
 clean:
-	rm *.vvp *.vcd
+	rm *.vvp
