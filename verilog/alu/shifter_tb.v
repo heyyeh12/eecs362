@@ -9,7 +9,7 @@ module testbench;
     initial begin
 
         $monitoro("@%0dns A=%h shamt=%d res=%b",
-                    $time, A, B, ctrl, Z);
+                    $time, A, B, Z);
         // sll
         $display("---SHIFT LEFT LOGICAL--");
         #0 A = 32'hFFFFFFFF; B = 32'd1; ctrl = 2'b10;
@@ -19,15 +19,15 @@ module testbench;
         #10 A = 32'hFFFFFFFF; B = 32'd32;
 
         // srl
-        $display("---SHIFT RIGHT LOGICAL--");
+        #10 $display("---SHIFT RIGHT LOGICAL--");
         #10 A = 32'hFFFFFFFF; B = 32'd1; ctrl = 2'b00;
         #10 A = 32'hFFFFFFFF; B = 32'd5;
         #10 A = 32'hFFFFFFFF; B = 32'd10;
         #10 A = 32'hFFFFFFFF; B = 32'd40;
 
         // sra
-        $display("---SHIFT RIGHT ARITHMETIC--");
-        #10 A = 32'hFFFFFFFF; B = 32'd1; ctrl = 2'b00;
+        #10 $display("---SHIFT RIGHT ARITHMETIC--");
+        #10 A = 32'hFFFFFFFF; B = 32'd1; ctrl = 2'b01;
         #10 A = 32'hFFFFFFFF; B = 32'd5;
         #10 A = 32'hFFFFFFFF; B = 32'd10;
         #10 A = 32'hFFFFFFFF; B = 32'd40;
