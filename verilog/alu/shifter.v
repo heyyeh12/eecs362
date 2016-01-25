@@ -1,5 +1,5 @@
 // Include
-`include "../gates/mux_n.v"
+`include "../gates/gates.v"
 
 // /**
 //  * TODO: Debug and make it work...lol
@@ -28,7 +28,7 @@ module shifter (a, shamt, ctrl, res, cout);
 
 // Signals
     wire [31:0] rev0, s5, s4, s3, s2, s1, s0, msb32;
-    wire msb;
+    wire msb, big_shift;
     genvar i;
 
 // select - 0: logical, 1: arithemtic
@@ -42,8 +42,9 @@ module shifter (a, shamt, ctrl, res, cout);
     endgenerate
 
 // clear for shamt bit 5 or higher
-    mux2to1 #(32) Ms5A(.src0(32'b0), .src1(32'b1), .sel(shamt[5]), .z(msb32));
-    mux2to1 #(32) Ms5B(.src0(rev0), .src1(msb32), .sel(shamt[5]), .z(s5));
+    or32to1 BIG_SHIFT(.a({shamt[31:5], 5'd0}), .z(big_shift));
+    mux2to1 #(32) Ms5A(.src0(32'd0), .src1(32'hFFFFFFFF), .sel(msb), .z(msb32));
+    mux2to1 #(32) Ms5B(.src0(rev0), .src1(msb32), .sel(big_shift), .z(s5));
 
 // 16-bit right shift
     generate

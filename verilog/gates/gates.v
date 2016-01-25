@@ -49,6 +49,53 @@ assign z = a | b;
 
 endmodule
 
+/////////////////////////////
+
+module or32to1 (a, z);
+    
+    input [31:0] a;
+    output z;
+    
+    wire [15:0] nor16;
+    wire [7:0] nor8;
+    wire [3:0] nor4;
+    wire [1:0] nor2;
+    wire or_res;
+    
+    // 32 to 16
+    genvar i;
+    generate
+        for (i = 0; i < 16; i = i+1) begin : LOOP16
+            or_gate NOR16(a[i], a[31-i], nor16[i]);
+        end
+    endgenerate
+
+    // 16 to 8
+    generate
+        for (i = 0; i < 8; i = i+1) begin : LOOP8
+            or_gate NOR8(nor16[i], nor16[15-i], nor8[i]);
+        end
+    endgenerate
+    
+    // 8 to 4
+    generate
+        for (i = 0; i < 4; i = i+1) begin : LOOP4
+            or_gate NOR4(nor8[i], nor8[7-i], nor4[i]);
+        end
+    endgenerate
+    
+    // 4 to 2
+    generate
+        for (i = 0; i < 2; i = i+1) begin : LOOP2
+            or_gate NOR2(nor4[i], nor4[3-i], nor2[i]);
+        end
+    endgenerate
+    
+    // 2 to 1
+    or_gate NOR1(nor2[0], nor2[1], z);
+
+endmodule
+
 ////////////////////////////////
 
 module or_32 (a, b, z);
@@ -120,6 +167,26 @@ endmodule
 
 /////////////////////////////
 
+module not_32 (a, z);
+
+// Ports
+
+input [31:0] a;
+output [31:0] z;
+
+// Implementation
+genvar i;
+    generate
+        for(i=0; i<32; i=i+1)
+	begin : knotting
+            not_gate NOT1(a[i], z[i]);
+        end
+    endgenerate
+
+endmodule
+
+/////////////////////////////
+
 module nand_gate (a, b, z);
 
 // Ports
@@ -159,39 +226,41 @@ module nor32to1 (a, z);
     wire [7:0] nor8;
     wire [3:0] nor4;
     wire [1:0] nor2;
-    wire nor32_out;
+    wire or_res;
     
     // 32 to 16
     genvar i;
     generate
         for (i = 0; i < 16; i = i+1) begin : LOOP16
-            nor_gate NOR16(a[i], a[31-i], nor16[i]);
+            or_gate NOR16(a[i], a[31-i], nor16[i]);
         end
     endgenerate
 
     // 16 to 8
     generate
         for (i = 0; i < 8; i = i+1) begin : LOOP8
-            nor_gate NOR8(nor16[i], nor16[15-i], nor8[i]);
+            or_gate NOR8(nor16[i], nor16[15-i], nor8[i]);
         end
     endgenerate
     
     // 8 to 4
     generate
         for (i = 0; i < 4; i = i+1) begin : LOOP4
-            nor_gate NOR4(nor8[i], nor8[7-i], nor4[i]);
+            or_gate NOR4(nor8[i], nor8[7-i], nor4[i]);
         end
     endgenerate
     
     // 4 to 2
     generate
         for (i = 0; i < 2; i = i+1) begin : LOOP2
-            nor_gate NOR2(nor4[i], nor4[3-i], nor2[i]);
+            or_gate NOR2(nor4[i], nor4[3-i], nor2[i]);
         end
     endgenerate
     
     // 2 to 1
-    nor_gate NOR1(nor4[0], nor4[1], z);
+    or_gate NOR1(nor2[0], nor2[1], or_res);
+    
+    not_gate NOT1(or_res, z);
 
 endmodule
 

@@ -1,10 +1,11 @@
 # Basic gates
 BUILD_DIR = build
 SOURCES = and_gate.vvp and_32.vvp \
-		or_gate.vvp or_32.vvp \
+		or_gate.vvp or_32.vvp or32to1.vvp \
 		xor_gate.vvp xor_32.vvp \
 		nand_gate.vvp \
-		nor_gate.vvp \
+		nor_gate.vvp nor32to1.vvp \
+		not_gate.vvp not_32.vvp \
 		mux2to1.vvp
 IVERILOG = iverilog
 VVP = vvp

@@ -1,5 +1,5 @@
 # ALU Components
-SOURCES = shifter.vvp flag_setter.vvp
+SOURCES = shifter.vvp flag_setter.vvp bitwise.vvp
 IVERILOG = iverilog
 
 all: $(SOURCES)
