@@ -1,0 +1,72 @@
+################################################################################
+# This is a sample that shows basic rules on writing a makefile.
+#
+# You are encouraged to write your own makefiles for various purposes
+# during the project.
+#
+# Northwestern University 
+# EECS362 Computer Architecture Project
+# Author: Chao Yan
+# Last Update: Jan/11/2015
+################################################################################
+
+ifeq (0, 1) # conditional compiling \
+	      usually used to comment multiple lines 
+             
+AS = /vol/eecs362/scripts/dlxasm  # define a variable, which equals to the absolute path \
+				    of the dlx assembler. 
+ 
+# Phony Target 
+# Explicitly declare the targets that might be called by the make command.
+# Avoid name conflict
+.PHONY: all fib.exe quicksort.exe unsignedsum.exe clean 
+
+# Default target when running 'make'
+all: fib.exe quicksort.exe unsignedsum.exe
+
+# Target 'fib' depends on 'fib.asm'. It could be called independently using 'make fib'
+# $(variable-name) means to substitue the variable name with the value
+fib.exe:fib.asm
+	$(AS) fib.asm -C fib_instr.hex -D fib_dat.hex -O fib.exe
+
+# $^ means the content of the dependency list, in this case, $^ = quicksort.asm 
+# $@ means the content of the target list, in this case, $@ = quicksort 
+quicksort.exe:quicksort.asm
+	$(AS) $^ -C quicksort_instr.hex -D quicksort_dat.hex -O $@
+
+# $< means the first file name in the dependency list, in this case, $< = unsignedsum.asm
+# $@ means the content of the target list, in this case, $@ = unsignedsum 
+unsignedsum.exe:unsignedsum.asm
+	$(AS) $< -C unsignedsum_instr.hex -D unsignedsum_dat.hex -O $@
+
+# Target 'clean' depends on nothing. To delete all files that are created by 'make'.
+clean:
+	rm *.hex *.exe
+endif
+
+#ifeq (0, 1)
+
+AS = /vol/eecs362/scripts/dlxasm
+TARGET = fib.exe quicksort.exe unsignedsum.exe 
+SRC = $(TARGET:.exe=.asm) # variable substitution, SRC = fib.asm quicksort.asm unsignedsum.asm \
+		        another common use of the substitution is: \
+			SRC = foo.c bar.c \
+			OBJ = $(SRC:.c=.o) means OBJ = foo.o bar.o
+
+.PHONY: all $(TARGET) clean
+
+#all: 
+#	for target in $(TARGET); do\
+#		$(AS) $$target.asm -C $$target.instr.hex -D $$target.dat.hex; \
+#	done 
+
+all: $(TARGET)
+
+# Declare the targets with variables.
+$(TARGET):$(SRC)
+	$(AS) $< -C $(@:.exe=).instr.hex -D $(@:.exe=).dat.hex -O $@
+
+clean:
+	rm *.hex *.exe
+#endif
+
