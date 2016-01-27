@@ -11,7 +11,7 @@
 // - res    32-bit result
 
 
-`include "../gates/gates.v"
+// `include "../gates/gates.v"
 
 
 module bitwise(a, b, ctrl, res);

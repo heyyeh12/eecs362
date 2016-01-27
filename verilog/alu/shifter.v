@@ -1,9 +1,5 @@
 // Include
-`include "../gates/gates.v"
-
-// /**
-//  * TODO: Debug and make it work...lol
-//  */
+// `include "../gates/gates.v"
 
 // /**
 //  * SHIFTER

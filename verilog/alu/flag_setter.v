@@ -1,5 +1,5 @@
 // Include
-`include "../gates/gates.v"
+// `include "../gates/gates.v"
 
 // /*
 // FLAG SETTER
@@ -40,6 +40,6 @@ wire carry, cf_mux, not_ctrl1, cf_int, cf;
     assign cf = cf_int;
     
 // Overflow logic
-    xor OF_FLAG(cf_int, alu_res[31], of);
+    xor_gate OF_FLAG(cf_int, alu_res[31], of);
     
 endmodule // flag_setter

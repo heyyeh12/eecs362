@@ -1,4 +1,20 @@
-'include "../gates/gates.v"
+// `include "../gates/gates.v"
+
+module adder(a, b, ctrl, res, cout);
+    // Interface
+    input [31:0] a, b;
+    input [1:0] ctrl;
+    output [31:0] res;
+    output cout;
+    
+    // Internal Signals
+    wire [31:0] b_not, b_int;
+    
+    not_32 not_map(.a(b), .z(b_not));
+    mux2to1 #(32) mux_map(.src0(b), .src1(b_not), .sel(ctrl[0]), .z(b_int));
+    fa_nbit fa_map(.A(a), .B(b_int), .cin(ctrl[0]), .sum(res), .cout(cout));
+
+endmodule // adder
 
 module fa(a, b, cin, sum, cout);
     input a, b, cin;
