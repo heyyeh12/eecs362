@@ -5,9 +5,9 @@
 // - a  32-bit input into ALU
 // - b  32-bit input into ALU
 // - ctrl   alu_ctrl[1:0]
-//          00 -> AND
-//          01 -> OR
-//          10 -> XOR
+//          000 -> AND
+//          001 -> OR
+//          010 -> XOR
 // - res    32-bit result
 
 

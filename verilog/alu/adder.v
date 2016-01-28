@@ -3,16 +3,55 @@
 module adder(a, b, ctrl, res, cout);
     // Interface
     input [31:0] a, b;
-    input [1:0] ctrl;
+    input [3:0] ctrl; // if 11XX(src12-15) - subtract, if 0101(src5) - subtract, else - add
     output [31:0] res;
     output cout;
     
     // Internal Signals
     wire [31:0] b_not, b_int;
+    wire carry_int;
     
     not_32 not_map(.a(b), .z(b_not));
-    mux2to1 #(32) mux_map(.src0(b), .src1(b_not), .sel(ctrl[0]), .z(b_int));
-    fa_nbit fa_map(.A(a), .B(b_int), .cin(ctrl[0]), .sum(res), .cout(cout));
+    mux16to1 #(32) mux_map1(.src0(b), 
+                           .src1(b),
+                           .src2(b),
+                           .src3(b),
+                           .src4(b),
+                           .src5(b_not),
+                           .src6(b),
+                           .src7(b),
+                           .src8(b),
+                           .src9(b),
+                           .src10(b),
+                           .src11(b),
+                           .src12(b_not),
+                           .src13(b_not),
+                           .src14(b_not),
+                           .src15(b_not),
+                           .sel(ctrl[3:0]), 
+                           .z(b_int));
+                           
+        mux16to1 #(1) mux_map2(.src0(0), 
+                           .src1(0),
+                           .src2(0),
+                           .src3(0),
+                           .src4(0),
+                           .src5(1),
+                           .src6(0),
+                           .src7(0),
+                           .src8(0),
+                           .src9(0),
+                           .src10(0),
+                           .src11(0),
+                           .src12(1),
+                           .src13(1),
+                           .src14(1),
+                           .src15(1),
+                           .sel(ctrl[3:0]), 
+                           .z(carry_int));
+                           
+    // cin should be 1 if alu_ctrl is 11XX or 0101, another mux16to1?
+    fa_nbit fa_map(.A(a), .B(b_int), .cin(carry_int), .sum(res), .cout(cout));
 
 endmodule // adder
 
