@@ -26,7 +26,7 @@ module alu(a, b, alu_ctrl, inverse_set, res, zf, of, cf);
     // Output selector
     mux4to1 mux_map (.src0(res_shft), .src1(res_add), .src2(res_bit), .src3(res_set), .sel(alu_ctrl[3:2]), .z(int_res));
     
-    flag_setter  flag_map (.alu_res(int_res), .ctrl(alu_ctrl[3:2]), .cout_add(cout_add), .cout_shft(coud_shft), .zf(zf), .of(of), .cf(cf));
+    flag_setter  flag_map (.alu_res(int_res), .ctrl(alu_ctrl[3:2]), .cout_add(cout_add), .cout_shft(cout_shft), .zf(zf), .of(of), .cf(cf));
     assign res = int_res;
     
     endmodule

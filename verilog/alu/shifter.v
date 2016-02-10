@@ -105,5 +105,7 @@ module shifter (a, shamt, ctrl, res, cout);
             mux2to1 #(1) MR1(.src0(s0[i]), .src1(s0[31-i]), .sel(ctrl[1]), .z(res[i]));
         end
     endgenerate
+    
+    assign cout = 0;
 
 endmodule // shifter
