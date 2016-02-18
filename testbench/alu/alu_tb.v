@@ -21,6 +21,12 @@ module testbench;
         #10 A = 32'hFFFFFFFF; B = 32'hFFFFFFFF; alu_ctrl =  4'b0100; inverse_set = 1'b0; 
         #10 A = 32'hFFFFFFFF; B = 32'h00000000;
         #10 A = 32'hFFFFFFFF; B = 32'hF0F0F0F0;
+        #10 A = 32'hFFFFFFFF; B = 32'h00000000;
+        #10 A = 32'hFFFFFFFF; B = 32'hF0F0F0F0;
+        #10 A = 32'h00000000; B = 32'h00000000;
+        #10 A = 32'hFFFFFFFF; B = 32'hF0F0F0F0;
+        #10 A = 32'hFFFFFFFF; B = 32'h00000000;
+        #10 A = 32'hFFFFFFFF; B = 32'hF0F0F0F0;
 
         #10 $display("--SUB--");
         #10 A = 32'hFFFFFFFF; B = 32'hFFFFFFFF; alu_ctrl = 4'b0101; inverse_set = 1'b0; 
@@ -46,6 +52,7 @@ module testbench;
         #10 A = 32'hFFFFFFFF; B = 32'hFFFFFFFF; alu_ctrl = 4'b1100; inverse_set = 1'b1; 
         #10 A = 32'hFFFFFFFF; B = 32'h00000000;
         #10 A = 32'hFFFFFFFF; B = 32'hF0F0F0F0;
+        
 
     end
 endmodule
