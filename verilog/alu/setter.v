@@ -1,24 +1,24 @@
-// Include
-// `include "../gates/gates.v"
-
-// /*
-// SETTER
-// ===========
-// - add_res      adder result [31:0]
-// - inverse_set  [1 bit]
-// - ctrl         alu_ctrl[1:0]
-//                00 => set on equal
-//                01 => set on greater than
-//                11 => set on greater than or equal
-
-// - a_msb        most significant bit of a
-// - b_msb        most significant bit of b
-
-// - res [31:0] result
-
-//  */
-
-module setter (add_res, ctrl, a_msb, b_msb, inverse_set, res);
+    // Include
+    // `include "../gates/gates.v"
+    
+    // /*
+    // SETTER
+    // ===========
+    // - add_res      adder result [31:0]
+    // - inverse_set  [1 bit]
+    // - ctrl         alu_ctrl[1:0]
+    //                00 => set on equal
+    //                01 => set on greater than
+    //                11 => set on greater than or equal
+    
+    // - a_msb        most significant bit of a
+    // - b_msb        most significant bit of b
+    
+    // - res [31:0] result
+    
+    //  */
+    
+    module setter (add_res, ctrl, a_msb, b_msb, inverse_set, res);
 
 // Interface
 input [31:0] add_res;
