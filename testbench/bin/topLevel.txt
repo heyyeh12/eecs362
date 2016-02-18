@@ -1,0 +1,1547 @@
+WARNING: ../../verilog/memory/memory.v:79: $readmemh(instr.hex): Not enough words in the file for the requested range [0:1023].
+WARNING: ../../verilog/single_cycle/topLevel.v:44: $readmemh(instr.hex): Not enough words in the file for the requested range [0:1023].
+--opcode=xxxxxx aluCtrl=00xx aluSrc=0 setInv=0 regDst=0--
+zf: z
+takeBr=0
+incPC=xxxxxxxx, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=zzzzzzzz, curPC=xxxxxxxx, nextPC=zzzzzzzz
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 00000000
+reg 5: 00000000 	 reg 6: 00000000
+=====================================
+--opcode=000000 aluCtrl=1010 aluSrc=0 setInv=0 regDst=1--
+Instr [00000000] = 00000026
+Instr [00000004] = 00842026
+addr= 00002000 data = 0000000f
+addr= 00002001 data = 00000f00
+don't write to register 0!!!
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 00000000
+reg 5: 00000000 	 reg 6: 00000000
+=====================================
+takeBr=0
+incPC=00000004, jmpPC=0000002a, reg31=00000000
+jmpOrBrPC=00000004, curPC=00000000, nextPC=00000004
+
+
+zf: 1
+
+----------time: @10ns---------
+Instr [00000000] = 00000026
+regWr: 1
+--opcode=000000 aluCtrl=1010 aluSrc=0 setInv=0 regDst=1--
+
+----------time: @20ns---------
+Instr [00000004] = 00842026
+regWr: 1
+zf: 1
+takeBr=0
+incPC=00000008, jmpPC=0000202e, reg31=00000000
+jmpOrBrPC=00000008, curPC=00000004, nextPC=00000008
+
+
+writing val 00000000 to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 00000000
+reg 5: 00000000 	 reg 6: 00000000
+=====================================
+--opcode=000000 aluCtrl=1010 aluSrc=0 setInv=0 regDst=1--
+writing val 00000000 to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 00000000
+reg 5: 00000000 	 reg 6: 00000000
+=====================================
+takeBr=0
+incPC=0000000c, jmpPC=00002832, reg31=00000000
+jmpOrBrPC=0000000c, curPC=00000008, nextPC=0000000c
+
+
+zf: 1
+
+----------time: @30ns---------
+Instr [00000008] = 00a52826
+regWr: 1
+--opcode=000000 aluCtrl=1010 aluSrc=0 setInv=0 regDst=1--
+
+----------time: @40ns---------
+Instr [0000000c] = 00c63026
+regWr: 1
+zf: 1
+takeBr=0
+incPC=00000010, jmpPC=00003036, reg31=00000000
+jmpOrBrPC=00000010, curPC=0000000c, nextPC=00000010
+
+
+writing val 00000000 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 00000000
+reg 5: 00000000 	 reg 6: 00000000
+=====================================
+writing val 00000024 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 00000000
+reg 5: 00000000 	 reg 6: 00000000
+=====================================
+takeBr=0
+incPC=00000014, jmpPC=00000038, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000010, nextPC=00000014
+
+
+zf: 0
+
+----------time: @50ns---------
+Instr [00000010] = 20060024
+regWr: 1
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @60ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=00000000
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 00000000
+reg 5: 00000000 	 reg 6: 00000024
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: 00000000 	 reg 6: 00000024
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @70ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @80ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=00000024
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val 00000020 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000024
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000020
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 0
+
+----------time: @90ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @100ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000020
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000020
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @110ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @120ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=00000020
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val 0000001c to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000020
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 0000001c
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 0
+
+----------time: @130ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @140ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 0000001c
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 0000001c
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @150ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @160ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=0000001c
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val 00000018 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 0000001c
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000018
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 0
+
+----------time: @170ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @180ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000018
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000018
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @190ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @200ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=00000018
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val 00000014 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000018
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000014
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 0
+
+----------time: @210ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @220ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000014
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000014
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @230ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @240ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=00000014
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val 00000010 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000014
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000010
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 0
+
+----------time: @250ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @260ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000010
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000010
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @270ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @280ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=00000010
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val 0000000c to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000010
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 0000000c
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 0
+
+----------time: @290ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @300ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 0000000c
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 0000000c
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @310ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @320ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=0000000c
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val 00000008 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 0000000c
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000008
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 0
+
+----------time: @330ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @340ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000008
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000008
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @350ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @360ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=00000008
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val 00000004 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000008
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000004
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 0
+
+----------time: @370ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @380ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000004
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000004
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @390ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @400ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 1
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=00000004
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val 00000000 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000004
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000000
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 1
+
+----------time: @410ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @420ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000000
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000000
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @430ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @440ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=00000000
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val fffffffc to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: 00000000
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: fffffffc
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 0
+
+----------time: @450ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @460ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: fffffffc
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: fffffffc
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @470ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @480ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=fffffffc
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val fffffff8 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: fffffffc
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: fffffff8
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 0
+
+----------time: @490ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @500ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: fffffff8
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: fffffff8
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @510ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @520ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=fffffff8
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val fffffff4 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: fffffff8
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: fffffff4
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 0
+
+----------time: @530ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @540ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: fffffff4
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: fffffff4
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @550ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @560ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=fffffff4
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val fffffff0 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: fffffff4
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: fffffff0
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 0
+
+----------time: @570ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @580ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: fffffff0
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: fffffff0
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @590ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @600ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=fffffff0
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val ffffffec to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: fffffff0
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffec
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 0
+
+----------time: @610ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @620ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffec
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffec
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @630ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @640ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=ffffffec
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val ffffffe8 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffec
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffe8
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 0
+
+----------time: @650ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @660ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffe8
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffe8
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @670ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @680ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=ffffffe8
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val ffffffe4 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffe8
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffe4
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 0
+
+----------time: @690ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @700ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffe4
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffe4
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @710ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @720ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=ffffffe4
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val ffffffe0 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffe4
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffe0
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 0
+
+----------time: @730ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @740ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffe0
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffe0
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @750ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @760ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=ffffffe0
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val ffffffdc to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffe0
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffdc
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 0
+
+----------time: @770ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @780ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffdc
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffdc
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @790ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @800ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=ffffffdc
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val ffffffd8 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffdc
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffd8
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 0
+
+----------time: @810ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @820ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffd8
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffd8
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @830ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @840ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=ffffffd8
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val ffffffd4 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffd8
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffd4
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 0
+
+----------time: @850ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @860ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffd4
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffd4
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @870ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @880ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=ffffffd4
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val ffffffd0 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffd4
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffd0
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 0
+
+----------time: @890ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @900ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffd0
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffd0
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @910ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @920ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=ffffffd0
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val ffffffcc to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffd0
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffcc
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 0
+
+----------time: @930ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @940ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffcc
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffcc
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @950ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @960ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=ffffffcc
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val ffffffc8 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffcc
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffc8
+=====================================
+takeBr=1
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+zf: 0
+
+----------time: @970ns---------
+Instr [00000020] = 14c0fff0
+regWr: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @980ns---------
+Instr [00000014] = 8cc42000
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000018, jmpPC=00002018, reg31=xxxxxxxx
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val xxxxxxxx to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffc8
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val xxxxxxxx to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffc8
+=====================================
+takeBr=0
+incPC=0000001c, jmpPC=0000283d, reg31=xxxxxxxx
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+zf: x
+
+----------time: @990ns---------
+Instr [00000018] = 00a42821
+regWr: 1
+
+----------time: @1000ns---------
+Instr [0000001c] = 28c60004
+regWr: 1
+zf: 0
+takeBr=0
+incPC=00000020, jmpPC=00000024, reg31=ffffffc8
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val ffffffc4 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: xxxxxxxx
+reg 5: xxxxxxxx 	 reg 6: ffffffc8
+=====================================

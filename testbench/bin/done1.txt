@@ -1,0 +1,1634 @@
+WARNING: ../../verilog/memory/memory.v:79: $readmemh(instr.hex): Not enough words in the file for the requested range [0:1023].
+WARNING: ../../verilog/single_cycle/topLevel.v:44: $readmemh(instr.hex): Not enough words in the file for the requested range [0:1023].
+--opcode=xxxxxx aluCtrl=00xx aluSrc=0 setInv=0 regDst=0--
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: z, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=xxxxxxxx, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=zzzzzzzz, curPC=xxxxxxxx, nextPC=zzzzzzzz
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 00000000
+reg 5: 00000000 	 reg 6: 00000000
+=====================================
+--opcode=000000 aluCtrl=1010 aluSrc=0 setInv=0 regDst=1--
+Instr [00000000] = 00000026
+Instr [00000004] = 00842026
+addr= 00002000 data = 0000000f
+addr= 00002001 data = 00000f00
+don't write to register 0!!!
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 00000000
+reg 5: 00000000 	 reg 6: 00000000
+=====================================
+incPC=00000004, jmpPC=0000002a, reg31=00000000
+jmpOrBrPC=00000004, curPC=00000000, nextPC=00000004
+
+
+regData: 00000000
+alu inputs: 00000000, 00000000 	zf: 1, op0: 0, takeBr: 0
+aluRes: 00000000, drData: 00000000, memRd: 0, regData: 00000000
+
+----------time: @10ns---------
+Instr [00000000] = 00000026
+daddr: 00000000, rData: 00000000, dwdata: 00000000, dwrite: 0
+--opcode=000000 aluCtrl=1010 aluSrc=0 setInv=0 regDst=1--
+
+----------time: @20ns---------
+Instr [00000004] = 00842026
+daddr: 00000000, rData: 00000000, dwdata: 00000000, dwrite: 0
+aluRes: 00000000, drData: 00000000, memRd: 0, regData: 00000000
+alu inputs: 00000000, 00000000 	zf: 1, op0: 0, takeBr: 0
+regData: 00000000
+incPC=00000008, jmpPC=0000202e, reg31=00000000
+jmpOrBrPC=00000008, curPC=00000004, nextPC=00000008
+
+
+writing val 00000000 to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 00000000
+reg 5: 00000000 	 reg 6: 00000000
+=====================================
+--opcode=000000 aluCtrl=1010 aluSrc=0 setInv=0 regDst=1--
+writing val 00000000 to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 00000000
+reg 5: 00000000 	 reg 6: 00000000
+=====================================
+incPC=0000000c, jmpPC=00002832, reg31=00000000
+jmpOrBrPC=0000000c, curPC=00000008, nextPC=0000000c
+
+
+regData: 00000000
+alu inputs: 00000000, 00000000 	zf: 1, op0: 0, takeBr: 0
+aluRes: 00000000, drData: 00000000, memRd: 0, regData: 00000000
+
+----------time: @30ns---------
+Instr [00000008] = 00a52826
+daddr: 00000000, rData: 00000000, dwdata: 00000000, dwrite: 0
+--opcode=000000 aluCtrl=1010 aluSrc=0 setInv=0 regDst=1--
+
+----------time: @40ns---------
+Instr [0000000c] = 00c63026
+daddr: 00000000, rData: 00000000, dwdata: 00000000, dwrite: 0
+aluRes: 00000000, drData: 00000000, memRd: 0, regData: 00000000
+alu inputs: 00000000, 00000000 	zf: 1, op0: 0, takeBr: 0
+regData: 00000000
+incPC=00000010, jmpPC=00003036, reg31=00000000
+jmpOrBrPC=00000010, curPC=0000000c, nextPC=00000010
+
+
+writing val 00000000 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 00000000
+reg 5: 00000000 	 reg 6: 00000000
+=====================================
+writing val 00000024 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 00000000
+reg 5: 00000000 	 reg 6: 00000000
+=====================================
+incPC=00000014, jmpPC=00000038, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000010, nextPC=00000014
+
+
+regData: 00000024
+alu inputs: 00000000, 00000024 	zf: 0, op0: 0, takeBr: 0
+aluRes: 00000024, drData: 00000000, memRd: 0, regData: 00000024
+
+----------time: @50ns---------
+Instr [00000010] = 20060024
+daddr: 00000024, rData: 00000000, dwdata: 00000024, dwrite: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @60ns---------
+Instr [00000014] = 8cc42000
+daddr: 00002024, rData: c0000000, dwdata: c0000000, dwrite: 0
+aluRes: 00002024, drData: c0000000, memRd: 1, regData: c0000000
+alu inputs: 00000024, 00002000 	zf: 0, op0: 1, takeBr: 0
+regData: c0000000
+incPC=00000018, jmpPC=00002018, reg31=00000000
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val c0000000 to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 00000000
+reg 5: 00000000 	 reg 6: 00000024
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val c0000000 to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: c0000000
+reg 5: 00000000 	 reg 6: 00000024
+=====================================
+incPC=0000001c, jmpPC=0000283d, reg31=c0000000
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+regData: c0000000
+alu inputs: 00000000, c0000000 	zf: 0, op0: 0, takeBr: 0
+aluRes: c0000000, drData: xxxxxxxx, memRd: 0, regData: c0000000
+
+----------time: @70ns---------
+Instr [00000018] = 00a42821
+daddr: c0000000, rData: xxxxxxxx, dwdata: c0000000, dwrite: 0
+
+----------time: @80ns---------
+Instr [0000001c] = 28c60004
+daddr: 00000020, rData: 00000000, dwdata: 00000020, dwrite: 0
+aluRes: 00000020, drData: 00000000, memRd: 0, regData: 00000020
+alu inputs: 00000024, 00000004 	zf: 0, op0: 0, takeBr: 0
+regData: 00000020
+incPC=00000020, jmpPC=00000024, reg31=00000024
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val 00000020 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: c0000000
+reg 5: c0000000 	 reg 6: 00000024
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: c0000000
+reg 5: c0000000 	 reg 6: 00000020
+=====================================
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+regData: 00000020
+alu inputs: 00000020, 00000000 	zf: 0, op0: 1, takeBr: 1
+aluRes: 00000020, drData: 00000000, memRd: 0, regData: 00000020
+
+----------time: @90ns---------
+Instr [00000020] = 14c0fff0
+daddr: 00000020, rData: 00000000, dwdata: 00000020, dwrite: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @100ns---------
+Instr [00000014] = 8cc42000
+daddr: 00002020, rData: 20000000, dwdata: 20000000, dwrite: 0
+aluRes: 00002020, drData: 20000000, memRd: 1, regData: 20000000
+alu inputs: 00000020, 00002000 	zf: 0, op0: 1, takeBr: 0
+regData: 20000000
+incPC=00000018, jmpPC=00002018, reg31=c0000000
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val 20000000 to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: c0000000
+reg 5: c0000000 	 reg 6: 00000020
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val e0000000 to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 20000000
+reg 5: c0000000 	 reg 6: 00000020
+=====================================
+incPC=0000001c, jmpPC=0000283d, reg31=20000000
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+regData: e0000000
+alu inputs: c0000000, 20000000 	zf: 0, op0: 0, takeBr: 0
+aluRes: e0000000, drData: xxxxxxxx, memRd: 0, regData: e0000000
+
+----------time: @110ns---------
+Instr [00000018] = 00a42821
+daddr: e0000000, rData: xxxxxxxx, dwdata: e0000000, dwrite: 0
+
+----------time: @120ns---------
+Instr [0000001c] = 28c60004
+daddr: 0000001c, rData: 00000000, dwdata: 0000001c, dwrite: 0
+aluRes: 0000001c, drData: 00000000, memRd: 0, regData: 0000001c
+alu inputs: 00000020, 00000004 	zf: 0, op0: 0, takeBr: 0
+regData: 0000001c
+incPC=00000020, jmpPC=00000024, reg31=00000020
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val 0000001c to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 20000000
+reg 5: e0000000 	 reg 6: 00000020
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 20000000
+reg 5: e0000000 	 reg 6: 0000001c
+=====================================
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+regData: 0000001c
+alu inputs: 0000001c, 00000000 	zf: 0, op0: 1, takeBr: 1
+aluRes: 0000001c, drData: 00000000, memRd: 0, regData: 0000001c
+
+----------time: @130ns---------
+Instr [00000020] = 14c0fff0
+daddr: 0000001c, rData: 00000000, dwdata: 0000001c, dwrite: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @140ns---------
+Instr [00000014] = 8cc42000
+daddr: 0000201c, rData: 10000000, dwdata: 10000000, dwrite: 0
+aluRes: 0000201c, drData: 10000000, memRd: 1, regData: 10000000
+alu inputs: 0000001c, 00002000 	zf: 0, op0: 1, takeBr: 0
+regData: 10000000
+incPC=00000018, jmpPC=00002018, reg31=20000000
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val 10000000 to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 20000000
+reg 5: e0000000 	 reg 6: 0000001c
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val f0000000 to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 10000000
+reg 5: e0000000 	 reg 6: 0000001c
+=====================================
+incPC=0000001c, jmpPC=0000283d, reg31=10000000
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+regData: f0000000
+alu inputs: e0000000, 10000000 	zf: 0, op0: 0, takeBr: 0
+aluRes: f0000000, drData: xxxxxxxx, memRd: 0, regData: f0000000
+
+----------time: @150ns---------
+Instr [00000018] = 00a42821
+daddr: f0000000, rData: xxxxxxxx, dwdata: f0000000, dwrite: 0
+
+----------time: @160ns---------
+Instr [0000001c] = 28c60004
+daddr: 00000018, rData: 00000000, dwdata: 00000018, dwrite: 0
+aluRes: 00000018, drData: 00000000, memRd: 0, regData: 00000018
+alu inputs: 0000001c, 00000004 	zf: 0, op0: 0, takeBr: 0
+regData: 00000018
+incPC=00000020, jmpPC=00000024, reg31=0000001c
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val 00000018 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 10000000
+reg 5: f0000000 	 reg 6: 0000001c
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 10000000
+reg 5: f0000000 	 reg 6: 00000018
+=====================================
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+regData: 00000018
+alu inputs: 00000018, 00000000 	zf: 0, op0: 1, takeBr: 1
+aluRes: 00000018, drData: 00000000, memRd: 0, regData: 00000018
+
+----------time: @170ns---------
+Instr [00000020] = 14c0fff0
+daddr: 00000018, rData: 00000000, dwdata: 00000018, dwrite: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @180ns---------
+Instr [00000014] = 8cc42000
+daddr: 00002018, rData: 0f000000, dwdata: 0f000000, dwrite: 0
+aluRes: 00002018, drData: 0f000000, memRd: 1, regData: 0f000000
+alu inputs: 00000018, 00002000 	zf: 0, op0: 1, takeBr: 0
+regData: 0f000000
+incPC=00000018, jmpPC=00002018, reg31=10000000
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val 0f000000 to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 10000000
+reg 5: f0000000 	 reg 6: 00000018
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val ff000000 to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 0f000000
+reg 5: f0000000 	 reg 6: 00000018
+=====================================
+incPC=0000001c, jmpPC=0000283d, reg31=0f000000
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+regData: ff000000
+alu inputs: f0000000, 0f000000 	zf: 0, op0: 0, takeBr: 0
+aluRes: ff000000, drData: xxxxxxxx, memRd: 0, regData: ff000000
+
+----------time: @190ns---------
+Instr [00000018] = 00a42821
+daddr: ff000000, rData: xxxxxxxx, dwdata: ff000000, dwrite: 0
+
+----------time: @200ns---------
+Instr [0000001c] = 28c60004
+daddr: 00000014, rData: 00000000, dwdata: 00000014, dwrite: 0
+aluRes: 00000014, drData: 00000000, memRd: 0, regData: 00000014
+alu inputs: 00000018, 00000004 	zf: 0, op0: 0, takeBr: 0
+regData: 00000014
+incPC=00000020, jmpPC=00000024, reg31=00000018
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val 00000014 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 0f000000
+reg 5: ff000000 	 reg 6: 00000018
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 0f000000
+reg 5: ff000000 	 reg 6: 00000014
+=====================================
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+regData: 00000014
+alu inputs: 00000014, 00000000 	zf: 0, op0: 1, takeBr: 1
+aluRes: 00000014, drData: 00000000, memRd: 0, regData: 00000014
+
+----------time: @210ns---------
+Instr [00000020] = 14c0fff0
+daddr: 00000014, rData: 00000000, dwdata: 00000014, dwrite: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @220ns---------
+Instr [00000014] = 8cc42000
+daddr: 00002014, rData: 00f00000, dwdata: 00f00000, dwrite: 0
+aluRes: 00002014, drData: 00f00000, memRd: 1, regData: 00f00000
+alu inputs: 00000014, 00002000 	zf: 0, op0: 1, takeBr: 0
+regData: 00f00000
+incPC=00000018, jmpPC=00002018, reg31=0f000000
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val 00f00000 to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 0f000000
+reg 5: ff000000 	 reg 6: 00000014
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val fff00000 to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 00f00000
+reg 5: ff000000 	 reg 6: 00000014
+=====================================
+incPC=0000001c, jmpPC=0000283d, reg31=00f00000
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+regData: fff00000
+alu inputs: ff000000, 00f00000 	zf: 0, op0: 0, takeBr: 0
+aluRes: fff00000, drData: xxxxxxxx, memRd: 0, regData: fff00000
+
+----------time: @230ns---------
+Instr [00000018] = 00a42821
+daddr: fff00000, rData: xxxxxxxx, dwdata: fff00000, dwrite: 0
+
+----------time: @240ns---------
+Instr [0000001c] = 28c60004
+daddr: 00000010, rData: 00000000, dwdata: 00000010, dwrite: 0
+aluRes: 00000010, drData: 00000000, memRd: 0, regData: 00000010
+alu inputs: 00000014, 00000004 	zf: 0, op0: 0, takeBr: 0
+regData: 00000010
+incPC=00000020, jmpPC=00000024, reg31=00000014
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val 00000010 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 00f00000
+reg 5: fff00000 	 reg 6: 00000014
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 00f00000
+reg 5: fff00000 	 reg 6: 00000010
+=====================================
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+regData: 00000010
+alu inputs: 00000010, 00000000 	zf: 0, op0: 1, takeBr: 1
+aluRes: 00000010, drData: 00000000, memRd: 0, regData: 00000010
+
+----------time: @250ns---------
+Instr [00000020] = 14c0fff0
+daddr: 00000010, rData: 00000000, dwdata: 00000010, dwrite: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @260ns---------
+Instr [00000014] = 8cc42000
+daddr: 00002010, rData: 000f0000, dwdata: 000f0000, dwrite: 0
+aluRes: 00002010, drData: 000f0000, memRd: 1, regData: 000f0000
+alu inputs: 00000010, 00002000 	zf: 0, op0: 1, takeBr: 0
+regData: 000f0000
+incPC=00000018, jmpPC=00002018, reg31=00f00000
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val 000f0000 to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 00f00000
+reg 5: fff00000 	 reg 6: 00000010
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val ffff0000 to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000f0000
+reg 5: fff00000 	 reg 6: 00000010
+=====================================
+incPC=0000001c, jmpPC=0000283d, reg31=000f0000
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+regData: ffff0000
+alu inputs: fff00000, 000f0000 	zf: 0, op0: 0, takeBr: 0
+aluRes: ffff0000, drData: xxxxxxxx, memRd: 0, regData: ffff0000
+
+----------time: @270ns---------
+Instr [00000018] = 00a42821
+daddr: ffff0000, rData: xxxxxxxx, dwdata: ffff0000, dwrite: 0
+
+----------time: @280ns---------
+Instr [0000001c] = 28c60004
+daddr: 0000000c, rData: 00000000, dwdata: 0000000c, dwrite: 0
+aluRes: 0000000c, drData: 00000000, memRd: 0, regData: 0000000c
+alu inputs: 00000010, 00000004 	zf: 0, op0: 0, takeBr: 0
+regData: 0000000c
+incPC=00000020, jmpPC=00000024, reg31=00000010
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val 0000000c to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000f0000
+reg 5: ffff0000 	 reg 6: 00000010
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000f0000
+reg 5: ffff0000 	 reg 6: 0000000c
+=====================================
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+regData: 0000000c
+alu inputs: 0000000c, 00000000 	zf: 0, op0: 1, takeBr: 1
+aluRes: 0000000c, drData: 00000000, memRd: 0, regData: 0000000c
+
+----------time: @290ns---------
+Instr [00000020] = 14c0fff0
+daddr: 0000000c, rData: 00000000, dwdata: 0000000c, dwrite: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @300ns---------
+Instr [00000014] = 8cc42000
+daddr: 0000200c, rData: 0000f000, dwdata: 0000f000, dwrite: 0
+aluRes: 0000200c, drData: 0000f000, memRd: 1, regData: 0000f000
+alu inputs: 0000000c, 00002000 	zf: 0, op0: 1, takeBr: 0
+regData: 0000f000
+incPC=00000018, jmpPC=00002018, reg31=000f0000
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val 0000f000 to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000f0000
+reg 5: ffff0000 	 reg 6: 0000000c
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val fffff000 to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 0000f000
+reg 5: ffff0000 	 reg 6: 0000000c
+=====================================
+incPC=0000001c, jmpPC=0000283d, reg31=0000f000
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+regData: fffff000
+alu inputs: ffff0000, 0000f000 	zf: 0, op0: 0, takeBr: 0
+aluRes: fffff000, drData: xxxxxxxx, memRd: 0, regData: fffff000
+
+----------time: @310ns---------
+Instr [00000018] = 00a42821
+daddr: fffff000, rData: xxxxxxxx, dwdata: fffff000, dwrite: 0
+
+----------time: @320ns---------
+Instr [0000001c] = 28c60004
+daddr: 00000008, rData: 00000000, dwdata: 00000008, dwrite: 0
+aluRes: 00000008, drData: 00000000, memRd: 0, regData: 00000008
+alu inputs: 0000000c, 00000004 	zf: 0, op0: 0, takeBr: 0
+regData: 00000008
+incPC=00000020, jmpPC=00000024, reg31=0000000c
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val 00000008 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 0000f000
+reg 5: fffff000 	 reg 6: 0000000c
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 0000f000
+reg 5: fffff000 	 reg 6: 00000008
+=====================================
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+regData: 00000008
+alu inputs: 00000008, 00000000 	zf: 0, op0: 1, takeBr: 1
+aluRes: 00000008, drData: 00000000, memRd: 0, regData: 00000008
+
+----------time: @330ns---------
+Instr [00000020] = 14c0fff0
+daddr: 00000008, rData: 00000000, dwdata: 00000008, dwrite: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @340ns---------
+Instr [00000014] = 8cc42000
+daddr: 00002008, rData: 00000f00, dwdata: 00000f00, dwrite: 0
+aluRes: 00002008, drData: 00000f00, memRd: 1, regData: 00000f00
+alu inputs: 00000008, 00002000 	zf: 0, op0: 1, takeBr: 0
+regData: 00000f00
+incPC=00000018, jmpPC=00002018, reg31=0000f000
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val 00000f00 to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 0000f000
+reg 5: fffff000 	 reg 6: 00000008
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val ffffff00 to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 00000f00
+reg 5: fffff000 	 reg 6: 00000008
+=====================================
+incPC=0000001c, jmpPC=0000283d, reg31=00000f00
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+regData: ffffff00
+alu inputs: fffff000, 00000f00 	zf: 0, op0: 0, takeBr: 0
+aluRes: ffffff00, drData: xxxxxxxx, memRd: 0, regData: ffffff00
+
+----------time: @350ns---------
+Instr [00000018] = 00a42821
+daddr: ffffff00, rData: xxxxxxxx, dwdata: ffffff00, dwrite: 0
+
+----------time: @360ns---------
+Instr [0000001c] = 28c60004
+daddr: 00000004, rData: 00000000, dwdata: 00000004, dwrite: 0
+aluRes: 00000004, drData: 00000000, memRd: 0, regData: 00000004
+alu inputs: 00000008, 00000004 	zf: 0, op0: 0, takeBr: 0
+regData: 00000004
+incPC=00000020, jmpPC=00000024, reg31=00000008
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val 00000004 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 00000f00
+reg 5: ffffff00 	 reg 6: 00000008
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 00000f00
+reg 5: ffffff00 	 reg 6: 00000004
+=====================================
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000014, curPC=00000020, nextPC=00000014
+
+
+regData: 00000004
+alu inputs: 00000004, 00000000 	zf: 0, op0: 1, takeBr: 1
+aluRes: 00000004, drData: 00000000, memRd: 0, regData: 00000004
+
+----------time: @370ns---------
+Instr [00000020] = 14c0fff0
+daddr: 00000004, rData: 00000000, dwdata: 00000004, dwrite: 0
+--Load/Store: regWr=1 memWr=0 regDst=1 memRd=1 dSize=11 --
+
+----------time: @380ns---------
+Instr [00000014] = 8cc42000
+daddr: 00002004, rData: 000000f0, dwdata: 000000f0, dwrite: 0
+aluRes: 00002004, drData: 000000f0, memRd: 1, regData: 000000f0
+alu inputs: 00000004, 00002000 	zf: 0, op0: 1, takeBr: 0
+regData: 000000f0
+incPC=00000018, jmpPC=00002018, reg31=00000f00
+jmpOrBrPC=00000018, curPC=00000014, nextPC=00000018
+
+
+writing val 000000f0 to register 04 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 00000f00
+reg 5: ffffff00 	 reg 6: 00000004
+=====================================
+--opcode=000000 aluCtrl=0100 aluSrc=0 setInv=0 regDst=1--
+writing val fffffff0 to register 05 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: ffffff00 	 reg 6: 00000004
+=====================================
+incPC=0000001c, jmpPC=0000283d, reg31=000000f0
+jmpOrBrPC=0000001c, curPC=00000018, nextPC=0000001c
+
+
+regData: fffffff0
+alu inputs: ffffff00, 000000f0 	zf: 0, op0: 0, takeBr: 0
+aluRes: fffffff0, drData: xxxxxxxx, memRd: 0, regData: fffffff0
+
+----------time: @390ns---------
+Instr [00000018] = 00a42821
+daddr: fffffff0, rData: xxxxxxxx, dwdata: fffffff0, dwrite: 0
+
+----------time: @400ns---------
+Instr [0000001c] = 28c60004
+daddr: 00000000, rData: 00000000, dwdata: 00000000, dwrite: 0
+aluRes: 00000000, drData: 00000000, memRd: 0, regData: 00000000
+alu inputs: 00000004, 00000004 	zf: 1, op0: 0, takeBr: 0
+regData: 00000000
+incPC=00000020, jmpPC=00000024, reg31=00000004
+jmpOrBrPC=00000020, curPC=0000001c, nextPC=00000020
+
+
+writing val 00000000 to register 06 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000004
+=====================================
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=00000024, jmpPC=00000014, reg31=00000000
+jmpOrBrPC=00000024, curPC=00000020, nextPC=00000024
+
+
+regData: 00000000
+alu inputs: 00000000, 00000000 	zf: 1, op0: 1, takeBr: 0
+aluRes: 00000000, drData: 00000000, memRd: 0, regData: 00000000
+
+----------time: @410ns---------
+Instr [00000020] = 14c0fff0
+daddr: 00000000, rData: 00000000, dwdata: 00000000, dwrite: 0
+--Load/Store: regWr=0 memWr=1 regDst=0 memRd=0 dSize=11 --
+
+----------time: @420ns---------
+Instr [00000024] = ac062000
+daddr: 00002000, rData: 0000000f, dwdata: 00002000, dwrite: 1
+aluRes: 00002000, drData: 0000000f, memRd: 0, regData: 00002000
+alu inputs: 00000000, 00002000 	zf: 0, op0: 1, takeBr: 0
+regData: 00002000
+incPC=00000028, jmpPC=00002028, reg31=00000000
+jmpOrBrPC=00000028, curPC=00000024, nextPC=00000028
+
+
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing to mem at 00002000 val 00002000 size  3
+--opcode=xxxxxx aluCtrl=00xx aluSrc=0 setInv=0 regDst=0--
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=0000002c, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=0000002c, curPC=00000028, nextPC=0000002c
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @430ns---------
+Instr [00000028] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @440ns---------
+Instr [0000002c] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=00000030, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000030, curPC=0000002c, nextPC=00000030
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=00000034, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000034, curPC=00000030, nextPC=00000034
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @450ns---------
+Instr [00000030] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @460ns---------
+Instr [00000034] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=00000038, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000038, curPC=00000034, nextPC=00000038
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=0000003c, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=0000003c, curPC=00000038, nextPC=0000003c
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @470ns---------
+Instr [00000038] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @480ns---------
+Instr [0000003c] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=00000040, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000040, curPC=0000003c, nextPC=00000040
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=00000044, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000044, curPC=00000040, nextPC=00000044
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @490ns---------
+Instr [00000040] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @500ns---------
+Instr [00000044] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=00000048, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000048, curPC=00000044, nextPC=00000048
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=0000004c, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=0000004c, curPC=00000048, nextPC=0000004c
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @510ns---------
+Instr [00000048] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @520ns---------
+Instr [0000004c] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=00000050, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000050, curPC=0000004c, nextPC=00000050
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=00000054, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000054, curPC=00000050, nextPC=00000054
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @530ns---------
+Instr [00000050] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @540ns---------
+Instr [00000054] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=00000058, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000058, curPC=00000054, nextPC=00000058
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=0000005c, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=0000005c, curPC=00000058, nextPC=0000005c
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @550ns---------
+Instr [00000058] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @560ns---------
+Instr [0000005c] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=00000060, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000060, curPC=0000005c, nextPC=00000060
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=00000064, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000064, curPC=00000060, nextPC=00000064
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @570ns---------
+Instr [00000060] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @580ns---------
+Instr [00000064] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=00000068, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000068, curPC=00000064, nextPC=00000068
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=0000006c, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=0000006c, curPC=00000068, nextPC=0000006c
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @590ns---------
+Instr [00000068] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @600ns---------
+Instr [0000006c] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=00000070, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000070, curPC=0000006c, nextPC=00000070
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=00000074, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000074, curPC=00000070, nextPC=00000074
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @610ns---------
+Instr [00000070] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @620ns---------
+Instr [00000074] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=00000078, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000078, curPC=00000074, nextPC=00000078
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=0000007c, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=0000007c, curPC=00000078, nextPC=0000007c
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @630ns---------
+Instr [00000078] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @640ns---------
+Instr [0000007c] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=00000080, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000080, curPC=0000007c, nextPC=00000080
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=00000084, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000084, curPC=00000080, nextPC=00000084
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @650ns---------
+Instr [00000080] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @660ns---------
+Instr [00000084] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=00000088, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000088, curPC=00000084, nextPC=00000088
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=0000008c, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=0000008c, curPC=00000088, nextPC=0000008c
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @670ns---------
+Instr [00000088] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @680ns---------
+Instr [0000008c] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=00000090, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000090, curPC=0000008c, nextPC=00000090
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=00000094, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000094, curPC=00000090, nextPC=00000094
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @690ns---------
+Instr [00000090] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @700ns---------
+Instr [00000094] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=00000098, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000098, curPC=00000094, nextPC=00000098
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=0000009c, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=0000009c, curPC=00000098, nextPC=0000009c
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @710ns---------
+Instr [00000098] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @720ns---------
+Instr [0000009c] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=000000a0, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000a0, curPC=0000009c, nextPC=000000a0
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=000000a4, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000a4, curPC=000000a0, nextPC=000000a4
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @730ns---------
+Instr [000000a0] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @740ns---------
+Instr [000000a4] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=000000a8, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000a8, curPC=000000a4, nextPC=000000a8
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=000000ac, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000ac, curPC=000000a8, nextPC=000000ac
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @750ns---------
+Instr [000000a8] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @760ns---------
+Instr [000000ac] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=000000b0, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000b0, curPC=000000ac, nextPC=000000b0
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=000000b4, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000b4, curPC=000000b0, nextPC=000000b4
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @770ns---------
+Instr [000000b0] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @780ns---------
+Instr [000000b4] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=000000b8, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000b8, curPC=000000b4, nextPC=000000b8
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=000000bc, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000bc, curPC=000000b8, nextPC=000000bc
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @790ns---------
+Instr [000000b8] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @800ns---------
+Instr [000000bc] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=000000c0, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000c0, curPC=000000bc, nextPC=000000c0
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=000000c4, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000c4, curPC=000000c0, nextPC=000000c4
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @810ns---------
+Instr [000000c0] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @820ns---------
+Instr [000000c4] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=000000c8, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000c8, curPC=000000c4, nextPC=000000c8
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=000000cc, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000cc, curPC=000000c8, nextPC=000000cc
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @830ns---------
+Instr [000000c8] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @840ns---------
+Instr [000000cc] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=000000d0, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000d0, curPC=000000cc, nextPC=000000d0
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=000000d4, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000d4, curPC=000000d0, nextPC=000000d4
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @850ns---------
+Instr [000000d0] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @860ns---------
+Instr [000000d4] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=000000d8, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000d8, curPC=000000d4, nextPC=000000d8
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=000000dc, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000dc, curPC=000000d8, nextPC=000000dc
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @870ns---------
+Instr [000000d8] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @880ns---------
+Instr [000000dc] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=000000e0, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000e0, curPC=000000dc, nextPC=000000e0
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=000000e4, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000e4, curPC=000000e0, nextPC=000000e4
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @890ns---------
+Instr [000000e0] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @900ns---------
+Instr [000000e4] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=000000e8, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000e8, curPC=000000e4, nextPC=000000e8
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=000000ec, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000ec, curPC=000000e8, nextPC=000000ec
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @910ns---------
+Instr [000000e8] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @920ns---------
+Instr [000000ec] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=000000f0, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000f0, curPC=000000ec, nextPC=000000f0
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=000000f4, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000f4, curPC=000000f0, nextPC=000000f4
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @930ns---------
+Instr [000000f0] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @940ns---------
+Instr [000000f4] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=000000f8, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000f8, curPC=000000f4, nextPC=000000f8
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=000000fc, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=000000fc, curPC=000000f8, nextPC=000000fc
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @950ns---------
+Instr [000000f8] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @960ns---------
+Instr [000000fc] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=00000100, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000100, curPC=000000fc, nextPC=00000100
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=00000104, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000104, curPC=00000100, nextPC=00000104
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @970ns---------
+Instr [00000100] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @980ns---------
+Instr [00000104] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=00000108, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000108, curPC=00000104, nextPC=00000108
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
+incPC=0000010c, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=0000010c, curPC=00000108, nextPC=0000010c
+
+
+regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+
+----------time: @990ns---------
+Instr [00000108] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+
+----------time: @1000ns---------
+Instr [0000010c] = xxxxxxxx
+daddr: xxxxxxxx, rData: xxxxxxxx, dwdata: xxxxxxxx, dwrite: 0
+aluRes: xxxxxxxx, drData: xxxxxxxx, memRd: 0, regData: xxxxxxxx
+alu inputs: xxxxxxxx, xxxxxxxx 	zf: x, op0: x, takeBr: 0
+regData: xxxxxxxx
+incPC=00000110, jmpPC=xxxxxxxx, reg31=xxxxxxxx
+jmpOrBrPC=00000110, curPC=0000010c, nextPC=00000110
+
+
+writing val xxxxxxxx to register xx 
+============REGISTER DUMP============
+reg 0: 00000000 	 reg 4: 000000f0
+reg 5: fffffff0 	 reg 6: 00000000
+=====================================
