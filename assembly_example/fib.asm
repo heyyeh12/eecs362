@@ -17,14 +17,14 @@ _f:
 _fib:
     ; Initialize r1-r2
     lw r1, _f(r0)
-    lw r2, (_f+4)(r0)
+    lw r2, (_f + 4)(r0)
     ; r3 = 'i'
     xor r3, r3, r3 ; i=0
     addui r3, r3, #8 ; i=2
 fibr1:
     addu r1, r1, r2 ; a=(a+b)
     sw _f(r3), r1   ; f[i] = a
-    addui r3, r3, #4 ; i++
+    addui r3, r3, #4 ; i++ 
     addu r2, r1, r2 ; b=(a+b)
     sw _f(r3), r2   ; f[i] = b
     addui r3, r3, #4 ; i++

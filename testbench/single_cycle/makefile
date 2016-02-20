@@ -14,7 +14,7 @@ COMPONENTS = $(addprefix $(SOURCE_DIR), ex.v id.v ifetch.v wb.v singleCycle.v to
 # SOURCES_PATH = $(LIB_PATH) $(addprefix $(SOURCE_DIR), $(addsuffix .v, $(SOURCES)))
 # SOURCES_VVP = $(addsuffix .vvp, $(SOURCES))
 
-default: control regfile sign_extender id ex topLevel singleCycle
+default: topLevel
 
 
 ####### SINGLE CYCLE PROCESSOR #######

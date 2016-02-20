@@ -31,8 +31,8 @@ module ex(aluSrc, aluCtrl, setInv, busA, busB, im32, aluRes, zf, of, cf, op0, ta
     
     mux2to1 #(32) MultMux(.src0(aluTmp), .src1(multRes), .sel(multSel), .z(aluRes));
     
-    always @ (posedge(clk)) begin
-        $display("alu inputs: %x, %x \tzf: %b, op0: %b, takeBr: %x", busA, srcB_2, zf, op0, takeBr);
-    end
+    // always @ (posedge(clk)) begin
+    //     $display("alu inputs: %x, %x \tzf: %b, op0: %b, takeBr: %x", busA, srcB_2, zf, op0, takeBr);
+    // end
         
 endmodule

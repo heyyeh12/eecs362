@@ -41,11 +41,11 @@ module singleCycle(
     wire[31:0] signExtImm;
     
     // IF
-    wire[31:0] nextPC;
+    wire[31:0] nextPC, reg31Val, loadRegData;
     
     ifetch ifetch(
-        .initPC(initPC), .firstPC(nextPC), .reg31(busB), .imm32(signExtImm),
-        .rst(rst), .clk(clk), .nextPC(nextPC),
+        .initPC(initPC), .firstPC(nextPC), .jrRegVal(busB), .imm32(signExtImm),
+        .rst(rst), .clk(clk), .nextPC(nextPC), .reg31Val(reg31Val),
         .jr(jr), .jump(jump), .link(link), .takeBr(takeBr), .curPC(iAddr)
     );
     
@@ -76,9 +76,11 @@ module singleCycle(
     assign dwData = busB;
     
     // WB
-    mux2to1 #(32) LOAD_REG(.src0(aluRes), .src1(drData), .sel(memRd), .z(regData));
+    mux2to1 #(32) LOAD_REG(.src0(aluRes), .src1(drData), .sel(memRd), .z(loadRegData));
+    mux2to1 #(32) loadRegORlink(.src0(loadRegData), .src1(reg31Val), .sel(link), .z(regData));
     
-    always @ (posedge(clk)) begin
-        $display("aluRes: %x, drData: %x, memRd: %b, regData: %x", aluRes, drData, memRd, regData);
-    end
+    // DEBUG
+    // always @ (posedge(clk)) begin
+    //     // $display("aluRes: %x, drData: %x, memRd: %b, regData: %x", aluRes, drData, memRd, regData);
+    // end
 endmodule // singleCycle

@@ -52,12 +52,13 @@ module topLevel();
         //// Debug: dump memory
         $writememh("imem", IMEM.mem);
         $writememh("dmem", DMEM.mem);
-
+   
         clk = 1;rst = 1;
         // $monitor("%b: Instr [%x] = %x", clk, iaddr, instr);
+    
         #0
         #7 rst = 0;
-        #500 $finish;
+        #1200 $finish;
         
 
     end // initial
@@ -66,10 +67,17 @@ module topLevel();
         #5 clk = !clk; 
     
     // DEBUG
+    
     always @ (posedge(clk)) begin
+    
         $display("\n----------time: @%0dns---------", $time);
-        $display("Instr [%x] = %x", iaddr, instr);
-        $display("daddr: %x, rData: %x, dwdata: %x, dwrite: %b", daddr, drdata, dwdata, dwrite);
+        //$display("Instr [%x] = %x", iaddr, instr);
+        //$display("daddr: %x, rData: %x, dwdata: %x, dwrite: %b", daddr, drdata, dwdata, dwrite);
+       // $display("reg1 =%x", regfile.mem[1]);
+        $display("reg2 =%x", regfile.mem[2]);
+        $display("reg3 =%x", regfile.mem[3]);
+       // $display("reg4 =%x", regfile.mem[4]);
+       
     end
         
 endmodule

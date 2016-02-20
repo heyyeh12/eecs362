@@ -84,18 +84,18 @@ module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regW
                             end
                         endcase
                     end
-            
+                    6'b010101 : regWr = 0; // nop
                 endcase // func
-            $display("--opcode=%b aluCtrl=%b aluSrc=%b setInv=%b regDst=%b--", opcode, aluCtrl, aluSrc, setInv, regDst);
+          //  $display("--opcode=%b aluCtrl=%b aluSrc=%b setInv=%b regDst=%b--", opcode, aluCtrl, aluSrc, setInv, regDst);
             end // end R - Type 
             
             6'b0?001? : begin // J - Type Instructions + I - type jump instructions
                 aluCtrl = 4'b0100;
-                regWr = 0;
+                regWr = opcode[0];
                 jump = 1;
                 jr = opcode[4];
                 link = opcode[0];
-                $display("--Jump Instruction: jump=%b jr=%b link=%b--", jump, jr, link);
+             //   $display("--Jump Instruction: jump=%b jr=%b link=%b--", jump, jr, link);
             end
             
             // I - Type Instructions
@@ -103,7 +103,7 @@ module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regW
                 aluCtrl = 4'b0100;
                 regWr = ~opcode[3];
                 memWr = opcode[3];
-                regDst = regWr;
+                regDst = 0;
                 memRd = regWr;
                 dSize = opcode[1:0];
                 case(opcode[3:0])
@@ -111,7 +111,7 @@ module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regW
                     4'b0011 : dSize = 2'b11;
                     4'b1100 : dSize = 2'b11;
                 endcase
-                $display("--Load/Store: regWr=%b memWr=%b regDst=%b memRd=%b dSize=%b --", regWr, memWr, regDst, memRd, dSize);
+             //   $display("--Load/Store: regWr=%b memWr=%b regDst=%b memRd=%b dSize=%b --", regWr, memWr, regDst, memRd, dSize);
             end
             6'b0010?? : begin // addi, subi
                 aluCtrl[3:1] = 3'b010;

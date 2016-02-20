@@ -27,8 +27,8 @@ module id(
     
 assign rs1 = instruction[25:21];
    
-   or_gate reg31Sel (.a(jr), .b(link), .z(sel31));
-   mux2to1 #(5) muxReg31 (.src0(instruction[20:16]), .src1(5'b11111), .sel(sel31), .z(rs2_wire));
+//   or_gate reg31Sel (.a(jr), .b(link), .z(sel31));
+   mux2to1 #(5) muxReg31 (.src0(instruction[20:16]), .src1(5'b11111), .sel(link), .z(rs2_wire));
     
     control control(
         .instruction(instruction),
@@ -52,7 +52,9 @@ assign rs1 = instruction[25:21];
     
     sign_extender sign_extender(.imm(instruction[25:0]), .signExt(signExt), .res(signExtImm), .jump(jump));
     
-    always @ (posedge(clk)) begin
-        $display("regData: %x", regData);
-    end
+    // always @ (posedge(clk)) begin
+    //     $display("signExtended: %x", signExtImm);
+    //     $display("rs2_wire:%x", rs2_wire);
+    //     $display("rd:%x", rd);
+    // end
 endmodule // id
