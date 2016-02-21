@@ -196,7 +196,7 @@ output z;
 
 // Implementation
 
-assign z = a ~& b;
+assign z = !(a && b);
 
 endmodule
 
@@ -211,7 +211,7 @@ output z;
 
 // Implementation
 
-assign z = a ~| b;
+assign z = ~(a || b);
 
 endmodule
 

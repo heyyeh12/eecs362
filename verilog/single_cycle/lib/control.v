@@ -40,8 +40,8 @@ module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regW
     dSize = 2'b00;
     signExt = instruction[0]; // == 1 when unsigned
     
-    assign opcode = instruction [31:26];
-    assign func = instruction [5:0];
+    opcode = instruction [31:26];
+    func = instruction [5:0];
 
         
    //// for alu operations, sets signals aluCtrl, setInv, and aluSrc ////

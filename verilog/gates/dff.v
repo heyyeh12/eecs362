@@ -16,7 +16,7 @@ module dff (d, clk, rst, enable, q);
     
     reg [N_BITS - 1:0] q;
 
- always @(posedge(clk), rst, enable)
+ always @(posedge(clk), posedge(rst))
  begin
     if (rst == 1)
        q <= {N_BITS{1'b0}};
@@ -44,7 +44,7 @@ module dffa (d, clk, rst, enable, q, aload, arst);
     output [N_BITS - 1: 0] q;
     reg [N_BITS - 1:0] q;
 
- always @(posedge(clk), rst, enable)
+ always @(posedge(clk), posedge(rst))
  begin
     if (rst == 1)
         q <= {N_BITS{1'b0}};

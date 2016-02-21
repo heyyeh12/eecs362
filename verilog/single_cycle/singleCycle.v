@@ -17,6 +17,7 @@ module singleCycle(
     output [31:0] dAddr, dwData;
     output dWrite;
     output [1:0] dSize;
+    wire [31:0] dResize;
     
     // REGFILE INTERFACE
     input [31:0] busA, busB;
@@ -56,7 +57,7 @@ module singleCycle(
         .regDst(regDst), .memRd(memRd), .memWr(dWrite), .regWr(regWr),
         .branch(branch), .jr(jr), .jump(jump), .link(link),
         .dSize(dSize), .signExt(signExt),
-        .signExtImm(signExtImm), .busA(busA), .busB(busB),
+        .signExtImm(signExtImm),
         .clk(clk),
         .rs1(rs1), .rs2(rs2), .rd(rd)
     );
@@ -76,11 +77,8 @@ module singleCycle(
     assign dwData = busB;
     
     // WB
-    mux2to1 #(32) LOAD_REG(.src0(aluRes), .src1(drData), .sel(memRd), .z(loadRegData));
+    mux4to1 #(32) dsize_reg(.src0(24'b0, {drData[31:24]}), .src1({16'b0, drData[31:16]}), .src2(drData), .src3(drData), .sel(dSize), .z(dResize));
+    mux2to1 #(32) LOAD_REG(.src0(aluRes), .src1(dResize), .sel(memRd), .z(loadRegData));
     mux2to1 #(32) loadRegORlink(.src0(loadRegData), .src1(reg31Val), .sel(link), .z(regData));
     
-    // DEBUG
-    // always @ (posedge(clk)) begin
-    //     // $display("aluRes: %x, drData: %x, memRd: %b, regData: %x", aluRes, drData, memRd, regData);
-    // end
 endmodule // singleCycle

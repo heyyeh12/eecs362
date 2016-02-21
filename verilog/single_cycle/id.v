@@ -4,7 +4,7 @@ module id(
     regDst, memRd, memWr, regWr,
     branch, jr, jump, link,
     dSize, signExt,
-    signExtImm, busA, busB,
+    signExtImm,
     rs1, rs2, rd
 );
     
@@ -17,12 +17,13 @@ module id(
             signExt;
     output [1:0] dSize;
     output [3:0] aluCtrl;
-    output [31:0] signExtImm, busA, busB;
+    output [31:0] signExtImm;
     output [4:0] rs1, rs2, rd;
     
     
    wire [4:0]  rs2_wire;
    wire sel31;
+   
    
     
 assign rs1 = instruction[25:21];
@@ -53,8 +54,8 @@ assign rs1 = instruction[25:21];
     sign_extender sign_extender(.imm(instruction[25:0]), .signExt(signExt), .res(signExtImm), .jump(jump));
     
     // always @ (posedge(clk)) begin
-    //     $display("signExtended: %x", signExtImm);
-    //     $display("rs2_wire:%x", rs2_wire);
-    //     $display("rd:%x", rd);
+    //     // $display("signExtended: %x", signExtImm);
+    //     // $display("rs2_wire:%x", rs2_wire);
+    //     // $display("rd:%x", rd);
     // end
 endmodule // id
