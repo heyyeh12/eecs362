@@ -6,11 +6,11 @@
 // TODO: floating point and mul/mulu aluCtrl
 //
 
-module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regWr, branch, jr, jump, link, dSize, signExt);
+module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regWr, branch, jr, jump, link, dSize, signExt, zeroExt);
 
     // Interface
     input [31:0] instruction;
-    output regDst, memRd, memWr, regWr, branch, jr, jump, link, setInv, aluSrc, signExt;
+    output regDst, memRd, memWr, regWr, branch, jr, jump, link, setInv, aluSrc, signExt, zeroExt;
     output [3:0] aluCtrl;
     output [1:0] dSize;
 
@@ -39,6 +39,7 @@ module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regW
     link = 0;
     dSize = 2'b00;
     signExt = instruction[0]; // == 1 when unsigned
+    zeroExt = 0;
     
     opcode = instruction [31:26];
     func = instruction [5:0];
@@ -156,6 +157,7 @@ module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regW
             6'b001111 : begin // lhi 
                 regDst = 1;
                 aluCtrl = 4'b0100;
+                zeroExt = 1;
             end
         endcase
         // $display("--Jump Instruction: jump=%b jr=%b link=%b--", jump, jr, link);

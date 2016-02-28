@@ -12,6 +12,7 @@ module ifetch(initPC, firstPC, jrRegVal, imm32, rst, clk, curPC, nextPC, reg31Va
     dffa #(32) dffa (.d(firstPC), .clk(clk), .rst(0), .enable(1'b1), .q(curPC_wire), .aload(initPC), .arst(rst));
    assign curPC = curPC_wire;
     
+    //
      mux2to1 #(1) getJR (.src0(jr), .src1(1'b0), .sel(rst), .z(jr_wire)); 
      mux2to1 #(1) getJump (.src0(jump), .src1(1'b0), .sel(rst), .z(jump_wire)); 
      mux2to1 #(1) getLink (.src0(link), .src1(1'b0), .sel(rst), .z(link_wire)); 
@@ -23,7 +24,6 @@ module ifetch(initPC, firstPC, jrRegVal, imm32, rst, clk, curPC, nextPC, reg31Va
     
     // increment PC by 4 again for reg31Val
     adder add8 (.a(32'b0100), .b(incPC), .ctrl(4'b0000), .res(reg31Val));
-    
     
     // increment PC + 4 by immediate
     adder addImm (.a(incPC), .b(imm32), .ctrl(4'b0000), .res(jmpPC));

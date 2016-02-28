@@ -16,7 +16,7 @@ module topLevel();
     integer dfileobj, dmaddr, r, k, i;
 
     // CONNECTING THE WIRES
-    imem #(.SIZE(1024)) IMEM(.addr(iaddr), .instr(instr));
+    imem #(.SIZE(16384)) IMEM(.addr(iaddr), .instr(instr));
     dmem #(.SIZE(16384)) DMEM(.addr(daddr), .rData(drdata), .wData(dwdata), .writeEnable(dwrite), .dsize(dsize), .clk(clk));
     regfile regfile(
         .rs1(rs1), .rs2(rs2), .rd(rd), .rData1(busA), .rData2(busB),
@@ -24,7 +24,7 @@ module topLevel();
     );
     
     singleCycle CPU(
-        .clk(clk), .rst(rst), .initPC(32'b0),
+        .clk(clk), .rst(rst), .initPC(32'h1000),
         .instruction(instr), .iAddr(iaddr),
         .dAddr(daddr), .drData(drdata), .dwData(dwdata), .dWrite(dwrite), .dSize(dsize),
         .busA(busA), .busB(busB), .rs1(rs1), .rs2(rs2), .rd(rd), .regData(regData), .regWr(regWr)

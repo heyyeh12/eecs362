@@ -77,7 +77,7 @@ module singleCycle(
     assign dwData = busB;
     
     // WB
-    mux4to1 #(32) dsize_reg(.src0(24'b0, {drData[31:24]}), .src1({16'b0, drData[31:16]}), .src2(drData), .src3(drData), .sel(dSize), .z(dResize));
+    mux4to1 #(32) dsize_reg(.src0({24'b0, drData[31:24]}), .src1({16'b0, drData[31:16]}), .src2(drData), .src3(drData), .sel(dSize), .z(dResize));
     mux2to1 #(32) LOAD_REG(.src0(aluRes), .src1(dResize), .sel(memRd), .z(loadRegData));
     mux2to1 #(32) loadRegORlink(.src0(loadRegData), .src1(reg31Val), .sel(link), .z(regData));
     
