@@ -6,11 +6,11 @@
 // TODO: floating point and mul/mulu aluCtrl
 //
 
-module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regWr, branch, jr, jump, link, dSize, signExt, zeroExt);
+module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regWr, branch, jr, jump, link, dSize, signExt, zeroExt, fp);
 
     // Interface
     input [31:0] instruction;
-    output regDst, memRd, memWr, regWr, branch, jr, jump, link, setInv, aluSrc, signExt, zeroExt;
+    output regDst, memRd, memWr, regWr, branch, jr, jump, link, setInv, aluSrc, signExt, zeroExt,fp;
     output [3:0] aluCtrl;
     output [1:0] dSize;
 
@@ -18,7 +18,7 @@ module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regW
     // Internal Signals
     reg [5:0] opcode;
     reg [5:0] func;
-    reg regDst, memRd, memWr, regWr, branch, jr, jump, link, setInv, aluSrc, signExt;
+    reg regDst, memRd, memWr, regWr, branch, jr, jump, link, setInv, aluSrc, signExt, zeroExt, fp;
     reg [3:0] aluCtrl;
     reg [1:0] dSize;
     
@@ -40,6 +40,7 @@ module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regW
     dSize = 2'b00;
     signExt = instruction[0]; // == 1 when unsigned
     zeroExt = 0;
+    fp = 0;
     
     opcode = instruction [31:26];
     func = instruction [5:0];
@@ -86,6 +87,12 @@ module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regW
                         endcase
                     end
                     6'b010101 : regWr = 0; // nop
+                    6'b11???? : begin // fp instructions
+                        regWr = ~func[0];           // only write to regfile for movfp2i - write busFP
+                        fp = 1;                     // write to fp = ~regWr && fp for movi2pf (write aluRes (busA))
+                        regDst = 1;
+                        aluSrc = 0;
+                    end
                 endcase // func
           //  $display("--opcode=%b aluCtrl=%b aluSrc=%b setInv=%b regDst=%b--", opcode, aluCtrl, aluSrc, setInv, regDst);
             end // end R - Type 
@@ -147,6 +154,7 @@ module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regW
                 endcase
             end
             6'b000001 : begin // mult, multu
+                aluSrc = 0;
                 regDst = 1;
             end
             6'b00010? : begin // beq, bnez
@@ -156,7 +164,7 @@ module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regW
             end
             6'b001111 : begin // lhi 
                 regDst = 1;
-                aluCtrl = 4'b0100;
+                aluCtrl = 4'b0010;
                 zeroExt = 1;
             end
         endcase

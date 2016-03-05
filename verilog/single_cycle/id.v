@@ -53,6 +53,7 @@ assign rs1 = instruction[25:21];
     
     sign_extender sign_extender(.imm(instruction[25:0]), .signExt(signExt), .res(signExtImm), .jump(jump));
     
+    
     // always @ (posedge(clk)) begin
     //     // $display("signExtended: %x", signExtImm);
     //     // $display("rs2_wire:%x", rs2_wire);

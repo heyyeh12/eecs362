@@ -51,7 +51,7 @@ module regfile(rs1, rs2, rd, rData1, rData2, wData, regWr, clk);
 endmodule // regfile
 
 
-module fpregfile(rs, rd, rData, wData, regWr, clk);
+module fpregfile(rs, rd, rData, wData, regWr, clk, fp);
 
     // floating point registers
     
@@ -66,8 +66,8 @@ module fpregfile(rs, rd, rData, wData, regWr, clk);
     
     input [4:0] rs, rd;
     input [31:0] wData;
-    input regWr, clk;
-    output [31:0] rData;
+    input regWr, clk, fp;
+    output [31:0] rData; //busFP on the pipeline level
     reg [31:0] mem[(SIZE-1):0];
     initial mem[0] = 32'd0;
     
@@ -84,7 +84,7 @@ module fpregfile(rs, rd, rData, wData, regWr, clk);
     
     // Write
     always @ (posedge clk) begin
-        if (regWr) begin
+        if (~regWr && fp) begin
             $display("writing val %x to fp register %x ", wData, rd);
             mem[rd] <= wData[31:0];
         end

@@ -1,3 +1,6 @@
+`ifndef _constants_vh_
+`define _constants_vh_
+
 // Register 0 index
 `define R0      5'b0
 
@@ -8,3 +11,5 @@
 
 // Instructions
 `define NOP     32'h15
+
+`endif //_constants_vh_

@@ -1,11 +1,11 @@
 module mem(
     isZero, op0, branch, 
     jump, jr, 
-    incPc, imm32, 
+    incPC, imm32, busB,
     reg31Val, nextPC);
     
    // input [31:0] aluRes;                // from EX
-   // input [31:0] busB;                  // from ID
+    input [31:0] busB;                  // from ID
     
     // inputs for choosing nextPC
     input isZero;                       // input from EX, is busA 0

@@ -1,0 +1,24 @@
+SO WE DON"T GET CONFUSED ABOUT WHAT'S DIFFERENT
+
+//////////////////
+3/5
+
+UPDATES
+- AH: created topLevel.v for pipeline, copied from singleCycle topLevel but renamed signals to match piepeline and added appropriate wires for fp 
+- BY: created makefile target for topLevel
+
+TODO
+
+
+//////////////////
+
+//////////////////
+3/3
+
+UPDATES
+- BY: created initial control file for pipereg stuff
+
+TODO
+- BY: I think we need to pass instructions along to each stage so the pipe reg control can look at what the previous instructions were. This means we could remove op0 and rd(or is there a special Reg31 case?)
+
+//////////////////

@@ -4,7 +4,7 @@ module id(
     regDst, memRd, memWr, regWr,
     branch, jr, jump, link,
     dSize, imm32,
-    rs1, rs2, rd, op0
+    rs1, rs2, rd, op0, fp
 );
 
     // Interface
@@ -15,7 +15,7 @@ module id(
     output [1:0] dSize;
     output aluSrc, setInv,          
             regDst, memRd, memWr, regWr,
-            branch, jr, jump, link, op0;
+            branch, jr, jump, link, op0, fp;
     output [4:0] rs1, rs2, rd;      // set by instruction, link, and regDst
     
     
@@ -44,22 +44,24 @@ module id(
         .link(link),
         .dSize(dSize),
         .signExt(signExt),
-        .zeroExt(zeroExt)
+        .zeroExt(zeroExt),
+        .fp(fp)
         );
 
 
     // If jal/jalr, set rs2 to reg31
-    mux2to1 #(5) muxReg31 (.src0(instruction[20:16]), .src1(5'b11111), .sel(link), .z(rs2);
+    mux2to1 #(5) muxReg31 (.src0(instruction[20:16]), .src1(5'b11111), .sel(link), .z(rs2));
     
-    // Either rs2 or instruction[15:11] will be the destination register
+    // Either rs2 or instruction[15:11] will be the destination register (rd)
     mux2to1 #(5) mux2to1(.src0(rs2), .src1(instruction[15:11]), .sel(regDst), .z(rd));
     
+  
     // assign rs1
-    assign rs1 = instruction[25:21];
+    assign rs1 = instruction[25:21]; // if fp = 1, this is referencing a fp register
     
     // Sign-extension
     sign_extender sign_extender(.imm(instruction[25:0]), .signExt(signExt), .res(signExt32), .jump(jump));
-    zeroExt32 = {instruction[15:0], 16'b0};
+    assign zeroExt32 = {instruction[15:0], 16'b0};
     mux2to1 #(32) muxImmExt(.src0(signExt32), .src1(zeroExt32), .sel(zeroExt));
     
     // assign op0 for branch stuff in MEM

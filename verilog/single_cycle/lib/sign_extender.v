@@ -8,12 +8,13 @@
     // INPUTS:
     //     imm = [15:0] immediate value
     //     signExt = 0 for signed extension
+    //      jump
         
     // OUTPUTS: 
     //     res = [31:0] result
 
 
-module sign_extender (imm, signExt, res, jump);
+module sign_extender (imm, signExt, jump, res);
 
     input [25:0] imm;
     input signExt, jump;
