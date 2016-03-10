@@ -23,128 +23,31 @@ _usum:
     xor r5, r5, r5
     xor r6, r6, r6
     addi r6, r0, 36 
-    
-    nop
-    nop
-    nop
-    
     lw r4, _dat(r6)
-    
-    nop
-    nop
-    nop
-    
     addu r5, r5, r4
     subi r6, r6, 4
-    
-    nop
-    nop
-    nop
-    
     lw r4, _dat(r6)
-    
-    nop
-    nop
-    nop
-    
     addu r5, r5, r4
     subi r6, r6, 4
-    
-    nop
-    nop
-    nop
-    
     lw r4, _dat(r6)
-    
-    nop
-    nop
-    nop
-    
     addu r5, r5, r4
     subi r6, r6, 4
-    
-    nop
-    nop
-    nop
-    
     lw r4, _dat(r6)
-    
-    nop
-    nop
-    nop
-    
     addu r5, r5, r4
     subi r6, r6, 4
-    
-    nop
-    nop
-    nop
-    
     lw r4, _dat(r6)
-    
-    nop
-    nop
-    nop
-    
     addu r5, r5, r4
     subi r6, r6, 4
-    
-    nop
-    nop
-    nop
-    
     lw r4, _dat(r6)
-    
-    nop
-    nop
-    nop
-    
     addu r5, r5, r4
     subi r6, r6, 4
-    
-    nop
-    nop
-    nop
-    
-    
     lw r4, _dat(r6)
-    
-    nop
-    nop
-    nop
-    
     addu r5, r5, r4
     subi r6, r6, 4
-    
-    nop
-    nop
-    nop
-    
     lw r4, _dat(r6)
-    
-    nop
-    nop
-    nop
-    
     addu r5, r5, r4
     subi r6, r6, 4
-    
-    nop
-    nop
-    nop
-    
     lw r4, _dat(r6)
-    
-    nop
-    nop
-    nop
-    
     addu r5, r5, r4
-    
-    nop
-    nop
-    nop
-    
     sw _dat(r0), r5
-    
 .endproc _usum

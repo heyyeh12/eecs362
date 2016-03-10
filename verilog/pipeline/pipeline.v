@@ -42,11 +42,12 @@ module pipeline(
 ////// IF Module
     // New outputs of module
     wire [31:0] incPC_0;
+    // wire not_halt;
     
     ifetch ifetch(
     // Inputs
     //.takeLeap(takeLeap),
-        .clk(clk), .rst(rst), .initPC(initPC), .nextPC(nextPC_3), .takeLeap(0), .enable(pc_enable),
+        .clk(clk), .rst(rst), .initPC(initPC), .nextPC(nextPC_3), .takeLeap(0), .enable(pc_enable), //.not_halt(not_halt),
     // Outputs
         .curPC(iAddr), .incPC(incPC_0)
     );
@@ -59,7 +60,7 @@ module pipeline(
     wire [31:0] incPC_1, instr_1;
     
     if_id if_id(
-        .clk(clk), .rst(rst), .ctrl(ctrl),
+        .clk(clk), .rst(rst), .ctrl(if_id_ctrl),
     // Inputs
         .incPC_d(incPC_0), .instr_d(instruction),
     // Outputs
@@ -86,7 +87,7 @@ module pipeline(
         .regDst(regDst_1), .memRd(memRd_1), .memWr(memWr_1), .regWr(regWr_1),
         .branch(branch_1), .jr(jr_1), .jump(jump_1), .link(link_1),
         .dSize(dSize_1), .imm32(imm32_1),
-        .rs1(rs1), .rs2(rs2), .rd(rd_1), .op0(op0_1), .fp(fp_1)
+        .rs1(rs1), .rs2(rs2), .rd(rd_1), .op0(op0_1), .fp(fp_1), .not_halt(not_halt)
     );
     
     
@@ -99,11 +100,12 @@ wire [1:0] busA_sel, busB_sel, memWrData_sel;
 wire [1:0] if_id_ctrl, id_ex_ctrl, ex_mem_ctrl, mem_wb_ctrl;
 wire pc_enable;
 
-    hazard_detect hazard_detect(.id_instr(instr_1), .ex_instr(instr_2), 
+    hazard_detect hazard_detect(
+        .id_instr(instr_1), .ex_instr(instr_2), 
         .mem_instr(instr_3), .id_rs1(rs1), .id_rs2(rs2), .ex_rd(rd_2), 
-        .mem_rd(rd_3), .id_regDst(regDst_1), .ex_valid(valid_2), .mem_valid(valid_3), 
+        .mem_rd(rd_3), .id_regDst(regDst_1), .ex_valid(valid_2), .mem_valid(valid_3), .ex_memWr(memWr_2), .mem_memRd(memRd_3),
         .busA_sel(busA_sel), .busB_sel(busB_sel), .memWrData_sel(memWrData_sel), 
-        .if_id_ctrl(if_id_ctrl), .id_ex_ctrl(id_ex_ctrl), .mem_wb_ctrl(mem_wb_ctrl),
+        .if_id_ctrl(if_id_ctrl), .id_ex_ctrl(id_ex_ctrl), .ex_mem_ctrl(ex_mem_ctrl), .mem_wb_ctrl(mem_wb_ctrl),
         .pc_enable(pc_enable)
     );
 
@@ -126,7 +128,7 @@ wire pc_enable;
     
 
     id_ex id_ex(
-        .clk(clk), .rst(rst), .ctrl(ctrl),
+        .clk(clk), .rst(rst), .ctrl(id_ex_ctrl),
     // Inputs
         .incPC_d(incPC_1), .busA_d(busA), .busB_d(busB), .busFP_d(busFP), 
         .aluCtrl_d(aluCtrl_1), .aluSrc_d(aluSrc_1), .setInv_d(setInv_1),
@@ -179,7 +181,7 @@ wire pc_enable;
     wire [1:0] memWrData_sel_3;
     
     ex_mem ex_mem(
-        .clk(clk), .rst(rst), .ctrl(ctrl),
+        .clk(clk), .rst(rst), .ctrl(ex_mem_ctrl),
     //Inputs
         .incPC_d(incPC_2), .busB_d(busB_2), .imm32_d(imm32_2), .busFP_d(busFP_2), .aluRes_d(aluRes_2),
         .regDst_d(regDst_2), .memRd_d(memRd_2), .memWr_d(memWr_2), .regWr_d(regWr_2),
@@ -229,7 +231,7 @@ wire pc_enable;
     wire valid_0;
     
     mem_wb mem_wb(
-        .clk(clk), .rst(rst), .ctrl(ctrl),
+        .clk(clk), .rst(rst), .ctrl(mem_wb_ctrl),
     // Inputs
         //.nextPC_d(nextPC_3),
         .regDst_d(regDst_3), .memRd_d(memRd_3), .regWr_d(regWr_3), .link_d(link_3), .fp_d(fp_3),

@@ -6,13 +6,14 @@
 // TODO: floating point and mul/mulu aluCtrl
 //
 
-module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regWr, branch, jr, jump, link, dSize, signExt, zeroExt, fp);
+module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regWr, branch, jr, jump, link, dSize, signExt, zeroExt, fp, not_halt);
 
     // Interface
     input [31:0] instruction;
     output regDst, memRd, memWr, regWr, branch, jr, jump, link, setInv, aluSrc, signExt, zeroExt,fp;
     output [3:0] aluCtrl;
     output [1:0] dSize;
+    output not_halt;
 
 
     // Internal Signals
@@ -21,6 +22,7 @@ module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regW
     reg regDst, memRd, memWr, regWr, branch, jr, jump, link, setInv, aluSrc, signExt, zeroExt, fp;
     reg [3:0] aluCtrl;
     reg [1:0] dSize;
+    reg not_halt;
     
 
     always @ (instruction) begin
@@ -44,10 +46,14 @@ module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regW
     
     opcode = instruction [31:26];
     func = instruction [5:0];
-
+    not_halt = 1;
+    
         
    //// for alu operations, sets signals aluCtrl, setInv, and aluSrc ////
         casex(opcode)
+            6'b010001 : begin //TRAP
+                not_halt = 0;
+            end
             6'b00000? : begin // R - Type Insructions
                 regDst = 1;
                 aluSrc = 0;

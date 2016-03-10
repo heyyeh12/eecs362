@@ -38,53 +38,69 @@ module hazard_detect(
      
     
     
-    if (mem_valid && mem_rd != `R0)
+    if (mem_valid && mem_rd != `R0 && ex_instr[31:29] == `NOP) // hazard with 2 instructions ahead
         begin 
             if(id_rs1 == mem_rd) 
-                begin
-                     busA_sel = `FROM_MEM;
-                end
-            else if(id_rs2 == mem_rd)
-                begin
-                     busB_sel = `FROM_MEM;
-                end
+            begin
+                $write("RS1 == MEM_RD\n");
+                busA_sel = `FROM_MEM;
+            end
+            else if(id_rs2 == mem_rd) 
+            begin
+                $write("RS2 == MEM_RD\n");
+                busB_sel = `FROM_MEM;
+            end
             else if(mem_memRd && ex_memWr && mem_rd == ex_rd)
+            begin
                 memWrData_sel = `FROM_WB;
+            end
         end
 
-    else if (ex_valid && ex_rd != `R0) // 1 instruction ahead
+    else if (ex_valid && (ex_rd != `R0)) // hazard with 1 instruction ahead
         begin
-        
-            if (id_rs1 == ex_rd)
-                begin
-                    if (ex_instr[31:29] == `LD_INST) begin // if opcode = 100, if instruction is load
-                         if_id_ctrl = `HOLD;
-                         id_ex_ctrl = `FLUSH;
-                         pc_enable = 0;
-                    end
-                    else
-                         busA_sel = `FROM_EX;
+            if (id_rs1 == ex_rd) 
+            begin
+                $write("RS1 == EX_RD\n");
+                if (ex_instr[31:29] == `LD_INST)
+                begin // if opcode = 100, if instruction is load
+                     $write("!!!!!! LOAD INSTRUCTION !!!!!!!\n");
+                     if_id_ctrl = `HOLD;
+                     id_ex_ctrl = `FLUSH;
+                     pc_enable = 1'b0;
                 end
-            else if (id_rs2 == ex_rd)
+                else
                 begin
-                    if (ex_instr[31:29] == `LD_INST) begin// if opcode = 100, if instruction is load
-                         if_id_ctrl = `HOLD;
-                         id_ex_ctrl = `FLUSH;
-                         pc_enable = 0;
-                    end
-                    else
-                         busB_sel = `FROM_EX;
+                     busA_sel = `FROM_EX;
                 end
+            end
+            else if (id_rs2 == ex_rd) 
+            begin
+                $write("RS2 == EX_RD\n");
+                if (ex_instr[31:29] == `LD_INST)
+                begin// if opcode = 100, if instruction is load
+                     $write("!!!!!! LOAD INSTRUCTION !!!!!!!\n");
+                     if_id_ctrl = `HOLD;
+                     id_ex_ctrl = `FLUSH;
+                     pc_enable = 1'b0;
+                end
+                else
+                begin
+                     busB_sel = `FROM_EX;
+                end
+            end
         end 
     
     // FORWARDING FOR LOAD TO NON-STORES
     else
+    begin
          busA_sel = `FROM_ID;
-        busB_sel = `FROM_ID;
+         busB_sel = `FROM_ID;
          memWrData_sel = `FROM_MEM;
+    end
         
 //    end
 //else
 //    id_opa_sel_out = id_opa_sel_in;
-end 
+
+end // always
 endmodule

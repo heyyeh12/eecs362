@@ -67,7 +67,7 @@ module topLevel();
     
         #0
         #7 rst = 1;
-        #920 $finish;
+        #500 $finish;
         
 
     end // initial
@@ -116,9 +116,11 @@ module topLevel();
         
         //$display("mem/wb incPC_d=%x, incPC_q=%x", CPU.incPC_3, CPU.incPC_0);
        // $display("mem/wb nextPC_d=%x, nextPC_q=%x", CPU.nextPC_3, CPU.nextPC_0);
-       
+        $display("PC enable=%x", CPU.pc_enable);
+        
         $display("----------IF-----------");
         $display("instr=%x", CPU.instruction);
+        $display("ctrl if_id=%x", CPU.if_id_ctrl);
         
         $display("----------ID-----------");
         $display("instr=%x", CPU.instr_1);
@@ -130,6 +132,7 @@ module topLevel();
         // $display("rs2=%x", rs2);
         $display("rd=%x", CPU.rd_1);
         // $display("memWr=%x", CPU.memWr_1);
+        $display("ctrl id_ex=%x", CPU.id_ex_ctrl);
         
         $display("----------EX-----------");
         $display("instr=%x", CPU.instr_2);
@@ -140,6 +143,7 @@ module topLevel();
         $display("rd=%x", CPU.rd_2);
         $display("alu=%x", CPU.aluRes_2);
         // $display("memWr=%x", CPU.memWr_2);
+        $display("ctrl ex_mem=%x", CPU.ex_mem_ctrl);
         
         $display("----------MEM-----------");
         $display("instr=%x", CPU.instr_3);
@@ -150,6 +154,7 @@ module topLevel();
         $display("alu=%x", CPU.aluRes_3);
         $display("memRd=%x", CPU.memRd_3);
         //$display("memWr=%x", CPU.memWr_3);
+        $display("ctrl mem_wb=%x", CPU.mem_wb_ctrl);
         
         $display("----------WB-----------");
         $display("instr=%x", CPU.instr_0);
@@ -162,12 +167,12 @@ module topLevel();
         // $display("byteData=%x", CPU.wb.byteData);
         // $display("wordData=%x", CPU.wb.wordData);
         // $display("dwordData=%x", CPU.wb.dwordData);
-        $display("dSize=%x", CPU.wb.dSize);
-        $display("memRd=%x", CPU.wb.memRd);
-        $display("link=%x", CPU.wb.link);
-        $display("selWhichFP=%x", CPU.wb.selWhichFP);
-        $display("dResize=%x", CPU.wb.dResize);
-        $display("loadRegData=%x", CPU.wb.loadRegData);
+        //$display("dSize=%x", CPU.wb.dSize);
+        //$display("memRd=%x", CPU.wb.memRd);
+        //$display("link=%x", CPU.wb.link);
+        //$display("selWhichFP=%x", CPU.wb.selWhichFP);
+        //$display("dResize=%x", CPU.wb.dResize);
+        //$display("loadRegData=%x", CPU.wb.loadRegData);
        
         $display("===============REGISTER DUMP===============");
         $display("reg %x: %x \t reg %x: %x", 0, regfile.mem[0],  4, regfile.mem[4]);
