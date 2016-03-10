@@ -49,5 +49,10 @@ _usum:
     subi r6, r6, 4
     lw r4, _dat(r6)
     addu r5, r5, r4
+    subi r6, r6, 4
+    lw r4, _dat(r6)
+    addu r5, r5, r4
     sw _dat(r0), r5
+    nop
+    trap #0x300
 .endproc _usum

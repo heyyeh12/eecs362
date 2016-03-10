@@ -47,7 +47,7 @@ module pipeline(
     ifetch ifetch(
     // Inputs
     //.takeLeap(takeLeap),
-        .clk(clk), .rst(rst), .initPC(initPC), .nextPC(nextPC_3), .takeLeap(0), .enable(pc_enable), //.not_halt(not_halt),
+        .clk(clk), .rst(rst), .initPC(initPC), .nextPC(nextPC_3), .takeLeap(takeLeap), .enable(pc_enable), .not_halt(not_halt),
     // Outputs
         .curPC(iAddr), .incPC(incPC_0)
     );
@@ -106,7 +106,7 @@ wire pc_enable;
         .mem_rd(rd_3), .id_regDst(regDst_1), .ex_valid(valid_2), .mem_valid(valid_3), .ex_memWr(memWr_2), .mem_memRd(memRd_3),
         .busA_sel(busA_sel), .busB_sel(busB_sel), .memWrData_sel(memWrData_sel), 
         .if_id_ctrl(if_id_ctrl), .id_ex_ctrl(id_ex_ctrl), .ex_mem_ctrl(ex_mem_ctrl), .mem_wb_ctrl(mem_wb_ctrl),
-        .pc_enable(pc_enable)
+        .pc_enable(pc_enable), .takeLeap(takeLeap)
     );
 
 
@@ -174,7 +174,7 @@ wire pc_enable;
     // New outputs of register
     wire [31:0] incPC_3, busB_3, imm32_3, busFP_3, aluRes_3, instr_3;
     wire regDst_3, memRd_3, memWr_3, regWr_3,
-                branch_3, jr_3, jump_3, link_3, op0_3, fp_3;
+                branch_3, jr_3, jump_3, link_3, op0_3, fp_3, isZero_3;
     wire [1:0] dSize_3;
     wire [4:0] rd_3;
     wire valid_3;
@@ -187,13 +187,13 @@ wire pc_enable;
         .regDst_d(regDst_2), .memRd_d(memRd_2), .memWr_d(memWr_2), .regWr_d(regWr_2),
         .branch_d(branch_2), .jr_d(jr_2), .jump_d(jump_2), .link_d(link_2), .op0_d(op0_2),.fp_d(fp_2), 
         .dSize_d(dSize_2),
-        .rd_d(rd_2), .instr_d(instr_2), .memWrData_sel_d(memWrData_sel_2), .valid_d(valid_2),
+        .rd_d(rd_2), .instr_d(instr_2), .memWrData_sel_d(memWrData_sel_2), .valid_d(valid_2), .isZero_d(isZero_2),
     //Outputs
         .incPC_q(incPC_3), .busB_q(busB_3), .imm32_q(imm32_3), .busFP_q(busFP_3), .aluRes_q(aluRes_3), 
         .regDst_q(regDst_3), .memRd_q(memRd_3), .memWr_q(memWr_3), .regWr_q(regWr_3),
         .branch_q(branch_3), .jr_q(jr_3), .jump_q(jump_3), .link_q(link_3), .op0_q(op0_3), .fp_q(fp_3), 
         .dSize_q(dSize_3),
-        .rd_q(rd_3), .instr_q(instr_3), .memWrData_sel_q(memWrData_sel_3), .valid_q(valid_3)
+        .rd_q(rd_3), .instr_q(instr_3), .memWrData_sel_q(memWrData_sel_3), .valid_q(valid_3), .isZero_q(isZero_3)
     );
     
 ////// MEM Module
@@ -217,7 +217,7 @@ wire pc_enable;
     
     
     //Forwarding memWrData MUX
-    mux2to1 #(32) ForwardData(.src0(busB_3), .src1(memRdData_0), .sel(memWrData_sel_3[0]), .z(memWrData));
+    mux4to1 #(32) ForwardData(.src0(busB_3), .src1(aluRes_3), .src2(32'h00), .src3(memRdData_0), .sel(memWrData_sel), .z(memWrData));
             // assign memWrData = busB_3;
 
     

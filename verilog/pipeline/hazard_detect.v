@@ -15,6 +15,7 @@ module hazard_detect(
     input wb_valid,
     input mem_memRd,
     input ex_memWr,
+    input takeLeap,
     
     output reg [1:0] busA_sel, // (00 -> busA (ID), 01 -> aluRes (EX), 10 -> memWrData (MEM))
     output reg [1:0] busB_sel, //(00 -> busB (ID), 01 -> aluRes (EX), 10 -> memWrData (MEM))
@@ -36,9 +37,14 @@ module hazard_detect(
      if_id_ctrl = `GO;  id_ex_ctrl = `GO;  ex_mem_ctrl = `GO;  mem_wb_ctrl = `GO;
      pc_enable = 1'b1;
      
+    if (takeLeap)
+        begin
+            //if_id_ctrl = `FLUSH;
+            id_ex_ctrl = `FLUSH;
+            ex_mem_ctrl = `FLUSH;
+        end
     
-    
-    if (mem_valid && mem_rd != `R0 && ex_instr[31:29] == `NOP) // hazard with 2 instructions ahead
+    else if (mem_valid && mem_rd != `R0 && ex_instr[31:29] == `NOP) // hazard with 2 instructions ahead
         begin 
             if(id_rs1 == mem_rd) 
             begin
@@ -50,10 +56,19 @@ module hazard_detect(
                 $write("RS2 == MEM_RD\n");
                 busB_sel = `FROM_MEM;
             end
-            else if(mem_memRd && ex_memWr && mem_rd == ex_rd)
+            else if(ex_memWr && mem_rd == ex_rd)
             begin
-                memWrData_sel = `FROM_WB;
+                if (mem_memRd) 
+                begin
+                    memWrData_sel = `FROM_WB;
+                end
+                else 
+                begin
+                    memWrData_sel = `FROM_EX;
+                end
             end
+            
+                
         end
 
     else if (ex_valid && (ex_rd != `R0)) // hazard with 1 instruction ahead

@@ -32,6 +32,8 @@ module if_id(
             // 1. flush register
             if (ctrl == `FLUSH) begin
                 // TODO: figure out what matters
+                incPC_q <= initPC;
+                instr_q <= `NOP;
                 valid_q <= 1'b0;
             end
             // 2. proceed as normal

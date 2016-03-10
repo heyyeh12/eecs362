@@ -67,7 +67,7 @@ module topLevel();
     
         #0
         #7 rst = 1;
-        #500 $finish;
+        #750 $finish;
         
 
     end // initial
@@ -117,6 +117,7 @@ module topLevel();
         //$display("mem/wb incPC_d=%x, incPC_q=%x", CPU.incPC_3, CPU.incPC_0);
        // $display("mem/wb nextPC_d=%x, nextPC_q=%x", CPU.nextPC_3, CPU.nextPC_0);
         $display("PC enable=%x", CPU.pc_enable);
+        // $display("Not trap=%x", CPU.not_halt);
         
         $display("----------IF-----------");
         $display("instr=%x", CPU.instruction);

@@ -9,13 +9,15 @@ module ex_mem(
    dSize_d,
    rd_d,
    memWrData_sel_d,
+   isZero_d,
    //Outputs
    instr_q, incPC_q, busB_q, imm32_q, busFP_q, busA_q, aluRes_q,
    regDst_q, memRd_q, memWr_q, regWr_q,
    branch_q, jr_q, jump_q, link_q, op0_q, fp_q,
    dSize_q,
    rd_q,
-   memWrData_sel_q, valid_q
+   memWrData_sel_q, valid_q,
+   isZero_q
 );
 
    input          clk, rst, valid_d;
@@ -27,6 +29,7 @@ module ex_mem(
    input [1:0]    dSize_d;
    input [4:0]    rd_d;
    input [1:0]    memWrData_sel_d;
+   input          isZero_d;
    
    output reg [31:0]  instr_q, incPC_q, busB_q, imm32_q, busFP_q, busA_q, aluRes_q;
    output reg         regDst_q, memRd_q, memWr_q, regWr_q,
@@ -35,11 +38,29 @@ module ex_mem(
    output reg [4:0]   rd_q;
    output reg  [1:0]  memWrData_sel_q; 
    output reg valid_q;
+   output reg  isZero_q;
    
    always @ (posedge clk or negedge rst)
         if (~rst) begin
             //TODO
             instr_q <= `NOP;
+            incPC_q <= 32'b0;
+            busB_q <= 32'b0;
+            imm32_q <= 32'b0;
+            busFP_q <= 32'b0;
+            busA_q <= 32'b0; 
+            aluRes_q <= 32'b0;
+            regDst_q <= 1'b0;
+            memRd_q <= 1'b0;
+            memWr_q <= 1'b0;
+            regWr_q <= 1'b0;
+            isZero_q <= 1'b0;          
+            jump_q <= 1'b0;
+            branch_q <=1'b0;
+            jr_q <= 1'b0;
+            link_q <= 1'b0;
+            op0_q <= 1'b0;
+            fp_q <=1'b0;
             memWr_q <= 0;
             regWr_q <= 0;
             memWrData_sel_q <= `FROM_ID;
@@ -49,15 +70,33 @@ module ex_mem(
         else begin
             // 1. flush register
             if (ctrl == `FLUSH) begin
-               instr_q <= `NOP;
-               memWr_q <= 0;
-               regWr_q <= 0;
-               memWrData_sel_q <= `FROM_ID;
-               valid_q <= 1'b0;
+            instr_q <= `NOP;
+            incPC_q <= 32'b0;
+            busB_q <= 32'b0;
+            imm32_q <= 32'b0;
+            busFP_q <= 32'b0;
+            busA_q <= 32'b0; 
+            aluRes_q <= 32'b0;
+            regDst_q <= 1'b0;
+            memRd_q <= 1'b0;
+            memWr_q <= 1'b0;
+            regWr_q <= 1'b0;
+            isZero_q <= 1'b0;          
+            jump_q <= 1'b0;
+            branch_q <=1'b0;
+            jr_q <= 1'b0;
+            link_q <= 1'b0;
+            op0_q <= 1'b0;
+            fp_q <=1'b0;
+            memWr_q <= 0;
+            regWr_q <= 0;
+            memWrData_sel_q <= `FROM_ID;
+            valid_q <= 1'b0;
                // TODO: figure out what else matters
             end
             // 2. proceed as normal
             else if (ctrl == `GO) begin
+               isZero_q <= isZero_d;
                instr_q <= instr_d;
                incPC_q <= incPC_d;
                busB_q <= busB_d;
