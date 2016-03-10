@@ -71,6 +71,11 @@ mem_wb: mem_wb.vvp
 mem_wb.vvp : ../../verilog/pipeline/mem_wb.v $(LIB) 
 	$(IVERILOG) -o $(addprefix $(BUILD_DIR), $@) $^
 
+hazard_detect: hazard_detect.vvp
+
+hazard_detect.vvp : ../../verilog/pipeline/hazard_detect.v $(LIB)
+	$(IVERILOG)-o $(addprefix $(BUILD_DIR), $@) $^
+
 ###########################################################
 
 ################ MAKE PIPELINE #########################
@@ -81,8 +86,8 @@ topLevel.vvp : ../../verilog/pipeline/topLevel.v $(SRC_FILES) $(LIB)
 	$(IVERILOG) -o $(addprefix $(BUILD_DIR), $@) $^
 
 # can check each src file for syntax e.g. make ../../verilog/pipeline/ifetch.v
-#$(BUILD_FILES) : %.vvp : %.v $(LIB)
-#	$(IVERILOG) -o $(addprefix $(BUILD_DIR), $@) $^ -grelative-include
+# $(BUILD_FILES) : %.vvp : %.v $(LIB)
+# 	$(IVERILOG) -o $(addprefix $(BUILD_DIR), $@) $^ -grelative-include
 
 .PHONY: clean
 

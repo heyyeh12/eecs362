@@ -20,6 +20,7 @@ module topLevel();
     // CONNECTING THE WIRES
     imem #(.SIZE(16384)) IMEM(.addr(iaddr), .instr(instr));
     dmem #(.SIZE(16384)) DMEM(.addr(memAddr), .rData(memRdData), .wData(memWrData), .writeEnable(memWr), .dsize(dsize), .clk(clk));
+    
     regfile regfile(
         .rs1(rs1), .rs2(rs2), .rd(rd), .rData1(busA), .rData2(busB),
         .wData(regWrData), .regWr(regWr), .clk(clk)
@@ -60,12 +61,13 @@ module topLevel();
         $writememh("imem", IMEM.mem);
         $writememh("dmem", DMEM.mem);
    
-        clk = 1;rst = 1;
+        clk = 1; rst = 0;
+        
         // $monitor("%b: Instr [%x] = %x", clk, iaddr, instr);
     
         #0
-        #7 rst = 0;
-        #50 $finish;
+        #7 rst = 1;
+        #920 $finish;
         
 
     end // initial
@@ -77,16 +79,100 @@ module topLevel();
     
     always @ (posedge(clk)) begin
     
-        $display("\n----------time: @%0dns---------", $time);
+        $display("\n~~~~~~~~~~~~~time: @%0dns~~~~~~~~~~~~~", $time);
         $display("Instr [%x] = %x", iaddr, instr);
         //$display("memAddr: %x, memRdData: %x, memWrData: %x, memWr: %b", memAddr, memRdData, memWrData, memWr);
-        $display("reg4 =%x", regfile.mem[4]);
-        $display("reg5 =%x", regfile.mem[5]);
-        $display("reg6 =%x", regfile.mem[6]);
+      
+        // Unsigned Sum
+        // $display("reg4 =%x", regfile.mem[4]);
+        // $display("reg5 =%x", regfile.mem[5]);
+        // $display("reg6 =%x", regfile.mem[6]);
         
-        $display("if/id incPC=%x", CPU.incPC_0);
-       // $display("reg4 =%x", regfile.mem[4]);
+        // Check instruction fetching
+        // $display("ifetch PC_d=%x PC_q=%x incPC=%x", CPU.ifetch.PC_d, CPU.ifetch.PC_q, CPU.ifetch.incPC);
+        // $display("takeLeap=%x", CPU.mem.takeLeap);
+        // $display("if/id incPC_d=%x incPC_q=%x", CPU.incPC_0, CPU.incPC_1);
+        // $display("id/ex incPC_d=%x, incPC_q=%x", CPU.incPC_1, CPU.incPC_2);
+        // $display("ex/mem incPC_d=%x incPC_q=%x", CPU.incPC_2, CPU.incPC_3);
+        
+        
+        // CHECK Instructions
+        // $display("if/id instr_d=%x instr_q=%x", CPU.instruction, CPU.instr_1);
+        // $display("id/ex instr_d=%x, instr_q=%x", CPU.instr_1, CPU.instr_2);
+        // $display("ex/mem instr_d=%x instr_q=%x", CPU.instr_2, CPU.instr_3);
+        // $display("mem/wb instr_d=%x instr_q=%x", CPU.instr_3, CPU.instr_0);
+        
+        
+        // $display("regfile: rs1=%x, rs2=%x, rd=%x, busA=%x, busB=%x, regWrData=%x, regWr=%x", rs1, rs2, rd, busA, busB, regWrData, regWr);
+        
+        $display("memory: addr=%x, rData=%x, wData=%x, memWr=%x, dsize=%x", memAddr, memRdData, memWrData, memWr, dsize);
+        
+        // CHECK BUS A & B & AluRes
+        // $display("id/ex busA %x => %x", CPU.busA, CPU.busA_2);
+        // $display("id/ex busB %x => %x", CPU.busB, CPU.busB_2);
+        // $display("ex/mem busB %x => %x", CPU.busB_2, CPU.busB_3);
+        // $display("ex/mem aluRes %x => %x", CPU.ex.aluRes, CPU.aluRes_3);
+        // $display("mem/wb aluRes %x => %x", CPU.aluRes_3, CPU.aluRes_2);
+        
+        //$display("mem/wb incPC_d=%x, incPC_q=%x", CPU.incPC_3, CPU.incPC_0);
+       // $display("mem/wb nextPC_d=%x, nextPC_q=%x", CPU.nextPC_3, CPU.nextPC_0);
        
+        $display("----------IF-----------");
+        $display("instr=%x", CPU.instruction);
+        
+        $display("----------ID-----------");
+        $display("instr=%x", CPU.instr_1);
+        $display("busA=%x", busA);
+        $display("busB=%x", busB);
+        $display("imm32=%x", CPU.imm32_1);
+        $display("regWr=%x", CPU.regWr_1);
+        // $display("rs1=%x", rs1);
+        // $display("rs2=%x", rs2);
+        $display("rd=%x", CPU.rd_1);
+        // $display("memWr=%x", CPU.memWr_1);
+        
+        $display("----------EX-----------");
+        $display("instr=%x", CPU.instr_2);
+        $display("busA=%x", CPU.busA_2);
+        $display("busB=%x", CPU.busB_2);
+        $display("imm32=%x", CPU.imm32_2);
+        $display("regWr=%x", CPU.regWr_2);
+        $display("rd=%x", CPU.rd_2);
+        $display("alu=%x", CPU.aluRes_2);
+        // $display("memWr=%x", CPU.memWr_2);
+        
+        $display("----------MEM-----------");
+        $display("instr=%x", CPU.instr_3);
+        $display("busB=%x", CPU.busB_3);
+        $display("imm32=%x", CPU.imm32_3);
+        $display("regWr=%x", CPU.regWr_3);
+        $display("rd=%x", CPU.rd_3);
+        $display("alu=%x", CPU.aluRes_3);
+        $display("memRd=%x", CPU.memRd_3);
+        //$display("memWr=%x", CPU.memWr_3);
+        
+        $display("----------WB-----------");
+        $display("instr=%x", CPU.instr_0);
+        $display("regWr=%x", CPU.regWr);
+        $display("regWrData=%x", CPU.regWrData);
+        $display("rd=%x", CPU.rd);
+        $display("alu=%x", CPU.aluRes_0);
+        
+        $display("memRdData=%x", CPU.wb.memRdData);
+        // $display("byteData=%x", CPU.wb.byteData);
+        // $display("wordData=%x", CPU.wb.wordData);
+        // $display("dwordData=%x", CPU.wb.dwordData);
+        $display("dSize=%x", CPU.wb.dSize);
+        $display("memRd=%x", CPU.wb.memRd);
+        $display("link=%x", CPU.wb.link);
+        $display("selWhichFP=%x", CPU.wb.selWhichFP);
+        $display("dResize=%x", CPU.wb.dResize);
+        $display("loadRegData=%x", CPU.wb.loadRegData);
+       
+        $display("===============REGISTER DUMP===============");
+        $display("reg %x: %x \t reg %x: %x", 0, regfile.mem[0],  4, regfile.mem[4]);
+        $display("reg %x: %x \t reg %x: %x", 5, regfile.mem[5],  6, regfile.mem[6]);
+        $display("===========================================");
     end
         
 endmodule

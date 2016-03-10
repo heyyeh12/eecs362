@@ -18,7 +18,7 @@ module dff (d, clk, rst, enable, q);
 
  always @ (posedge clk or negedge rst)
  begin
-    if (rst == 1)
+    if (~rst)
        q <= {N_BITS{1'b0}};
     else if (clk == 1)  
         begin
@@ -44,11 +44,11 @@ module dffa (d, clk, rst, enable, q, aload, arst);
     output [N_BITS - 1: 0] q;
     reg [N_BITS - 1:0] q;
 
- always @ (posedge clk or negedge rst)
+ always @ (posedge clk or negedge rst or negedge arst)
  begin
-    if (rst == 1)
+    if (~rst)
         q <= {N_BITS{1'b0}};
-    else if (arst == 1)
+    else if (~arst)
         q <= aload;
     else if (clk == 1)  // rising_edge verilog equivalent?
         begin

@@ -1,5 +1,5 @@
 
-SRC = unsignedsum.asm
+SRC = unsignedsum_pipeline.asm
 GEN = *.exe instr.hex data.hex
 DLXASM = /vol/eecs362/scripts/dlxasm
 

@@ -1,13 +1,23 @@
 SO WE DON"T GET CONFUSED ABOUT WHAT'S DIFFERENT
 
 //////////////////
+3/9
+
+UPDATES
+- BY: hazard_detect file for looking at other pipe reg instructions and setting appropriate signals before ID/EX register
+- BY: pipe_reg_ctrl file for counting stalls
+
+//////////////////
 3/5
 
 UPDATES
 - AH: created topLevel.v for pipeline, copied from singleCycle topLevel but renamed signals to match piepeline and added appropriate wires for fp 
 - BY: created makefile target for topLevel
+- CB: in ifetch - get prevPC then add 4 -> goes into mux w/ nextPC and takeLeap is sel, result = curPC, then add 4 for incPC
 
 TODO
+- move takeLeap to EX stage, save in EX/MEM reg and use in ifetch :)
+
 
 
 //////////////////

@@ -62,7 +62,7 @@ module id(
     // Sign-extension
     sign_extender sign_extender(.imm(instruction[25:0]), .signExt(signExt), .res(signExt32), .jump(jump));
     assign zeroExt32 = {instruction[15:0], 16'b0};
-    mux2to1 #(32) muxImmExt(.src0(signExt32), .src1(zeroExt32), .sel(zeroExt));
+    mux2to1 #(32) muxImmExt(.src0(signExt32), .src1(zeroExt32), .sel(zeroExt), .z(imm32));
     
     // assign op0 for branch stuff in MEM
     assign op0 = instruction[26];

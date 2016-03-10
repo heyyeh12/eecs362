@@ -1,14 +1,14 @@
 module ex(
     aluSrc, aluCtrl, setInv, 
     busA, busB, imm32,
-    aluRes, isZero
+    aluRes, isZero, fp
     );
     
     // Interface
     input [3:0] aluCtrl;        // input into ALU, from ID
     input [31:0] busA, busB;    // from pipeline (from toplevel)
     input [31:0] imm32;         // sign extended immediate from sign extender in ID
-    input aluSrc, setInv;        // control signals from ID 
+    input aluSrc, setInv, fp;     // control signals from ID 
     
     output [31:0] aluRes;       // alu result
     output isZero;               // used for branch logic in MEM stage
@@ -17,7 +17,7 @@ module ex(
     
     // Internal Signals
     wire [31:0] srcB;           // second input to ALU
-    wire [31:0] aluRes; 
+    wire [31:0] aluRes_int; 
     wire [31:0] mulRes;         // result of multiplier
     wire mulSel;                // selects if we take mulRes
     wire andTmp0, andTmp1;      // signals used for setting multiplier selector
@@ -26,7 +26,7 @@ module ex(
     mux2to1 #(32) Ms3B(.src0(busB), .src1(imm32), .sel(aluSrc), .z(srcB));
     
     // ALU -- might need to explicity say that flag outputs are open
-    alu alu(.a(busA), .b(srcB), .alu_ctrl(aluCtrl), .inverse_set(setInv), .res(aluRes));
+    alu alu(.a(busA), .b(srcB), .alu_ctrl(aluCtrl), .inverse_set(setInv), .res(aluRes_int));
     
     // Multiplier -- TODO, need to replace with WallaceTreeBooth multiplier
     assign multRes = busA * srcB;
@@ -38,7 +38,7 @@ module ex(
     //mux2to1 #(32) MultMux(.src0(aluRes), .src1(multRes), .sel(multSel), .z(aluRes)); -- old mulitply
     
     // if fp = 1, aluRes = busA
-    mux2to1 #(32) MultMux(.src0(aluRes), .src1(busA), .sel(fp), .z(aluRes));
+    mux2to1 #(32) MultMux(.src0(aluRes_int), .src1(busA), .sel(fp), .z(aluRes));
     
     // check if busA is zero for branching, set isZero
     nor32to1 checkisZero(.a(busA), .z(isZero));

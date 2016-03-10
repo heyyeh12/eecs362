@@ -12,30 +12,35 @@ module regfile(rs1, rs2, rd, rData1, rData2, wData, regWr, clk);
     input [4:0] rs1, rs2, rd;
     input [31:0] wData;
     input regWr, clk;
-    output [31:0] rData1, rData2;
+    output reg [31:0] rData1, rData2;
     reg [31:0] mem[(SIZE-1):0];
-    initial mem[0] = 32'd0;
+    // initial mem[0] = 32'b0;
     
    
    integer i;
    initial begin
      for (i = 0; i < 32; i = i + 1)
-            mem[i] = 8'h0;
+            mem[i] = 32'b0;
     
     end
     
     // Read
-    assign rData1 = mem[rs1];
-    assign rData2 = mem[rs2];
-    
+    always @ (negedge clk) begin
+        rData1 <= mem[rs1];
+        rData2 <= mem[rs2];
+    end
+
     // Write
     always @ (posedge clk) begin
         if (regWr) begin
-            if (rd == 5'b0)
+            if (rd == 5'b0) begin
                 $display("don't write to register 0!!!");
-            else
+                mem[rd] <= 32'b0;
+            end
+            else begin
                 $display("writing val %x to register %x ", wData, rd);
                 mem[rd] <= wData[31:0];
+            end
         end
         
         // DEBUG

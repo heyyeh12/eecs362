@@ -1,7 +1,7 @@
 module wb(
     memRd, link, fp, regWr,
     memRdData, aluRes, reg31Val, busFP, //busA,
-    regWrData);
+    regWrData, dSize);
     
         // Interface
     input memRd, link, fp, regWr;               // from ID
@@ -22,11 +22,15 @@ module wb(
                             // selWhichFP = 1 when instr = movfp2i
     wire [31:0] beforeFP;
 
+    wire [31:0] byteData, wordData, dwordData;
 
 // will need additonal muxing to choose whether or not for fp reg's
     // if movfp2i, write fpr (rs1) value to gpr (rd)
 
     // resize memRdData based on dSize
+    assign byteData = {24'b0, memRdData[31:24]};
+    assign wordData = {16'b0, memRdData[31:16]};
+    assign dwordData = memRdData;
     mux4to1 #(32) dsize_reg(.src0({24'b0, memRdData[31:24]}), .src1({16'b0, memRdData[31:16]}), .src2(memRdData), .src3(memRdData), .sel(dSize), .z(dResize));
     
     // choose between resized data and aluRes
@@ -37,7 +41,8 @@ module wb(
     
     
     // set selWhichFP
-    assign selWhichFP = regWr && fp;
+    and_gate saskdjfhf (.a(regWr), .b(fp), .z(selWhichFP));
+    //assign selWhichFP = regWr and fp;
     
     // choose between busFP and beforeFP -- this works for movfp2i
     mux2to1 #(32) fpReg(.src0(beforeFP), .src1(busFP), .sel(selWhichFP), .z(regWrData));

@@ -2,7 +2,7 @@ module mem(
     isZero, op0, branch, 
     jump, jr, 
     incPC, imm32, busB,
-    reg31Val, nextPC);
+    reg31Val, nextPC, takeLeap);
     
    // input [31:0] aluRes;                // from EX
     input [31:0] busB;                  // from ID
@@ -19,15 +19,16 @@ module mem(
     //output [31:0] memAddr;
     output [31:0] reg31Val;             // output for link jumps, send to WB
     output [31:0] nextPC;               // send to IF
+    output takeLeap;
 
     
     //Internal signals for choosing nextPC
-    wire brTrue, takeBr, takeLeap;
-    wire [31:0] leapPC, nextPC;
+    wire brTrue, takeBr;
+    wire [31:0] leapPC;
     
     
-   // assign memAddr = aluRes;
-   // assign memWrData = busB;
+    //assign memAddr = aluRes;
+    //assign memWrData = busB;
     
     
 /////////////////////////// choosing nextPC ///////////////////////////////////  
@@ -41,11 +42,11 @@ module mem(
     
     or_gate jmpOR (.a(jump), .b(takeBr), .z(takeLeap));                                    // check if jumping or taking branch
     
-    // take nextPC or leap
-    mux2to1 #(32) jmpOrBrMux (.src0(incPC), .src1(leapPC), .sel(takeLeap), .z(nextPC));     // taking leap or nextPC as target address
+    // take nextPC or leapPC
+    //mux2to1 #(32) jmpOrBrMux (.src0(incPC), .src1(leapPC), .sel(takeLeap), .z(notNextPC));     // taking leap or nextPC as target address
     
     // take register jump
-    mux2to1 #(32) jrRegValMux (.src0(nextPC), .src1(busB), .sel(jr), .z(nextPC));            // taking register jump for target address?
+    mux2to1 #(32) jrRegValMux (.src0(leapPC), .src1(busB), .sel(jr), .z(nextPC));            // taking register jump for target address?
   
 /////////////////////////////////////////////////////////////////////////////////////////////// 
 
