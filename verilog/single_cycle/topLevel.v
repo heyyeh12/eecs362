@@ -58,7 +58,7 @@ module topLevel();
     
         #0
         #7 rst = 0;
-        #50 $finish;
+        #500 $finish;
         
 
     end // initial
@@ -73,9 +73,9 @@ module topLevel();
         $display("\n----------time: @%0dns---------", $time);
         $display("Instr [%x] = %x", iaddr, instr);
         //$display("daddr: %x, rData: %x, dwdata: %x, dwrite: %b", daddr, drdata, dwdata, dwrite);
-        $display("reg1 =%x", regfile.mem[1]);
-        $display("reg2 =%x", regfile.mem[2]);
-        $display("reg3 =%x", regfile.mem[3]);
+        $display("reg4 =%x", regfile.mem[4]);
+        $display("reg5 =%x", regfile.mem[5]);
+        $display("reg6 =%x", regfile.mem[6]);
        // $display("reg4 =%x", regfile.mem[4]);
        
     end

@@ -14,7 +14,7 @@ COMPONENTS = $(addprefix $(SOURCE_DIR), ex.v id.v ifetch.v wb.v singleCycle.v to
 # SOURCES_PATH = $(LIB_PATH) $(addprefix $(SOURCE_DIR), $(addsuffix .v, $(SOURCES)))
 # SOURCES_VVP = $(addsuffix .vvp, $(SOURCES))
 
-default: topLevel
+default: topLevel_sc
 
 
 ####### SINGLE CYCLE PROCESSOR #######
@@ -51,9 +51,9 @@ ex.vvp : $(LIB_PATH) $(addprefix $(LIB_DIR), control.v sign_extender.v regfile.v
 	$(IVERILOG) -o $(addprefix $(BUILD_DIR), $@) $^
 
 ####### TOP LEVEL #######
-topLevel: topLevel.vvp
+topLevel_sc: topLevel_sc.vvp
 
-topLevel.vvp : $(LIB_PATH) $(ALU_LIB) $(CPU_LIB) $(COMPONENTS)
+topLevel_sc.vvp : $(LIB_PATH) $(ALU_LIB) $(CPU_LIB) $(COMPONENTS)
 	$(IVERILOG) -o $(addprefix $(BUILD_DIR), $@) $^
 
 #########################

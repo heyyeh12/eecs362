@@ -44,7 +44,7 @@ module hazard_detect(
             ex_mem_ctrl = `FLUSH;
         end
     
-    else if (mem_valid && mem_rd != `R0 && ex_instr[31:29] == `NOP) // hazard with 2 instructions ahead
+    else if (mem_valid && mem_rd != `R0 && ex_instr == `NOP) // hazard with 2 instructions ahead
         begin 
             if(id_rs1 == mem_rd) 
             begin
@@ -82,9 +82,11 @@ module hazard_detect(
                      if_id_ctrl = `HOLD;
                      id_ex_ctrl = `FLUSH;
                      pc_enable = 1'b0;
+                     
                 end
                 else
                 begin
+                     $write("busA_sel = 'From ex (rs1 = rd and not load\n");
                      busA_sel = `FROM_EX;
                 end
             end

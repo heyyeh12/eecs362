@@ -155,7 +155,7 @@ wire pc_enable;
     wire [31:0] aluRes_2;
     wire isZero_2;
     
-    // Forwarding busA MUX
+        // Forwarding busA MUX
     mux4to1 #(32) ForwardBusA(.src0(busA_2), .src1(aluRes_3), .src2(memRdData_0), .src3(32'h00), .sel(busA_sel_2), .z(busA_in));
         
     // Forwarding busB MUX
@@ -167,6 +167,8 @@ wire pc_enable;
         .busA(busA_in), .busB(busB_in), .imm32(imm32_2),
         .aluRes(aluRes_2), .isZero(isZero_2), .fp(fp_2)
     );
+    
+
 
 /////////////////////////////////////////////////////////////////// 
 
@@ -217,7 +219,7 @@ wire pc_enable;
     
     
     //Forwarding memWrData MUX
-    mux4to1 #(32) ForwardData(.src0(busB_3), .src1(aluRes_3), .src2(32'h00), .src3(memRdData_0), .sel(memWrData_sel), .z(memWrData));
+    mux4to1 #(32) ForwardData(.src0(busB_3), .src1(aluRes_3), .src2(32'h00), .src3(memRdData_0), .sel(memWrData_sel_3), .z(memWrData));
             // assign memWrData = busB_3;
 
     

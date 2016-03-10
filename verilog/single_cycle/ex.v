@@ -12,7 +12,7 @@ module ex(aluSrc, aluCtrl, setInv, busA, busB, im32, aluRes, zf, of, cf, op0, ta
     wire andTmp0, andTmp1, multSel;
     wire brTrue, zf_wire, lhi_sig;
     
-;  
+ 
     mux2to1 #(32) Ms3B(.src0(busB), .src1(im32), .sel(aluSrc), .z(srcB));
     mux2to1 #(32) getZeroSrcB(.src0(srcB), .src1(32'b0), .sel(branch), .z(srcB_2));
     

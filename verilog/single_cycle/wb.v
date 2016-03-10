@@ -1,4 +1,4 @@
-module wb(memRd, memRdData, aluRes, reg31Val, regWrReg);
+module wb(memRd, memRdData, aluRes, reg31Val);
 
     // Interface
     input memRd, link;                          // from ID

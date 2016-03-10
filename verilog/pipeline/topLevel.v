@@ -129,16 +129,17 @@ module topLevel();
         $display("busB=%x", busB);
         $display("imm32=%x", CPU.imm32_1);
         $display("regWr=%x", CPU.regWr_1);
-        // $display("rs1=%x", rs1);
-        // $display("rs2=%x", rs2);
+         $display("rs1=%x", rs1);
+         $display("rs2=%x", rs2);
         $display("rd=%x", CPU.rd_1);
         // $display("memWr=%x", CPU.memWr_1);
         $display("ctrl id_ex=%x", CPU.id_ex_ctrl);
         
         $display("----------EX-----------");
+        $display("busA_sel=%x", CPU.busA_sel_2);
         $display("instr=%x", CPU.instr_2);
-        $display("busA=%x", CPU.busA_2);
-        $display("busB=%x", CPU.busB_2);
+        $display("busA=%x", CPU.busA_in);
+        $display("busB=%x", CPU.busB_in);
         $display("imm32=%x", CPU.imm32_2);
         $display("regWr=%x", CPU.regWr_2);
         $display("rd=%x", CPU.rd_2);
@@ -155,7 +156,9 @@ module topLevel();
         $display("alu=%x", CPU.aluRes_3);
         $display("memRd=%x", CPU.memRd_3);
         //$display("memWr=%x", CPU.memWr_3);
+        $display("takeLeap=%x", CPU.takeLeap);
         $display("ctrl mem_wb=%x", CPU.mem_wb_ctrl);
+        
         
         $display("----------WB-----------");
         $display("instr=%x", CPU.instr_0);
@@ -163,8 +166,8 @@ module topLevel();
         $display("regWrData=%x", CPU.regWrData);
         $display("rd=%x", CPU.rd);
         $display("alu=%x", CPU.aluRes_0);
-        
         $display("memRdData=%x", CPU.wb.memRdData);
+
         // $display("byteData=%x", CPU.wb.byteData);
         // $display("wordData=%x", CPU.wb.wordData);
         // $display("dwordData=%x", CPU.wb.dwordData);

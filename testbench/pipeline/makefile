@@ -13,7 +13,7 @@ LIB = $(foreach dir, $(addprefix $(SRC_DIR), $(LIB_SUBDIRS)), $(wildcard $(dir)/
 SRC = $(wildcard $(addprefix $(SRC_DIR), pipeline/*.v))
 TST = $(wildcard *.v)
 
-default: pipe_reg.vvp
+default: topLevel.vvp
 
 pipe_reg.vvp : $(TST) $(LIB) $(SRC)
 	$(IVERILOG) -o $(addprefix $(BUILD_DIR), $@) $^
