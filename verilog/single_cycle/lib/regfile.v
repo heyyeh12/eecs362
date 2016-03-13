@@ -61,8 +61,8 @@ module regfile(rs1, rs2, rd, rData1, rData2, wData, regWr, clk);
             rData1 <= mem[rs1];
             rData2 <= mem[rs2];
         end
-         //$write("reading val %x from reg %x\n", rData1, rs1);
-         //$write("reading val %x from reg %x\n", rData2, rs2);
+         $write("reading val %x from reg %x\n", rData1, rs1);
+         $write("reading val %x from reg %x\n", rData2, rs2);
      end
     
 endmodule // regfile

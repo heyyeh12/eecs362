@@ -185,7 +185,7 @@ wire pc_enable;
     ex_mem ex_mem(
         .clk(clk), .rst(rst), .ctrl(ex_mem_ctrl),
     //Inputs
-        .incPC_d(incPC_2), .busB_d(busB_2), .imm32_d(imm32_2), .busFP_d(busFP_2), .aluRes_d(aluRes_2),
+        .incPC_d(incPC_2), .busB_d(busB_in), .imm32_d(imm32_2), .busFP_d(busFP_2), .aluRes_d(aluRes_2),
         .regDst_d(regDst_2), .memRd_d(memRd_2), .memWr_d(memWr_2), .regWr_d(regWr_2),
         .branch_d(branch_2), .jr_d(jr_2), .jump_d(jump_2), .link_d(link_2), .op0_d(op0_2),.fp_d(fp_2), 
         .dSize_d(dSize_2),
@@ -219,7 +219,7 @@ wire pc_enable;
     
     
     //Forwarding memWrData MUX
-    mux4to1 #(32) ForwardData(.src0(busB_3), .src1(aluRes_3), .src2(32'h00), .src3(memRdData_0), .sel(memWrData_sel_3), .z(memWrData));
+    mux4to1 #(32) ForwardData(.src0(32'h00), .src1(aluRes_3), .src2(busB_3), .src3(memRdData_0), .sel(memWrData_sel_3), .z(memWrData));
             // assign memWrData = busB_3;
 
     

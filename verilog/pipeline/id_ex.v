@@ -86,6 +86,7 @@ module id_ex(
                 busB_sel_q <= `FROM_ID;
                 memWrData_sel_q <= `FROM_ID;
                 valid_q <= 1'b0;
+                //inc_q <= initPC;
             end
             // 2. proceed as normal
             else if (ctrl == `GO) begin

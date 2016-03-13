@@ -44,7 +44,7 @@ module wb(
     and_gate saskdjfhf (.a(regWr), .b(fp), .z(selWhichFP));
     //assign selWhichFP = regWr and fp;
     
-    // choose between busFP and beforeFP -- this works for movfp2i
+    // choose between busFP and beforeFP -- this is for movfp2i
     mux2to1 #(32) fpReg(.src0(beforeFP), .src1(busFP), .sel(selWhichFP), .z(regWrData));
     
     

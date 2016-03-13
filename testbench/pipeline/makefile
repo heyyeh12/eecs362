@@ -7,7 +7,7 @@ SRC_FILES = $(wildcard $(addprefix $(SRC_DIR), pipeline/*.v))
 BUILD_FILES = $(SRC_FILES:.v=.vvp)
 BUILD_NAMES = $(notdir $(BUILD_FILES))
 
-LIB_SUBDIRS = alu gates memory single_cycle/lib
+LIB_SUBDIRS = gates memory single_cycle/lib alu
 LIB = $(foreach dir, $(addprefix $(SRC_DIR), $(LIB_SUBDIRS)), $(wildcard $(dir)/*.v))
 # LIB = $(addprefix $(SRC_DIR), constants.vh gates/gates.v gates/dff.v memory/memory.v alu/alu.v)
 SRC = $(wildcard $(addprefix $(SRC_DIR), pipeline/*.v))

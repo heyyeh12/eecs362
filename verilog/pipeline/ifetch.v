@@ -13,7 +13,7 @@ module ifetch(
     wire [31:0] PC_d, PC_q;
     wire enable_PC;
     
-    and_gate and_gate (.a(enable), .b(not_halt), .z(enable_PC));
+    and_gate and_gate (.a(enable), .b(1), .z(enable_PC)); // put back not_halt
     // PC Register
     dffa #(32) dffa (.d(PC_d), .clk(clk), .rst(1), .enable(enable_PC), .q(PC_q), .aload(initPC), .arst(rst));
    
