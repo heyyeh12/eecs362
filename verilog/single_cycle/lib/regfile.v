@@ -23,22 +23,16 @@ module regfile(rs1, rs2, rd, rData1, rData2, wData, regWr, clk);
             mem[i] = 32'b0;
     
     end
-    
-    // Read
-    always @ (negedge clk) begin
-        rData1 <= mem[rs1];
-        rData2 <= mem[rs2];
-    end
 
     // Write
     always @ (posedge clk) begin
         if (regWr) begin
             if (rd == 5'b0) begin
-                $display("don't write to register 0!!!");
+                $write("don't write to register 0!!!\n");
                 mem[rd] <= 32'b0;
             end
             else begin
-                $display("writing val %x to register %x ", wData, rd);
+                $write("writing val %x to register %x\n", wData, rd);
                 mem[rd] <= wData[31:0];
             end
         end
@@ -52,6 +46,24 @@ module regfile(rs1, rs2, rd, rData1, rData2, wData, regWr, clk);
         //     $display("reg %x: %x", i, mem[i]);
         
     end
+    
+        // Read
+     always @ (negedge clk) begin
+        if (rd == rs1) begin
+            rData1 <= wData;
+            rData2 <= mem[rs2];
+        end
+        else if(rd == rs2) begin
+            rData2 <= wData;
+            rData1 <= mem[rs1];
+        end 
+        else begin
+            rData1 <= mem[rs1];
+            rData2 <= mem[rs2];
+        end
+         //$write("reading val %x from reg %x\n", rData1, rs1);
+         //$write("reading val %x from reg %x\n", rData2, rs2);
+     end
     
 endmodule // regfile
 
