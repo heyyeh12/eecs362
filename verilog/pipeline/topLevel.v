@@ -32,7 +32,7 @@ module topLevel();
     );
     
     pipeline CPU(
-        .clk(clk), .rst(rst), .initPC(32'h1000),
+        .clk(clk), .rst(rst), .initPC(32'h0000),
         .instruction(instr), .iAddr(iaddr),
         .memAddr(memAddr), .memRdData(memRdData), .memWrData(memWrData), .dSize(dsize), .memWr(memWr),
         .busA(busA), .busB(busB), .busFP(busFP), .rs1(rs1), .rs2(rs2), .rd(rd), .regWrData(regWrData), .regWr(regWr), .fp(fp)
@@ -64,7 +64,7 @@ module topLevel();
     
         #0
         #7 rst = 1;
-        #250 $writememh("dmem_final", DMEM.mem); $finish;
+        #1500 $writememh("dmem_final", DMEM.mem); $finish;
         
 
     end // initial
@@ -85,17 +85,17 @@ module topLevel();
         //  $display("===========================================");
         
         // // FIB DEMO
-        // $display("\n===============REGISTER DUMP===============");
-        // $display("reg %x: %x \t reg %x: %x", 1, regfile.mem[1],  2, regfile.mem[2]);
-        // $display("reg %x: %x \t reg %x: %x", 3, regfile.mem[3],  4, regfile.mem[4]);
-        // $display("===========================================");
-        
-                // FIB DEMO
         $display("\n===============REGISTER DUMP===============");
-        $display("reg %d: %x \t reg %d: %x", 1, regfile.mem[1],  29, regfile.mem[29]);
-        $display("reg %d: %x \t reg %d: %x", 2, regfile.mem[2],  30, regfile.mem[30]);
-        $display("reg %d: %x \t reg %d: %x", 3, regfile.mem[3],  31, regfile.mem[31]);
+        $display("reg %x: %x \t reg %x: %x", 1, regfile.mem[1],  2, regfile.mem[2]);
+        $display("reg %x: %x \t reg %x: %x", 3, regfile.mem[3],  4, regfile.mem[4]);
         $display("===========================================");
+        
+        // // QUICKSORT DEMO
+        // $display("\n===============REGISTER DUMP===============");
+        // $display("reg %d: %x \t reg %d: %x", 1, regfile.mem[1],  29, regfile.mem[29]);
+        // $display("reg %d: %x \t reg %d: %x", 2, regfile.mem[2],  30, regfile.mem[30]);
+        // $display("reg %d: %x \t reg %d: %x", 3, regfile.mem[3],  31, regfile.mem[31]);
+        // $display("===========================================");
         
         ////////////////////////////
         
@@ -146,8 +146,13 @@ module topLevel();
         $display("busA=%x, rs1=%x", busA, rs1);
         $display("busB=%x, rs2=%x", busB, rs2);
         // // $display("imm32=%x", CPU.imm32_1);
-        // // $display("regWr=%x", CPU.regWr_1);;
-        // $display("rd=%x", CPU.rd_1);
+        // // $display("regWr=%x", CPU.regWr_1);
+        $display("signExt=%x", CPU.id.signExt);
+        $display("regDst=%x", CPU.id.regDst);
+      //  $display("rd=%x", CPU.rd_1);
+    //    $display("aluCtrl=%b", CPU.aluCtrl_1);
+       // $display("aluCtrl(ctrl)=%b", CPU.id.control.aluCtrl);
+        
         // // $display("memWr=%x", CPU.memWr_1);
         // $display("ctrl id_ex=%x", CPU.id_ex_ctrl);
         
@@ -156,23 +161,25 @@ module topLevel();
         $display("busB_sel=%x", CPU.busB_sel);
         $display("memWrData_sel=%x", CPU.memWrData_sel);
         
-        // $display("id_rs1=%x", CPU.hazard_detect.id_rs1);
-        // $display("id_rs2=%x", CPU.hazard_detect.id_rs2);
+        $display("id_rs1=%x", CPU.hazard_detect.id_rs1);
+        $display("id_rs2=%x", CPU.hazard_detect.id_rs2);
         // $display("ex_valid=%x", CPU.hazard_detect.ex_valid);
-        // $display("ex_rd=%x", CPU.hazard_detect.ex_rd);
+        $display("ex_rd=%x", CPU.hazard_detect.ex_rd);
         // $display("ex_instr=%x", CPU.hazard_detect.ex_instr);
         // $display("mem_valid=%x", CPU.hazard_detect.mem_valid);
-        // $display("mem_rd=%x", CPU.hazard_detect.mem_rd);
+        $display("mem_rd=%x", CPU.hazard_detect.mem_rd);
         
         
         $display("----------EX-----------");
         $display("instr=%x", CPU.instr_2);
         $display("busA=%x, busA_sel=%x", CPU.busA_in, CPU.busA_sel_2);
         $display("busB=%x, busB_sel=%x", CPU.busB_in, CPU.busB_sel_2);
-        // $display("imm32=%x", CPU.imm32_2);
+        $display("imm32=%x", CPU.imm32_2);
         // $display("regWr=%x", CPU.regWr_2);
         // $display("rd=%x", CPU.rd_2);
-        // $display("alu=%x", CPU.aluRes_2);
+        $display("alu=%x", CPU.aluRes_2);
+        $display("aluRes_int=%x", CPU.ex.aluRes_int);
+        $display("aluCtrl=%b", CPU.ex.aluCtrl);
         // // $display("memWr=%x", CPU.memWr_2);
         // $display("ctrl ex_mem=%x", CPU.ex_mem_ctrl);
         
@@ -180,7 +187,7 @@ module topLevel();
         $display("instr=%x", CPU.instr_3);
         $display("busB=%x", CPU.busB_3);
         $display("jr=%x", CPU.mem.jr);
-        // $display("alu=%x", CPU.aluRes_3);
+        $display("alu=%x", CPU.aluRes_3);
         $display("imm32=%x", CPU.imm32_3);
         // $display("regWr=%x", CPU.regWr_3);
         // $display("rd=%x", CPU.rd_3);

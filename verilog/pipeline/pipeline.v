@@ -86,7 +86,7 @@ module pipeline(
         .regDst(regDst_1), .memRd(memRd_1), .memWr(memWr_1), .regWr(regWr_1),
         .branch(branch_1), .jr(jr_1), .jump(jump_1), .link(link_1),
         .dSize(dSize_1), .imm32(imm32_1),
-        .rs1(rs1), .rs2(rs2), .rd(rd_1), .op0(op0_1), .fp(fp_1), .not_trap(not_trap_1)
+        .rs1(rs1), .rs2(rs2), .rd(rd_1), .op0(op0_1), .fp(fp_1), .zeroExt(zeroExt_1), .not_trap(not_trap_1)
     );
     
     
@@ -118,7 +118,7 @@ wire pc_enable;
     wire [3:0] aluCtrl_2;
     wire aluSrc_2, setInv_2,
         regDst_2, memRd_2, memWr_2, regWr_2, signExt_2,
-        branch_2, jr_2, jump_2, link_2, op0_2, fp_2, not_trap_2;
+        branch_2, jr_2, jump_2, link_2, op0_2, fp_2, zeroExt_2, not_trap_2;
     wire [1:0] dSize_2;
     wire [31:0] imm32_2;
     wire [4:0] rd_2;
@@ -132,7 +132,7 @@ wire pc_enable;
         .incPC_d(incPC_1), .busA_d(busA), .busB_d(busB), .busFP_d(busFP), 
         .aluCtrl_d(aluCtrl_1), .aluSrc_d(aluSrc_1), .setInv_d(setInv_1),
         .regDst_d(regDst), .memRd_d(memRd_1), .memWr_d(memWr_1), .regWr_d(regWr_1),
-        .branch_d(branch_1), .jr_d(jr_1), .jump_d(jump_1), .link_d(link_1), .op0_d(op0_1), .fp_d(fp_1),
+        .branch_d(branch_1), .jr_d(jr_1), .jump_d(jump_1), .link_d(link_1), .op0_d(op0_1), .fp_d(fp_1), .zeroExt_d(zeroExt_1),
         .dSize_d(dSize_1), .imm32_d(imm32_1),
         .rd_d(rd_1), .instr_d(instr_1), .valid_d(valid_1),
         .busA_sel_d(busA_sel), .busB_sel_d(busB_sel), .memWrData_sel_d(memWrData_sel),
@@ -142,7 +142,7 @@ wire pc_enable;
         .incPC_q(incPC_2), .busA_q(busA_2), .busB_q(busB_2), .busFP_q(busFP_2),
         .aluCtrl_q(aluCtrl_2), .aluSrc_q(aluSrc_2), .setInv_q(setInv_2),
         .regDst_q(regDst_2), .memRd_q(memRd_2), .memWr_q(memWr_2), .regWr_q(regWr_2),
-        .branch_q(branch_2), .jr_q(jr_2), .jump_q(jump_2), .link_q(link_2), .op0_q(op0_2), .fp_q(fp_2),
+        .branch_q(branch_2), .jr_q(jr_2), .jump_q(jump_2), .link_q(link_2), .op0_q(op0_2), .fp_q(fp_2), .zeroExt_q(zeroExt_2),
         .dSize_q(dSize_2), .imm32_q(imm32_2),
         .rd_q(rd_2), .instr_q(instr_2), .valid_q(valid_2),
         .busA_sel_q(busA_sel_2), .busB_sel_q(busB_sel_2), .memWrData_sel_q(memWrData_sel_2),
@@ -168,7 +168,7 @@ wire pc_enable;
     ex ex(
         .aluSrc(aluSrc_2), .aluCtrl(aluCtrl_2), .setInv(setInv_2), 
         .busA(busA_in), .busB(busB_in), .imm32(imm32_2),
-        .aluRes(aluRes_2), .isZero(isZero_2), .fp(fp_2)
+        .aluRes(aluRes_2), .isZero(isZero_2), .fp(fp_2), .zeroExt(zeroExt_2)
     );
     
 
@@ -177,7 +177,7 @@ wire pc_enable;
 
 ////// EX/MEM Register (in = 2, out = 3)
     // New outputs of register
-    wire [31:0] incPC_3, busB_3, imm32_3, busFP_3, aluRes_3, instr_3;
+    wire [31:0] incPC_3, busA_3, busB_3, imm32_3, busFP_3, aluRes_3, instr_3;
     wire regDst_3, memRd_3, memWr_3, regWr_3,
                 branch_3, jr_3, jump_3, link_3, op0_3, fp_3, isZero_3, not_trap_3;
     wire [1:0] dSize_3;
@@ -188,14 +188,14 @@ wire pc_enable;
     ex_mem ex_mem(
         .clk(clk), .rst(rst), .ctrl(ex_mem_ctrl),
     //Inputs
-        .incPC_d(incPC_2), .busB_d(busB_in), .imm32_d(imm32_2), .busFP_d(busFP_2), .aluRes_d(aluRes_2),
+        .incPC_d(incPC_2), .busA_d(busA_in), .busB_d(busB_in), .imm32_d(imm32_2), .busFP_d(busFP_2), .aluRes_d(aluRes_2),
         .regDst_d(regDst_2), .memRd_d(memRd_2), .memWr_d(memWr_2), .regWr_d(regWr_2),
         .branch_d(branch_2), .jr_d(jr_2), .jump_d(jump_2), .link_d(link_2), .op0_d(op0_2),.fp_d(fp_2), 
         .dSize_d(dSize_2),
         .rd_d(rd_2), .instr_d(instr_2), .memWrData_sel_d(memWrData_sel_2),
         .valid_d(valid_2), .isZero_d(isZero_2), .not_trap_d(not_trap_2),
     //Outputs
-        .incPC_q(incPC_3), .busB_q(busB_3), .imm32_q(imm32_3), .busFP_q(busFP_3), .aluRes_q(aluRes_3), 
+        .incPC_q(incPC_3), .busA_q(busA_3), .busB_q(busB_3), .imm32_q(imm32_3), .busFP_q(busFP_3), .aluRes_q(aluRes_3), 
         .regDst_q(regDst_3), .memRd_q(memRd_3), .memWr_q(memWr_3), .regWr_q(regWr_3),
         .branch_q(branch_3), .jr_q(jr_3), .jump_q(jump_3), .link_q(link_3), .op0_q(op0_3), .fp_q(fp_3), 
         .dSize_q(dSize_3),
@@ -213,7 +213,7 @@ wire pc_enable;
     mem mem(
         .isZero(isZero_3), .op0(op0_3), .branch(branch_3), 
         .jump(jump_3), .jr(jr_3), 
-        .incPC(incPC_3), .imm32(imm32_3), .busB(busB_3),
+        .incPC(incPC_3), .imm32(imm32_3), .busA(busA_3),
         .reg31Val(reg31Val_3), .nextPC(nextPC_3), .takeLeap(takeLeap)
     );
     
@@ -267,7 +267,8 @@ wire pc_enable;
         .reg31Val(reg31Val_0),
         .busFP(busFP_0),
         .regWrData(regWrData),
-        .dSize(dSize_0)
+        .dSize(dSize_0),
+        .instr(instr_0)
     );
 
 endmodule // pipeline

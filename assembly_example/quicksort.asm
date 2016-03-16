@@ -121,9 +121,9 @@ _main:
 	subui	r29,r29,#8; alloc local storage
 	jal	___main
 	nop; delay slot nop
-	addi	r29,r29,#-16
-	add	r1,r0,r29
-	lhi	r2,((_A)>>16)&0xffff
+	addi	r29,r29,#-16 ;0fe8
+	add	r1,r0,r29 ;fe8
+	lhi	r2,((_A)>>16)&0xffff	
 	addui	r2,r2,(_A)&0xffff
 	sw	(r1),r2
 	addi	r2,r0,#0

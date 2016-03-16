@@ -3,7 +3,7 @@
 module ex_mem(
    clk, rst, ctrl, valid_d,
    //Inputs
-   instr_d, incPC_d, busB_d, imm32_d, busFP_d, busA_d, aluRes_d,
+   instr_d, incPC_d, busA_d, busB_d, imm32_d, busFP_d, busA_d, aluRes_d,
    regDst_d, memRd_d, memWr_d, regWr_d,
    branch_d, jr_d, jump_d, link_d, op0_d, fp_d,
    dSize_d,
@@ -11,7 +11,7 @@ module ex_mem(
    memWrData_sel_d,
    isZero_d, not_trap_d,
    //Outputs
-   instr_q, incPC_q, busB_q, imm32_q, busFP_q, busA_q, aluRes_q,
+   instr_q, incPC_q, busA_q, busB_q, imm32_q, busFP_q, busA_q, aluRes_q,
    regDst_q, memRd_q, memWr_q, regWr_q,
    branch_q, jr_q, jump_q, link_q, op0_q, fp_q,
    dSize_q,
@@ -23,7 +23,7 @@ module ex_mem(
    input          clk, rst, valid_d;
    input [1:0]    ctrl;
    
-   input [31:0]   instr_d, incPC_d, busB_d, imm32_d, busFP_d, busA_d, aluRes_d;
+   input [31:0]   instr_d, incPC_d, busA_d, busB_d, imm32_d, busFP_d, aluRes_d;
    input          regDst_d, memRd_d, memWr_d, regWr_d,
                   branch_d, jr_d, jump_d, link_d, op0_d, fp_d;
    input [1:0]    dSize_d;
@@ -31,7 +31,7 @@ module ex_mem(
    input [1:0]    memWrData_sel_d;
    input          isZero_d, not_trap_d;
    
-   output reg [31:0]  instr_q, incPC_q, busB_q, imm32_q, busFP_q, busA_q, aluRes_q;
+   output reg [31:0]  instr_q, incPC_q, busA_q, busB_q, imm32_q, busFP_q, aluRes_q;
    output reg         regDst_q, memRd_q, memWr_q, regWr_q,
                       branch_q, jr_q, jump_q, link_q, op0_q, fp_q;
    output reg [1:0]   dSize_q;
@@ -45,6 +45,7 @@ module ex_mem(
             //TODO
             instr_q <= `NOP;
             incPC_q <= 32'b0;
+            busA_q <= 32'b0;
             busB_q <= 32'b0;
             imm32_q <= 32'b0;
             busFP_q <= 32'b0;
@@ -74,6 +75,7 @@ module ex_mem(
             if (ctrl == `FLUSH) begin
             instr_q <= `NOP;
             incPC_q <= 32'b0;
+            busA_q <= 32'b0;
             busB_q <= 32'b0;
             imm32_q <= 32'b0;
             busFP_q <= 32'b0;
@@ -103,6 +105,7 @@ module ex_mem(
                isZero_q <= isZero_d;
                instr_q <= instr_d;
                incPC_q <= incPC_d;
+               busA_q <= busA_d;
                busB_q <= busB_d;
                imm32_q <= imm32_d;
                regDst_q <= regDst_d;

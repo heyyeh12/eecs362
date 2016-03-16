@@ -1,11 +1,11 @@
 module mem(
     isZero, op0, branch, 
     jump, jr, 
-    incPC, imm32, busB,
+    incPC, imm32, busA,
     reg31Val, nextPC, takeLeap);
     
    // input [31:0] aluRes;                // from EX
-    input [31:0] busB;                  // from ID
+    input [31:0] busA;                  // from ID
     
     // inputs for choosing nextPC
     input isZero;                       // input from EX, is busA 0
@@ -46,7 +46,7 @@ module mem(
     //mux2to1 #(32) jmpOrBrMux (.src0(incPC), .src1(leapPC), .sel(takeLeap), .z(notNextPC));     // taking leap or nextPC as target address
     
     // take register jump
-    mux2to1 #(32) jrRegValMux (.src0(leapPC), .src1(busB), .sel(jr), .z(nextPC));            // taking register jump for target address?
+    mux2to1 #(32) jrRegValMux (.src0(leapPC), .src1(busA), .sel(jr), .z(nextPC));            // taking register jump for target address?
   
 /////////////////////////////////////////////////////////////////////////////////////////////// 
 

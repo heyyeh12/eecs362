@@ -4,7 +4,7 @@ module id(
     regDst, memRd, memWr, regWr,
     branch, jr, jump, link,
     dSize, imm32,
-    rs1, rs2, rd, op0, fp, not_trap
+    rs1, rs2, rd, op0, fp, not_trap, zeroExt
 );
 
     // Interface
@@ -18,6 +18,7 @@ module id(
             branch, jr, jump, link, op0, fp;
     output [4:0] rs1, rs2, rd;      // set by instruction, link, and regDst
     output not_trap;
+    output zeroExt;
     
     // Internal Signals
     wire [4:0] rs2, rs2_link, rd_rt;

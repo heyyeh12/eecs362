@@ -121,8 +121,10 @@ module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regW
                 regDst = 0;
                 memRd = regWr;
                 dSize = opcode[1:0];
+                signExt = 0;
                 case(opcode[3:0])
-                    4'b0100 : signExt = 1;
+                    // 4'b0101 : signExt = 0;
+                    // 4'b0100 : signExt = 0;
                     4'b0011 : dSize = 2'b11;
                     4'b1100 : dSize = 2'b11;
                 endcase
@@ -130,11 +132,17 @@ module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regW
             end
             6'b0010?? : begin // addi, subi
                 aluCtrl[3:1] = 3'b010;
+                signExt = opcode[0];
                 aluCtrl[0] = opcode[1];
             end
-            6'b0011?? : begin // bitwisei
-                aluCtrl[3:2] = 2'b10;
-                aluCtrl[1:0] = opcode[1:0];
+            6'b001111 : begin // lhi 
+                 regDst = 0;
+                 aluCtrl = 4'b0100;
+                 zeroExt = 1;
+            end
+            6'b0011?? : begin // bitwisei and lhi
+                aluCtrl[3:2] = 2'b10;           //
+                aluCtrl[1:0] = opcode[1:0];     //
             end
             6'b0101? : begin // shifti
                 aluCtrl[3:2] = 2'b00;
@@ -169,11 +177,11 @@ module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regW
                 regWr = 0;
                 branch = 1;
             end
-            6'b001111 : begin // lhi 
-                regDst = 1;
-                aluCtrl = 4'b0010;
-                zeroExt = 1;
-            end
+            // 6'b001111 : begin // lhi 
+            //     regDst = 0;
+            //     aluCtrl = 4'b0100;
+            //     zeroExt = 1;
+            // end
         endcase
         // $display("--Jump Instruction: jump=%b jr=%b link=%b--", jump, jr, link);
         // $display("--Branch Instruction: branch=%b--", branch);
