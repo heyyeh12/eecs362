@@ -9,7 +9,7 @@ module ex_mem(
    dSize_d,
    rd_d,
    memWrData_sel_d,
-   isZero_d,
+   isZero_d, not_trap_d,
    //Outputs
    instr_q, incPC_q, busB_q, imm32_q, busFP_q, busA_q, aluRes_q,
    regDst_q, memRd_q, memWr_q, regWr_q,
@@ -17,7 +17,7 @@ module ex_mem(
    dSize_q,
    rd_q,
    memWrData_sel_q, valid_q,
-   isZero_q
+   isZero_q, not_trap_q
 );
 
    input          clk, rst, valid_d;
@@ -29,7 +29,7 @@ module ex_mem(
    input [1:0]    dSize_d;
    input [4:0]    rd_d;
    input [1:0]    memWrData_sel_d;
-   input          isZero_d;
+   input          isZero_d, not_trap_d;
    
    output reg [31:0]  instr_q, incPC_q, busB_q, imm32_q, busFP_q, busA_q, aluRes_q;
    output reg         regDst_q, memRd_q, memWr_q, regWr_q,
@@ -38,7 +38,7 @@ module ex_mem(
    output reg [4:0]   rd_q;
    output reg  [1:0]  memWrData_sel_q; 
    output reg valid_q;
-   output reg  isZero_q;
+   output reg  isZero_q, not_trap_q;
    
    always @ (posedge clk or negedge rst)
         if (~rst) begin
@@ -64,7 +64,9 @@ module ex_mem(
             memWr_q <= 0;
             regWr_q <= 0;
             memWrData_sel_q <= `FROM_ID;
-            valid_q <= 1'b1;
+            valid_q <= 1'b0;
+            not_trap_q <= 1'b1;
+            rd_q = 5'b0;
          end
             
         else begin
@@ -92,6 +94,8 @@ module ex_mem(
             regWr_q <= 0;
             memWrData_sel_q <= `FROM_ID;
             valid_q <= 1'b0;
+            not_trap_q <= 1'b1;
+            rd_q <= 5'b0;
                // TODO: figure out what else matters
             end
             // 2. proceed as normal
@@ -118,6 +122,7 @@ module ex_mem(
                rd_q <= rd_d;
                memWrData_sel_q <= memWrData_sel_d;
                valid_q <= valid_d;
+               not_trap_q <= not_trap_d;
             end
             // 3. stall (don't update)
         end

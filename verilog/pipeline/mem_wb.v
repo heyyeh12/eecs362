@@ -33,7 +33,7 @@ module mem_wb(
         if (~rst) begin
             instr_q <= `NOP;
             regWr_q <= 0;
-            valid_q <= 1'b1;
+            valid_q <= 1'b0;
             //TODO
         end
         else begin

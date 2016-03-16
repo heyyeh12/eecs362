@@ -4,7 +4,7 @@ module id(
     regDst, memRd, memWr, regWr,
     branch, jr, jump, link,
     dSize, imm32,
-    rs1, rs2, rd, op0, fp, not_halt
+    rs1, rs2, rd, op0, fp, not_trap
 );
 
     // Interface
@@ -17,10 +17,10 @@ module id(
             regDst, memRd, memWr, regWr,
             branch, jr, jump, link, op0, fp;
     output [4:0] rs1, rs2, rd;      // set by instruction, link, and regDst
-    output not_halt;
+    output not_trap;
     
     // Internal Signals
-    wire [4:0] rs2;
+    wire [4:0] rs2, rs2_link, rd_rt;
     wire link, regDst, signExt, zeroExt, jump;
     wire [31:0] signExt32;
     wire [31:0] zeroExt32;
@@ -46,16 +46,22 @@ module id(
         .signExt(signExt),
         .zeroExt(zeroExt),
         .fp(fp),
-        .not_halt(not_halt)
+        .not_trap(not_trap)
         );
+
 
 
     // If jal/jalr, set rs2 to reg31
     mux2to1 #(5) muxReg31 (.src0(instruction[20:16]), .src1(5'b11111), .sel(link), .z(rs2));
     
-    // Either rs2 or instruction[15:11] will be the destination register (rd)
-    mux2to1 #(5) mux2to1(.src0(rs2), .src1(instruction[15:11]), .sel(regDst), .z(rd));
+    // If immediate, default rs2 = 0 for hazard detection
+    // mux2to1 #(5) muxImm(.src0(rs2_link), .src1(5'b0), .sel(aluSrc), .z(rs2));
     
+    // Either rs2 or instruction[15:11] will be the destination register (rd)
+    mux2to1 #(5) mux2to1(.src0(rs2), .src1(instruction[15:11]), .sel(regDst), .z(rd_rt));
+    
+    // If store word, default rd = 0 for hazard detection
+    mux2to1 #(5) muxStore(.src0(rd_rt), .src1(5'b0), .sel(memWr), .z(rd));
   
     // assign rs1
     assign rs1 = instruction[25:21]; // if fp = 1, this is referencing a fp register

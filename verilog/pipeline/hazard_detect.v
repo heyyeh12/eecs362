@@ -66,7 +66,7 @@ always @* begin
             end
         end
         
-        else if (mem_valid && mem_rd != `R0 && id_rs1 == mem_rd && ex_instr == `NOP)
+        else if ((mem_valid && mem_rd != `R0 && id_rs1 == mem_rd)) // || ex_instr == `NOP)
         begin 
             // MEM FORWARD DETECTION - RS1
             busA_sel = `FROM_MEM;
@@ -96,7 +96,7 @@ always @* begin
             end
         end
         
-        else if (mem_valid && mem_rd != `R0 && id_rs2 == mem_rd && ex_instr == `NOP)
+        else if ((mem_valid && mem_rd != `R0 && id_rs2 == mem_rd)) // || ex_instr == `NOP)
         begin 
             // MEM FORWARD DETECTION - RS1
             busB_sel = `FROM_MEM;

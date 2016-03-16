@@ -42,12 +42,11 @@ module pipeline(
 ////// IF Module
     // New outputs of module
     wire [31:0] incPC_0;
-    // wire not_halt;
     
     ifetch ifetch(
     // Inputs
     //.takeLeap(takeLeap),
-        .clk(clk), .rst(rst), .initPC(initPC), .nextPC(nextPC_3), .takeLeap(takeLeap), .enable(pc_enable), .not_halt(not_halt),
+        .clk(clk), .rst(rst), .initPC(initPC), .nextPC(nextPC_3), .takeLeap(takeLeap), .enable(pc_enable), .not_trap(not_trap_3),
     // Outputs
         .curPC(iAddr), .incPC(incPC_0)
     );
@@ -72,7 +71,7 @@ module pipeline(
     wire [3:0] aluCtrl_1;
     wire aluSrc_1, setInv_1,
         regDst_1, memRd_1, memWr_1, regWr_1, signExt_1,
-        branch_1, jr_1, jump_1, link_1, op0_1, fp_1;
+        branch_1, jr_1, jump_1, link_1, op0_1, fp_1, not_trap_1;
     wire [1:0] dSize_1;
     wire [31:0] imm32_1;
     wire [4:0] rd_1;
@@ -87,7 +86,7 @@ module pipeline(
         .regDst(regDst_1), .memRd(memRd_1), .memWr(memWr_1), .regWr(regWr_1),
         .branch(branch_1), .jr(jr_1), .jump(jump_1), .link(link_1),
         .dSize(dSize_1), .imm32(imm32_1),
-        .rs1(rs1), .rs2(rs2), .rd(rd_1), .op0(op0_1), .fp(fp_1), .not_halt(not_halt)
+        .rs1(rs1), .rs2(rs2), .rd(rd_1), .op0(op0_1), .fp(fp_1), .not_trap(not_trap_1)
     );
     
     
@@ -119,7 +118,7 @@ wire pc_enable;
     wire [3:0] aluCtrl_2;
     wire aluSrc_2, setInv_2,
         regDst_2, memRd_2, memWr_2, regWr_2, signExt_2,
-        branch_2, jr_2, jump_2, link_2, op0_2, fp_2;
+        branch_2, jr_2, jump_2, link_2, op0_2, fp_2, not_trap_2;
     wire [1:0] dSize_2;
     wire [31:0] imm32_2;
     wire [4:0] rd_2;
@@ -137,6 +136,7 @@ wire pc_enable;
         .dSize_d(dSize_1), .imm32_d(imm32_1),
         .rd_d(rd_1), .instr_d(instr_1), .valid_d(valid_1),
         .busA_sel_d(busA_sel), .busB_sel_d(busB_sel), .memWrData_sel_d(memWrData_sel),
+        .not_trap_d(not_trap_1),
         
     // Outputs
         .incPC_q(incPC_2), .busA_q(busA_2), .busB_q(busB_2), .busFP_q(busFP_2),
@@ -145,7 +145,8 @@ wire pc_enable;
         .branch_q(branch_2), .jr_q(jr_2), .jump_q(jump_2), .link_q(link_2), .op0_q(op0_2), .fp_q(fp_2),
         .dSize_q(dSize_2), .imm32_q(imm32_2),
         .rd_q(rd_2), .instr_q(instr_2), .valid_q(valid_2),
-        .busA_sel_q(busA_sel_2), .busB_sel_q(busB_sel_2), .memWrData_sel_q(memWrData_sel_2)
+        .busA_sel_q(busA_sel_2), .busB_sel_q(busB_sel_2), .memWrData_sel_q(memWrData_sel_2),
+        .not_trap_q(not_trap_2)
     );
     
     
@@ -156,10 +157,12 @@ wire pc_enable;
     wire isZero_2;
     
         // Forwarding busA MUX
-    mux4to1 #(32) ForwardBusA(.src0(busA_2), .src1(aluRes_3), .src2(memRdData_0), .src3(32'h00), .sel(busA_sel_2), .z(busA_in));
+    // mux4to1 #(32) ForwardBusA(.src0(busA_2), .src1(aluRes_3), .src2(memRdData_0), .src3(32'h00), .sel(busA_sel_2), .z(busA_in));
+    mux4to1 #(32) ForwardBusA(.src0(busA_2), .src1(aluRes_3), .src2(regWrData), .src3(32'h00), .sel(busA_sel_2), .z(busA_in));
         
     // Forwarding busB MUX
-    mux4to1 #(32) ForwardBusB(.src0(busB_2), .src1(aluRes_3), .src2(memRdData_0), .src3(32'h00), .sel(busB_sel_2), .z(busB_in));
+    // mux4to1 #(32) ForwardBusB(.src0(busB_2), .src1(aluRes_3), .src2(memRdData_0), .src3(32'h00), .sel(busB_sel_2), .z(busB_in));
+    mux4to1 #(32) ForwardBusB(.src0(busB_2), .src1(aluRes_3), .src2(regWrData), .src3(32'h00), .sel(busB_sel_2), .z(busB_in));
             
     
     ex ex(
@@ -176,7 +179,7 @@ wire pc_enable;
     // New outputs of register
     wire [31:0] incPC_3, busB_3, imm32_3, busFP_3, aluRes_3, instr_3;
     wire regDst_3, memRd_3, memWr_3, regWr_3,
-                branch_3, jr_3, jump_3, link_3, op0_3, fp_3, isZero_3;
+                branch_3, jr_3, jump_3, link_3, op0_3, fp_3, isZero_3, not_trap_3;
     wire [1:0] dSize_3;
     wire [4:0] rd_3;
     wire valid_3;
@@ -189,13 +192,15 @@ wire pc_enable;
         .regDst_d(regDst_2), .memRd_d(memRd_2), .memWr_d(memWr_2), .regWr_d(regWr_2),
         .branch_d(branch_2), .jr_d(jr_2), .jump_d(jump_2), .link_d(link_2), .op0_d(op0_2),.fp_d(fp_2), 
         .dSize_d(dSize_2),
-        .rd_d(rd_2), .instr_d(instr_2), .memWrData_sel_d(memWrData_sel_2), .valid_d(valid_2), .isZero_d(isZero_2),
+        .rd_d(rd_2), .instr_d(instr_2), .memWrData_sel_d(memWrData_sel_2),
+        .valid_d(valid_2), .isZero_d(isZero_2), .not_trap_d(not_trap_2),
     //Outputs
         .incPC_q(incPC_3), .busB_q(busB_3), .imm32_q(imm32_3), .busFP_q(busFP_3), .aluRes_q(aluRes_3), 
         .regDst_q(regDst_3), .memRd_q(memRd_3), .memWr_q(memWr_3), .regWr_q(regWr_3),
         .branch_q(branch_3), .jr_q(jr_3), .jump_q(jump_3), .link_q(link_3), .op0_q(op0_3), .fp_q(fp_3), 
         .dSize_q(dSize_3),
-        .rd_q(rd_3), .instr_q(instr_3), .memWrData_sel_q(memWrData_sel_3), .valid_q(valid_3), .isZero_q(isZero_3)
+        .rd_q(rd_3), .instr_q(instr_3), .memWrData_sel_q(memWrData_sel_3),
+        .valid_q(valid_3), .isZero_q(isZero_3), .not_trap_q(not_trap_3)
     );
     
 ////// MEM Module
@@ -238,12 +243,14 @@ wire pc_enable;
         //.nextPC_d(nextPC_3),
         .regDst_d(regDst_3), .memRd_d(memRd_3), .regWr_d(regWr_3), .link_d(link_3), .fp_d(fp_3),
         .dSize_d(dSize_3), .rd_d(rd_3), .instr_d(instr_3),
-        .aluRes_d(aluRes_3), .memRdData_d(memRdData), .reg31Val_d(reg31Val_3), .busFP_d(busFP_3), .valid_d(valid_3),
+        .aluRes_d(aluRes_3), .memRdData_d(memRdData), .reg31Val_d(reg31Val_3),
+        .busFP_d(busFP_3), .valid_d(valid_3),
     //Outputs
         //.nextPC_q(nextPC_0),
         .regDst_q(regDst_0), .memRd_q(memRd_0), .regWr_q(regWr), .link_q(link_0), .fp_q(fp_0), 
         .dSize_q(dSize_0), .rd_q(rd), .instr_q(instr_0),
-        .aluRes_q(aluRes_0), .memRdData_q(memRdData_0), .reg31Val_q(reg31Val_0), .busFP_q(busFP_0), .valid_q(valid_0)
+        .aluRes_q(aluRes_0), .memRdData_q(memRdData_0), .reg31Val_q(reg31Val_0),
+        .busFP_q(busFP_0), .valid_q(valid_0)
     );
   
 ////// WB Module

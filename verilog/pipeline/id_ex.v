@@ -10,7 +10,7 @@ module id_ex(
     branch_d, jr_d, jump_d, link_d, op0_d, fp_d,
     dSize_d, imm32_d,
     rd_d,
-    busA_sel_d, busB_sel_d, memWrData_sel_d,
+    busA_sel_d, busB_sel_d, memWrData_sel_d, not_trap_d,
     // Outputs
     instr_q, incPC_q, busA_q, busB_q, busFP_q, busA_q,
     aluCtrl_q, aluSrc_q, setInv_q,
@@ -18,13 +18,13 @@ module id_ex(
     branch_q, jr_q, jump_q, link_q, op0_q, fp_q,
     dSize_q, imm32_q,
     rd_q,
-    busA_sel_q, busB_sel_q, memWrData_sel_q, valid_q
+    busA_sel_q, busB_sel_q, memWrData_sel_q, valid_q, not_trap_q,
 
 );
 
     input           clk, rst;
     input [1:0]     ctrl;
-    input           valid_d;
+    input           valid_d, not_trap_d;
     
     input [31:0]    instr_d, incPC_d, busA_d, busB_d, busFP_d;
     input [3:0]     aluCtrl_d;
@@ -46,7 +46,7 @@ module id_ex(
     output reg [31:0]   imm32_q;
     output reg [4:0]    rd_q;
     output reg [1:0]    busA_sel_q, busB_sel_q, memWrData_sel_q;
-    output reg valid_q;
+    output reg          valid_q, not_trap_q;
     
     always @ (posedge clk or negedge rst)
         if (~rst) begin
@@ -74,7 +74,8 @@ module id_ex(
             busA_sel_q <= `FROM_ID;
             busB_sel_q <= `FROM_ID;
             memWrData_sel_q <= `FROM_ID;
-            valid_q <= 1'b1;
+            valid_q <= 1'b0;
+            not_trap_q <= 1'b1;
         end
         else begin
             // 1. flush register
@@ -86,6 +87,7 @@ module id_ex(
                 busB_sel_q <= `FROM_ID;
                 memWrData_sel_q <= `FROM_ID;
                 valid_q <= 1'b0;
+                not_trap_q <= 1'b1;
                 //inc_q <= initPC;
             end
             // 2. proceed as normal
@@ -115,6 +117,7 @@ module id_ex(
                 busB_sel_q <= busB_sel_d;
                 memWrData_sel_q <= memWrData_sel_d;
                 valid_q <= valid_d;
+                not_trap_q <= not_trap_d;
             end
             // 3. hold (don't update)
             

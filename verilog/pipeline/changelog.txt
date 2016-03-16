@@ -1,6 +1,13 @@
 SO WE DON"T GET CONFUSED ABOUT WHAT'S DIFFERENT
 
 //////////////////
+3/13
+
+- BY: fixed BusA_sel in hazard_detect (ignore NOP case for MEM hazard b/c originally &&, also causes problems at start when all NOP)
+- BY: changed BusA_sel mux to take regWrData in for src2
+- BY: changed rd to default to 0 for store instruction
+
+//////////////////
 3/9
 
 UPDATES

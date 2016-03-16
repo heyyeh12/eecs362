@@ -1,19 +1,19 @@
 module ifetch(
-    clk, rst, initPC, nextPC, takeLeap, enable, not_halt,
+    clk, rst, initPC, nextPC, takeLeap, enable, not_trap,
     curPC, incPC
 );
     
     input clk, rst;
     input [31:0] initPC;    // address for reset
     input [31:0] nextPC;
-    input takeLeap, enable, not_halt;
+    input takeLeap, enable, not_trap;
     output [31:0] curPC;    // going to instruction memory
     output [31:0] incPC;   // PC + 4
     
     wire [31:0] PC_d, PC_q;
     wire enable_PC;
     
-    and_gate and_gate (.a(enable), .b(1), .z(enable_PC)); // put back not_halt
+    and_gate and_gate (.a(enable), .b(1), .z(enable_PC)); // put back not_trap
     // PC Register
     dffa #(32) dffa (.d(PC_d), .clk(clk), .rst(1), .enable(enable_PC), .q(PC_q), .aload(initPC), .arst(rst));
    
