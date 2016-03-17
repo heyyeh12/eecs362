@@ -1,11 +1,3 @@
-// D - Flip Flop
-//
-//
-//
-//
-
-
-
 module dff (d, clk, rst, enable, q);
 
 // Ports : d, q, clk
@@ -46,14 +38,17 @@ module dffa (d, clk, rst, enable, q, aload, arst);
 
  always @ (posedge clk or negedge rst or negedge arst)
  begin
-    if (~rst)
+    if (~rst) begin
         q <= {N_BITS{1'b0}};
-    else if (~arst)
+    end
+    else if (~arst) begin
         q <= aload;
-    else if (clk == 1)  // rising_edge verilog equivalent?
+    end
+    else if (clk)  // rising_edge verilog equivalent?
         begin
-            if (enable == 1)
+            if (enable == 1) begin
                 q <= d;
+            end
         end
     end
  
