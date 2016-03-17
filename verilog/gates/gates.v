@@ -3,7 +3,7 @@
 
 ////////////////////////////////
 
-module and_gate (a, b, z);
+module and_gate (a, b, z); // synopsys template
 
 // Ports
     input a, b;
@@ -12,11 +12,11 @@ module and_gate (a, b, z);
 // Implementation
     assign z = a & b;
 
-endmodule
+endmodule // and_gate
 
 ////////////////////////////////
 
-module and_32 (a, b, z);
+module and_32 (a, b, z); // synopsys template
 
 // Ports
 
@@ -32,11 +32,11 @@ module and_32 (a, b, z);
             and_gate AND(a[i], b[i], z[i]);
         end
     endgenerate
-endmodule
+endmodule // and_32
 
 ////////////////////////////////
 
-module or_gate (a, b, z);
+module or_gate (a, b, z); // synopsys template
 
 // Ports
 
@@ -47,11 +47,11 @@ output z;
 
 assign z = a | b;
 
-endmodule
+endmodule // or_gate
 
 /////////////////////////////
 
-module or32to1 (a, z);
+module or32to1 (a, z); // synopsys template
     
     input [31:0] a;
     output z;
@@ -94,11 +94,11 @@ module or32to1 (a, z);
     // 2 to 1
     or_gate NOR1(nor2[0], nor2[1], z);
 
-endmodule
+endmodule // or32to1
 
 ////////////////////////////////
 
-module or_32 (a, b, z);
+module or_32 (a, b, z); // synopsys template
 
 // Ports
 
@@ -113,11 +113,11 @@ module or_32 (a, b, z);
             or_gate OR(a[i], b[i], z[i]);
         end
     endgenerate
-endmodule
+endmodule // or_32
 
 ////////////////////////////////
 
-module xor_gate (a, b, z);
+module xor_gate (a, b, z); // synopsys template
 
 // Ports
 
@@ -127,11 +127,11 @@ output z;
 // Implementation
 assign z = a ^ b;
 
-endmodule
+endmodule // xor_gate
 
 ////////////////////////////////
 
-module xor_32 (a, b, z);
+module xor_32 (a, b, z); // synopsys template
 
 // Ports
 
@@ -147,12 +147,12 @@ module xor_32 (a, b, z);
             xor_gate XOR (a[i], b[i], z[i]);
         end
     endgenerate
-endmodule
+endmodule // xor_32
 
 
 ////////////////////////////////
 
-module not_gate (a, z);
+module not_gate (a, z); // synopsys template
 
 // Ports
 
@@ -163,11 +163,11 @@ output z;
 
 assign z = ~a;
 
-endmodule
+endmodule // not_gate
 
 /////////////////////////////
 
-module not_32 (a, z);
+module not_32 (a, z); // synopsys template
 
 // Ports
 
@@ -183,11 +183,11 @@ genvar i;
         end
     endgenerate
 
-endmodule
+endmodule // not_32
 
 /////////////////////////////
 
-module nand_gate (a, b, z);
+module nand_gate (a, b, z); // synopsys template
 
 // Ports
 
@@ -198,11 +198,11 @@ output z;
 
 assign z = !(a && b);
 
-endmodule
+endmodule // nand_gate
 
 //////////////////////////////
 
-module nor_gate (a, b, z);
+module nor_gate (a, b, z); // synopsys template
 
 // Ports
 
@@ -213,11 +213,11 @@ output z;
 
 assign z = ~(a || b);
 
-endmodule
+endmodule // nor_gate
 
 /////////////////////////////
 
-module nor32to1 (a, z);
+module nor32to1 (a, z); // synopsys template
     
     input [31:0] a;
     output z;
@@ -262,11 +262,11 @@ module nor32to1 (a, z);
     
     not_gate NOT1(or_res, z);
 
-endmodule
+endmodule // nor32to1
 
 /////////////////////////////
 
-module mux2to1 (src0, src1, sel, z);
+module mux2to1 (src0, src1, sel, z); // synopsys template
     
     // Interface
     parameter N_BITS = 1;
@@ -276,11 +276,11 @@ module mux2to1 (src0, src1, sel, z);
 
     assign z = (sel) ? src1 : src0;
 
-endmodule
+endmodule // mux2to1
 
 /////////////////////////////
 
-module mux2to1_32 (src0, src1, sel, z);
+module mux2to1_32 (src0, src1, sel, z); // synopsys template
     
      input [31:0] src0, src1;
      input sel;
@@ -288,12 +288,12 @@ module mux2to1_32 (src0, src1, sel, z);
 
      mux2to1 #(32) MUX0 (.src0(src0), .src1(src1), .sel(sel), .z(z));
 
-endmodule
+endmodule // mux2to1_32
 
 /////////////////////////////
 
 // /* 4 to 1 mux for N_BITS sources */
-module mux4to1 (src0, src1, src2, src3, sel, z);
+module mux4to1 (src0, src1, src2, src3, sel, z); // synopsys template
     
     // Interface
     parameter N_BITS = 32;
@@ -309,12 +309,12 @@ module mux4to1 (src0, src1, src2, src3, sel, z);
     mux2to1 #(N_BITS) M2(src2, src3, sel[0], z2);
     mux2to1 #(N_BITS) M3(z1, z2, sel[1], z);
 
-endmodule
+endmodule // mux4to1
 
 /////////////////////////////
 
 // /* 8 to 1 mux for N_BITS sources */
-module mux8to1 (src0, src1, src2, src3, src4, src5, src6, src7, sel, z);
+module mux8to1 (src0, src1, src2, src3, src4, src5, src6, src7, sel, z); // synopsys template
     
     // Interface
     parameter N_BITS = 32;
@@ -330,7 +330,7 @@ module mux8to1 (src0, src1, src2, src3, src4, src5, src6, src7, sel, z);
     mux4to1 #(N_BITS) M2(src4, src5, src6, src7, sel[1:0], z2);
     mux2to1 #(N_BITS) M3(z1, z2, sel[2], z);
 
-endmodule
+endmodule // mux8to1
 
 /////////////////////////////
 
@@ -339,7 +339,7 @@ module mux16to1 (src0, src1, src2, src3,
                  src4, src5, src6, src7,
                  src8, src9, src10, src11,
                  src12, src13, src14, src15,
-                 sel, z);
+                 sel, z); // synopsys template
     
     // Interface
     parameter N_BITS = 32;
@@ -360,7 +360,7 @@ module mux16to1 (src0, src1, src2, src3,
     mux4to1 #(N_BITS) M4 (src12, src13, src14, src15, sel[1:0], z4);
     mux4to1 #(N_BITS) M5 (z1, z2, z3, z4, sel[3:2], z);
 
-endmodule
+endmodule // mux16to1
 
 /////////////////////////////
 
@@ -369,7 +369,7 @@ module mux32to1 (src0, src1, src2, src3, src4, src5, src6, src7,
                  src8, src9, src10, src11, src12, src13, src14, src15,
                  src16, src17, src18, src19, src20, src21, src22, src23,
                  src24, src25, src26, src27, src28, src29, src30, src31,
-                 sel, z);
+                 sel, z); // synopsys template
     
     // Interface
     parameter N_BITS = 32;
@@ -395,7 +395,7 @@ module mux32to1 (src0, src1, src2, src3, src4, src5, src6, src7,
         sel[3:0], z2);
     mux2to1 #(N_BITS) M3 (z1, z2, sel[4], z);
 
-endmodule
+endmodule // mux32to1
 
 /////////////////////////////
 
