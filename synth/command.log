@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version D-2010.03-SP5 for amd64 -- Oct 18, 2010
-#@ # Date:   %sThu Mar 17 12:41:25 2016
+#@ # Date:   %sThu Mar 17 14:01:30 2016
 #@ # Run by: byy911@batgirl.ece.northwestern.edu
 #@ 
 
@@ -4866,11 +4866,11 @@ source -echo -verbose /home/byy911/Documents/eecs362/synth/run.tcl
 #@ set compile_no_new_cells_at_top_level false
 #@ 
 #@ set default_clk clk
-#@ set default_clk_freq 1000
+#@ set default_clk_freq 800
 #@ set default_setup_skew  0.00
 #@ set default_hold_skew  0.00
 #@ set default_clk_transition  0.00
-#@ set clk_list {                                {clk     1000.0    0.0    0.0    0.0}        }
+#@ set clk_list {                                {clk     800.0    0.0    0.0    0.0}        }
 #@ set ideal_net_list {}
 #@ set false_path_list {}
 #@ set enforce_input_fanout_one     0

@@ -38,12 +38,12 @@ set compile_flatten_all 1
 set compile_no_new_cells_at_top_level false
 
 set default_clk clk
-set default_clk_freq 1000
+set default_clk_freq 800
 set default_setup_skew  0.00
 set default_hold_skew  0.00
 set default_clk_transition  0.00
 set clk_list {                        \
-        {clk     1000.0    0.0    0.0    0.0}        \
+        {clk     800.0    0.0    0.0    0.0}        \
 }
 set ideal_net_list {}
 set false_path_list {}
