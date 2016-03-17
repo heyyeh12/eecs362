@@ -1,7 +1,7 @@
 `include "constants.vh"
 module pipeline(
     clk, rst, initPC,
-    instruction, iAddr,
+    instruction, iAddr, memInstr,
     memAddr, memRdData, memWrData, dSize, memWr,
     busA, busB, busFP, rs1, rs2, rd, regWrData, regWr, fp
 );
@@ -13,6 +13,7 @@ module pipeline(
     // IMEM Interface
     input [31:0] instruction;       // instruction at current PC
     output [31:0] iAddr;            // address to fetch instruction
+    output [31:0] memInstr;         // address for checking TRAP
     
     // DMEM Interface
     input [31:0] memRdData;         // data read from data memory
@@ -103,7 +104,7 @@ wire [31:0] instr_2,  instr_3;
 wire valid_2, memWr_2,  memRd_3, valid_3;
 wire [4:0] rd_2, rd_3;
 
-
+// no wires fro rs1 rs2, problem?
 
     hazard_detect hazard_detect(
         .id_instr(instr_1), .ex_instr(instr_2), 
@@ -223,6 +224,7 @@ wire [4:0] rd_2, rd_3;
     assign memAddr = aluRes_3;
     assign memWr = memWr_3;
     assign dSize = dSize_3;
+    assign memInstr = instr_3;
     
     
     //Forwarding memWrData MUX

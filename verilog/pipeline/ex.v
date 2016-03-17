@@ -34,10 +34,10 @@ module ex(
     alu alu(.a(srcA), .b(srcB), .alu_ctrl(aluCtrl), .inverse_set(setInv), .res(aluRes_int));
     
     // Multiplier -- TODO, need to replace with WallaceTreeBooth multiplier
-    assign multRes = busA * srcB;
+    assign multRes = busA * srcB;           //this multRes should be mulRes
     and_gate and_gate1 (aluCtrl[0], aluCtrl[1], andTmp0);
     and_gate and_gate2 (aluCtrl[2], aluCtrl[3], andTmp1);
-    and_gate and_gate3 (andTmp0, andTmp1, multSel);
+    and_gate and_gate3 (andTmp0, andTmp1, multSel); // this multSel should be mulSel
     
     // select between aluRes and multRes as final result
     //mux2to1 #(32) MultMux(.src0(aluRes), .src1(multRes), .sel(multSel), .z(aluRes)); -- old mulitply
@@ -45,7 +45,7 @@ module ex(
     // if fp = 1, aluRes = busA
     mux2to1 #(32) MultMux(.src0(aluRes_int), .src1(busA), .sel(fp), .z(aluRes)); //change busA to srcA?
     
-    // check if busA is zero for branching, set isZero
+    // check if busA is zero for branching, set isZero                          // change busA to srcA
     nor32to1 checkisZero(.a(busA), .z(isZero));
 
     

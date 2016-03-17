@@ -1,0 +1,5381 @@
+reading val xxxxxxxx from reg xx
+reading val xxxxxxxx from reg xx
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00000000 	 reg 2: 00000000
+reg 3: 00000000 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @10ns~~~~~~~~~~~~~
+Instr [00000000] = 8c012000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=8c012000
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 00000000 	 reg 2: 00000000
+reg 3: 00000000 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @20ns~~~~~~~~~~~~~
+Instr [00000004] = 8c022004
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=8c022004
+----------ID-----------
+instr=8c012000
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 00000000 from reg 00
+reading val 00000000 from reg 01
+reading val 00000000 from reg 00
+reading val 00000000 from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 00000000 	 reg 2: 00000000
+reg 3: 00000000 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @30ns~~~~~~~~~~~~~
+Instr [00000008] = 00631826
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00631826
+----------ID-----------
+instr=8c022004
+----------EX-----------
+instr=8c012000
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 00000000 	 reg 2: 00000000
+reg 3: 00000000 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @40ns~~~~~~~~~~~~~
+Instr [0000000c] = 24630008
+memAddr: 00002000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630008
+----------ID-----------
+instr=00631826
+----------EX-----------
+instr=8c022004
+----------MEM-----------
+instr=8c012000
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 00000000 from reg 03
+reading val 00000000 from reg 03
+writing val 00000000 to register 01
+reading val 00000000 from reg 03
+reading val 00000000 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 00000000 	 reg 2: 00000000
+reg 3: 00000000 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @50ns~~~~~~~~~~~~~
+Instr [00000010] = 00220821
+memAddr: 00002004, memRdData: 00000001, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00220821
+----------ID-----------
+instr=24630008
+----------EX-----------
+instr=00631826
+----------MEM-----------
+instr=8c022004
+takeLeap=0
+----------WB-----------
+instr=8c012000
+
+===============REGISTER DUMP===============
+reg 1: 00000000 	 reg 2: 00000000
+reg 3: 00000000 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @60ns~~~~~~~~~~~~~
+Instr [00000014] = ac612000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=ac612000
+----------ID-----------
+instr=00220821
+----------EX-----------
+instr=24630008
+----------MEM-----------
+instr=00631826
+takeLeap=0
+----------WB-----------
+instr=8c022004
+writing val 00000001 to register 02
+reading val 00000000 from reg 01
+reading val 00000001 from reg 02
+writing val 00000000 to register 03
+reading val 00000000 from reg 03
+reading val 00000000 from reg 01
+
+===============REGISTER DUMP===============
+reg 1: 00000000 	 reg 2: 00000001
+reg 3: 00000000 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @70ns~~~~~~~~~~~~~
+Instr [00000018] = 24630004
+memAddr: 00000008, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac612000
+----------EX-----------
+instr=00220821
+----------MEM-----------
+instr=24630008
+takeLeap=0
+----------WB-----------
+instr=00631826
+
+===============REGISTER DUMP===============
+reg 1: 00000000 	 reg 2: 00000001
+reg 3: 00000000 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @80ns~~~~~~~~~~~~~
+Instr [0000001c] = 00221021
+memAddr: 00000001, memRdData: 00000000, memWrData: 00000001, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00221021
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac612000
+----------MEM-----------
+instr=00220821
+takeLeap=0
+----------WB-----------
+instr=24630008
+writing val 00000008 to register 03
+reading val 00000008 from reg 03
+reading val 00000000 from reg 03
+writing word to mem at 00002008 val 00000001
+writing val 00000001 to register 01
+reading val 00000001 from reg 01
+reading val 00000001 from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 00000000 	 reg 2: 00000001
+reg 3: 00000008 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @90ns~~~~~~~~~~~~~
+Instr [00000020] = ac622000
+memAddr: 00002008, memRdData: 00000000, memWrData: 00000001, memWr: 1
+Not trap=1
+----------IF-----------
+instr=ac622000
+----------ID-----------
+instr=00221021
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac612000
+takeLeap=0
+----------WB-----------
+instr=00220821
+
+===============REGISTER DUMP===============
+reg 1: 00000001 	 reg 2: 00000001
+reg 3: 00000008 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @100ns~~~~~~~~~~~~~
+Instr [00000024] = 24630004
+memAddr: 0000000c, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac622000
+----------EX-----------
+instr=00221021
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac612000
+reading val 00000008 from reg 03
+reading val 00000001 from reg 02
+writing val 0000000c to register 03
+reading val 0000000c from reg 03
+reading val 00000008 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 00000001 	 reg 2: 00000001
+reg 3: 00000008 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @110ns~~~~~~~~~~~~~
+Instr [00000028] = 746400b4
+memAddr: 00000002, memRdData: 00000000, memWrData: 00000001, memWr: 0
+Not trap=1
+----------IF-----------
+instr=746400b4
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac622000
+----------MEM-----------
+instr=00221021
+takeLeap=0
+----------WB-----------
+instr=24630004
+
+===============REGISTER DUMP===============
+reg 1: 00000001 	 reg 2: 00000001
+reg 3: 0000000c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @120ns~~~~~~~~~~~~~
+Instr [0000002c] = 1080ffe0
+memAddr: 0000200c, memRdData: 00000000, memWrData: 00000002, memWr: 1
+Not trap=1
+----------IF-----------
+instr=1080ffe0
+----------ID-----------
+instr=746400b4
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac622000
+takeLeap=0
+----------WB-----------
+instr=00221021
+writing val 00000002 to register 02
+reading val 0000000c from reg 03
+reading val 00000000 from reg 04
+writing word to mem at 0000200c val 00000002
+reading val 00000000 from reg 04
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00000001 	 reg 2: 00000002
+reg 3: 0000000c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @130ns~~~~~~~~~~~~~
+Instr [00000030] = 00000015
+memAddr: 00000010, memRdData: 00000000, memWrData: 00000008, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00000015
+----------ID-----------
+instr=1080ffe0
+----------EX-----------
+instr=746400b4
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac622000
+
+===============REGISTER DUMP===============
+reg 1: 00000001 	 reg 2: 00000002
+reg 3: 0000000c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @140ns~~~~~~~~~~~~~
+Instr [00000034] = 44000300
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=44000300
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=1080ffe0
+----------MEM-----------
+instr=746400b4
+takeLeap=0
+----------WB-----------
+instr=24630004
+writing val 00000010 to register 03
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+writing val 00000000 to register 04
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00000001 	 reg 2: 00000002
+reg 3: 00000010 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @150ns~~~~~~~~~~~~~
+Instr [00000010] = 00220821
+memAddr: ffffffe0, memRdData: xxxxxxxx, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00220821
+----------ID-----------
+instr=44000300
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=1080ffe0
+takeLeap=1
+----------WB-----------
+instr=746400b4
+
+===============REGISTER DUMP===============
+reg 1: 00000001 	 reg 2: 00000002
+reg 3: 00000010 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @160ns~~~~~~~~~~~~~
+Instr [00000014] = ac612000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=ac612000
+----------ID-----------
+instr=00220821
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=1080ffe0
+reading val 00000001 from reg 01
+reading val 00000002 from reg 02
+reading val 00000010 from reg 03
+reading val 00000001 from reg 01
+
+===============REGISTER DUMP===============
+reg 1: 00000001 	 reg 2: 00000002
+reg 3: 00000010 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @170ns~~~~~~~~~~~~~
+Instr [00000018] = 24630004
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac612000
+----------EX-----------
+instr=00220821
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 00000001 	 reg 2: 00000002
+reg 3: 00000010 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @180ns~~~~~~~~~~~~~
+Instr [0000001c] = 00221021
+memAddr: 00000003, memRdData: 00000000, memWrData: 00000002, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00221021
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac612000
+----------MEM-----------
+instr=00220821
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 00000010 from reg 03
+reading val 00000010 from reg 03
+writing word to mem at 00002010 val 00000003
+writing val 00000003 to register 01
+reading val 00000003 from reg 01
+reading val 00000002 from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 00000001 	 reg 2: 00000002
+reg 3: 00000010 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @190ns~~~~~~~~~~~~~
+Instr [00000020] = ac622000
+memAddr: 00002010, memRdData: 00000000, memWrData: 00000003, memWr: 1
+Not trap=1
+----------IF-----------
+instr=ac622000
+----------ID-----------
+instr=00221021
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac612000
+takeLeap=0
+----------WB-----------
+instr=00220821
+
+===============REGISTER DUMP===============
+reg 1: 00000003 	 reg 2: 00000002
+reg 3: 00000010 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @200ns~~~~~~~~~~~~~
+Instr [00000024] = 24630004
+memAddr: 00000014, memRdData: 00000000, memWrData: 00000010, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac622000
+----------EX-----------
+instr=00221021
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac612000
+reading val 00000010 from reg 03
+reading val 00000002 from reg 02
+writing val 00000014 to register 03
+reading val 00000014 from reg 03
+reading val 00000010 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 00000003 	 reg 2: 00000002
+reg 3: 00000010 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @210ns~~~~~~~~~~~~~
+Instr [00000028] = 746400b4
+memAddr: 00000005, memRdData: 00000000, memWrData: 00000002, memWr: 0
+Not trap=1
+----------IF-----------
+instr=746400b4
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac622000
+----------MEM-----------
+instr=00221021
+takeLeap=0
+----------WB-----------
+instr=24630004
+
+===============REGISTER DUMP===============
+reg 1: 00000003 	 reg 2: 00000002
+reg 3: 00000014 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @220ns~~~~~~~~~~~~~
+Instr [0000002c] = 1080ffe0
+memAddr: 00002014, memRdData: 00000000, memWrData: 00000005, memWr: 1
+Not trap=1
+----------IF-----------
+instr=1080ffe0
+----------ID-----------
+instr=746400b4
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac622000
+takeLeap=0
+----------WB-----------
+instr=00221021
+writing val 00000005 to register 02
+reading val 00000014 from reg 03
+reading val 00000000 from reg 04
+writing word to mem at 00002014 val 00000005
+reading val 00000000 from reg 04
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00000003 	 reg 2: 00000005
+reg 3: 00000014 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @230ns~~~~~~~~~~~~~
+Instr [00000030] = 00000015
+memAddr: 00000018, memRdData: 00000000, memWrData: 00000010, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00000015
+----------ID-----------
+instr=1080ffe0
+----------EX-----------
+instr=746400b4
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac622000
+
+===============REGISTER DUMP===============
+reg 1: 00000003 	 reg 2: 00000005
+reg 3: 00000014 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @240ns~~~~~~~~~~~~~
+Instr [00000034] = 44000300
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=44000300
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=1080ffe0
+----------MEM-----------
+instr=746400b4
+takeLeap=0
+----------WB-----------
+instr=24630004
+writing val 00000018 to register 03
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+writing val 00000000 to register 04
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00000003 	 reg 2: 00000005
+reg 3: 00000018 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @250ns~~~~~~~~~~~~~
+Instr [00000010] = 00220821
+memAddr: ffffffe0, memRdData: xxxxxxxx, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00220821
+----------ID-----------
+instr=44000300
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=1080ffe0
+takeLeap=1
+----------WB-----------
+instr=746400b4
+
+===============REGISTER DUMP===============
+reg 1: 00000003 	 reg 2: 00000005
+reg 3: 00000018 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @260ns~~~~~~~~~~~~~
+Instr [00000014] = ac612000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=ac612000
+----------ID-----------
+instr=00220821
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=1080ffe0
+reading val 00000003 from reg 01
+reading val 00000005 from reg 02
+reading val 00000018 from reg 03
+reading val 00000003 from reg 01
+
+===============REGISTER DUMP===============
+reg 1: 00000003 	 reg 2: 00000005
+reg 3: 00000018 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @270ns~~~~~~~~~~~~~
+Instr [00000018] = 24630004
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac612000
+----------EX-----------
+instr=00220821
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 00000003 	 reg 2: 00000005
+reg 3: 00000018 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @280ns~~~~~~~~~~~~~
+Instr [0000001c] = 00221021
+memAddr: 00000008, memRdData: 00000000, memWrData: 00000005, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00221021
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac612000
+----------MEM-----------
+instr=00220821
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 00000018 from reg 03
+reading val 00000018 from reg 03
+writing word to mem at 00002018 val 00000008
+writing val 00000008 to register 01
+reading val 00000008 from reg 01
+reading val 00000005 from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 00000003 	 reg 2: 00000005
+reg 3: 00000018 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @290ns~~~~~~~~~~~~~
+Instr [00000020] = ac622000
+memAddr: 00002018, memRdData: 00000000, memWrData: 00000008, memWr: 1
+Not trap=1
+----------IF-----------
+instr=ac622000
+----------ID-----------
+instr=00221021
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac612000
+takeLeap=0
+----------WB-----------
+instr=00220821
+
+===============REGISTER DUMP===============
+reg 1: 00000008 	 reg 2: 00000005
+reg 3: 00000018 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @300ns~~~~~~~~~~~~~
+Instr [00000024] = 24630004
+memAddr: 0000001c, memRdData: 00000000, memWrData: 00000018, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac622000
+----------EX-----------
+instr=00221021
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac612000
+reading val 00000018 from reg 03
+reading val 00000005 from reg 02
+writing val 0000001c to register 03
+reading val 0000001c from reg 03
+reading val 00000018 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 00000008 	 reg 2: 00000005
+reg 3: 00000018 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @310ns~~~~~~~~~~~~~
+Instr [00000028] = 746400b4
+memAddr: 0000000d, memRdData: 00000000, memWrData: 00000005, memWr: 0
+Not trap=1
+----------IF-----------
+instr=746400b4
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac622000
+----------MEM-----------
+instr=00221021
+takeLeap=0
+----------WB-----------
+instr=24630004
+
+===============REGISTER DUMP===============
+reg 1: 00000008 	 reg 2: 00000005
+reg 3: 0000001c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @320ns~~~~~~~~~~~~~
+Instr [0000002c] = 1080ffe0
+memAddr: 0000201c, memRdData: 00000000, memWrData: 0000000d, memWr: 1
+Not trap=1
+----------IF-----------
+instr=1080ffe0
+----------ID-----------
+instr=746400b4
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac622000
+takeLeap=0
+----------WB-----------
+instr=00221021
+writing val 0000000d to register 02
+reading val 0000001c from reg 03
+reading val 00000000 from reg 04
+writing word to mem at 0000201c val 0000000d
+reading val 00000000 from reg 04
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00000008 	 reg 2: 0000000d
+reg 3: 0000001c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @330ns~~~~~~~~~~~~~
+Instr [00000030] = 00000015
+memAddr: 00000020, memRdData: 00000000, memWrData: 00000018, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00000015
+----------ID-----------
+instr=1080ffe0
+----------EX-----------
+instr=746400b4
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac622000
+
+===============REGISTER DUMP===============
+reg 1: 00000008 	 reg 2: 0000000d
+reg 3: 0000001c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @340ns~~~~~~~~~~~~~
+Instr [00000034] = 44000300
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=44000300
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=1080ffe0
+----------MEM-----------
+instr=746400b4
+takeLeap=0
+----------WB-----------
+instr=24630004
+writing val 00000020 to register 03
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+writing val 00000000 to register 04
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00000008 	 reg 2: 0000000d
+reg 3: 00000020 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @350ns~~~~~~~~~~~~~
+Instr [00000010] = 00220821
+memAddr: ffffffe0, memRdData: xxxxxxxx, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00220821
+----------ID-----------
+instr=44000300
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=1080ffe0
+takeLeap=1
+----------WB-----------
+instr=746400b4
+
+===============REGISTER DUMP===============
+reg 1: 00000008 	 reg 2: 0000000d
+reg 3: 00000020 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @360ns~~~~~~~~~~~~~
+Instr [00000014] = ac612000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=ac612000
+----------ID-----------
+instr=00220821
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=1080ffe0
+reading val 00000008 from reg 01
+reading val 0000000d from reg 02
+reading val 00000020 from reg 03
+reading val 00000008 from reg 01
+
+===============REGISTER DUMP===============
+reg 1: 00000008 	 reg 2: 0000000d
+reg 3: 00000020 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @370ns~~~~~~~~~~~~~
+Instr [00000018] = 24630004
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac612000
+----------EX-----------
+instr=00220821
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 00000008 	 reg 2: 0000000d
+reg 3: 00000020 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @380ns~~~~~~~~~~~~~
+Instr [0000001c] = 00221021
+memAddr: 00000015, memRdData: 00000000, memWrData: 0000000d, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00221021
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac612000
+----------MEM-----------
+instr=00220821
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 00000020 from reg 03
+reading val 00000020 from reg 03
+writing word to mem at 00002020 val 00000015
+writing val 00000015 to register 01
+reading val 00000015 from reg 01
+reading val 0000000d from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 00000008 	 reg 2: 0000000d
+reg 3: 00000020 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @390ns~~~~~~~~~~~~~
+Instr [00000020] = ac622000
+memAddr: 00002020, memRdData: 00000000, memWrData: 00000015, memWr: 1
+Not trap=1
+----------IF-----------
+instr=ac622000
+----------ID-----------
+instr=00221021
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac612000
+takeLeap=0
+----------WB-----------
+instr=00220821
+
+===============REGISTER DUMP===============
+reg 1: 00000015 	 reg 2: 0000000d
+reg 3: 00000020 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @400ns~~~~~~~~~~~~~
+Instr [00000024] = 24630004
+memAddr: 00000024, memRdData: 00000000, memWrData: 00000020, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac622000
+----------EX-----------
+instr=00221021
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac612000
+reading val 00000020 from reg 03
+reading val 0000000d from reg 02
+writing val 00000024 to register 03
+reading val 00000024 from reg 03
+reading val 00000020 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 00000015 	 reg 2: 0000000d
+reg 3: 00000020 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @410ns~~~~~~~~~~~~~
+Instr [00000028] = 746400b4
+memAddr: 00000022, memRdData: 00000000, memWrData: 0000000d, memWr: 0
+Not trap=1
+----------IF-----------
+instr=746400b4
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac622000
+----------MEM-----------
+instr=00221021
+takeLeap=0
+----------WB-----------
+instr=24630004
+
+===============REGISTER DUMP===============
+reg 1: 00000015 	 reg 2: 0000000d
+reg 3: 00000024 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @420ns~~~~~~~~~~~~~
+Instr [0000002c] = 1080ffe0
+memAddr: 00002024, memRdData: 00000000, memWrData: 00000022, memWr: 1
+Not trap=1
+----------IF-----------
+instr=1080ffe0
+----------ID-----------
+instr=746400b4
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac622000
+takeLeap=0
+----------WB-----------
+instr=00221021
+writing val 00000022 to register 02
+reading val 00000024 from reg 03
+reading val 00000000 from reg 04
+writing word to mem at 00002024 val 00000022
+reading val 00000000 from reg 04
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00000015 	 reg 2: 00000022
+reg 3: 00000024 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @430ns~~~~~~~~~~~~~
+Instr [00000030] = 00000015
+memAddr: 00000028, memRdData: 00000000, memWrData: 00000020, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00000015
+----------ID-----------
+instr=1080ffe0
+----------EX-----------
+instr=746400b4
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac622000
+
+===============REGISTER DUMP===============
+reg 1: 00000015 	 reg 2: 00000022
+reg 3: 00000024 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @440ns~~~~~~~~~~~~~
+Instr [00000034] = 44000300
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=44000300
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=1080ffe0
+----------MEM-----------
+instr=746400b4
+takeLeap=0
+----------WB-----------
+instr=24630004
+writing val 00000028 to register 03
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+writing val 00000000 to register 04
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00000015 	 reg 2: 00000022
+reg 3: 00000028 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @450ns~~~~~~~~~~~~~
+Instr [00000010] = 00220821
+memAddr: ffffffe0, memRdData: xxxxxxxx, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00220821
+----------ID-----------
+instr=44000300
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=1080ffe0
+takeLeap=1
+----------WB-----------
+instr=746400b4
+
+===============REGISTER DUMP===============
+reg 1: 00000015 	 reg 2: 00000022
+reg 3: 00000028 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @460ns~~~~~~~~~~~~~
+Instr [00000014] = ac612000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=ac612000
+----------ID-----------
+instr=00220821
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=1080ffe0
+reading val 00000015 from reg 01
+reading val 00000022 from reg 02
+reading val 00000028 from reg 03
+reading val 00000015 from reg 01
+
+===============REGISTER DUMP===============
+reg 1: 00000015 	 reg 2: 00000022
+reg 3: 00000028 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @470ns~~~~~~~~~~~~~
+Instr [00000018] = 24630004
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac612000
+----------EX-----------
+instr=00220821
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 00000015 	 reg 2: 00000022
+reg 3: 00000028 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @480ns~~~~~~~~~~~~~
+Instr [0000001c] = 00221021
+memAddr: 00000037, memRdData: 00000000, memWrData: 00000022, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00221021
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac612000
+----------MEM-----------
+instr=00220821
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 00000028 from reg 03
+reading val 00000028 from reg 03
+writing word to mem at 00002028 val 00000037
+writing val 00000037 to register 01
+reading val 00000037 from reg 01
+reading val 00000022 from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 00000015 	 reg 2: 00000022
+reg 3: 00000028 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @490ns~~~~~~~~~~~~~
+Instr [00000020] = ac622000
+memAddr: 00002028, memRdData: 00000000, memWrData: 00000037, memWr: 1
+Not trap=1
+----------IF-----------
+instr=ac622000
+----------ID-----------
+instr=00221021
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac612000
+takeLeap=0
+----------WB-----------
+instr=00220821
+
+===============REGISTER DUMP===============
+reg 1: 00000037 	 reg 2: 00000022
+reg 3: 00000028 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @500ns~~~~~~~~~~~~~
+Instr [00000024] = 24630004
+memAddr: 0000002c, memRdData: 00000000, memWrData: 00000028, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac622000
+----------EX-----------
+instr=00221021
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac612000
+reading val 00000028 from reg 03
+reading val 00000022 from reg 02
+writing val 0000002c to register 03
+reading val 0000002c from reg 03
+reading val 00000028 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 00000037 	 reg 2: 00000022
+reg 3: 00000028 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @510ns~~~~~~~~~~~~~
+Instr [00000028] = 746400b4
+memAddr: 00000059, memRdData: 00000000, memWrData: 00000022, memWr: 0
+Not trap=1
+----------IF-----------
+instr=746400b4
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac622000
+----------MEM-----------
+instr=00221021
+takeLeap=0
+----------WB-----------
+instr=24630004
+
+===============REGISTER DUMP===============
+reg 1: 00000037 	 reg 2: 00000022
+reg 3: 0000002c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @520ns~~~~~~~~~~~~~
+Instr [0000002c] = 1080ffe0
+memAddr: 0000202c, memRdData: 00000000, memWrData: 00000059, memWr: 1
+Not trap=1
+----------IF-----------
+instr=1080ffe0
+----------ID-----------
+instr=746400b4
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac622000
+takeLeap=0
+----------WB-----------
+instr=00221021
+writing val 00000059 to register 02
+reading val 0000002c from reg 03
+reading val 00000000 from reg 04
+writing word to mem at 0000202c val 00000059
+reading val 00000000 from reg 04
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00000037 	 reg 2: 00000059
+reg 3: 0000002c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @530ns~~~~~~~~~~~~~
+Instr [00000030] = 00000015
+memAddr: 00000030, memRdData: 00000000, memWrData: 00000028, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00000015
+----------ID-----------
+instr=1080ffe0
+----------EX-----------
+instr=746400b4
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac622000
+
+===============REGISTER DUMP===============
+reg 1: 00000037 	 reg 2: 00000059
+reg 3: 0000002c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @540ns~~~~~~~~~~~~~
+Instr [00000034] = 44000300
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=44000300
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=1080ffe0
+----------MEM-----------
+instr=746400b4
+takeLeap=0
+----------WB-----------
+instr=24630004
+writing val 00000030 to register 03
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+writing val 00000000 to register 04
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00000037 	 reg 2: 00000059
+reg 3: 00000030 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @550ns~~~~~~~~~~~~~
+Instr [00000010] = 00220821
+memAddr: ffffffe0, memRdData: xxxxxxxx, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00220821
+----------ID-----------
+instr=44000300
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=1080ffe0
+takeLeap=1
+----------WB-----------
+instr=746400b4
+
+===============REGISTER DUMP===============
+reg 1: 00000037 	 reg 2: 00000059
+reg 3: 00000030 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @560ns~~~~~~~~~~~~~
+Instr [00000014] = ac612000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=ac612000
+----------ID-----------
+instr=00220821
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=1080ffe0
+reading val 00000037 from reg 01
+reading val 00000059 from reg 02
+reading val 00000030 from reg 03
+reading val 00000037 from reg 01
+
+===============REGISTER DUMP===============
+reg 1: 00000037 	 reg 2: 00000059
+reg 3: 00000030 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @570ns~~~~~~~~~~~~~
+Instr [00000018] = 24630004
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac612000
+----------EX-----------
+instr=00220821
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 00000037 	 reg 2: 00000059
+reg 3: 00000030 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @580ns~~~~~~~~~~~~~
+Instr [0000001c] = 00221021
+memAddr: 00000090, memRdData: 00000000, memWrData: 00000059, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00221021
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac612000
+----------MEM-----------
+instr=00220821
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 00000030 from reg 03
+reading val 00000030 from reg 03
+writing word to mem at 00002030 val 00000090
+writing val 00000090 to register 01
+reading val 00000090 from reg 01
+reading val 00000059 from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 00000037 	 reg 2: 00000059
+reg 3: 00000030 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @590ns~~~~~~~~~~~~~
+Instr [00000020] = ac622000
+memAddr: 00002030, memRdData: 00000000, memWrData: 00000090, memWr: 1
+Not trap=1
+----------IF-----------
+instr=ac622000
+----------ID-----------
+instr=00221021
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac612000
+takeLeap=0
+----------WB-----------
+instr=00220821
+
+===============REGISTER DUMP===============
+reg 1: 00000090 	 reg 2: 00000059
+reg 3: 00000030 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @600ns~~~~~~~~~~~~~
+Instr [00000024] = 24630004
+memAddr: 00000034, memRdData: 00000000, memWrData: 00000030, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac622000
+----------EX-----------
+instr=00221021
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac612000
+reading val 00000030 from reg 03
+reading val 00000059 from reg 02
+writing val 00000034 to register 03
+reading val 00000034 from reg 03
+reading val 00000030 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 00000090 	 reg 2: 00000059
+reg 3: 00000030 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @610ns~~~~~~~~~~~~~
+Instr [00000028] = 746400b4
+memAddr: 000000e9, memRdData: 00000000, memWrData: 00000059, memWr: 0
+Not trap=1
+----------IF-----------
+instr=746400b4
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac622000
+----------MEM-----------
+instr=00221021
+takeLeap=0
+----------WB-----------
+instr=24630004
+
+===============REGISTER DUMP===============
+reg 1: 00000090 	 reg 2: 00000059
+reg 3: 00000034 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @620ns~~~~~~~~~~~~~
+Instr [0000002c] = 1080ffe0
+memAddr: 00002034, memRdData: 00000000, memWrData: 000000e9, memWr: 1
+Not trap=1
+----------IF-----------
+instr=1080ffe0
+----------ID-----------
+instr=746400b4
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac622000
+takeLeap=0
+----------WB-----------
+instr=00221021
+writing val 000000e9 to register 02
+reading val 00000034 from reg 03
+reading val 00000000 from reg 04
+writing word to mem at 00002034 val 000000e9
+reading val 00000000 from reg 04
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00000090 	 reg 2: 000000e9
+reg 3: 00000034 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @630ns~~~~~~~~~~~~~
+Instr [00000030] = 00000015
+memAddr: 00000038, memRdData: 00000000, memWrData: 00000030, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00000015
+----------ID-----------
+instr=1080ffe0
+----------EX-----------
+instr=746400b4
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac622000
+
+===============REGISTER DUMP===============
+reg 1: 00000090 	 reg 2: 000000e9
+reg 3: 00000034 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @640ns~~~~~~~~~~~~~
+Instr [00000034] = 44000300
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=44000300
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=1080ffe0
+----------MEM-----------
+instr=746400b4
+takeLeap=0
+----------WB-----------
+instr=24630004
+writing val 00000038 to register 03
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+writing val 00000000 to register 04
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00000090 	 reg 2: 000000e9
+reg 3: 00000038 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @650ns~~~~~~~~~~~~~
+Instr [00000010] = 00220821
+memAddr: ffffffe0, memRdData: xxxxxxxx, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00220821
+----------ID-----------
+instr=44000300
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=1080ffe0
+takeLeap=1
+----------WB-----------
+instr=746400b4
+
+===============REGISTER DUMP===============
+reg 1: 00000090 	 reg 2: 000000e9
+reg 3: 00000038 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @660ns~~~~~~~~~~~~~
+Instr [00000014] = ac612000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=ac612000
+----------ID-----------
+instr=00220821
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=1080ffe0
+reading val 00000090 from reg 01
+reading val 000000e9 from reg 02
+reading val 00000038 from reg 03
+reading val 00000090 from reg 01
+
+===============REGISTER DUMP===============
+reg 1: 00000090 	 reg 2: 000000e9
+reg 3: 00000038 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @670ns~~~~~~~~~~~~~
+Instr [00000018] = 24630004
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac612000
+----------EX-----------
+instr=00220821
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 00000090 	 reg 2: 000000e9
+reg 3: 00000038 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @680ns~~~~~~~~~~~~~
+Instr [0000001c] = 00221021
+memAddr: 00000179, memRdData: 00000000, memWrData: 000000e9, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00221021
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac612000
+----------MEM-----------
+instr=00220821
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 00000038 from reg 03
+reading val 00000038 from reg 03
+writing word to mem at 00002038 val 00000179
+writing val 00000179 to register 01
+reading val 00000179 from reg 01
+reading val 000000e9 from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 00000090 	 reg 2: 000000e9
+reg 3: 00000038 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @690ns~~~~~~~~~~~~~
+Instr [00000020] = ac622000
+memAddr: 00002038, memRdData: 00000000, memWrData: 00000179, memWr: 1
+Not trap=1
+----------IF-----------
+instr=ac622000
+----------ID-----------
+instr=00221021
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac612000
+takeLeap=0
+----------WB-----------
+instr=00220821
+
+===============REGISTER DUMP===============
+reg 1: 00000179 	 reg 2: 000000e9
+reg 3: 00000038 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @700ns~~~~~~~~~~~~~
+Instr [00000024] = 24630004
+memAddr: 0000003c, memRdData: 00000000, memWrData: 00000038, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac622000
+----------EX-----------
+instr=00221021
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac612000
+reading val 00000038 from reg 03
+reading val 000000e9 from reg 02
+writing val 0000003c to register 03
+reading val 0000003c from reg 03
+reading val 00000038 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 00000179 	 reg 2: 000000e9
+reg 3: 00000038 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @710ns~~~~~~~~~~~~~
+Instr [00000028] = 746400b4
+memAddr: 00000262, memRdData: 00000000, memWrData: 000000e9, memWr: 0
+Not trap=1
+----------IF-----------
+instr=746400b4
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac622000
+----------MEM-----------
+instr=00221021
+takeLeap=0
+----------WB-----------
+instr=24630004
+
+===============REGISTER DUMP===============
+reg 1: 00000179 	 reg 2: 000000e9
+reg 3: 0000003c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @720ns~~~~~~~~~~~~~
+Instr [0000002c] = 1080ffe0
+memAddr: 0000203c, memRdData: 00000000, memWrData: 00000262, memWr: 1
+Not trap=1
+----------IF-----------
+instr=1080ffe0
+----------ID-----------
+instr=746400b4
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac622000
+takeLeap=0
+----------WB-----------
+instr=00221021
+writing val 00000262 to register 02
+reading val 0000003c from reg 03
+reading val 00000000 from reg 04
+writing word to mem at 0000203c val 00000262
+reading val 00000000 from reg 04
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00000179 	 reg 2: 00000262
+reg 3: 0000003c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @730ns~~~~~~~~~~~~~
+Instr [00000030] = 00000015
+memAddr: 00000040, memRdData: 00000000, memWrData: 00000038, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00000015
+----------ID-----------
+instr=1080ffe0
+----------EX-----------
+instr=746400b4
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac622000
+
+===============REGISTER DUMP===============
+reg 1: 00000179 	 reg 2: 00000262
+reg 3: 0000003c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @740ns~~~~~~~~~~~~~
+Instr [00000034] = 44000300
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=44000300
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=1080ffe0
+----------MEM-----------
+instr=746400b4
+takeLeap=0
+----------WB-----------
+instr=24630004
+writing val 00000040 to register 03
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+writing val 00000000 to register 04
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00000179 	 reg 2: 00000262
+reg 3: 00000040 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @750ns~~~~~~~~~~~~~
+Instr [00000010] = 00220821
+memAddr: ffffffe0, memRdData: xxxxxxxx, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00220821
+----------ID-----------
+instr=44000300
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=1080ffe0
+takeLeap=1
+----------WB-----------
+instr=746400b4
+
+===============REGISTER DUMP===============
+reg 1: 00000179 	 reg 2: 00000262
+reg 3: 00000040 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @760ns~~~~~~~~~~~~~
+Instr [00000014] = ac612000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=ac612000
+----------ID-----------
+instr=00220821
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=1080ffe0
+reading val 00000179 from reg 01
+reading val 00000262 from reg 02
+reading val 00000040 from reg 03
+reading val 00000179 from reg 01
+
+===============REGISTER DUMP===============
+reg 1: 00000179 	 reg 2: 00000262
+reg 3: 00000040 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @770ns~~~~~~~~~~~~~
+Instr [00000018] = 24630004
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac612000
+----------EX-----------
+instr=00220821
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 00000179 	 reg 2: 00000262
+reg 3: 00000040 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @780ns~~~~~~~~~~~~~
+Instr [0000001c] = 00221021
+memAddr: 000003db, memRdData: 00000000, memWrData: 00000262, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00221021
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac612000
+----------MEM-----------
+instr=00220821
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 00000040 from reg 03
+reading val 00000040 from reg 03
+writing word to mem at 00002040 val 000003db
+writing val 000003db to register 01
+reading val 000003db from reg 01
+reading val 00000262 from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 00000179 	 reg 2: 00000262
+reg 3: 00000040 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @790ns~~~~~~~~~~~~~
+Instr [00000020] = ac622000
+memAddr: 00002040, memRdData: 00000000, memWrData: 000003db, memWr: 1
+Not trap=1
+----------IF-----------
+instr=ac622000
+----------ID-----------
+instr=00221021
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac612000
+takeLeap=0
+----------WB-----------
+instr=00220821
+
+===============REGISTER DUMP===============
+reg 1: 000003db 	 reg 2: 00000262
+reg 3: 00000040 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @800ns~~~~~~~~~~~~~
+Instr [00000024] = 24630004
+memAddr: 00000044, memRdData: 00000000, memWrData: 00000040, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac622000
+----------EX-----------
+instr=00221021
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac612000
+reading val 00000040 from reg 03
+reading val 00000262 from reg 02
+writing val 00000044 to register 03
+reading val 00000044 from reg 03
+reading val 00000040 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 000003db 	 reg 2: 00000262
+reg 3: 00000040 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @810ns~~~~~~~~~~~~~
+Instr [00000028] = 746400b4
+memAddr: 0000063d, memRdData: 00000000, memWrData: 00000262, memWr: 0
+Not trap=1
+----------IF-----------
+instr=746400b4
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac622000
+----------MEM-----------
+instr=00221021
+takeLeap=0
+----------WB-----------
+instr=24630004
+
+===============REGISTER DUMP===============
+reg 1: 000003db 	 reg 2: 00000262
+reg 3: 00000044 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @820ns~~~~~~~~~~~~~
+Instr [0000002c] = 1080ffe0
+memAddr: 00002044, memRdData: 00000000, memWrData: 0000063d, memWr: 1
+Not trap=1
+----------IF-----------
+instr=1080ffe0
+----------ID-----------
+instr=746400b4
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac622000
+takeLeap=0
+----------WB-----------
+instr=00221021
+writing val 0000063d to register 02
+reading val 00000044 from reg 03
+reading val 00000000 from reg 04
+writing word to mem at 00002044 val 0000063d
+reading val 00000000 from reg 04
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 000003db 	 reg 2: 0000063d
+reg 3: 00000044 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @830ns~~~~~~~~~~~~~
+Instr [00000030] = 00000015
+memAddr: 00000048, memRdData: 00000000, memWrData: 00000040, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00000015
+----------ID-----------
+instr=1080ffe0
+----------EX-----------
+instr=746400b4
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac622000
+
+===============REGISTER DUMP===============
+reg 1: 000003db 	 reg 2: 0000063d
+reg 3: 00000044 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @840ns~~~~~~~~~~~~~
+Instr [00000034] = 44000300
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=44000300
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=1080ffe0
+----------MEM-----------
+instr=746400b4
+takeLeap=0
+----------WB-----------
+instr=24630004
+writing val 00000048 to register 03
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+writing val 00000000 to register 04
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 000003db 	 reg 2: 0000063d
+reg 3: 00000048 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @850ns~~~~~~~~~~~~~
+Instr [00000010] = 00220821
+memAddr: ffffffe0, memRdData: xxxxxxxx, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00220821
+----------ID-----------
+instr=44000300
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=1080ffe0
+takeLeap=1
+----------WB-----------
+instr=746400b4
+
+===============REGISTER DUMP===============
+reg 1: 000003db 	 reg 2: 0000063d
+reg 3: 00000048 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @860ns~~~~~~~~~~~~~
+Instr [00000014] = ac612000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=ac612000
+----------ID-----------
+instr=00220821
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=1080ffe0
+reading val 000003db from reg 01
+reading val 0000063d from reg 02
+reading val 00000048 from reg 03
+reading val 000003db from reg 01
+
+===============REGISTER DUMP===============
+reg 1: 000003db 	 reg 2: 0000063d
+reg 3: 00000048 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @870ns~~~~~~~~~~~~~
+Instr [00000018] = 24630004
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac612000
+----------EX-----------
+instr=00220821
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 000003db 	 reg 2: 0000063d
+reg 3: 00000048 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @880ns~~~~~~~~~~~~~
+Instr [0000001c] = 00221021
+memAddr: 00000a18, memRdData: 00000000, memWrData: 0000063d, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00221021
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac612000
+----------MEM-----------
+instr=00220821
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 00000048 from reg 03
+reading val 00000048 from reg 03
+writing word to mem at 00002048 val 00000a18
+writing val 00000a18 to register 01
+reading val 00000a18 from reg 01
+reading val 0000063d from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 000003db 	 reg 2: 0000063d
+reg 3: 00000048 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @890ns~~~~~~~~~~~~~
+Instr [00000020] = ac622000
+memAddr: 00002048, memRdData: 00000000, memWrData: 00000a18, memWr: 1
+Not trap=1
+----------IF-----------
+instr=ac622000
+----------ID-----------
+instr=00221021
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac612000
+takeLeap=0
+----------WB-----------
+instr=00220821
+
+===============REGISTER DUMP===============
+reg 1: 00000a18 	 reg 2: 0000063d
+reg 3: 00000048 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @900ns~~~~~~~~~~~~~
+Instr [00000024] = 24630004
+memAddr: 0000004c, memRdData: 00000000, memWrData: 00000048, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac622000
+----------EX-----------
+instr=00221021
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac612000
+reading val 00000048 from reg 03
+reading val 0000063d from reg 02
+writing val 0000004c to register 03
+reading val 0000004c from reg 03
+reading val 00000048 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 00000a18 	 reg 2: 0000063d
+reg 3: 00000048 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @910ns~~~~~~~~~~~~~
+Instr [00000028] = 746400b4
+memAddr: 00001055, memRdData: 00000000, memWrData: 0000063d, memWr: 0
+Not trap=1
+----------IF-----------
+instr=746400b4
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac622000
+----------MEM-----------
+instr=00221021
+takeLeap=0
+----------WB-----------
+instr=24630004
+
+===============REGISTER DUMP===============
+reg 1: 00000a18 	 reg 2: 0000063d
+reg 3: 0000004c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @920ns~~~~~~~~~~~~~
+Instr [0000002c] = 1080ffe0
+memAddr: 0000204c, memRdData: 00000000, memWrData: 00001055, memWr: 1
+Not trap=1
+----------IF-----------
+instr=1080ffe0
+----------ID-----------
+instr=746400b4
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac622000
+takeLeap=0
+----------WB-----------
+instr=00221021
+writing val 00001055 to register 02
+reading val 0000004c from reg 03
+reading val 00000000 from reg 04
+writing word to mem at 0000204c val 00001055
+reading val 00000000 from reg 04
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00000a18 	 reg 2: 00001055
+reg 3: 0000004c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @930ns~~~~~~~~~~~~~
+Instr [00000030] = 00000015
+memAddr: 00000050, memRdData: 00000000, memWrData: 00000048, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00000015
+----------ID-----------
+instr=1080ffe0
+----------EX-----------
+instr=746400b4
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac622000
+
+===============REGISTER DUMP===============
+reg 1: 00000a18 	 reg 2: 00001055
+reg 3: 0000004c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @940ns~~~~~~~~~~~~~
+Instr [00000034] = 44000300
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=44000300
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=1080ffe0
+----------MEM-----------
+instr=746400b4
+takeLeap=0
+----------WB-----------
+instr=24630004
+writing val 00000050 to register 03
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+writing val 00000000 to register 04
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00000a18 	 reg 2: 00001055
+reg 3: 00000050 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @950ns~~~~~~~~~~~~~
+Instr [00000010] = 00220821
+memAddr: ffffffe0, memRdData: xxxxxxxx, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00220821
+----------ID-----------
+instr=44000300
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=1080ffe0
+takeLeap=1
+----------WB-----------
+instr=746400b4
+
+===============REGISTER DUMP===============
+reg 1: 00000a18 	 reg 2: 00001055
+reg 3: 00000050 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @960ns~~~~~~~~~~~~~
+Instr [00000014] = ac612000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=ac612000
+----------ID-----------
+instr=00220821
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=1080ffe0
+reading val 00000a18 from reg 01
+reading val 00001055 from reg 02
+reading val 00000050 from reg 03
+reading val 00000a18 from reg 01
+
+===============REGISTER DUMP===============
+reg 1: 00000a18 	 reg 2: 00001055
+reg 3: 00000050 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @970ns~~~~~~~~~~~~~
+Instr [00000018] = 24630004
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac612000
+----------EX-----------
+instr=00220821
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 00000a18 	 reg 2: 00001055
+reg 3: 00000050 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @980ns~~~~~~~~~~~~~
+Instr [0000001c] = 00221021
+memAddr: 00001a6d, memRdData: 00000000, memWrData: 00001055, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00221021
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac612000
+----------MEM-----------
+instr=00220821
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 00000050 from reg 03
+reading val 00000050 from reg 03
+writing word to mem at 00002050 val 00001a6d
+writing val 00001a6d to register 01
+reading val 00001a6d from reg 01
+reading val 00001055 from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 00000a18 	 reg 2: 00001055
+reg 3: 00000050 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @990ns~~~~~~~~~~~~~
+Instr [00000020] = ac622000
+memAddr: 00002050, memRdData: 00000000, memWrData: 00001a6d, memWr: 1
+Not trap=1
+----------IF-----------
+instr=ac622000
+----------ID-----------
+instr=00221021
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac612000
+takeLeap=0
+----------WB-----------
+instr=00220821
+
+===============REGISTER DUMP===============
+reg 1: 00001a6d 	 reg 2: 00001055
+reg 3: 00000050 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1000ns~~~~~~~~~~~~~
+Instr [00000024] = 24630004
+memAddr: 00000054, memRdData: 00000000, memWrData: 00000050, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac622000
+----------EX-----------
+instr=00221021
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac612000
+reading val 00000050 from reg 03
+reading val 00001055 from reg 02
+writing val 00000054 to register 03
+reading val 00000054 from reg 03
+reading val 00000050 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 00001a6d 	 reg 2: 00001055
+reg 3: 00000050 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1010ns~~~~~~~~~~~~~
+Instr [00000028] = 746400b4
+memAddr: 00002ac2, memRdData: 00000000, memWrData: 00001055, memWr: 0
+Not trap=1
+----------IF-----------
+instr=746400b4
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac622000
+----------MEM-----------
+instr=00221021
+takeLeap=0
+----------WB-----------
+instr=24630004
+
+===============REGISTER DUMP===============
+reg 1: 00001a6d 	 reg 2: 00001055
+reg 3: 00000054 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1020ns~~~~~~~~~~~~~
+Instr [0000002c] = 1080ffe0
+memAddr: 00002054, memRdData: 00000000, memWrData: 00002ac2, memWr: 1
+Not trap=1
+----------IF-----------
+instr=1080ffe0
+----------ID-----------
+instr=746400b4
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac622000
+takeLeap=0
+----------WB-----------
+instr=00221021
+writing val 00002ac2 to register 02
+reading val 00000054 from reg 03
+reading val 00000000 from reg 04
+writing word to mem at 00002054 val 00002ac2
+reading val 00000000 from reg 04
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00001a6d 	 reg 2: 00002ac2
+reg 3: 00000054 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1030ns~~~~~~~~~~~~~
+Instr [00000030] = 00000015
+memAddr: 00000058, memRdData: 00000000, memWrData: 00000050, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00000015
+----------ID-----------
+instr=1080ffe0
+----------EX-----------
+instr=746400b4
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac622000
+
+===============REGISTER DUMP===============
+reg 1: 00001a6d 	 reg 2: 00002ac2
+reg 3: 00000054 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1040ns~~~~~~~~~~~~~
+Instr [00000034] = 44000300
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=44000300
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=1080ffe0
+----------MEM-----------
+instr=746400b4
+takeLeap=0
+----------WB-----------
+instr=24630004
+writing val 00000058 to register 03
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+writing val 00000000 to register 04
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00001a6d 	 reg 2: 00002ac2
+reg 3: 00000058 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1050ns~~~~~~~~~~~~~
+Instr [00000010] = 00220821
+memAddr: ffffffe0, memRdData: xxxxxxxx, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00220821
+----------ID-----------
+instr=44000300
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=1080ffe0
+takeLeap=1
+----------WB-----------
+instr=746400b4
+
+===============REGISTER DUMP===============
+reg 1: 00001a6d 	 reg 2: 00002ac2
+reg 3: 00000058 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1060ns~~~~~~~~~~~~~
+Instr [00000014] = ac612000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=ac612000
+----------ID-----------
+instr=00220821
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=1080ffe0
+reading val 00001a6d from reg 01
+reading val 00002ac2 from reg 02
+reading val 00000058 from reg 03
+reading val 00001a6d from reg 01
+
+===============REGISTER DUMP===============
+reg 1: 00001a6d 	 reg 2: 00002ac2
+reg 3: 00000058 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1070ns~~~~~~~~~~~~~
+Instr [00000018] = 24630004
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac612000
+----------EX-----------
+instr=00220821
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 00001a6d 	 reg 2: 00002ac2
+reg 3: 00000058 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1080ns~~~~~~~~~~~~~
+Instr [0000001c] = 00221021
+memAddr: 0000452f, memRdData: xxxxxxxx, memWrData: 00002ac2, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00221021
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac612000
+----------MEM-----------
+instr=00220821
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 00000058 from reg 03
+reading val 00000058 from reg 03
+writing word to mem at 00002058 val 0000452f
+writing val 0000452f to register 01
+reading val 0000452f from reg 01
+reading val 00002ac2 from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 00001a6d 	 reg 2: 00002ac2
+reg 3: 00000058 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1090ns~~~~~~~~~~~~~
+Instr [00000020] = ac622000
+memAddr: 00002058, memRdData: 00000000, memWrData: 0000452f, memWr: 1
+Not trap=1
+----------IF-----------
+instr=ac622000
+----------ID-----------
+instr=00221021
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac612000
+takeLeap=0
+----------WB-----------
+instr=00220821
+
+===============REGISTER DUMP===============
+reg 1: 0000452f 	 reg 2: 00002ac2
+reg 3: 00000058 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1100ns~~~~~~~~~~~~~
+Instr [00000024] = 24630004
+memAddr: 0000005c, memRdData: 00000000, memWrData: 00000058, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac622000
+----------EX-----------
+instr=00221021
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac612000
+reading val 00000058 from reg 03
+reading val 00002ac2 from reg 02
+writing val 0000005c to register 03
+reading val 0000005c from reg 03
+reading val 00000058 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 0000452f 	 reg 2: 00002ac2
+reg 3: 00000058 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1110ns~~~~~~~~~~~~~
+Instr [00000028] = 746400b4
+memAddr: 00006ff1, memRdData: xxxxxxxx, memWrData: 00002ac2, memWr: 0
+Not trap=1
+----------IF-----------
+instr=746400b4
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac622000
+----------MEM-----------
+instr=00221021
+takeLeap=0
+----------WB-----------
+instr=24630004
+
+===============REGISTER DUMP===============
+reg 1: 0000452f 	 reg 2: 00002ac2
+reg 3: 0000005c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1120ns~~~~~~~~~~~~~
+Instr [0000002c] = 1080ffe0
+memAddr: 0000205c, memRdData: 00000000, memWrData: 00006ff1, memWr: 1
+Not trap=1
+----------IF-----------
+instr=1080ffe0
+----------ID-----------
+instr=746400b4
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac622000
+takeLeap=0
+----------WB-----------
+instr=00221021
+writing val 00006ff1 to register 02
+reading val 0000005c from reg 03
+reading val 00000000 from reg 04
+writing word to mem at 0000205c val 00006ff1
+reading val 00000000 from reg 04
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 0000452f 	 reg 2: 00006ff1
+reg 3: 0000005c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1130ns~~~~~~~~~~~~~
+Instr [00000030] = 00000015
+memAddr: 00000060, memRdData: 00000000, memWrData: 00000058, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00000015
+----------ID-----------
+instr=1080ffe0
+----------EX-----------
+instr=746400b4
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac622000
+
+===============REGISTER DUMP===============
+reg 1: 0000452f 	 reg 2: 00006ff1
+reg 3: 0000005c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1140ns~~~~~~~~~~~~~
+Instr [00000034] = 44000300
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=44000300
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=1080ffe0
+----------MEM-----------
+instr=746400b4
+takeLeap=0
+----------WB-----------
+instr=24630004
+writing val 00000060 to register 03
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+writing val 00000000 to register 04
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 0000452f 	 reg 2: 00006ff1
+reg 3: 00000060 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1150ns~~~~~~~~~~~~~
+Instr [00000010] = 00220821
+memAddr: ffffffe0, memRdData: xxxxxxxx, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00220821
+----------ID-----------
+instr=44000300
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=1080ffe0
+takeLeap=1
+----------WB-----------
+instr=746400b4
+
+===============REGISTER DUMP===============
+reg 1: 0000452f 	 reg 2: 00006ff1
+reg 3: 00000060 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1160ns~~~~~~~~~~~~~
+Instr [00000014] = ac612000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=ac612000
+----------ID-----------
+instr=00220821
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=1080ffe0
+reading val 0000452f from reg 01
+reading val 00006ff1 from reg 02
+reading val 00000060 from reg 03
+reading val 0000452f from reg 01
+
+===============REGISTER DUMP===============
+reg 1: 0000452f 	 reg 2: 00006ff1
+reg 3: 00000060 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1170ns~~~~~~~~~~~~~
+Instr [00000018] = 24630004
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac612000
+----------EX-----------
+instr=00220821
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 0000452f 	 reg 2: 00006ff1
+reg 3: 00000060 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1180ns~~~~~~~~~~~~~
+Instr [0000001c] = 00221021
+memAddr: 0000b520, memRdData: xxxxxxxx, memWrData: 00006ff1, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00221021
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac612000
+----------MEM-----------
+instr=00220821
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 00000060 from reg 03
+reading val 00000060 from reg 03
+writing word to mem at 00002060 val 0000b520
+writing val 0000b520 to register 01
+reading val 0000b520 from reg 01
+reading val 00006ff1 from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 0000452f 	 reg 2: 00006ff1
+reg 3: 00000060 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1190ns~~~~~~~~~~~~~
+Instr [00000020] = ac622000
+memAddr: 00002060, memRdData: 00000000, memWrData: 0000b520, memWr: 1
+Not trap=1
+----------IF-----------
+instr=ac622000
+----------ID-----------
+instr=00221021
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac612000
+takeLeap=0
+----------WB-----------
+instr=00220821
+
+===============REGISTER DUMP===============
+reg 1: 0000b520 	 reg 2: 00006ff1
+reg 3: 00000060 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1200ns~~~~~~~~~~~~~
+Instr [00000024] = 24630004
+memAddr: 00000064, memRdData: 00000000, memWrData: 00000060, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac622000
+----------EX-----------
+instr=00221021
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac612000
+reading val 00000060 from reg 03
+reading val 00006ff1 from reg 02
+writing val 00000064 to register 03
+reading val 00000064 from reg 03
+reading val 00000060 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 0000b520 	 reg 2: 00006ff1
+reg 3: 00000060 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1210ns~~~~~~~~~~~~~
+Instr [00000028] = 746400b4
+memAddr: 00012511, memRdData: xxxxxxxx, memWrData: 00006ff1, memWr: 0
+Not trap=1
+----------IF-----------
+instr=746400b4
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac622000
+----------MEM-----------
+instr=00221021
+takeLeap=0
+----------WB-----------
+instr=24630004
+
+===============REGISTER DUMP===============
+reg 1: 0000b520 	 reg 2: 00006ff1
+reg 3: 00000064 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1220ns~~~~~~~~~~~~~
+Instr [0000002c] = 1080ffe0
+memAddr: 00002064, memRdData: 00000000, memWrData: 00012511, memWr: 1
+Not trap=1
+----------IF-----------
+instr=1080ffe0
+----------ID-----------
+instr=746400b4
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac622000
+takeLeap=0
+----------WB-----------
+instr=00221021
+writing val 00012511 to register 02
+reading val 00000064 from reg 03
+reading val 00000000 from reg 04
+writing word to mem at 00002064 val 00012511
+reading val 00000000 from reg 04
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 0000b520 	 reg 2: 00012511
+reg 3: 00000064 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1230ns~~~~~~~~~~~~~
+Instr [00000030] = 00000015
+memAddr: 00000068, memRdData: 00000000, memWrData: 00000060, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00000015
+----------ID-----------
+instr=1080ffe0
+----------EX-----------
+instr=746400b4
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac622000
+
+===============REGISTER DUMP===============
+reg 1: 0000b520 	 reg 2: 00012511
+reg 3: 00000064 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1240ns~~~~~~~~~~~~~
+Instr [00000034] = 44000300
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=44000300
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=1080ffe0
+----------MEM-----------
+instr=746400b4
+takeLeap=0
+----------WB-----------
+instr=24630004
+writing val 00000068 to register 03
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+writing val 00000000 to register 04
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 0000b520 	 reg 2: 00012511
+reg 3: 00000068 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1250ns~~~~~~~~~~~~~
+Instr [00000010] = 00220821
+memAddr: ffffffe0, memRdData: xxxxxxxx, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00220821
+----------ID-----------
+instr=44000300
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=1080ffe0
+takeLeap=1
+----------WB-----------
+instr=746400b4
+
+===============REGISTER DUMP===============
+reg 1: 0000b520 	 reg 2: 00012511
+reg 3: 00000068 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1260ns~~~~~~~~~~~~~
+Instr [00000014] = ac612000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=ac612000
+----------ID-----------
+instr=00220821
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=1080ffe0
+reading val 0000b520 from reg 01
+reading val 00012511 from reg 02
+reading val 00000068 from reg 03
+reading val 0000b520 from reg 01
+
+===============REGISTER DUMP===============
+reg 1: 0000b520 	 reg 2: 00012511
+reg 3: 00000068 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1270ns~~~~~~~~~~~~~
+Instr [00000018] = 24630004
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac612000
+----------EX-----------
+instr=00220821
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 0000b520 	 reg 2: 00012511
+reg 3: 00000068 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1280ns~~~~~~~~~~~~~
+Instr [0000001c] = 00221021
+memAddr: 0001da31, memRdData: xxxxxxxx, memWrData: 00012511, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00221021
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac612000
+----------MEM-----------
+instr=00220821
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 00000068 from reg 03
+reading val 00000068 from reg 03
+writing word to mem at 00002068 val 0001da31
+writing val 0001da31 to register 01
+reading val 0001da31 from reg 01
+reading val 00012511 from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 0000b520 	 reg 2: 00012511
+reg 3: 00000068 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1290ns~~~~~~~~~~~~~
+Instr [00000020] = ac622000
+memAddr: 00002068, memRdData: 00000000, memWrData: 0001da31, memWr: 1
+Not trap=1
+----------IF-----------
+instr=ac622000
+----------ID-----------
+instr=00221021
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac612000
+takeLeap=0
+----------WB-----------
+instr=00220821
+
+===============REGISTER DUMP===============
+reg 1: 0001da31 	 reg 2: 00012511
+reg 3: 00000068 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1300ns~~~~~~~~~~~~~
+Instr [00000024] = 24630004
+memAddr: 0000006c, memRdData: 00000000, memWrData: 00000068, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac622000
+----------EX-----------
+instr=00221021
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac612000
+reading val 00000068 from reg 03
+reading val 00012511 from reg 02
+writing val 0000006c to register 03
+reading val 0000006c from reg 03
+reading val 00000068 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 0001da31 	 reg 2: 00012511
+reg 3: 00000068 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1310ns~~~~~~~~~~~~~
+Instr [00000028] = 746400b4
+memAddr: 0002ff42, memRdData: xxxxxxxx, memWrData: 00012511, memWr: 0
+Not trap=1
+----------IF-----------
+instr=746400b4
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac622000
+----------MEM-----------
+instr=00221021
+takeLeap=0
+----------WB-----------
+instr=24630004
+
+===============REGISTER DUMP===============
+reg 1: 0001da31 	 reg 2: 00012511
+reg 3: 0000006c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1320ns~~~~~~~~~~~~~
+Instr [0000002c] = 1080ffe0
+memAddr: 0000206c, memRdData: 00000000, memWrData: 0002ff42, memWr: 1
+Not trap=1
+----------IF-----------
+instr=1080ffe0
+----------ID-----------
+instr=746400b4
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac622000
+takeLeap=0
+----------WB-----------
+instr=00221021
+writing val 0002ff42 to register 02
+reading val 0000006c from reg 03
+reading val 00000000 from reg 04
+writing word to mem at 0000206c val 0002ff42
+reading val 00000000 from reg 04
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 0001da31 	 reg 2: 0002ff42
+reg 3: 0000006c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1330ns~~~~~~~~~~~~~
+Instr [00000030] = 00000015
+memAddr: 00000070, memRdData: 00000000, memWrData: 00000068, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00000015
+----------ID-----------
+instr=1080ffe0
+----------EX-----------
+instr=746400b4
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac622000
+
+===============REGISTER DUMP===============
+reg 1: 0001da31 	 reg 2: 0002ff42
+reg 3: 0000006c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1340ns~~~~~~~~~~~~~
+Instr [00000034] = 44000300
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=44000300
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=1080ffe0
+----------MEM-----------
+instr=746400b4
+takeLeap=0
+----------WB-----------
+instr=24630004
+writing val 00000070 to register 03
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+writing val 00000000 to register 04
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 0001da31 	 reg 2: 0002ff42
+reg 3: 00000070 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1350ns~~~~~~~~~~~~~
+Instr [00000010] = 00220821
+memAddr: ffffffe0, memRdData: xxxxxxxx, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00220821
+----------ID-----------
+instr=44000300
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=1080ffe0
+takeLeap=1
+----------WB-----------
+instr=746400b4
+
+===============REGISTER DUMP===============
+reg 1: 0001da31 	 reg 2: 0002ff42
+reg 3: 00000070 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1360ns~~~~~~~~~~~~~
+Instr [00000014] = ac612000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=ac612000
+----------ID-----------
+instr=00220821
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=1080ffe0
+reading val 0001da31 from reg 01
+reading val 0002ff42 from reg 02
+reading val 00000070 from reg 03
+reading val 0001da31 from reg 01
+
+===============REGISTER DUMP===============
+reg 1: 0001da31 	 reg 2: 0002ff42
+reg 3: 00000070 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1370ns~~~~~~~~~~~~~
+Instr [00000018] = 24630004
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac612000
+----------EX-----------
+instr=00220821
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 0001da31 	 reg 2: 0002ff42
+reg 3: 00000070 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1380ns~~~~~~~~~~~~~
+Instr [0000001c] = 00221021
+memAddr: 0004d973, memRdData: xxxxxxxx, memWrData: 0002ff42, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00221021
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac612000
+----------MEM-----------
+instr=00220821
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 00000070 from reg 03
+reading val 00000070 from reg 03
+writing word to mem at 00002070 val 0004d973
+writing val 0004d973 to register 01
+reading val 0004d973 from reg 01
+reading val 0002ff42 from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 0001da31 	 reg 2: 0002ff42
+reg 3: 00000070 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1390ns~~~~~~~~~~~~~
+Instr [00000020] = ac622000
+memAddr: 00002070, memRdData: 00000000, memWrData: 0004d973, memWr: 1
+Not trap=1
+----------IF-----------
+instr=ac622000
+----------ID-----------
+instr=00221021
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac612000
+takeLeap=0
+----------WB-----------
+instr=00220821
+
+===============REGISTER DUMP===============
+reg 1: 0004d973 	 reg 2: 0002ff42
+reg 3: 00000070 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1400ns~~~~~~~~~~~~~
+Instr [00000024] = 24630004
+memAddr: 00000074, memRdData: 00000000, memWrData: 00000070, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac622000
+----------EX-----------
+instr=00221021
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac612000
+reading val 00000070 from reg 03
+reading val 0002ff42 from reg 02
+writing val 00000074 to register 03
+reading val 00000074 from reg 03
+reading val 00000070 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 0004d973 	 reg 2: 0002ff42
+reg 3: 00000070 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1410ns~~~~~~~~~~~~~
+Instr [00000028] = 746400b4
+memAddr: 0007d8b5, memRdData: xxxxxxxx, memWrData: 0002ff42, memWr: 0
+Not trap=1
+----------IF-----------
+instr=746400b4
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac622000
+----------MEM-----------
+instr=00221021
+takeLeap=0
+----------WB-----------
+instr=24630004
+
+===============REGISTER DUMP===============
+reg 1: 0004d973 	 reg 2: 0002ff42
+reg 3: 00000074 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1420ns~~~~~~~~~~~~~
+Instr [0000002c] = 1080ffe0
+memAddr: 00002074, memRdData: 00000000, memWrData: 0007d8b5, memWr: 1
+Not trap=1
+----------IF-----------
+instr=1080ffe0
+----------ID-----------
+instr=746400b4
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac622000
+takeLeap=0
+----------WB-----------
+instr=00221021
+writing val 0007d8b5 to register 02
+reading val 00000074 from reg 03
+reading val 00000000 from reg 04
+writing word to mem at 00002074 val 0007d8b5
+reading val 00000000 from reg 04
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 0004d973 	 reg 2: 0007d8b5
+reg 3: 00000074 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1430ns~~~~~~~~~~~~~
+Instr [00000030] = 00000015
+memAddr: 00000078, memRdData: 00000000, memWrData: 00000070, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00000015
+----------ID-----------
+instr=1080ffe0
+----------EX-----------
+instr=746400b4
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac622000
+
+===============REGISTER DUMP===============
+reg 1: 0004d973 	 reg 2: 0007d8b5
+reg 3: 00000074 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1440ns~~~~~~~~~~~~~
+Instr [00000034] = 44000300
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=44000300
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=1080ffe0
+----------MEM-----------
+instr=746400b4
+takeLeap=0
+----------WB-----------
+instr=24630004
+writing val 00000078 to register 03
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+writing val 00000000 to register 04
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 0004d973 	 reg 2: 0007d8b5
+reg 3: 00000078 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1450ns~~~~~~~~~~~~~
+Instr [00000010] = 00220821
+memAddr: ffffffe0, memRdData: xxxxxxxx, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00220821
+----------ID-----------
+instr=44000300
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=1080ffe0
+takeLeap=1
+----------WB-----------
+instr=746400b4
+
+===============REGISTER DUMP===============
+reg 1: 0004d973 	 reg 2: 0007d8b5
+reg 3: 00000078 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1460ns~~~~~~~~~~~~~
+Instr [00000014] = ac612000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=ac612000
+----------ID-----------
+instr=00220821
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=1080ffe0
+reading val 0004d973 from reg 01
+reading val 0007d8b5 from reg 02
+reading val 00000078 from reg 03
+reading val 0004d973 from reg 01
+
+===============REGISTER DUMP===============
+reg 1: 0004d973 	 reg 2: 0007d8b5
+reg 3: 00000078 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1470ns~~~~~~~~~~~~~
+Instr [00000018] = 24630004
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac612000
+----------EX-----------
+instr=00220821
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 0004d973 	 reg 2: 0007d8b5
+reg 3: 00000078 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1480ns~~~~~~~~~~~~~
+Instr [0000001c] = 00221021
+memAddr: 000cb228, memRdData: xxxxxxxx, memWrData: 0007d8b5, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00221021
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac612000
+----------MEM-----------
+instr=00220821
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 00000078 from reg 03
+reading val 00000078 from reg 03
+writing word to mem at 00002078 val 000cb228
+writing val 000cb228 to register 01
+reading val 000cb228 from reg 01
+reading val 0007d8b5 from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 0004d973 	 reg 2: 0007d8b5
+reg 3: 00000078 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1490ns~~~~~~~~~~~~~
+Instr [00000020] = ac622000
+memAddr: 00002078, memRdData: 00000000, memWrData: 000cb228, memWr: 1
+Not trap=1
+----------IF-----------
+instr=ac622000
+----------ID-----------
+instr=00221021
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac612000
+takeLeap=0
+----------WB-----------
+instr=00220821
+
+===============REGISTER DUMP===============
+reg 1: 000cb228 	 reg 2: 0007d8b5
+reg 3: 00000078 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1500ns~~~~~~~~~~~~~
+Instr [00000024] = 24630004
+memAddr: 0000007c, memRdData: 00000000, memWrData: 00000078, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac622000
+----------EX-----------
+instr=00221021
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac612000
+reading val 00000078 from reg 03
+reading val 0007d8b5 from reg 02
+writing val 0000007c to register 03
+reading val 0000007c from reg 03
+reading val 00000078 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 000cb228 	 reg 2: 0007d8b5
+reg 3: 00000078 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1510ns~~~~~~~~~~~~~
+Instr [00000028] = 746400b4
+memAddr: 00148add, memRdData: xxxxxxxx, memWrData: 0007d8b5, memWr: 0
+Not trap=1
+----------IF-----------
+instr=746400b4
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac622000
+----------MEM-----------
+instr=00221021
+takeLeap=0
+----------WB-----------
+instr=24630004
+
+===============REGISTER DUMP===============
+reg 1: 000cb228 	 reg 2: 0007d8b5
+reg 3: 0000007c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1520ns~~~~~~~~~~~~~
+Instr [0000002c] = 1080ffe0
+memAddr: 0000207c, memRdData: 00000000, memWrData: 00148add, memWr: 1
+Not trap=1
+----------IF-----------
+instr=1080ffe0
+----------ID-----------
+instr=746400b4
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac622000
+takeLeap=0
+----------WB-----------
+instr=00221021
+writing val 00148add to register 02
+reading val 0000007c from reg 03
+reading val 00000000 from reg 04
+writing word to mem at 0000207c val 00148add
+reading val 00000000 from reg 04
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 000cb228 	 reg 2: 00148add
+reg 3: 0000007c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1530ns~~~~~~~~~~~~~
+Instr [00000030] = 00000015
+memAddr: 00000080, memRdData: 00000000, memWrData: 00000078, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00000015
+----------ID-----------
+instr=1080ffe0
+----------EX-----------
+instr=746400b4
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac622000
+
+===============REGISTER DUMP===============
+reg 1: 000cb228 	 reg 2: 00148add
+reg 3: 0000007c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1540ns~~~~~~~~~~~~~
+Instr [00000034] = 44000300
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=44000300
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=1080ffe0
+----------MEM-----------
+instr=746400b4
+takeLeap=0
+----------WB-----------
+instr=24630004
+writing val 00000080 to register 03
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+writing val 00000000 to register 04
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 000cb228 	 reg 2: 00148add
+reg 3: 00000080 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1550ns~~~~~~~~~~~~~
+Instr [00000010] = 00220821
+memAddr: ffffffe0, memRdData: xxxxxxxx, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00220821
+----------ID-----------
+instr=44000300
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=1080ffe0
+takeLeap=1
+----------WB-----------
+instr=746400b4
+
+===============REGISTER DUMP===============
+reg 1: 000cb228 	 reg 2: 00148add
+reg 3: 00000080 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1560ns~~~~~~~~~~~~~
+Instr [00000014] = ac612000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=ac612000
+----------ID-----------
+instr=00220821
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=1080ffe0
+reading val 000cb228 from reg 01
+reading val 00148add from reg 02
+reading val 00000080 from reg 03
+reading val 000cb228 from reg 01
+
+===============REGISTER DUMP===============
+reg 1: 000cb228 	 reg 2: 00148add
+reg 3: 00000080 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1570ns~~~~~~~~~~~~~
+Instr [00000018] = 24630004
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac612000
+----------EX-----------
+instr=00220821
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 000cb228 	 reg 2: 00148add
+reg 3: 00000080 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1580ns~~~~~~~~~~~~~
+Instr [0000001c] = 00221021
+memAddr: 00213d05, memRdData: xxxxxxxx, memWrData: 00148add, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00221021
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac612000
+----------MEM-----------
+instr=00220821
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 00000080 from reg 03
+reading val 00000080 from reg 03
+writing word to mem at 00002080 val 00213d05
+writing val 00213d05 to register 01
+reading val 00213d05 from reg 01
+reading val 00148add from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 000cb228 	 reg 2: 00148add
+reg 3: 00000080 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1590ns~~~~~~~~~~~~~
+Instr [00000020] = ac622000
+memAddr: 00002080, memRdData: 00000000, memWrData: 00213d05, memWr: 1
+Not trap=1
+----------IF-----------
+instr=ac622000
+----------ID-----------
+instr=00221021
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac612000
+takeLeap=0
+----------WB-----------
+instr=00220821
+
+===============REGISTER DUMP===============
+reg 1: 00213d05 	 reg 2: 00148add
+reg 3: 00000080 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1600ns~~~~~~~~~~~~~
+Instr [00000024] = 24630004
+memAddr: 00000084, memRdData: 00000000, memWrData: 00000080, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac622000
+----------EX-----------
+instr=00221021
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac612000
+reading val 00000080 from reg 03
+reading val 00148add from reg 02
+writing val 00000084 to register 03
+reading val 00000084 from reg 03
+reading val 00000080 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 00213d05 	 reg 2: 00148add
+reg 3: 00000080 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1610ns~~~~~~~~~~~~~
+Instr [00000028] = 746400b4
+memAddr: 0035c7e2, memRdData: xxxxxxxx, memWrData: 00148add, memWr: 0
+Not trap=1
+----------IF-----------
+instr=746400b4
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac622000
+----------MEM-----------
+instr=00221021
+takeLeap=0
+----------WB-----------
+instr=24630004
+
+===============REGISTER DUMP===============
+reg 1: 00213d05 	 reg 2: 00148add
+reg 3: 00000084 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1620ns~~~~~~~~~~~~~
+Instr [0000002c] = 1080ffe0
+memAddr: 00002084, memRdData: 00000000, memWrData: 0035c7e2, memWr: 1
+Not trap=1
+----------IF-----------
+instr=1080ffe0
+----------ID-----------
+instr=746400b4
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac622000
+takeLeap=0
+----------WB-----------
+instr=00221021
+writing val 0035c7e2 to register 02
+reading val 00000084 from reg 03
+reading val 00000000 from reg 04
+writing word to mem at 00002084 val 0035c7e2
+reading val 00000000 from reg 04
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00213d05 	 reg 2: 0035c7e2
+reg 3: 00000084 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1630ns~~~~~~~~~~~~~
+Instr [00000030] = 00000015
+memAddr: 00000088, memRdData: 00000000, memWrData: 00000080, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00000015
+----------ID-----------
+instr=1080ffe0
+----------EX-----------
+instr=746400b4
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac622000
+
+===============REGISTER DUMP===============
+reg 1: 00213d05 	 reg 2: 0035c7e2
+reg 3: 00000084 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1640ns~~~~~~~~~~~~~
+Instr [00000034] = 44000300
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=44000300
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=1080ffe0
+----------MEM-----------
+instr=746400b4
+takeLeap=0
+----------WB-----------
+instr=24630004
+writing val 00000088 to register 03
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+writing val 00000000 to register 04
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00213d05 	 reg 2: 0035c7e2
+reg 3: 00000088 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1650ns~~~~~~~~~~~~~
+Instr [00000010] = 00220821
+memAddr: ffffffe0, memRdData: xxxxxxxx, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00220821
+----------ID-----------
+instr=44000300
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=1080ffe0
+takeLeap=1
+----------WB-----------
+instr=746400b4
+
+===============REGISTER DUMP===============
+reg 1: 00213d05 	 reg 2: 0035c7e2
+reg 3: 00000088 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1660ns~~~~~~~~~~~~~
+Instr [00000014] = ac612000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=ac612000
+----------ID-----------
+instr=00220821
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=1080ffe0
+reading val 00213d05 from reg 01
+reading val 0035c7e2 from reg 02
+reading val 00000088 from reg 03
+reading val 00213d05 from reg 01
+
+===============REGISTER DUMP===============
+reg 1: 00213d05 	 reg 2: 0035c7e2
+reg 3: 00000088 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1670ns~~~~~~~~~~~~~
+Instr [00000018] = 24630004
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac612000
+----------EX-----------
+instr=00220821
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 00213d05 	 reg 2: 0035c7e2
+reg 3: 00000088 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1680ns~~~~~~~~~~~~~
+Instr [0000001c] = 00221021
+memAddr: 005704e7, memRdData: xxxxxxxx, memWrData: 0035c7e2, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00221021
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac612000
+----------MEM-----------
+instr=00220821
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 00000088 from reg 03
+reading val 00000088 from reg 03
+writing word to mem at 00002088 val 005704e7
+writing val 005704e7 to register 01
+reading val 005704e7 from reg 01
+reading val 0035c7e2 from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 00213d05 	 reg 2: 0035c7e2
+reg 3: 00000088 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1690ns~~~~~~~~~~~~~
+Instr [00000020] = ac622000
+memAddr: 00002088, memRdData: 00000000, memWrData: 005704e7, memWr: 1
+Not trap=1
+----------IF-----------
+instr=ac622000
+----------ID-----------
+instr=00221021
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac612000
+takeLeap=0
+----------WB-----------
+instr=00220821
+
+===============REGISTER DUMP===============
+reg 1: 005704e7 	 reg 2: 0035c7e2
+reg 3: 00000088 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1700ns~~~~~~~~~~~~~
+Instr [00000024] = 24630004
+memAddr: 0000008c, memRdData: 00000000, memWrData: 00000088, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac622000
+----------EX-----------
+instr=00221021
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac612000
+reading val 00000088 from reg 03
+reading val 0035c7e2 from reg 02
+writing val 0000008c to register 03
+reading val 0000008c from reg 03
+reading val 00000088 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 005704e7 	 reg 2: 0035c7e2
+reg 3: 00000088 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1710ns~~~~~~~~~~~~~
+Instr [00000028] = 746400b4
+memAddr: 008cccc9, memRdData: xxxxxxxx, memWrData: 0035c7e2, memWr: 0
+Not trap=1
+----------IF-----------
+instr=746400b4
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac622000
+----------MEM-----------
+instr=00221021
+takeLeap=0
+----------WB-----------
+instr=24630004
+
+===============REGISTER DUMP===============
+reg 1: 005704e7 	 reg 2: 0035c7e2
+reg 3: 0000008c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1720ns~~~~~~~~~~~~~
+Instr [0000002c] = 1080ffe0
+memAddr: 0000208c, memRdData: 00000000, memWrData: 008cccc9, memWr: 1
+Not trap=1
+----------IF-----------
+instr=1080ffe0
+----------ID-----------
+instr=746400b4
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac622000
+takeLeap=0
+----------WB-----------
+instr=00221021
+writing val 008cccc9 to register 02
+reading val 0000008c from reg 03
+reading val 00000000 from reg 04
+writing word to mem at 0000208c val 008cccc9
+reading val 00000000 from reg 04
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 005704e7 	 reg 2: 008cccc9
+reg 3: 0000008c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1730ns~~~~~~~~~~~~~
+Instr [00000030] = 00000015
+memAddr: 00000090, memRdData: 00000000, memWrData: 00000088, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00000015
+----------ID-----------
+instr=1080ffe0
+----------EX-----------
+instr=746400b4
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac622000
+
+===============REGISTER DUMP===============
+reg 1: 005704e7 	 reg 2: 008cccc9
+reg 3: 0000008c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1740ns~~~~~~~~~~~~~
+Instr [00000034] = 44000300
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=44000300
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=1080ffe0
+----------MEM-----------
+instr=746400b4
+takeLeap=0
+----------WB-----------
+instr=24630004
+writing val 00000090 to register 03
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+writing val 00000000 to register 04
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 005704e7 	 reg 2: 008cccc9
+reg 3: 00000090 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1750ns~~~~~~~~~~~~~
+Instr [00000010] = 00220821
+memAddr: ffffffe0, memRdData: xxxxxxxx, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00220821
+----------ID-----------
+instr=44000300
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=1080ffe0
+takeLeap=1
+----------WB-----------
+instr=746400b4
+
+===============REGISTER DUMP===============
+reg 1: 005704e7 	 reg 2: 008cccc9
+reg 3: 00000090 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1760ns~~~~~~~~~~~~~
+Instr [00000014] = ac612000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=ac612000
+----------ID-----------
+instr=00220821
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=1080ffe0
+reading val 005704e7 from reg 01
+reading val 008cccc9 from reg 02
+reading val 00000090 from reg 03
+reading val 005704e7 from reg 01
+
+===============REGISTER DUMP===============
+reg 1: 005704e7 	 reg 2: 008cccc9
+reg 3: 00000090 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1770ns~~~~~~~~~~~~~
+Instr [00000018] = 24630004
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac612000
+----------EX-----------
+instr=00220821
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 005704e7 	 reg 2: 008cccc9
+reg 3: 00000090 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1780ns~~~~~~~~~~~~~
+Instr [0000001c] = 00221021
+memAddr: 00e3d1b0, memRdData: xxxxxxxx, memWrData: 008cccc9, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00221021
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac612000
+----------MEM-----------
+instr=00220821
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 00000090 from reg 03
+reading val 00000090 from reg 03
+writing word to mem at 00002090 val 00e3d1b0
+writing val 00e3d1b0 to register 01
+reading val 00e3d1b0 from reg 01
+reading val 008cccc9 from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 005704e7 	 reg 2: 008cccc9
+reg 3: 00000090 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1790ns~~~~~~~~~~~~~
+Instr [00000020] = ac622000
+memAddr: 00002090, memRdData: 00000000, memWrData: 00e3d1b0, memWr: 1
+Not trap=1
+----------IF-----------
+instr=ac622000
+----------ID-----------
+instr=00221021
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac612000
+takeLeap=0
+----------WB-----------
+instr=00220821
+
+===============REGISTER DUMP===============
+reg 1: 00e3d1b0 	 reg 2: 008cccc9
+reg 3: 00000090 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1800ns~~~~~~~~~~~~~
+Instr [00000024] = 24630004
+memAddr: 00000094, memRdData: 00000000, memWrData: 00000090, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac622000
+----------EX-----------
+instr=00221021
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac612000
+reading val 00000090 from reg 03
+reading val 008cccc9 from reg 02
+writing val 00000094 to register 03
+reading val 00000094 from reg 03
+reading val 00000090 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 00e3d1b0 	 reg 2: 008cccc9
+reg 3: 00000090 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1810ns~~~~~~~~~~~~~
+Instr [00000028] = 746400b4
+memAddr: 01709e79, memRdData: xxxxxxxx, memWrData: 008cccc9, memWr: 0
+Not trap=1
+----------IF-----------
+instr=746400b4
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac622000
+----------MEM-----------
+instr=00221021
+takeLeap=0
+----------WB-----------
+instr=24630004
+
+===============REGISTER DUMP===============
+reg 1: 00e3d1b0 	 reg 2: 008cccc9
+reg 3: 00000094 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1820ns~~~~~~~~~~~~~
+Instr [0000002c] = 1080ffe0
+memAddr: 00002094, memRdData: 00000000, memWrData: 01709e79, memWr: 1
+Not trap=1
+----------IF-----------
+instr=1080ffe0
+----------ID-----------
+instr=746400b4
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac622000
+takeLeap=0
+----------WB-----------
+instr=00221021
+writing val 01709e79 to register 02
+reading val 00000094 from reg 03
+reading val 00000000 from reg 04
+writing word to mem at 00002094 val 01709e79
+reading val 00000000 from reg 04
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00e3d1b0 	 reg 2: 01709e79
+reg 3: 00000094 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1830ns~~~~~~~~~~~~~
+Instr [00000030] = 00000015
+memAddr: 00000098, memRdData: 00000000, memWrData: 00000090, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00000015
+----------ID-----------
+instr=1080ffe0
+----------EX-----------
+instr=746400b4
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac622000
+
+===============REGISTER DUMP===============
+reg 1: 00e3d1b0 	 reg 2: 01709e79
+reg 3: 00000094 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1840ns~~~~~~~~~~~~~
+Instr [00000034] = 44000300
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=44000300
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=1080ffe0
+----------MEM-----------
+instr=746400b4
+takeLeap=0
+----------WB-----------
+instr=24630004
+writing val 00000098 to register 03
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+writing val 00000000 to register 04
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 00e3d1b0 	 reg 2: 01709e79
+reg 3: 00000098 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1850ns~~~~~~~~~~~~~
+Instr [00000010] = 00220821
+memAddr: ffffffe0, memRdData: xxxxxxxx, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00220821
+----------ID-----------
+instr=44000300
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=1080ffe0
+takeLeap=1
+----------WB-----------
+instr=746400b4
+
+===============REGISTER DUMP===============
+reg 1: 00e3d1b0 	 reg 2: 01709e79
+reg 3: 00000098 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1860ns~~~~~~~~~~~~~
+Instr [00000014] = ac612000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=ac612000
+----------ID-----------
+instr=00220821
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=1080ffe0
+reading val 00e3d1b0 from reg 01
+reading val 01709e79 from reg 02
+reading val 00000098 from reg 03
+reading val 00e3d1b0 from reg 01
+
+===============REGISTER DUMP===============
+reg 1: 00e3d1b0 	 reg 2: 01709e79
+reg 3: 00000098 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1870ns~~~~~~~~~~~~~
+Instr [00000018] = 24630004
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac612000
+----------EX-----------
+instr=00220821
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 00e3d1b0 	 reg 2: 01709e79
+reg 3: 00000098 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1880ns~~~~~~~~~~~~~
+Instr [0000001c] = 00221021
+memAddr: 02547029, memRdData: xxxxxxxx, memWrData: 01709e79, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00221021
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac612000
+----------MEM-----------
+instr=00220821
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 00000098 from reg 03
+reading val 00000098 from reg 03
+writing word to mem at 00002098 val 02547029
+writing val 02547029 to register 01
+reading val 02547029 from reg 01
+reading val 01709e79 from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 00e3d1b0 	 reg 2: 01709e79
+reg 3: 00000098 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1890ns~~~~~~~~~~~~~
+Instr [00000020] = ac622000
+memAddr: 00002098, memRdData: 00000000, memWrData: 02547029, memWr: 1
+Not trap=1
+----------IF-----------
+instr=ac622000
+----------ID-----------
+instr=00221021
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac612000
+takeLeap=0
+----------WB-----------
+instr=00220821
+
+===============REGISTER DUMP===============
+reg 1: 02547029 	 reg 2: 01709e79
+reg 3: 00000098 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1900ns~~~~~~~~~~~~~
+Instr [00000024] = 24630004
+memAddr: 0000009c, memRdData: 00000000, memWrData: 00000098, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac622000
+----------EX-----------
+instr=00221021
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac612000
+reading val 00000098 from reg 03
+reading val 01709e79 from reg 02
+writing val 0000009c to register 03
+reading val 0000009c from reg 03
+reading val 00000098 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 02547029 	 reg 2: 01709e79
+reg 3: 00000098 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1910ns~~~~~~~~~~~~~
+Instr [00000028] = 746400b4
+memAddr: 03c50ea2, memRdData: xxxxxxxx, memWrData: 01709e79, memWr: 0
+Not trap=1
+----------IF-----------
+instr=746400b4
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac622000
+----------MEM-----------
+instr=00221021
+takeLeap=0
+----------WB-----------
+instr=24630004
+
+===============REGISTER DUMP===============
+reg 1: 02547029 	 reg 2: 01709e79
+reg 3: 0000009c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1920ns~~~~~~~~~~~~~
+Instr [0000002c] = 1080ffe0
+memAddr: 0000209c, memRdData: 00000000, memWrData: 03c50ea2, memWr: 1
+Not trap=1
+----------IF-----------
+instr=1080ffe0
+----------ID-----------
+instr=746400b4
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac622000
+takeLeap=0
+----------WB-----------
+instr=00221021
+writing val 03c50ea2 to register 02
+reading val 0000009c from reg 03
+reading val 00000000 from reg 04
+writing word to mem at 0000209c val 03c50ea2
+reading val 00000000 from reg 04
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 02547029 	 reg 2: 03c50ea2
+reg 3: 0000009c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1930ns~~~~~~~~~~~~~
+Instr [00000030] = 00000015
+memAddr: 000000a0, memRdData: 00000000, memWrData: 00000098, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00000015
+----------ID-----------
+instr=1080ffe0
+----------EX-----------
+instr=746400b4
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac622000
+
+===============REGISTER DUMP===============
+reg 1: 02547029 	 reg 2: 03c50ea2
+reg 3: 0000009c 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1940ns~~~~~~~~~~~~~
+Instr [00000034] = 44000300
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=44000300
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=1080ffe0
+----------MEM-----------
+instr=746400b4
+takeLeap=0
+----------WB-----------
+instr=24630004
+writing val 000000a0 to register 03
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+writing val 00000000 to register 04
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 02547029 	 reg 2: 03c50ea2
+reg 3: 000000a0 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1950ns~~~~~~~~~~~~~
+Instr [00000010] = 00220821
+memAddr: ffffffe0, memRdData: xxxxxxxx, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00220821
+----------ID-----------
+instr=44000300
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=1080ffe0
+takeLeap=1
+----------WB-----------
+instr=746400b4
+
+===============REGISTER DUMP===============
+reg 1: 02547029 	 reg 2: 03c50ea2
+reg 3: 000000a0 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1960ns~~~~~~~~~~~~~
+Instr [00000014] = ac612000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=ac612000
+----------ID-----------
+instr=00220821
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=1080ffe0
+reading val 02547029 from reg 01
+reading val 03c50ea2 from reg 02
+reading val 000000a0 from reg 03
+reading val 02547029 from reg 01
+
+===============REGISTER DUMP===============
+reg 1: 02547029 	 reg 2: 03c50ea2
+reg 3: 000000a0 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1970ns~~~~~~~~~~~~~
+Instr [00000018] = 24630004
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac612000
+----------EX-----------
+instr=00220821
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 02547029 	 reg 2: 03c50ea2
+reg 3: 000000a0 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1980ns~~~~~~~~~~~~~
+Instr [0000001c] = 00221021
+memAddr: 06197ecb, memRdData: xxxxxxxx, memWrData: 03c50ea2, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00221021
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac612000
+----------MEM-----------
+instr=00220821
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 000000a0 from reg 03
+reading val 000000a0 from reg 03
+writing word to mem at 000020a0 val 06197ecb
+writing val 06197ecb to register 01
+reading val 06197ecb from reg 01
+reading val 03c50ea2 from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 02547029 	 reg 2: 03c50ea2
+reg 3: 000000a0 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @1990ns~~~~~~~~~~~~~
+Instr [00000020] = ac622000
+memAddr: 000020a0, memRdData: 00000000, memWrData: 06197ecb, memWr: 1
+Not trap=1
+----------IF-----------
+instr=ac622000
+----------ID-----------
+instr=00221021
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac612000
+takeLeap=0
+----------WB-----------
+instr=00220821
+
+===============REGISTER DUMP===============
+reg 1: 06197ecb 	 reg 2: 03c50ea2
+reg 3: 000000a0 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2000ns~~~~~~~~~~~~~
+Instr [00000024] = 24630004
+memAddr: 000000a4, memRdData: 00000000, memWrData: 000000a0, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac622000
+----------EX-----------
+instr=00221021
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac612000
+reading val 000000a0 from reg 03
+reading val 03c50ea2 from reg 02
+writing val 000000a4 to register 03
+reading val 000000a4 from reg 03
+reading val 000000a0 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 06197ecb 	 reg 2: 03c50ea2
+reg 3: 000000a0 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2010ns~~~~~~~~~~~~~
+Instr [00000028] = 746400b4
+memAddr: 09de8d6d, memRdData: xxxxxxxx, memWrData: 03c50ea2, memWr: 0
+Not trap=1
+----------IF-----------
+instr=746400b4
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac622000
+----------MEM-----------
+instr=00221021
+takeLeap=0
+----------WB-----------
+instr=24630004
+
+===============REGISTER DUMP===============
+reg 1: 06197ecb 	 reg 2: 03c50ea2
+reg 3: 000000a4 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2020ns~~~~~~~~~~~~~
+Instr [0000002c] = 1080ffe0
+memAddr: 000020a4, memRdData: 00000000, memWrData: 09de8d6d, memWr: 1
+Not trap=1
+----------IF-----------
+instr=1080ffe0
+----------ID-----------
+instr=746400b4
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac622000
+takeLeap=0
+----------WB-----------
+instr=00221021
+writing val 09de8d6d to register 02
+reading val 000000a4 from reg 03
+reading val 00000000 from reg 04
+writing word to mem at 000020a4 val 09de8d6d
+reading val 00000000 from reg 04
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 06197ecb 	 reg 2: 09de8d6d
+reg 3: 000000a4 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2030ns~~~~~~~~~~~~~
+Instr [00000030] = 00000015
+memAddr: 000000a8, memRdData: 00000000, memWrData: 000000a0, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00000015
+----------ID-----------
+instr=1080ffe0
+----------EX-----------
+instr=746400b4
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac622000
+
+===============REGISTER DUMP===============
+reg 1: 06197ecb 	 reg 2: 09de8d6d
+reg 3: 000000a4 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2040ns~~~~~~~~~~~~~
+Instr [00000034] = 44000300
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=44000300
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=1080ffe0
+----------MEM-----------
+instr=746400b4
+takeLeap=0
+----------WB-----------
+instr=24630004
+writing val 000000a8 to register 03
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+writing val 00000000 to register 04
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 06197ecb 	 reg 2: 09de8d6d
+reg 3: 000000a8 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2050ns~~~~~~~~~~~~~
+Instr [00000010] = 00220821
+memAddr: ffffffe0, memRdData: xxxxxxxx, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00220821
+----------ID-----------
+instr=44000300
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=1080ffe0
+takeLeap=1
+----------WB-----------
+instr=746400b4
+
+===============REGISTER DUMP===============
+reg 1: 06197ecb 	 reg 2: 09de8d6d
+reg 3: 000000a8 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2060ns~~~~~~~~~~~~~
+Instr [00000014] = ac612000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=ac612000
+----------ID-----------
+instr=00220821
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=1080ffe0
+reading val 06197ecb from reg 01
+reading val 09de8d6d from reg 02
+reading val 000000a8 from reg 03
+reading val 06197ecb from reg 01
+
+===============REGISTER DUMP===============
+reg 1: 06197ecb 	 reg 2: 09de8d6d
+reg 3: 000000a8 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2070ns~~~~~~~~~~~~~
+Instr [00000018] = 24630004
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac612000
+----------EX-----------
+instr=00220821
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 06197ecb 	 reg 2: 09de8d6d
+reg 3: 000000a8 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2080ns~~~~~~~~~~~~~
+Instr [0000001c] = 00221021
+memAddr: 0ff80c38, memRdData: xxxxxxxx, memWrData: 09de8d6d, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00221021
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac612000
+----------MEM-----------
+instr=00220821
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 000000a8 from reg 03
+reading val 000000a8 from reg 03
+writing word to mem at 000020a8 val 0ff80c38
+writing val 0ff80c38 to register 01
+reading val 0ff80c38 from reg 01
+reading val 09de8d6d from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 06197ecb 	 reg 2: 09de8d6d
+reg 3: 000000a8 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2090ns~~~~~~~~~~~~~
+Instr [00000020] = ac622000
+memAddr: 000020a8, memRdData: 00000000, memWrData: 0ff80c38, memWr: 1
+Not trap=1
+----------IF-----------
+instr=ac622000
+----------ID-----------
+instr=00221021
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac612000
+takeLeap=0
+----------WB-----------
+instr=00220821
+
+===============REGISTER DUMP===============
+reg 1: 0ff80c38 	 reg 2: 09de8d6d
+reg 3: 000000a8 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2100ns~~~~~~~~~~~~~
+Instr [00000024] = 24630004
+memAddr: 000000ac, memRdData: 00000000, memWrData: 000000a8, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac622000
+----------EX-----------
+instr=00221021
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac612000
+reading val 000000a8 from reg 03
+reading val 09de8d6d from reg 02
+writing val 000000ac to register 03
+reading val 000000ac from reg 03
+reading val 000000a8 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 0ff80c38 	 reg 2: 09de8d6d
+reg 3: 000000a8 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2110ns~~~~~~~~~~~~~
+Instr [00000028] = 746400b4
+memAddr: 19d699a5, memRdData: xxxxxxxx, memWrData: 09de8d6d, memWr: 0
+Not trap=1
+----------IF-----------
+instr=746400b4
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac622000
+----------MEM-----------
+instr=00221021
+takeLeap=0
+----------WB-----------
+instr=24630004
+
+===============REGISTER DUMP===============
+reg 1: 0ff80c38 	 reg 2: 09de8d6d
+reg 3: 000000ac 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2120ns~~~~~~~~~~~~~
+Instr [0000002c] = 1080ffe0
+memAddr: 000020ac, memRdData: 00000000, memWrData: 19d699a5, memWr: 1
+Not trap=1
+----------IF-----------
+instr=1080ffe0
+----------ID-----------
+instr=746400b4
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac622000
+takeLeap=0
+----------WB-----------
+instr=00221021
+writing val 19d699a5 to register 02
+reading val 000000ac from reg 03
+reading val 00000000 from reg 04
+writing word to mem at 000020ac val 19d699a5
+reading val 00000000 from reg 04
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 0ff80c38 	 reg 2: 19d699a5
+reg 3: 000000ac 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2130ns~~~~~~~~~~~~~
+Instr [00000030] = 00000015
+memAddr: 000000b0, memRdData: 00000000, memWrData: 000000a8, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00000015
+----------ID-----------
+instr=1080ffe0
+----------EX-----------
+instr=746400b4
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac622000
+
+===============REGISTER DUMP===============
+reg 1: 0ff80c38 	 reg 2: 19d699a5
+reg 3: 000000ac 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2140ns~~~~~~~~~~~~~
+Instr [00000034] = 44000300
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=44000300
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=1080ffe0
+----------MEM-----------
+instr=746400b4
+takeLeap=0
+----------WB-----------
+instr=24630004
+writing val 000000b0 to register 03
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+writing val 00000000 to register 04
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 0ff80c38 	 reg 2: 19d699a5
+reg 3: 000000b0 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2150ns~~~~~~~~~~~~~
+Instr [00000010] = 00220821
+memAddr: ffffffe0, memRdData: xxxxxxxx, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00220821
+----------ID-----------
+instr=44000300
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=1080ffe0
+takeLeap=1
+----------WB-----------
+instr=746400b4
+
+===============REGISTER DUMP===============
+reg 1: 0ff80c38 	 reg 2: 19d699a5
+reg 3: 000000b0 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2160ns~~~~~~~~~~~~~
+Instr [00000014] = ac612000
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=ac612000
+----------ID-----------
+instr=00220821
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=1080ffe0
+reading val 0ff80c38 from reg 01
+reading val 19d699a5 from reg 02
+reading val 000000b0 from reg 03
+reading val 0ff80c38 from reg 01
+
+===============REGISTER DUMP===============
+reg 1: 0ff80c38 	 reg 2: 19d699a5
+reg 3: 000000b0 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2170ns~~~~~~~~~~~~~
+Instr [00000018] = 24630004
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac612000
+----------EX-----------
+instr=00220821
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=00000015
+
+===============REGISTER DUMP===============
+reg 1: 0ff80c38 	 reg 2: 19d699a5
+reg 3: 000000b0 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2180ns~~~~~~~~~~~~~
+Instr [0000001c] = 00221021
+memAddr: 29cea5dd, memRdData: xxxxxxxx, memWrData: 19d699a5, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00221021
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac612000
+----------MEM-----------
+instr=00220821
+takeLeap=0
+----------WB-----------
+instr=00000015
+reading val 000000b0 from reg 03
+reading val 000000b0 from reg 03
+writing word to mem at 000020b0 val 29cea5dd
+writing val 29cea5dd to register 01
+reading val 29cea5dd from reg 01
+reading val 19d699a5 from reg 02
+
+===============REGISTER DUMP===============
+reg 1: 0ff80c38 	 reg 2: 19d699a5
+reg 3: 000000b0 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2190ns~~~~~~~~~~~~~
+Instr [00000020] = ac622000
+memAddr: 000020b0, memRdData: 00000000, memWrData: 29cea5dd, memWr: 1
+Not trap=1
+----------IF-----------
+instr=ac622000
+----------ID-----------
+instr=00221021
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac612000
+takeLeap=0
+----------WB-----------
+instr=00220821
+
+===============REGISTER DUMP===============
+reg 1: 29cea5dd 	 reg 2: 19d699a5
+reg 3: 000000b0 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2200ns~~~~~~~~~~~~~
+Instr [00000024] = 24630004
+memAddr: 000000b4, memRdData: 00000000, memWrData: 000000b0, memWr: 0
+Not trap=1
+----------IF-----------
+instr=24630004
+----------ID-----------
+instr=ac622000
+----------EX-----------
+instr=00221021
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac612000
+reading val 000000b0 from reg 03
+reading val 19d699a5 from reg 02
+writing val 000000b4 to register 03
+reading val 000000b4 from reg 03
+reading val 000000b0 from reg 03
+
+===============REGISTER DUMP===============
+reg 1: 29cea5dd 	 reg 2: 19d699a5
+reg 3: 000000b0 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2210ns~~~~~~~~~~~~~
+Instr [00000028] = 746400b4
+memAddr: 43a53f82, memRdData: xxxxxxxx, memWrData: 19d699a5, memWr: 0
+Not trap=1
+----------IF-----------
+instr=746400b4
+----------ID-----------
+instr=24630004
+----------EX-----------
+instr=ac622000
+----------MEM-----------
+instr=00221021
+takeLeap=0
+----------WB-----------
+instr=24630004
+
+===============REGISTER DUMP===============
+reg 1: 29cea5dd 	 reg 2: 19d699a5
+reg 3: 000000b4 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2220ns~~~~~~~~~~~~~
+Instr [0000002c] = 1080ffe0
+memAddr: 000020b4, memRdData: 00000000, memWrData: 43a53f82, memWr: 1
+Not trap=1
+----------IF-----------
+instr=1080ffe0
+----------ID-----------
+instr=746400b4
+----------EX-----------
+instr=24630004
+----------MEM-----------
+instr=ac622000
+takeLeap=0
+----------WB-----------
+instr=00221021
+writing val 43a53f82 to register 02
+reading val 000000b4 from reg 03
+reading val 00000000 from reg 04
+writing word to mem at 000020b4 val 43a53f82
+reading val 00000000 from reg 04
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 29cea5dd 	 reg 2: 43a53f82
+reg 3: 000000b4 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2230ns~~~~~~~~~~~~~
+Instr [00000030] = 00000015
+memAddr: 000000b8, memRdData: 00000000, memWrData: 000000b0, memWr: 0
+Not trap=1
+----------IF-----------
+instr=00000015
+----------ID-----------
+instr=1080ffe0
+----------EX-----------
+instr=746400b4
+----------MEM-----------
+instr=24630004
+takeLeap=0
+----------WB-----------
+instr=ac622000
+
+===============REGISTER DUMP===============
+reg 1: 29cea5dd 	 reg 2: 43a53f82
+reg 3: 000000b4 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2240ns~~~~~~~~~~~~~
+Instr [00000034] = 44000300
+memAddr: 00000001, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=44000300
+----------ID-----------
+instr=00000015
+----------EX-----------
+instr=1080ffe0
+----------MEM-----------
+instr=746400b4
+takeLeap=0
+----------WB-----------
+instr=24630004
+writing val 000000b8 to register 03
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+writing val 00000001 to register 04
+reading val 00000000 from reg 00
+reading val 00000000 from reg 00
+
+===============REGISTER DUMP===============
+reg 1: 29cea5dd 	 reg 2: 43a53f82
+reg 3: 000000b8 	 reg 4: 00000000
+===========================================
+
+~~~~~~~~~~~~~time: @2250ns~~~~~~~~~~~~~
+Instr [00000038] = xxxxxxxx
+memAddr: ffffffe1, memRdData: xxxxxxxx, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=xxxxxxxx
+----------ID-----------
+instr=44000300
+----------EX-----------
+instr=00000015
+----------MEM-----------
+instr=1080ffe0
+takeLeap=0
+----------WB-----------
+instr=746400b4
+
+===============REGISTER DUMP===============
+reg 1: 29cea5dd 	 reg 2: 43a53f82
+reg 3: 000000b8 	 reg 4: 00000001
+===========================================
+
+~~~~~~~~~~~~~time: @2260ns~~~~~~~~~~~~~
+Instr [0000003c] = xxxxxxxx
+memAddr: 00000000, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=1
+----------IF-----------
+instr=xxxxxxxx
+----------ID-----------
+instr=xxxxxxxx
+----------EX-----------
+instr=44000300
+----------MEM-----------
+instr=00000015
+takeLeap=0
+----------WB-----------
+instr=1080ffe0
+reading val xxxxxxxx from reg xx
+reading val xxxxxxxx from reg xx
+reading val xxxxxxxx from reg xx
+reading val xxxxxxxx from reg xx
+
+===============REGISTER DUMP===============
+reg 1: 29cea5dd 	 reg 2: 43a53f82
+reg 3: 000000b8 	 reg 4: 00000001
+===========================================
+
+~~~~~~~~~~~~~time: @2270ns~~~~~~~~~~~~~
+Instr [00000338] = xxxxxxxx
+memAddr: 00000300, memRdData: 00000000, memWrData: 00000000, memWr: 0
+Not trap=0
+----------IF-----------
+instr=xxxxxxxx
+----------ID-----------
+instr=xxxxxxxx
+----------EX-----------
+instr=xxxxxxxx
+----------MEM-----------
+instr=44000300
+takeLeap=1
+----------WB-----------
+instr=00000015

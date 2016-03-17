@@ -10,8 +10,9 @@
 `define HOLD    2'b01
 
 // Instructions
-`define NOP     32'h15
-`define LD_INST 3'b100
+`define NOP         32'h15
+`define LD_INST     3'b100
+`define TRAP_INST   32'h44000300 
 
 // Forwarding constants
 `define FROM_ID     2'b00

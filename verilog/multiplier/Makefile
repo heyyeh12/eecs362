@@ -1,9 +1,9 @@
 IVERILOG = iverilog
 
-SOURCE_DIR = ../verilog/alu/
+SOURCE_DIR = ../alu/
 TEST_DIR = ./
 BUILD_DIR = ./
-LIB_PATH = ../verilog/gates/gates.v
+LIB_PATH = ../gates/gates.v
 
 SOURCES = shifter adder
 SOURCES_PATH = $(LIB_PATH) $(addprefix $(SOURCE_DIR), $(addsuffix .v, $(SOURCES)))

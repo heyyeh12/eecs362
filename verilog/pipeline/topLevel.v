@@ -1,3 +1,4 @@
+`include "constants.vh"
 module topLevel();
 
 //  implement interface between pipeline & data memory & instruction memory
@@ -7,7 +8,7 @@ module topLevel();
     reg [8*80-1:0] filename;
     
     reg clk, rst;
-    wire [31:0] iaddr, instr;
+    wire [31:0] iaddr, instr, mem_instr;
     wire [31:0] memAddr, memWrData, memRdData, busA, busB, busFP, regWrData;
     wire [1:0] dsize;
     wire [4:0] rs1, rs2, rd;
@@ -32,9 +33,9 @@ module topLevel();
     );
     
     pipeline CPU(
-        .clk(clk), .rst(rst), .initPC(32'h1000),
+        .clk(clk), .rst(rst), .initPC(32'h0000),
         .instruction(instr), .iAddr(iaddr),
-        .memAddr(memAddr), .memRdData(memRdData), .memWrData(memWrData), .dSize(dsize), .memWr(memWr),
+        .memAddr(memAddr), .memRdData(memRdData), .memWrData(memWrData), .dSize(dsize), .memWr(memWr), .memInstr(mem_instr),
         .busA(busA), .busB(busB), .busFP(busFP), .rs1(rs1), .rs2(rs2), .rd(rd), .regWrData(regWrData), .regWr(regWr), .fp(fp)
     );
     
@@ -64,20 +65,23 @@ module topLevel();
     
         #0
         #7 rst = 1;
-        #9960 $writememh("dmem_final_19500", DMEM.mem); $finish;
+        // #5000 $writememh("dmem_final_19500", DMEM.mem); $finish;
         
 
     end // initial
     
+    // clock
     always
         #5 clk = !clk;
     
-    // DEBUG
-    
     always @ (posedge(clk)) begin
-    
+        if (mem_instr == `TRAP_INST) begin
+            $finish;
+        end
+        
+     // DEBUG
         // NOTE: printing register dump of previous cycle b/c read ready on negedge(clk)
-    
+
         // // UNSIGNED SUM DEMO
         //  $display("===============REGISTER DUMP===============");
         //  $display("reg %x: %x \t reg %x: %x", 0, regfile.mem[0],  4, regfile.mem[4]);
