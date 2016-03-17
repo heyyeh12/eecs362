@@ -46,11 +46,11 @@ Initializing...
 # 
 # ========== Copyright Header End ============================================
 sh date
-Thu Mar 17 02:32:34 CDT 2016
+Thu Mar 17 12:41:27 CDT 2016
 sh hostname
 batgirl.ece.northwestern.edu
 sh uptime
- 02:32:34 up 2 days, 12:26,  2 users,  load average: 0.38, 0.43, 0.47
+ 12:41:27 up 2 days, 22:35,  7 users,  load average: 0.47, 0.23, 0.29
 remove_design -all
 1
 if {[file exists template]} {
@@ -196,11 +196,11 @@ set num_of_path 1000
 set compile_flatten_all 0
 0
 0
-set rtl_files { /home/byy911/Documents/eecs362/verilog/alu/adder.v /home/byy911/Documents/eecs362/verilog/alu/alu.v /home/byy911/Documents/eecs362/verilog/alu/bitwise.v /home/byy911/Documents/eecs362/verilog/alu/flag_setter.v /home/byy911/Documents/eecs362/verilog/alu/setter.v /home/byy911/Documents/eecs362/verilog/alu/shifter.v /home/byy911/Documents/eecs362/verilog/pipeline/dff.v /home/byy911/Documents/eecs362/verilog/pipeline/ex_mem.v /home/byy911/Documents/eecs362/verilog/pipeline/ex.v /home/byy911/Documents/eecs362/verilog/pipeline/gates.v /home/byy911/Documents/eecs362/verilog/pipeline/hazard_detect.v /home/byy911/Documents/eecs362/verilog/pipeline/id_ex.v /home/byy911/Documents/eecs362/verilog/pipeline/id.v /home/byy911/Documents/eecs362/verilog/pipeline/ifetch.v /home/byy911/Documents/eecs362/verilog/pipeline/if_id.v /home/byy911/Documents/eecs362/verilog/pipeline/mem.v /home/byy911/Documents/eecs362/verilog/pipeline/mem_wb.v /home/byy911/Documents/eecs362/verilog/pipeline/pipeline.v /home/byy911/Documents/eecs362/verilog/pipeline/wb.v /home/byy911/Documents/eecs362/verilog/single_cycle/lib/control.v /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v /home/byy911/Documents/eecs362/verilog/single_cycle/lib/sign_extender.v /home/byy911/Documents/eecs362/verilog/gates/dffa.v /home/byy911/Documents/eecs362/verilog/gates/dff.v /home/byy911/Documents/eecs362/verilog/gates/gates.v }
- /home/byy911/Documents/eecs362/verilog/alu/adder.v /home/byy911/Documents/eecs362/verilog/alu/alu.v /home/byy911/Documents/eecs362/verilog/alu/bitwise.v /home/byy911/Documents/eecs362/verilog/alu/flag_setter.v /home/byy911/Documents/eecs362/verilog/alu/setter.v /home/byy911/Documents/eecs362/verilog/alu/shifter.v /home/byy911/Documents/eecs362/verilog/pipeline/dff.v /home/byy911/Documents/eecs362/verilog/pipeline/ex_mem.v /home/byy911/Documents/eecs362/verilog/pipeline/ex.v /home/byy911/Documents/eecs362/verilog/pipeline/gates.v /home/byy911/Documents/eecs362/verilog/pipeline/hazard_detect.v /home/byy911/Documents/eecs362/verilog/pipeline/id_ex.v /home/byy911/Documents/eecs362/verilog/pipeline/id.v /home/byy911/Documents/eecs362/verilog/pipeline/ifetch.v /home/byy911/Documents/eecs362/verilog/pipeline/if_id.v /home/byy911/Documents/eecs362/verilog/pipeline/mem.v /home/byy911/Documents/eecs362/verilog/pipeline/mem_wb.v /home/byy911/Documents/eecs362/verilog/pipeline/pipeline.v /home/byy911/Documents/eecs362/verilog/pipeline/wb.v /home/byy911/Documents/eecs362/verilog/single_cycle/lib/control.v /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v /home/byy911/Documents/eecs362/verilog/single_cycle/lib/sign_extender.v /home/byy911/Documents/eecs362/verilog/gates/dffa.v /home/byy911/Documents/eecs362/verilog/gates/dff.v /home/byy911/Documents/eecs362/verilog/gates/gates.v 
+set rtl_files { /home/byy911/Documents/eecs362/Multiplier/multiplier.v /home/byy911/Documents/eecs362/verilog/gates/gates.v /home/byy911/Documents/eecs362/verilog/alu/adder.v /home/byy911/Documents/eecs362/verilog/alu/alu.v /home/byy911/Documents/eecs362/verilog/alu/bitwise.v /home/byy911/Documents/eecs362/verilog/alu/flag_setter.v /home/byy911/Documents/eecs362/verilog/alu/setter.v /home/byy911/Documents/eecs362/verilog/alu/shifter.v }
+ /home/byy911/Documents/eecs362/Multiplier/multiplier.v /home/byy911/Documents/eecs362/verilog/gates/gates.v /home/byy911/Documents/eecs362/verilog/alu/adder.v /home/byy911/Documents/eecs362/verilog/alu/alu.v /home/byy911/Documents/eecs362/verilog/alu/bitwise.v /home/byy911/Documents/eecs362/verilog/alu/flag_setter.v /home/byy911/Documents/eecs362/verilog/alu/setter.v /home/byy911/Documents/eecs362/verilog/alu/shifter.v 
 set mix_files {}
-set top_module pipeline
-pipeline
+set top_module multiplier
+multiplier
 set include_paths { design/sys/iop/include }
  design/sys/iop/include 
 set black_box_libs {}
@@ -269,7 +269,7 @@ foreach include_path $include_paths {
    set search_path [concat $search_path $dv_root/$include_path]
 }
 sh date
-Thu Mar 17 02:32:35 CDT 2016
+Thu Mar 17 12:41:27 CDT 2016
 set link_library [concat $link_library                          $mem_libs                          $black_box_designs 		      NangateOpenCellLibrary.db]
 * your_library.db NangateOpenCellLibrary.db
 #/homes/gho705/fault/synthesis-stuff/lib/FreePDK45/osu_soc/lib/files/gscl45nm.db]
@@ -307,6 +307,44 @@ Loading db file '/vol/eecs362/synopsys/dc/libraries/syn/gtech.db'
 Loading db file '/vol/eecs362/synopsys/dc/libraries/syn/standard.sldb'
   Loading link library 'NangateOpenCellLibrary'
   Loading link library 'gtech'
+Loading verilog file '/home/byy911/Documents/eecs362/Multiplier/multiplier.v'
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Compiling source file /home/byy911/Documents/eecs362/Multiplier/multiplier.v
+Presto compilation completed successfully.
+Current design is now '/home/byy911/Documents/eecs362/Multiplier/multiplier.db:multiplier'
+Loaded 1 design.
+Current design is 'multiplier'.
+Loading verilog file '/home/byy911/Documents/eecs362/verilog/gates/gates.v'
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Compiling source file /home/byy911/Documents/eecs362/verilog/gates/gates.v
+Module 'and_gate' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
+Module 'and_32' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
+Module 'or_gate' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
+Module 'or32to1' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
+Module 'or_32' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
+Module 'xor_gate' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
+Module 'xor_32' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
+Module 'not_gate' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
+Module 'not_32' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
+Module 'nand_gate' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
+Module 'nor_gate' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
+Module 'nor32to1' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
+Module 'mux2to1' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
+Module 'mux2to1_32' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
+Module 'mux4to1' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
+Module 'mux8to1' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
+Module 'mux16to1' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
+Module 'mux16to1_32' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
+Module 'mux32to1' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
+No designs were read
 Loading verilog file '/home/byy911/Documents/eecs362/verilog/alu/adder.v'
 Detecting input file type automatically (-rtl or -netlist).
 Running DC verilog reader
@@ -374,519 +412,6 @@ Presto compilation completed successfully.
 Current design is now '/home/byy911/Documents/eecs362/verilog/alu/shifter.db:shifter'
 Loaded 1 design.
 Current design is 'shifter'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/pipeline/dff.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/pipeline/dff.v
-Warning:  /home/byy911/Documents/eecs362/verilog/pipeline/dff.v:15: 'aload' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
-
-Inferred memory devices in process
-	in routine dffa line 12 in file
-		'/home/byy911/Documents/eecs362/verilog/pipeline/dff.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|        q_reg        | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/pipeline/dffa.db:dffa'
-Loaded 1 design.
-Current design is 'dffa'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/pipeline/ex_mem.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Opening include file constants.vh
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/pipeline/ex_mem.v
-Opening include file constants.vh
-
-Inferred memory devices in process
-	in routine ex_mem line 43 in file
-		'/home/byy911/Documents/eecs362/verilog/pipeline/ex_mem.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|     valid_q_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|   not_trap_q_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
-|      rd_q_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     dSize_q_reg     | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
-|     instr_q_reg     | Flip-flop |  29   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     instr_q_reg     | Flip-flop |   3   |  Y  | N  | N  | Y  | N  | N  | N  |
-|     incPC_q_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     busA_q_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     busB_q_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     imm32_q_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     busFP_q_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
-|    aluRes_q_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
-|    regDst_q_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|     memRd_q_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|     memWr_q_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|     regWr_q_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|    isZero_q_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|     jump_q_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|    branch_q_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|      jr_q_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|     link_q_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|      op0_q_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|      fp_q_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-| memWrData_sel_q_reg | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/pipeline/ex_mem.db:ex_mem'
-Loaded 1 design.
-Current design is 'ex_mem'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/pipeline/ex.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/pipeline/ex.v
-Warning:  /home/byy911/Documents/eecs362/verilog/pipeline/ex.v:37: the undeclared symbol 'multRes' assumed to have the default net type, which is 'wire'. (VER-936)
-Warning:  /home/byy911/Documents/eecs362/verilog/pipeline/ex.v:40: the undeclared symbol 'multSel' assumed to have the default net type, which is 'wire'. (VER-936)
-Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/pipeline/ex.db:ex'
-Loaded 1 design.
-Current design is 'ex'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/pipeline/gates.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/pipeline/gates.v
-Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
-Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
-Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
-Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
-Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
-Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
-Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/pipeline/and_gate.db:and_gate'
-Warning:  File /home/byy911/Documents/eecs362/synth/.template/mux2to1-verilog.pvl for module mux2to1 cannot be found. (ELAB-320)
-Warning:  File /home/byy911/Documents/eecs362/synth/.template/mux4to1-verilog.pvl for module mux4to1 cannot be found. (ELAB-320)
-Warning:  File /home/byy911/Documents/eecs362/synth/.template/mux16to1-verilog.pvl for module mux16to1 cannot be found. (ELAB-320)
-Loaded 18 designs.
-Current design is 'and_gate'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/pipeline/hazard_detect.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Opening include file constants.vh
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/pipeline/hazard_detect.v
-Opening include file constants.vh
-Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/pipeline/hazard_detect.db:hazard_detect'
-Loaded 1 design.
-Current design is 'hazard_detect'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/pipeline/id_ex.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Opening include file constants.vh
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/pipeline/id_ex.v
-Opening include file constants.vh
-Warning:  /home/byy911/Documents/eecs362/verilog/pipeline/id_ex.v:23: Empty port in module declaration. (VER-986)
-Warning:  /home/byy911/Documents/eecs362/verilog/pipeline/id_ex.v:4: Port number 58 of 'id_ex' was named 'Port58'. (VER-441)
-
-Inferred memory devices in process
-	in routine id_ex line 52 in file
-		'/home/byy911/Documents/eecs362/verilog/pipeline/id_ex.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-| memWrData_sel_q_reg | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     valid_q_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|   not_trap_q_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
-|     instr_q_reg     | Flip-flop |  29   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     instr_q_reg     | Flip-flop |   3   |  Y  | N  | N  | Y  | N  | N  | N  |
-|     incPC_q_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     busA_q_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     busB_q_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
-|    aluCtrl_q_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
-|    aluSrc_q_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|    setInv_q_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|    regDst_q_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|     memRd_q_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|     memWr_q_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|     regWr_q_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|    branch_q_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|      jr_q_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|     jump_q_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|     link_q_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|      op0_q_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|      fp_q_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|    zeroExt_q_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|     dSize_q_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     imm32_q_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
-|      rd_q_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
-|   busA_sel_q_reg    | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
-|   busB_sel_q_reg    | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/pipeline/id_ex.db:id_ex'
-Loaded 1 design.
-Current design is 'id_ex'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/pipeline/id.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/pipeline/id.v
-Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/pipeline/id.db:id'
-Warning:  File /home/byy911/Documents/eecs362/synth/.template/mux2to1-verilog.pvl for module mux2to1 cannot be found. (ELAB-320)
-Warning:  File /home/byy911/Documents/eecs362/synth/.template/mux2to1-verilog.pvl for module mux2to1 cannot be found. (ELAB-320)
-Loaded 1 design.
-Current design is 'id'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/pipeline/ifetch.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/pipeline/ifetch.v
-Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/pipeline/ifetch.db:ifetch'
-Warning:  File /home/byy911/Documents/eecs362/synth/.template/dffa-verilog.pvl for module dffa cannot be found. (ELAB-320)
-Warning:  File /home/byy911/Documents/eecs362/synth/.template/mux2to1-verilog.pvl for module mux2to1 cannot be found. (ELAB-320)
-Loaded 1 design.
-Current design is 'ifetch'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/pipeline/if_id.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Opening include file constants.vh
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/pipeline/if_id.v
-Opening include file constants.vh
-
-Inferred memory devices in process
-	in routine if_id line 24 in file
-		'/home/byy911/Documents/eecs362/verilog/pipeline/if_id.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|     incPC_q_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     instr_q_reg     | Flip-flop |  29   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     instr_q_reg     | Flip-flop |   3   |  Y  | N  | N  | Y  | N  | N  | N  |
-|     valid_q_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
-===============================================================================
-Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/pipeline/if_id.db:if_id'
-Loaded 1 design.
-Current design is 'if_id'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/pipeline/mem.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/pipeline/mem.v
-Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/pipeline/mem.db:mem'
-Warning:  File /home/byy911/Documents/eecs362/synth/.template/mux2to1-verilog.pvl for module mux2to1 cannot be found. (ELAB-320)
-Loaded 1 design.
-Current design is 'mem'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/pipeline/mem_wb.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Opening include file constants.vh
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/pipeline/mem_wb.v
-Opening include file constants.vh
-
-Inferred memory devices in process
-	in routine mem_wb line 32 in file
-		'/home/byy911/Documents/eecs362/verilog/pipeline/mem_wb.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|   memRdData_q_reg   | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|   reg31Val_q_reg    | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
-|   reg31Val_q_reg    | Flip-flop |  25   |  Y  | N  | N  | N  | N  | N  | N  |
-|     link_q_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-|     instr_q_reg     | Flip-flop |  29   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     instr_q_reg     | Flip-flop |   3   |  Y  | N  | N  | Y  | N  | N  | N  |
-|     regWr_q_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|     valid_q_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|      fp_q_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-|    regDst_q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-|     memRd_q_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-|     dSize_q_reg     | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
-|      rd_q_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
-|    aluRes_q_reg     | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/pipeline/mem_wb.db:mem_wb'
-Loaded 1 design.
-Current design is 'mem_wb'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/pipeline/pipeline.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Opening include file constants.vh
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/pipeline/pipeline.v
-Opening include file constants.vh
-Warning:  /home/byy911/Documents/eecs362/verilog/pipeline/pipeline.v:91: the undeclared symbol 'zeroExt_1' assumed to have the default net type, which is 'wire'. (VER-936)
-Warning:  /home/byy911/Documents/eecs362/verilog/pipeline/pipeline.v:139: the undeclared symbol 'regDst' assumed to have the default net type, which is 'wire'. (VER-936)
-Warning:  /home/byy911/Documents/eecs362/verilog/pipeline/pipeline.v:252: the undeclared symbol 'memRd_0' assumed to have the default net type, which is 'wire'. (VER-936)
-Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/pipeline/pipeline.db:pipeline'
-Warning:  File /home/byy911/Documents/eecs362/synth/.template/mux4to1-verilog.pvl for module mux4to1 cannot be found. (ELAB-320)
-Loaded 1 design.
-Current design is 'pipeline'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/pipeline/wb.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/pipeline/wb.v
-Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/pipeline/wb.db:wb'
-Warning:  File /home/byy911/Documents/eecs362/synth/.template/mux2to1-verilog.pvl for module mux2to1 cannot be found. (ELAB-320)
-Warning:  File /home/byy911/Documents/eecs362/synth/.template/mux4to1-verilog.pvl for module mux4to1 cannot be found. (ELAB-320)
-Loaded 1 design.
-Current design is 'wb'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/single_cycle/lib/control.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/single_cycle/lib/control.v
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/control.v:151: Statement unreachable (Branch condition impossible to meet).  (VER-61)
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/control.v:175: Statement unreachable (Branch condition impossible to meet).  (VER-61)
-
-Statistics for case statements in always block at line 28 in file
-	'/home/byy911/Documents/eecs362/verilog/single_cycle/lib/control.v'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|            53            |      no/no       |
-|            63            |     no/auto      |
-|            81            |     no/auto      |
-|           128            |     no/auto      |
-|           157            |     no/auto      |
-===============================================
-Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/single_cycle/lib/control.db:control'
-Loaded 1 design.
-Current design is 'control'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:35: Invalid escape sequence '\x' in call to '$display'. (VER-941)
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:35: Invalid escape sequence '\x' in call to '$display'. (VER-941)
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:39: Invalid escape sequence '\x' in call to '$display'. (VER-941)
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:39: Invalid escape sequence '\x' in call to '$display'. (VER-941)
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:40: Invalid escape sequence '\x' in call to '$display'. (VER-941)
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:40: Invalid escape sequence '\x' in call to '$display'. (VER-941)
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:28: The statements in initial blocks are ignored. (VER-281)
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:106: Invalid escape sequence '\x' in call to '$display'. (VER-941)
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:106: Invalid escape sequence '\x' in call to '$display'. (VER-941)
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:93: The statements in initial blocks are ignored. (VER-281)
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:101: The statements in initial blocks are ignored. (VER-281)
-Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:35: Invalid escape sequence '\x' in call to '$display'. (VER-941)
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:35: Invalid escape sequence '\x' in call to '$display'. (VER-941)
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:39: Invalid escape sequence '\x' in call to '$display'. (VER-941)
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:39: Invalid escape sequence '\x' in call to '$display'. (VER-941)
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:40: Invalid escape sequence '\x' in call to '$display'. (VER-941)
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:40: Invalid escape sequence '\x' in call to '$display'. (VER-941)
-$display output: don't write to register 0!!!
-$display output: writing val  to register 
-??$display output: reading val  from reg 
-??$display output: reading val  from reg 
-??
-Inferred memory devices in process
-	in routine regfile line 28 in file
-		'/home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine regfile line 52 in file
-		'/home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|     rData1_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|     rData2_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-Statistics for MUX_OPs
-===========================================================
-| block name/line  | Inputs | Outputs | # sel inputs | MB |
-===========================================================
-|    regfile/56    |   32   |   32    |      5       | N  |
-|    regfile/60    |   32   |   32    |      5       | N  |
-===========================================================
-Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:106: Invalid escape sequence '\x' in call to '$display'. (VER-941)
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:106: Invalid escape sequence '\x' in call to '$display'. (VER-941)
-$display output: writing val  to fp register  ??
-
-Inferred memory devices in process
-	in routine fpregfile line 104 in file
-		'/home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-Statistics for MUX_OPs
-===========================================================
-| block name/line  | Inputs | Outputs | # sel inputs | MB |
-===========================================================
-|  fpregfile/101   |   32   |   32    |      5       | N  |
-===========================================================
-Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.db:regfile'
-Loaded 2 designs.
-Current design is 'regfile'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/single_cycle/lib/sign_extender.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/single_cycle/lib/sign_extender.v
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/sign_extender.v:38: the undeclared symbol 'invSign' assumed to have the default net type, which is 'wire'. (VER-936)
-Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/sign_extender.v:40: the undeclared symbol 'isSigned' assumed to have the default net type, which is 'wire'. (VER-936)
-Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/single_cycle/lib/sign_extender.db:sign_extender'
-Warning:  File /home/byy911/Documents/eecs362/synth/.template/mux2to1-verilog.pvl for module mux2to1 cannot be found. (ELAB-320)
-Loaded 1 design.
-Current design is 'sign_extender'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/gates/dffa.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/gates/dffa.v
-Module 'dffa' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-No designs were read
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/gates/dff.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Performing 'read' command.
-Compiling source file /home/byy911/Documents/eecs362/verilog/gates/dff.v
-Reading with netlist reader (equivalent to -netlist option).
-Verilog netlist reader completed successfully.
-No designs were read
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/gates/gates.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/gates/gates.v
-Module 'and_gate' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'and_32' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'or_gate' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'or32to1' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'or_32' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'xor_gate' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'xor_32' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'not_gate' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'not_32' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'nand_gate' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'nor_gate' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'nor32to1' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'mux2to1' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'mux2to1_32' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'mux4to1' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'mux8to1' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'mux16to1' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'mux16to1_32' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'mux32to1' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-No designs were read
 if {[info exists mix_files] && ($mix_files != {}) } {
    foreach mix_file $mix_files {
       set index_beg [expr {[string last "/" $mix_file] + 1}]
@@ -900,48 +425,48 @@ foreach_in_collection design_object [get_designs] {
    lappend design_list $design_name
 }
 sh date
-Thu Mar 17 02:32:38 CDT 2016
+Thu Mar 17 12:41:29 CDT 2016
 current_design $top_module
-Current design is 'pipeline'.
-{pipeline}
+Current design is 'multiplier'.
+{multiplier}
 echo $top_module
-pipeline
+multiplier
 # if {[get_designs -hier $dont_touch_modules] != {}} {
 #    set_dont_touch $dont_touch_modules
 # }
 set dc_shell_status [ link ]
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 
-  Linking design 'pipeline'
+  Linking design 'multiplier'
   Using the following designs and libraries:
   --------------------------------------------------------------------------
-  * (41 designs)              /home/byy911/Documents/eecs362/verilog/pipeline/pipeline.db, etc
+  * (8 designs)               /home/byy911/Documents/eecs362/Multiplier/multiplier.db, etc
   NangateOpenCellLibrary (library) /home/byy911/Documents/eecs362/synth/NangateOpenCellLibrary.db
 
-Information: Building the design 'mux4to1' instantiated from design 'pipeline' with
+Information: Building the design 'mux4to1' instantiated from design 'multiplier' with
+	the parameters "8". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mux4to1' instantiated from design 'multiplier' with
 	the parameters "32". (HDL-193)
 Presto compilation completed successfully.
-Information: Building the design 'dffa' instantiated from design 'ifetch' with
-	the parameters "32". (HDL-193)
-Warning:  /home/byy911/Documents/eecs362/verilog/gates/dffa.v:17: 'aload' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
-
-Inferred memory devices in process
-	in routine dffa_N_BITS32 line 14 in file
-		'/home/byy911/Documents/eecs362/verilog/gates/dffa.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|        q_reg        | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-Presto compilation completed successfully.
-Information: Building the design 'mux2to1' instantiated from design 'ifetch' with
+Information: Building the design 'mux2to1' instantiated from design 'multiplier' with
 	the parameters "32". (HDL-193)
 Presto compilation completed successfully.
-Information: Building the design 'mux2to1' instantiated from design 'id' with
-	the parameters "5". (HDL-193)
+Information: Building the design 'mux2to1' instantiated from design 'mux4to1_N_BITS8' with
+	the parameters "8". (HDL-193)
 Presto compilation completed successfully.
-Information: Building the design 'mux16to1' instantiated from design 'adder' with
-	the parameters "32". (HDL-193)
+Information: Building the design 'mux2to1' instantiated from design 'shifter' with
+	the parameters "1". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'or32to1'. (HDL-193)
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Presto compilation completed successfully.
+Information: Building the design 'mux2to1_32'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'not_32'. (HDL-193)
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Presto compilation completed successfully.
+Information: Building the design 'mux16to1_32'. (HDL-193)
 Presto compilation completed successfully.
 Information: Building the design 'mux16to1' instantiated from design 'adder' with
 	the parameters "1". (HDL-193)
@@ -949,14 +474,15 @@ Presto compilation completed successfully.
 Information: Building the design 'fa_nbit'. (HDL-193)
 Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
 Presto compilation completed successfully.
+Information: Building the design 'or_gate'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'not_gate'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mux16to1' instantiated from design 'mux16to1_32' with
+	the parameters "32". (HDL-193)
+Presto compilation completed successfully.
 Information: Building the design 'mux4to1' instantiated from design 'mux16to1_N_BITS1' with
 	the parameters "1". (HDL-193)
-Presto compilation completed successfully.
-Information: Building the design 'mux2to1' instantiated from design 'shifter' with
-	the parameters "1". (HDL-193)
-Presto compilation completed successfully.
-Information: Building the design 'mux2to1' instantiated from design 'setter' with
-	the parameters "3". (HDL-193)
 Presto compilation completed successfully.
 1
 if {$dc_shell_status == 0} {
@@ -966,15 +492,15 @@ if {$dc_shell_status == 0} {
    quit
 }
 current_design $top_module
-Current design is 'pipeline'.
-{pipeline}
+Current design is 'multiplier'.
+{multiplier}
 echo $top_module
-pipeline
+multiplier
 current_design $top_module
-Current design is 'pipeline'.
-{pipeline}
+Current design is 'multiplier'.
+{multiplier}
 echo $top_module
-pipeline
+multiplier
 set clk_name_list [list]
 set ideal_inputs [list]
 foreach clk_spec $clk_list {
@@ -1030,6 +556,7 @@ foreach clk_spec $clk_list {
    }
 }
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't find port 'clk' in design 'multiplier'. (UID-95)
 if {$clk_name_list == {} } {
    echo "\[WARNING\] No clock is defined,create a virtual one -- $default_clk..."
    set clk_name $default_clk
@@ -1043,6 +570,9 @@ if {$clk_name_list == {} } {
    set_clock_uncertainty -setup $setup_skew $clk_name
    set_clock_uncertainty -hold $hold_skew $clk_name
 }
+[WARNING] No clock is defined,create a virtual one -- clk...
+Warning: Creating virtual clock named 'clk' with no sources. (UID-348)
+1
 set non_ideal_inputs [list]
 foreach_in_collection input_object [all_inputs] {
    set input_name [get_object_name $input_object]
@@ -1054,9 +584,9 @@ foreach_in_collection input_object [all_inputs] {
    }
 }
 echo $ideal_inputs
-clk
+
 echo $non_ideal_inputs
-clk rst {initPC[31]} {initPC[30]} {initPC[29]} {initPC[28]} {initPC[27]} {initPC[26]} {initPC[25]} {initPC[24]} {initPC[23]} {initPC[22]} {initPC[21]} {initPC[20]} {initPC[19]} {initPC[18]} {initPC[17]} {initPC[16]} {initPC[15]} {initPC[14]} {initPC[13]} {initPC[12]} {initPC[11]} {initPC[10]} {initPC[9]} {initPC[8]} {initPC[7]} {initPC[6]} {initPC[5]} {initPC[4]} {initPC[3]} {initPC[2]} {initPC[1]} {initPC[0]} {instruction[31]} {instruction[30]} {instruction[29]} {instruction[28]} {instruction[27]} {instruction[26]} {instruction[25]} {instruction[24]} {instruction[23]} {instruction[22]} {instruction[21]} {instruction[20]} {instruction[19]} {instruction[18]} {instruction[17]} {instruction[16]} {instruction[15]} {instruction[14]} {instruction[13]} {instruction[12]} {instruction[11]} {instruction[10]} {instruction[9]} {instruction[8]} {instruction[7]} {instruction[6]} {instruction[5]} {instruction[4]} {instruction[3]} {instruction[2]} {instruction[1]} {instruction[0]} {memRdData[31]} {memRdData[30]} {memRdData[29]} {memRdData[28]} {memRdData[27]} {memRdData[26]} {memRdData[25]} {memRdData[24]} {memRdData[23]} {memRdData[22]} {memRdData[21]} {memRdData[20]} {memRdData[19]} {memRdData[18]} {memRdData[17]} {memRdData[16]} {memRdData[15]} {memRdData[14]} {memRdData[13]} {memRdData[12]} {memRdData[11]} {memRdData[10]} {memRdData[9]} {memRdData[8]} {memRdData[7]} {memRdData[6]} {memRdData[5]} {memRdData[4]} {memRdData[3]} {memRdData[2]} {memRdData[1]} {memRdData[0]} {busA[31]} {busA[30]} {busA[29]} {busA[28]} {busA[27]} {busA[26]} {busA[25]} {busA[24]} {busA[23]} {busA[22]} {busA[21]} {busA[20]} {busA[19]} {busA[18]} {busA[17]} {busA[16]} {busA[15]} {busA[14]} {busA[13]} {busA[12]} {busA[11]} {busA[10]} {busA[9]} {busA[8]} {busA[7]} {busA[6]} {busA[5]} {busA[4]} {busA[3]} {busA[2]} {busA[1]} {busA[0]} {busB[31]} {busB[30]} {busB[29]} {busB[28]} {busB[27]} {busB[26]} {busB[25]} {busB[24]} {busB[23]} {busB[22]} {busB[21]} {busB[20]} {busB[19]} {busB[18]} {busB[17]} {busB[16]} {busB[15]} {busB[14]} {busB[13]} {busB[12]} {busB[11]} {busB[10]} {busB[9]} {busB[8]} {busB[7]} {busB[6]} {busB[5]} {busB[4]} {busB[3]} {busB[2]} {busB[1]} {busB[0]} {busFP[31]} {busFP[30]} {busFP[29]} {busFP[28]} {busFP[27]} {busFP[26]} {busFP[25]} {busFP[24]} {busFP[23]} {busFP[22]} {busFP[21]} {busFP[20]} {busFP[19]} {busFP[18]} {busFP[17]} {busFP[16]} {busFP[15]} {busFP[14]} {busFP[13]} {busFP[12]} {busFP[11]} {busFP[10]} {busFP[9]} {busFP[8]} {busFP[7]} {busFP[6]} {busFP[5]} {busFP[4]} {busFP[3]} {busFP[2]} {busFP[1]} {busFP[0]}
+{a[31]} {a[30]} {a[29]} {a[28]} {a[27]} {a[26]} {a[25]} {a[24]} {a[23]} {a[22]} {a[21]} {a[20]} {a[19]} {a[18]} {a[17]} {a[16]} {a[15]} {a[14]} {a[13]} {a[12]} {a[11]} {a[10]} {a[9]} {a[8]} {a[7]} {a[6]} {a[5]} {a[4]} {a[3]} {a[2]} {a[1]} {a[0]} {b[31]} {b[30]} {b[29]} {b[28]} {b[27]} {b[26]} {b[25]} {b[24]} {b[23]} {b[22]} {b[21]} {b[20]} {b[19]} {b[18]} {b[17]} {b[16]} {b[15]} {b[14]} {b[13]} {b[12]} {b[11]} {b[10]} {b[9]} {b[8]} {b[7]} {b[6]} {b[5]} {b[4]} {b[3]} {b[2]} {b[1]} {b[0]} {control[1]} {control[0]} {product_in[31]} {product_in[30]} {product_in[29]} {product_in[28]} {product_in[27]} {product_in[26]} {product_in[25]} {product_in[24]} {product_in[23]} {product_in[22]} {product_in[21]} {product_in[20]} {product_in[19]} {product_in[18]} {product_in[17]} {product_in[16]} {product_in[15]} {product_in[14]} {product_in[13]} {product_in[12]} {product_in[11]} {product_in[10]} {product_in[9]} {product_in[8]} {product_in[7]} {product_in[6]} {product_in[5]} {product_in[4]} {product_in[3]} {product_in[2]} {product_in[1]} {product_in[0]}
 set_input_delay $default_input_delay -clock $default_clk $non_ideal_inputs
 1
 set_output_delay $default_output_delay -clock $default_clk [all_outputs]
@@ -1066,17 +596,6 @@ if {$clk_name_list != {} } {
    group_path -name "in2reg"  -from $non_ideal_inputs -to [ all_registers -data_pins ]
    group_path -name "reg2out" -from [ all_registers -clock_pins ] -to [all_outputs]
 }
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Warning: Design 'pipeline' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Warning: Design 'pipeline' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
-Information: Updating graph... (UID-83)
-Warning: Design 'pipeline' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
-Information: Updating graph... (UID-83)
-Warning: Design 'pipeline' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
-1
 group_path -name "in2out"  -from $non_ideal_inputs -to [all_outputs]
 1
 if {[info exists false_path_list] && ($false_path_list != {}) } {
@@ -1115,9 +634,9 @@ if {$dont_use_cells != 0} {
    }
 }
 sh date
-Thu Mar 17 02:32:39 CDT 2016
+Thu Mar 17 12:41:30 CDT 2016
 sh uptime
- 02:32:39 up 2 days, 12:26,  2 users,  load average: 0.38, 0.43, 0.47
+ 12:41:30 up 2 days, 22:35,  7 users,  load average: 0.47, 0.23, 0.29
 # Switch off the dont_touch attribute globally for set_size_only cells
 set dont_touch_nets_with_size_only_cells false
 false
@@ -1126,6 +645,8 @@ false
 if {[info exists compile_flatten_all] && ($compile_flatten_all  == 1)} {
       ungroup -flatten -all
    }
+Information: Updating design information... (UID-85)
+Warning: Design 'multiplier' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
 1
 # compile !!
 if {[info exists project_io_cfg] && ($project_io_cfg == 1) } {
@@ -1148,126 +669,17 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 ============================================================================
 
 
-Information: There are 331 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 8 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 
   Beginning Pass 1 Mapping
   ------------------------
-  Processing 'pipeline'
-Information: The register 'mem_wb/instr_q_reg[31]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[30]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[29]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[28]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[27]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[26]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[25]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[24]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[23]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[22]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[21]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[20]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[19]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[18]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[17]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[16]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[15]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[14]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[13]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[12]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[11]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[10]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[9]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[8]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[7]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[6]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[5]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[4]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[3]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[2]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[1]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/instr_q_reg[0]' will be removed. (OPT-1207)
-Information: The register 'mem_wb/valid_q_reg' will be removed. (OPT-1207)
-Information: The register 'mem_wb/regDst_q_reg' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[31]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[30]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[29]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[28]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[27]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[26]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[25]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[24]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[23]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[22]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[21]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[20]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[19]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[18]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[17]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[16]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[15]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[14]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[13]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[12]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[11]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[10]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[9]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[8]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[7]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[6]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[5]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[4]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[3]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[2]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[1]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/instr_q_reg[0]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[31]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[30]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[29]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[28]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[27]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[26]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[25]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[24]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[23]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[22]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[21]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[20]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[19]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[18]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[17]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[16]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[15]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[14]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[13]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[12]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[11]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[10]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[9]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[8]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[7]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[6]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[5]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[4]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[3]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[2]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[1]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/busFP_q_reg[0]' will be removed. (OPT-1207)
-Information: The register 'ex_mem/regDst_q_reg' will be removed. (OPT-1207)
-Information: The register 'id_ex/regDst_q_reg' will be removed. (OPT-1207)
+  Processing 'multiplier'
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 
   Updating timing information
 Information: Updating design information... (UID-85)
-
-  Beginning Implementation Selection
-  ----------------------------------
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-  Processing 'pipeline_DW01_cmp6_0'
-  Processing 'pipeline_DW01_cmp6_1'
-  Processing 'pipeline_DW01_cmp6_2'
-  Processing 'pipeline_DW01_cmp6_3'
-  Processing 'pipeline_DW01_cmp6_4'
 
   Beginning Mapping Optimizations  (High effort)
   -------------------------------
@@ -1309,12 +721,56 @@ Warning: Can't read link_library file 'your_library.db'. (UID-3)
   Mapping Optimization (Phase 36)
   Mapping Optimization (Phase 37)
   Mapping Optimization (Phase 38)
+  Mapping Optimization (Phase 39)
+  Mapping Optimization (Phase 40)
+  Mapping Optimization (Phase 41)
+  Mapping Optimization (Phase 42)
+  Mapping Optimization (Phase 43)
+  Mapping Optimization (Phase 44)
+  Mapping Optimization (Phase 45)
+  Mapping Optimization (Phase 46)
+  Mapping Optimization (Phase 47)
+  Mapping Optimization (Phase 48)
+  Mapping Optimization (Phase 49)
+  Mapping Optimization (Phase 50)
+  Mapping Optimization (Phase 51)
+  Mapping Optimization (Phase 52)
+  Mapping Optimization (Phase 53)
+  Mapping Optimization (Phase 54)
+  Mapping Optimization (Phase 55)
+  Mapping Optimization (Phase 56)
+  Mapping Optimization (Phase 57)
+  Mapping Optimization (Phase 58)
+  Mapping Optimization (Phase 59)
+  Mapping Optimization (Phase 60)
+  Mapping Optimization (Phase 61)
+  Mapping Optimization (Phase 62)
+  Mapping Optimization (Phase 63)
+  Mapping Optimization (Phase 64)
+  Mapping Optimization (Phase 65)
+  Mapping Optimization (Phase 66)
+  Mapping Optimization (Phase 67)
+  Mapping Optimization (Phase 68)
+  Mapping Optimization (Phase 69)
+  Mapping Optimization (Phase 70)
+  Mapping Optimization (Phase 71)
+  Mapping Optimization (Phase 72)
+  Mapping Optimization (Phase 73)
+  Mapping Optimization (Phase 74)
+  Mapping Optimization (Phase 75)
+  Mapping Optimization (Phase 76)
+  Mapping Optimization (Phase 77)
+  Mapping Optimization (Phase 78)
+  Mapping Optimization (Phase 79)
+  Mapping Optimization (Phase 80)
+  Mapping Optimization (Phase 81)
+  Mapping Optimization (Phase 82)
 
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:47   12098.6      0.21      21.2       0.0                          
-    0:00:47   12098.6      0.21      21.2       0.0                          
+    0:00:49    4475.1      1.34      27.4       0.0                          
+    0:00:49    4475.1      1.34      27.4       0.0                          
 
   Beginning Delay Optimization Phase
   ----------------------------------
@@ -1322,421 +778,307 @@ Warning: Can't read link_library file 'your_library.db'. (UID-3)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:47   12098.6      0.21      21.2       0.0                          
-Information: The register 'if_id/valid_q_reg' is a constant and will be removed. (OPT-1206)
-    0:00:48   12099.1      0.20      19.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:48   12109.0      0.19      18.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:49   12114.6      0.19      18.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:49   12110.1      0.19      18.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:49   12113.3      0.19      18.1       0.0 mem_wb/reg31Val_q_reg[31]/D
-    0:00:49   12110.6      0.18      18.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:49   12107.4      0.18      17.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:50   12112.5      0.18      17.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:50   12108.1      0.18      17.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:50   12111.5      0.18      17.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:50   12113.2      0.18      17.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:50   12120.7      0.18      17.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:50   12123.4      0.18      17.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:50   12121.8      0.17      16.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:50   12126.7      0.17      16.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:51   12136.2      0.17      16.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:51   12146.6      0.17      16.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:51   12155.6      0.17      16.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:51   12155.1      0.17      16.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:51   12155.2      0.16      16.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:51   12159.9      0.16      16.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:51   12164.1      0.16      16.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:51   12166.7      0.16      16.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:52   12165.4      0.16      16.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:52   12163.9      0.16      16.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:52   12166.2      0.16      16.3       0.0 ex_mem/aluRes_q_reg[18]/D
-    0:00:52   12171.0      0.16      16.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:52   12172.9      0.16      16.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:52   12174.0      0.16      16.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:52   12179.7      0.16      16.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:52   12180.8      0.16      16.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:52   12179.2      0.16      15.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:52   12179.2      0.16      15.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:52   12190.5      0.15      15.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:53   12190.2      0.15      15.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:53   12192.4      0.15      15.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:53   12195.8      0.15      15.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:53   12200.9      0.15      15.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:53   12197.7      0.15      15.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:53   12203.1      0.15      15.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:53   12204.6      0.15      15.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:53   12206.4      0.15      15.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:53   12196.6      0.15      15.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:54   12201.5      0.15      15.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:54   12206.4      0.15      15.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:54   12210.7      0.15      15.4       0.0 ex_mem/aluRes_q_reg[8]/D 
-    0:00:54   12214.0      0.14      15.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:54   12218.7      0.14      15.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:54   12220.3      0.14      10.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:54   12230.5      0.14      10.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:54   12235.3      0.14      10.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:54   12234.8      0.14      10.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:54   12236.6      0.14      10.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:55   12242.1      0.14      10.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:55   12243.8      0.14      10.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:55   12246.1      0.14      10.6       0.0 ex_mem/aluRes_q_reg[8]/D 
-    0:00:55   12248.7      0.14      10.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:55   12253.7      0.14      10.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:55   12251.5      0.14      10.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:55   12253.3      0.13      10.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:55   12256.4      0.13      10.3       0.0 ifetch/dffa/q_reg[30]/D  
-    0:00:55   12261.4      0.13      10.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:56   12257.3      0.13      10.3       0.0 if_id/incPC_q_reg[24]/D  
-    0:00:56   12262.6      0.13      10.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:56   12260.8      0.13      10.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:56   12264.8      0.13      10.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:56   12273.1      0.13      10.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:56   12275.9      0.13      10.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:56   12277.8      0.13      10.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:56   12278.1      0.13      10.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:56   12280.8      0.13       9.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:56   12286.1      0.13       9.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:56   12292.2      0.13       9.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:57   12291.7      0.13       9.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:57   12291.4      0.12       9.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:57   12299.1      0.12       9.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:57   12301.3      0.12       9.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:57   12309.3      0.12       9.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:57   12315.3      0.12       9.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:57   12316.9      0.12       9.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:57   12316.7      0.12       9.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:57   12319.3      0.12       9.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:58   12324.0      0.12       9.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:58   12321.8      0.12       9.5       0.0 ex_mem/aluRes_q_reg[7]/D 
-    0:00:58   12322.8      0.12       9.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:58   12327.6      0.12       9.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:58   12328.5      0.12       9.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:58   12337.3      0.12       9.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:58   12346.3      0.12       9.4       0.0 mem_wb/reg31Val_q_reg[31]/D
-    0:00:58   12345.0      0.12       9.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:58   12345.1      0.12       9.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:58   12348.0      0.12       9.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:58   12356.0      0.12       9.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:59   12360.9      0.12       9.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:59   12362.8      0.12       9.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:59   12361.3      0.12       9.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:59   12364.2      0.12       9.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:59   12365.5      0.11       9.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:59   12368.8      0.11       9.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:59   12373.6      0.11       9.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:59   12374.0      0.11       9.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:59   12380.3      0.11       9.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:00   12384.3      0.11       9.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:00   12387.6      0.11       9.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:00   12389.2      0.11       9.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:00   12393.6      0.11       8.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:00   12389.8      0.11       8.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:00   12388.3      0.11       8.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:00   12392.5      0.11       8.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:00   12394.2      0.11       8.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:00   12396.0      0.11       8.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:00   12394.6      0.11       8.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:00   12397.5      0.11       8.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:00   12400.7      0.11       8.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:00   12400.0      0.11       8.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:01   12400.5      0.11       8.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:01   12401.7      0.11       8.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:01   12413.7      0.11       8.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:01   12421.9      0.11       8.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:01   12421.6      0.11       8.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:01   12423.5      0.11       8.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:01   12423.3      0.11       8.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:01   12420.8      0.11       8.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:01   12422.5      0.11       8.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:01   12424.7      0.11       8.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:01   12426.4      0.11       8.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:01   12430.9      0.11       8.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:01   12439.0      0.10       8.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:02   12439.8      0.10       8.4       0.0 ex_mem/aluRes_q_reg[20]/D
-    0:01:02   12443.6      0.10       8.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:02   12445.7      0.10       8.4       0.0 ex_mem/aluRes_q_reg[8]/D 
-    0:01:02   12448.7      0.10       8.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:02   12448.7      0.10       8.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:02   12453.9      0.10       8.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:02   12453.9      0.10       8.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:02   12457.0      0.10       8.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:02   12459.7      0.10       8.3       0.0 ifetch/dffa/q_reg[31]/D  
-    0:01:02   12462.5      0.10       8.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:02   12465.3      0.10       8.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:02   12473.3      0.10       8.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:02   12478.3      0.10       8.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:03   12485.9      0.10       8.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:03   12489.4      0.10       8.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:03   12486.4      0.10       8.2       0.0 ifetch/dffa/q_reg[27]/D  
-    0:01:03   12489.2      0.10       8.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:03   12494.0      0.10       8.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:03   12496.4      0.10       8.1       0.0 ifetch/dffa/q_reg[27]/D  
-    0:01:03   12501.1      0.10       8.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:03   12508.4      0.10       8.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:03   12510.9      0.10       8.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:03   12511.8      0.10       8.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:03   12510.9      0.10       8.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:03   12513.5      0.10       8.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:03   12515.7      0.10       7.9       0.0 ex_mem/aluRes_q_reg[7]/D 
-    0:01:04   12515.2      0.10       7.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:04   12515.1      0.10       7.9       0.0 ex_mem/aluRes_q_reg[2]/D 
-    0:01:04   12522.1      0.10       7.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:04   12521.3      0.10       7.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:04   12521.2      0.09       7.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:04   12522.0      0.09       7.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:04   12523.3      0.09       7.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:04   12524.8      0.09       7.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:04   12526.6      0.09       7.7       0.0 ifetch/dffa/q_reg[27]/D  
-    0:01:04   12531.2      0.09       7.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:04   12535.5      0.09       7.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:05   12541.6      0.09       7.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:05   12552.6      0.09       7.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:05   12553.8      0.09       7.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:05   12555.8      0.09       7.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:05   12557.2      0.09       6.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:05   12558.8      0.09       6.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:05   12559.0      0.09       6.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:05   12561.1      0.09       6.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:05   12564.1      0.09       6.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:05   12565.3      0.09       6.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:05   12566.8      0.09       6.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:06   12571.2      0.09       6.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:06   12572.9      0.09       6.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:06   12572.3      0.09       6.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:06   12576.1      0.09       6.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:06   12581.9      0.09       6.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:06   12582.1      0.09       6.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:06   12581.6      0.09       6.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:06   12586.6      0.09       6.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:06   12590.1      0.09       6.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:06   12593.3      0.09       6.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:06   12600.1      0.08       6.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:06   12604.4      0.08       6.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:06   12610.0      0.08       6.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:06   12610.3      0.08       6.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:07   12609.8      0.08       6.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:07   12612.0      0.08       6.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:07   12622.1      0.08       6.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:07   12623.2      0.08       6.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:07   12629.6      0.08       6.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:07   12630.3      0.08       6.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:07   12638.2      0.08       6.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:07   12644.9      0.08       6.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:07   12647.8      0.08       6.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:07   12647.9      0.08       6.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:07   12649.6      0.08       6.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:07   12650.4      0.08       6.2       0.0 ifetch/dffa/q_reg[31]/D  
-    0:01:07   12649.6      0.08       6.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:07   12649.8      0.08       6.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:08   12649.8      0.08       6.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:08   12651.8      0.08       6.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:08   12654.7      0.08       6.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:08   12657.0      0.08       6.2       0.0 ex_mem/aluRes_q_reg[20]/D
-    0:01:08   12660.3      0.08       6.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:08   12662.6      0.08       6.1       0.0 ex_mem/aluRes_q_reg[1]/D 
-    0:01:08   12661.8      0.08       6.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:08   12667.9      0.08       6.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:08   12669.8      0.08       6.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:08   12669.5      0.08       6.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:08   12677.2      0.08       6.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:08   12678.1      0.08       6.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:08   12678.9      0.08       6.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:08   12678.9      0.08       6.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:09   12680.8      0.08       6.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:09   12680.3      0.08       6.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:09   12680.8      0.08       6.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:09   12695.0      0.08       6.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:09   12699.9      0.08       6.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:09   12706.9      0.08       6.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:09   12709.1      0.08       6.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:09   12709.6      0.08       6.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:09   12712.1      0.08       6.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:09   12712.1      0.08       6.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:09   12712.9      0.08       6.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:09   12716.6      0.08       6.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:10   12717.7      0.08       6.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:10   12720.1      0.08       6.0       0.0 ex_mem/aluRes_q_reg[1]/D 
-    0:01:10   12727.8      0.08       5.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:10   12728.2      0.08       5.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:10   12728.8      0.08       5.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:10   12732.7      0.08       5.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:10   12727.7      0.08       5.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:10   12726.4      0.08       5.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:10   12725.1      0.07       5.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:10   12729.1      0.07       5.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:10   12732.2      0.07       5.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:10   12735.3      0.07       5.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:10   12735.0      0.07       5.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:11   12739.5      0.07       5.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:11   12741.2      0.07       5.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:11   12742.5      0.07       5.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:11   12744.8      0.07       5.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:11   12744.2      0.07       5.7       0.0 ifetch/dffa/q_reg[29]/D  
-    0:01:11   12742.6      0.07       5.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:11   12743.7      0.07       5.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:11   12744.0      0.07       5.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:11   12748.8      0.07       5.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:11   12747.9      0.07       5.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:11   12747.1      0.07       5.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:11   12752.3      0.07       5.6       0.0 ex_mem/aluRes_q_reg[27]/D
-    0:01:11   12753.8      0.07       5.6       0.0 ex_mem/aluRes_q_reg[17]/D
-    0:01:11   12756.0      0.07       5.6       0.0 ifetch/dffa/q_reg[29]/D  
-    0:01:12   12759.8      0.07       5.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:12   12759.8      0.07       5.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:12   12758.1      0.07       5.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:12   12756.5      0.07       5.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:12   12758.5      0.07       5.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:12   12761.4      0.07       5.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:12   12767.7      0.07       5.4       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:12   12760.8      0.07       4.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:12   12762.1      0.07       4.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:12   12761.6      0.07       4.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:12   12761.7      0.07       4.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:12   12763.6      0.07       4.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:12   12769.6      0.07       4.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:13   12769.9      0.07       4.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:13   12770.5      0.07       4.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:13   12779.1      0.07       4.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:13   12780.5      0.07       4.3       0.0 ex_mem/aluRes_q_reg[1]/D 
-    0:01:13   12781.5      0.07       4.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:13   12781.0      0.07       4.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:13   12779.8      0.07       4.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:19   12779.0      0.07       4.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:20   12776.8      0.07       4.3       0.0 ex_mem/aluRes_q_reg[18]/D
-    0:01:20   12778.5      0.07       4.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:20   12778.8      0.07       4.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:20   12779.5      0.07       4.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:20   12779.8      0.07       4.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:21   12779.7      0.07       4.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:21   12781.0      0.07       4.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:21   12783.8      0.07       4.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:21   12785.6      0.07       4.2       0.0 ifetch/dffa/q_reg[27]/D  
-    0:01:21   12785.7      0.07       4.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:21   12787.1      0.07       4.2       0.0 ex_mem/aluRes_q_reg[21]/D
-    0:01:22   12788.2      0.07       4.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:22   12789.7      0.07       4.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:22   12790.0      0.07       4.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:22   12789.9      0.07       4.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:22   12791.6      0.07       4.2       0.0 ex_mem/aluRes_q_reg[18]/D
-    0:01:22   12794.8      0.07       4.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:22   12796.5      0.07       4.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:22   12797.6      0.07       4.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:22   12797.3      0.07       4.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:23   12799.8      0.07       4.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:23   12801.3      0.07       4.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:23   12804.4      0.07       4.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:23   12805.2      0.07       4.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:24   12807.7      0.07       4.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:24   12806.4      0.07       4.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:24   12805.3      0.07       4.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:24   12808.8      0.07       4.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:24   12811.6      0.07       4.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:24   12812.9      0.07       4.1       0.0 ifetch/dffa/q_reg[27]/D  
-    0:01:25   12811.7      0.07       4.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:25   12812.5      0.07       4.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:25   12813.4      0.07       4.0       0.0 ifetch/dffa/q_reg[27]/D  
-    0:01:25   12814.2      0.07       4.0       0.0 ex_mem/aluRes_q_reg[21]/D
-    0:01:25   12814.7      0.07       4.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:25   12816.1      0.07       4.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:25   12816.3      0.07       4.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:26   12818.9      0.07       4.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:26   12816.8      0.07       4.0       0.0 ex_mem/aluRes_q_reg[19]/D
-    0:01:26   12816.8      0.07       4.0       0.0 ex_mem/aluRes_q_reg[21]/D
-    0:01:26   12819.1      0.07       4.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:26   12821.4      0.07       4.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:26   12823.9      0.07       4.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:26   12822.4      0.07       4.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:27   12824.5      0.07       4.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:27   12824.3      0.07       4.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:27   12825.2      0.07       4.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:27   12826.8      0.07       4.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:28   12828.1      0.07       4.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:28   12828.1      0.07       4.0       0.0                          
-    0:01:28   12828.1      0.07       4.0       0.0                          
-    0:01:28   12829.7      0.07       4.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:28   12827.9      0.06       4.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:28   12826.8      0.06       4.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:28   12827.6      0.06       3.9       0.0 ex_mem/aluRes_q_reg[9]/D 
-    0:01:28   12828.4      0.06       3.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:28   12832.8      0.06       3.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:28   12834.8      0.06       3.9       0.0 ifetch/dffa/q_reg[27]/D  
-    0:01:28   12837.1      0.06       3.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:28   12837.1      0.06       3.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:29   12836.5      0.06       3.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:29   12841.4      0.06       3.9       0.0 mem_wb/reg31Val_q_reg[31]/D
-    0:01:29   12842.5      0.06       3.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:29   12850.0      0.06       3.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:29   12852.1      0.06       3.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:29   12855.9      0.06       3.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:29   12857.6      0.06       3.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:29   12861.6      0.06       3.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:29   12864.0      0.06       3.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:29   12865.0      0.06       3.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:29   12867.2      0.06       3.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:29   12866.6      0.06       3.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:30   12866.3      0.06       3.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:30   12869.3      0.06       3.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:30   12870.4      0.06       3.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:30   12871.2      0.06       3.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:30   12873.7      0.06       3.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:30   12875.7      0.06       3.7       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:30   12880.6      0.06       3.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:30   12878.1      0.06       3.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:30   12885.7      0.06       3.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:30   12888.1      0.06       3.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:30   12888.6      0.06       3.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:30   12887.6      0.06       3.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:30   12897.7      0.06       3.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:30   12900.2      0.06       3.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:31   12897.8      0.06       3.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-
-
-  Beginning Critical Range Optimization
-  -------------------------------------
-
-   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
-    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
-  --------- --------- --------- --------- --------- -------------------------
-    0:01:31   12897.8      0.06       3.6       0.0                          
-    0:01:31   12897.8      0.06       3.6       0.0                          
-    0:01:31   12901.2      0.06       3.6       0.0                          
-    0:01:31   12903.5      0.06       3.6       0.0                          
-    0:01:31   12904.8      0.06       3.6       0.0                          
-    0:01:31   12906.5      0.06       3.5       0.0                          
-    0:01:31   12907.2      0.06       3.5       0.0                          
-    0:01:31   12907.2      0.06       3.5       0.0                          
-    0:01:32   12907.0      0.06       3.5       0.0                          
-    0:01:32   12906.0      0.06       3.4       0.0                          
-    0:01:32   12908.7      0.06       3.3       0.0                          
-    0:01:32   12907.1      0.06       3.3       0.0                          
-    0:01:32   12909.9      0.06       3.3       0.0                          
-    0:01:32   12912.7      0.06       3.3       0.0                          
-    0:01:32   12913.1      0.06       3.2       0.0                          
-    0:01:32   12914.2      0.06       3.2       0.0                          
-    0:01:32   12912.7      0.06       3.1       0.0                          
-    0:01:32   12916.9      0.06       3.1       0.0                          
-    0:01:32   12921.1      0.06       3.0       0.0                          
-    0:01:32   12917.8      0.06       3.0       0.0                          
-    0:01:32   12921.4      0.06       3.0       0.0                          
-    0:01:33   12921.6      0.06       2.9       0.0                          
-    0:01:33   12922.6      0.06       2.8       0.0                          
-    0:01:33   12922.1      0.06       2.8       0.0                          
-    0:01:33   12926.2      0.06       2.7       0.0                          
-    0:01:33   12928.3      0.06       2.6       0.0                          
-    0:01:33   12925.6      0.06       2.5       0.0                          
-    0:01:33   12931.5      0.06       2.5       0.0                          
-    0:01:33   12930.6      0.06       2.4       0.0                          
-    0:01:33   12931.8      0.06       2.4       0.0                          
-    0:01:33   12933.4      0.06       2.3       0.0                          
-    0:01:33   12933.8      0.06       2.3       0.0                          
-    0:01:33   12941.3      0.06       2.2       0.0                          
-    0:01:33   12940.0      0.06       1.8       0.0                          
-    0:01:33   12941.4      0.06       1.8       0.0                          
-    0:01:33   12941.6      0.06       1.7       0.0                          
-    0:01:33   12938.4      0.06       1.6       0.0                          
-    0:01:34   12938.8      0.06       1.6       0.0                          
-    0:01:34   12937.7      0.06       1.6       0.0                          
-    0:01:34   12937.7      0.06       1.6       0.0                          
+    0:00:49    4475.1      1.34      27.4       0.0                          
+    0:00:50    4488.2      1.32      26.9       0.0 product_out[29]          
+    0:00:50    4495.3      1.32      26.9       0.0 product_out[29]          
+    0:00:50    4499.6      1.29      26.4       0.0 product_out[29]          
+    0:00:50    4513.3      1.28      26.1       0.0 product_out[29]          
+    0:00:51    4527.9      1.28      25.9       0.0 product_out[28]          
+    0:00:51    4530.7      1.27      25.8       0.0 product_out[29]          
+    0:00:51    4529.5      1.27      25.8       0.0 product_out[29]          
+    0:00:51    4531.2      1.27      25.7       0.0 product_out[29]          
+    0:00:51    4541.2      1.26      25.5       0.0 product_out[29]          
+    0:00:52    4545.4      1.26      25.4       0.0 product_out[29]          
+    0:00:52    4548.9      1.26      25.4       0.0 product_out[29]          
+    0:00:52    4550.8      1.26      25.4       0.0 product_out[29]          
+    0:00:52    4551.0      1.25      25.3       0.0 product_out[27]          
+    0:00:52    4552.5      1.25      25.2       0.0 product_out[29]          
+    0:00:52    4558.2      1.25      25.2       0.0 product_out[28]          
+    0:00:53    4554.8      1.24      25.2       0.0 product_out[31]          
+    0:00:53    4558.9      1.24      25.2       0.0 product_out[31]          
+    0:00:53    4561.1      1.24      25.1       0.0 product_out[27]          
+    0:00:53    4561.7      1.24      25.1       0.0 product_out[31]          
+    0:00:53    4563.8      1.23      25.1       0.0 product_out[28]          
+    0:00:53    4569.7      1.23      25.0       0.0 product_out[30]          
+    0:00:53    4569.5      1.23      25.0       0.0 product_out[31]          
+    0:00:53    4571.8      1.23      25.0       0.0 product_out[31]          
+    0:00:53    4572.9      1.23      24.9       0.0 product_out[31]          
+    0:00:54    4575.6      1.23      24.9       0.0 product_out[31]          
+    0:00:54    4578.0      1.22      24.9       0.0 product_out[31]          
+    0:00:54    4586.1      1.22      24.9       0.0 product_out[31]          
+    0:00:54    4589.5      1.22      24.9       0.0 product_out[29]          
+    0:00:54    4595.9      1.21      24.9       0.0 product_out[28]          
+    0:00:54    4597.9      1.21      24.8       0.0 product_out[29]          
+    0:00:54    4607.8      1.21      24.8       0.0 product_out[31]          
+    0:00:55    4614.8      1.21      24.7       0.0 product_out[27]          
+    0:00:55    4618.8      1.21      24.7       0.0 product_out[29]          
+    0:00:55    4622.5      1.20      24.6       0.0 product_out[29]          
+    0:00:55    4621.9      1.20      24.5       0.0 product_out[27]          
+    0:00:55    4624.1      1.20      24.5       0.0 product_out[29]          
+    0:00:55    4626.9      1.20      24.5       0.0 product_out[31]          
+    0:00:55    4648.6      1.20      24.5       0.0 product_out[31]          
+    0:00:56    4651.1      1.20      24.4       0.0 product_out[29]          
+    0:00:56    4657.5      1.19      24.4       0.0 product_out[31]          
+    0:00:56    4663.4      1.19      24.4       0.0 product_out[31]          
+    0:00:56    4662.7      1.19      24.3       0.0 product_out[31]          
+    0:00:56    4664.0      1.19      24.2       0.0 product_out[28]          
+    0:00:56    4666.2      1.19      24.2       0.0 product_out[31]          
+    0:00:56    4668.8      1.18      24.2       0.0 product_out[30]          
+    0:00:57    4669.5      1.18      24.2       0.0 product_out[29]          
+    0:00:57    4671.5      1.18      24.2       0.0 product_out[30]          
+    0:00:57    4676.9      1.18      24.1       0.0 product_out[29]          
+    0:00:57    4683.2      1.18      24.1       0.0 product_out[31]          
+    0:00:57    4686.3      1.18      24.1       0.0 product_out[29]          
+    0:00:57    4690.4      1.18      24.1       0.0 product_out[25]          
+    0:00:57    4693.2      1.17      24.0       0.0 product_out[29]          
+    0:00:58    4704.6      1.17      24.0       0.0 product_out[31]          
+    0:00:58    4705.9      1.17      24.0       0.0 product_out[29]          
+    0:00:58    4707.3      1.17      24.0       0.0 product_out[29]          
+    0:00:58    4707.6      1.17      24.0       0.0 product_out[31]          
+    0:00:58    4706.5      1.17      24.0       0.0 product_out[31]          
+    0:00:58    4708.2      1.17      23.9       0.0 product_out[25]          
+    0:00:58    4709.7      1.17      24.0       0.0 product_out[29]          
+    0:00:58    4713.2      1.17      24.0       0.0 product_out[30]          
+    0:00:58    4715.6      1.17      24.0       0.0 product_out[30]          
+    0:00:58    4713.7      1.17      24.0       0.0 product_out[25]          
+    0:00:59    4716.8      1.16      23.9       0.0 product_out[29]          
+    0:00:59    4717.9      1.16      23.9       0.0 product_out[31]          
+    0:00:59    4725.6      1.16      23.9       0.0 product_out[29]          
+    0:00:59    4729.4      1.16      23.8       0.0 product_out[27]          
+    0:00:59    4729.2      1.16      23.8       0.0 product_out[31]          
+    0:00:59    4729.4      1.16      23.8       0.0 product_out[31]          
+    0:00:59    4733.4      1.16      23.8       0.0 product_out[31]          
+    0:00:59    4733.4      1.16      23.8       0.0 product_out[29]          
+    0:01:00    4740.1      1.16      23.7       0.0 product_out[27]          
+    0:01:00    4741.6      1.16      23.7       0.0 product_out[29]          
+    0:01:00    4741.4      1.15      23.7       0.0 product_out[29]          
+    0:01:00    4742.1      1.15      23.6       0.0 product_out[29]          
+    0:01:00    4746.4      1.15      23.6       0.0 product_out[29]          
+    0:01:00    4749.8      1.15      23.6       0.0 product_out[29]          
+    0:01:00    4751.4      1.15      23.6       0.0 product_out[29]          
+    0:01:00    4759.1      1.15      23.6       0.0 product_out[31]          
+    0:01:00    4765.7      1.15      23.5       0.0 product_out[31]          
+    0:01:00    4773.9      1.15      23.5       0.0 product_out[29]          
+    0:01:01    4776.8      1.15      23.5       0.0 product_out[27]          
+    0:01:01    4779.0      1.15      23.5       0.0 product_out[31]          
+    0:01:01    4783.9      1.14      23.5       0.0 product_out[31]          
+    0:01:01    4790.8      1.14      23.4       0.0 product_out[29]          
+    0:01:01    4797.7      1.14      23.4       0.0 product_out[29]          
+    0:01:01    4798.3      1.14      23.4       0.0 product_out[26]          
+    0:01:01    4797.9      1.14      23.4       0.0 product_out[26]          
+    0:01:01    4798.4      1.14      23.3       0.0 product_out[31]          
+    0:01:01    4799.9      1.14      23.3       0.0 product_out[27]          
+    0:01:01    4799.9      1.14      23.3       0.0 product_out[29]          
+    0:01:01    4802.1      1.14      23.3       0.0 product_out[27]          
+    0:01:01    4803.2      1.14      23.3       0.0 product_out[29]          
+    0:01:01    4804.2      1.13      23.3       0.0 product_out[29]          
+    0:01:01    4807.7      1.13      23.3       0.0 product_out[29]          
+    0:01:01    4809.1      1.13      23.3       0.0 product_out[31]          
+    0:01:02    4814.0      1.13      23.2       0.0 product_out[29]          
+    0:01:02    4815.6      1.13      23.2       0.0 product_out[25]          
+    0:01:02    4820.9      1.13      23.2       0.0 product_out[31]          
+    0:01:02    4820.1      1.13      23.2       0.0 product_out[29]          
+    0:01:02    4823.2      1.13      23.2       0.0 product_out[29]          
+    0:01:02    4825.1      1.13      23.1       0.0 product_out[29]          
+    0:01:02    4828.3      1.13      23.1       0.0 product_out[29]          
+    0:01:02    4833.5      1.13      23.1       0.0 product_out[29]          
+    0:01:02    4837.7      1.13      23.1       0.0 product_out[31]          
+    0:01:02    4841.9      1.13      23.1       0.0 product_out[29]          
+    0:01:02    4839.8      1.12      23.0       0.0 product_out[29]          
+    0:01:02    4844.6      1.12      23.0       0.0 product_out[29]          
+    0:01:02    4845.0      1.12      23.0       0.0 product_out[31]          
+    0:01:03    4844.2      1.12      23.0       0.0 product_out[29]          
+    0:01:03    4851.5      1.12      23.0       0.0 product_out[29]          
+    0:01:03    4853.8      1.12      23.0       0.0 product_out[29]          
+    0:01:03    4859.1      1.12      22.9       0.0 product_out[29]          
+    0:01:03    4864.6      1.12      22.9       0.0 product_out[29]          
+    0:01:03    4866.3      1.12      22.9       0.0 product_out[31]          
+    0:01:03    4869.2      1.12      23.1       0.0 product_out[29]          
+    0:01:03    4873.7      1.12      23.1       0.0 product_out[29]          
+    0:01:03    4873.5      1.11      23.1       0.0 product_out[29]          
+    0:01:03    4874.2      1.11      23.0       0.0 product_out[31]          
+    0:01:03    4874.4      1.11      23.0       0.0 product_out[29]          
+    0:01:03    4874.8      1.11      23.0       0.0 product_out[29]          
+    0:01:03    4874.0      1.11      23.0       0.0 product_out[29]          
+    0:01:03    4871.7      1.11      23.0       0.0 product_out[31]          
+    0:01:04    4877.5      1.11      23.0       0.0 product_out[29]          
+    0:01:04    4881.4      1.11      22.9       0.0 product_out[30]          
+    0:01:04    4886.6      1.11      23.0       0.0 product_out[29]          
+    0:01:04    4886.9      1.11      22.9       0.0 product_out[29]          
+    0:01:04    4892.3      1.11      22.9       0.0 product_out[26]          
+    0:01:04    4892.9      1.11      22.9       0.0 product_out[29]          
+    0:01:04    4893.6      1.11      22.8       0.0 product_out[29]          
+    0:01:04    4893.9      1.11      22.8       0.0 product_out[29]          
+    0:01:04    4893.4      1.11      22.8       0.0 product_out[29]          
+    0:01:04    4896.8      1.10      22.8       0.0 product_out[31]          
+    0:01:04    4898.7      1.10      22.9       0.0 product_out[29]          
+    0:01:04    4898.7      1.10      22.9       0.0 product_out[29]          
+    0:01:04    4902.1      1.10      22.8       0.0 product_out[31]          
+    0:01:04    4907.5      1.10      22.8       0.0 product_out[29]          
+    0:01:04    4912.1      1.10      22.8       0.0 product_out[31]          
+    0:01:05    4911.6      1.10      22.8       0.0 product_out[29]          
+    0:01:05    4913.2      1.10      22.8       0.0 product_out[29]          
+    0:01:05    4914.4      1.10      22.8       0.0 product_out[31]          
+    0:01:05    4915.6      1.10      22.8       0.0 product_out[29]          
+    0:01:05    4915.6      1.10      22.8       0.0 product_out[29]          
+    0:01:05    4919.4      1.10      22.8       0.0 product_out[31]          
+    0:01:05    4919.2      1.10      22.8       0.0 product_out[29]          
+    0:01:05    4922.4      1.10      22.8       0.0 product_out[27]          
+    0:01:05    4922.7      1.10      22.8       0.0 product_out[28]          
+    0:01:05    4926.6      1.10      22.8       0.0 product_out[31]          
+    0:01:05    4932.4      1.10      22.8       0.0 product_out[27]          
+    0:01:05    4935.4      1.10      22.8       0.0 product_out[31]          
+    0:01:05    4936.2      1.10      22.8       0.0 product_out[29]          
+    0:01:06    4934.3      1.10      22.8       0.0 product_out[26]          
+    0:01:06    4940.2      1.10      22.8       0.0 product_out[29]          
+    0:01:06    4945.5      1.10      22.7       0.0 product_out[29]          
+    0:01:06    4949.1      1.09      22.7       0.0 product_out[29]          
+    0:01:06    4951.6      1.09      22.7       0.0 product_out[26]          
+    0:01:06    4953.1      1.09      22.7       0.0 product_out[29]          
+    0:01:06    4951.7      1.09      22.7       0.0 product_out[31]          
+    0:01:06    4951.9      1.09      22.7       0.0 product_out[28]          
+    0:01:06    4955.1      1.09      22.7       0.0 product_out[29]          
+    0:01:06    4957.6      1.09      22.7       0.0 product_out[29]          
+    0:01:06    4963.6      1.09      22.6       0.0 product_out[29]          
+    0:01:06    4964.4      1.09      22.6       0.0 product_out[29]          
+    0:01:06    4975.5      1.09      22.6       0.0 product_out[29]          
+    0:01:06    4974.9      1.09      22.6       0.0 product_out[31]          
+    0:01:07    4975.2      1.09      22.6       0.0 product_out[29]          
+    0:01:07    4978.7      1.09      22.6       0.0 product_out[29]          
+    0:01:16    4977.3      1.09      22.6       0.0 product_out[29]          
+    0:01:17    4977.6      1.09      22.6       0.0 product_out[29]          
+    0:01:18    4974.7      1.09      22.6       0.0 product_out[31]          
+    0:01:18    4974.3      1.09      22.6       0.0 product_out[29]          
+    0:01:19    4975.8      1.08      22.6       0.0 product_out[29]          
+    0:01:19    4976.1      1.08      22.6       0.0 product_out[31]          
+    0:01:20    4975.9      1.08      22.6       0.0 product_out[31]          
+    0:01:20    4975.3      1.08      22.6       0.0 product_out[31]          
+    0:01:20    4976.9      1.08      22.6       0.0 product_out[31]          
+    0:01:20    4976.9      1.08      22.6       0.0 product_out[29]          
+    0:01:21    4979.1      1.08      22.5       0.0 product_out[27]          
+    0:01:21    4979.9      1.08      22.5       0.0 product_out[29]          
+    0:01:21    4982.0      1.08      22.5       0.0 product_out[31]          
+    0:01:21    4982.5      1.08      22.5       0.0 product_out[31]          
+    0:01:21    4983.6      1.08      22.5       0.0 product_out[29]          
+    0:01:21    4983.7      1.08      22.5       0.0 product_out[29]          
+    0:01:21    4984.5      1.08      22.5       0.0 product_out[31]          
+    0:01:22    4986.4      1.08      22.5       0.0 product_out[31]          
+    0:01:22    4987.0      1.08      22.5       0.0 product_out[31]          
+    0:01:22    4987.2      1.08      22.5       0.0 product_out[31]          
+    0:01:22    4989.2      1.08      22.5       0.0 product_out[31]          
+    0:01:22    4989.2      1.08      22.5       0.0 product_out[30]          
+    0:01:22    4989.2      1.08      22.5       0.0 product_out[29]          
+    0:01:22    4988.6      1.08      22.5       0.0 product_out[31]          
+    0:01:22    4990.6      1.08      22.5       0.0 product_out[29]          
+    0:01:22    4989.5      1.08      22.4       0.0 product_out[25]          
+    0:01:22    4990.6      1.08      22.4       0.0 product_out[31]          
+    0:01:22    4990.1      1.08      22.4       0.0 product_out[29]          
+    0:01:23    4990.6      1.08      22.4       0.0 product_out[31]          
+    0:01:23    4990.6      1.08      22.4       0.0 product_out[31]          
+    0:01:23    4992.2      1.08      22.4       0.0 product_out[29]          
+    0:01:23    4992.7      1.08      22.4       0.0 product_out[27]          
+    0:01:23    4996.2      1.08      22.4       0.0 product_out[31]          
+    0:01:23    4997.3      1.08      22.4       0.0 product_out[31]          
+    0:01:24    4999.1      1.08      22.4       0.0 product_out[31]          
+    0:01:24    5000.1      1.08      22.4       0.0 product_out[31]          
+    0:01:24    5000.7      1.08      22.4       0.0 product_out[30]          
+    0:01:24    5001.2      1.08      22.4       0.0 product_out[31]          
+    0:01:24    5002.3      1.08      22.4       0.0 product_out[31]          
+    0:01:24    5002.3      1.08      22.4       0.0 product_out[27]          
+    0:01:24    5004.5      1.08      22.4       0.0 product_out[31]          
+    0:01:25    5006.0      1.08      22.4       0.0 product_out[27]          
+    0:01:25    5006.2      1.08      22.4       0.0 product_out[27]          
+    0:01:25    5008.1      1.08      22.4       0.0 product_out[29]          
+    0:01:25    5009.2      1.08      22.4       0.0 product_out[27]          
+    0:01:25    5009.2      1.08      22.4       0.0 product_out[29]          
+    0:01:25    5011.3      1.08      22.3       0.0 product_out[29]          
+    0:01:25    5011.8      1.08      22.3       0.0 product_out[27]          
+    0:01:25    5012.4      1.08      22.3       0.0 product_out[31]          
+    0:01:25    5013.2      1.08      22.3       0.0 product_out[27]          
+    0:01:25    5013.2      1.08      22.3       0.0 product_out[30]          
+    0:01:25    5012.6      1.08      22.3       0.0 product_out[27]          
+    0:01:25    5015.0      1.08      22.3       0.0 product_out[25]          
+    0:01:25    5014.7      1.07      22.3       0.0 product_out[31]          
+    0:01:25    5015.8      1.07      22.3       0.0 product_out[29]          
+    0:01:26    5017.3      1.07      22.3       0.0 product_out[25]          
+    0:01:26    5014.0      1.07      22.3       0.0 product_out[29]          
+    0:01:26    5012.4      1.07      22.3       0.0 product_out[29]          
+    0:01:26    5012.7      1.07      22.3       0.0 product_out[29]          
+    0:01:26    5014.6      1.07      22.3       0.0 product_out[29]          
+    0:01:27    5016.0      1.07      22.3       0.0 product_out[29]          
+    0:01:27    5016.3      1.07      22.3       0.0 product_out[29]          
+    0:01:27    5017.4      1.07      22.3       0.0 product_out[27]          
+    0:01:27    5020.0      1.07      22.3       0.0 product_out[25]          
+    0:01:27    5019.0      1.07      22.2       0.0 product_out[30]          
+    0:01:27    5018.4      1.07      22.2       0.0 product_out[29]          
+    0:01:27    5019.0      1.07      22.2       0.0 product_out[29]          
+    0:01:28    5020.9      1.07      22.2       0.0 product_out[27]          
+    0:01:28    5024.1      1.07      22.2       0.0 product_out[30]          
+    0:01:28    5026.8      1.07      22.3       0.0 product_out[27]          
+    0:01:28    5027.1      1.07      22.3       0.0 product_out[29]          
+    0:01:28    5026.6      1.07      22.3       0.0 product_out[27]          
+    0:01:28    5026.3      1.07      22.3       0.0 product_out[26]          
+    0:01:29    5028.8      1.07      22.3       0.0 product_out[26]          
+    0:01:29    5030.7      1.07      22.3       0.0 product_out[27]          
+    0:01:29    5032.9      1.07      22.3       0.0 product_out[27]          
+    0:01:29    5032.9      1.07      22.3       0.0 product_out[27]          
+    0:01:29    5032.9      1.07      22.3       0.0 product_out[28]          
+    0:01:29    5032.1      1.07      22.3       0.0 product_out[27]          
+    0:01:29    5034.5      1.07      22.3       0.0 product_out[29]          
+    0:01:29    5036.1      1.07      22.3       0.0 product_out[26]          
+    0:01:29    5035.3      1.07      22.3       0.0 product_out[27]          
+    0:01:29    5036.1      1.07      22.3       0.0 product_out[29]          
+    0:01:29    5039.0      1.07      22.3       0.0 product_out[29]          
+    0:01:30    5038.5      1.07      22.3       0.0 product_out[27]          
+    0:01:30    5039.6      1.07      22.3       0.0 product_out[31]          
+    0:01:30    5041.2      1.07      22.2       0.0 product_out[31]          
+    0:01:30    5040.6      1.07      22.2       0.0 product_out[29]          
+    0:01:31    5041.1      1.07      22.2       0.0 product_out[29]          
+    0:01:31    5040.5      1.07      22.2       0.0 product_out[25]          
+    0:01:31    5040.5      1.07      22.2       0.0 product_out[27]          
+    0:01:31    5044.1      1.07      22.2       0.0 product_out[27]          
+    0:01:31    5044.3      1.07      22.2       0.0 product_out[27]          
+    0:01:31    5045.7      1.07      22.2       0.0 product_out[27]          
+    0:01:31    5045.4      1.07      22.2       0.0 product_out[31]          
+    0:01:31    5046.2      1.07      22.2       0.0 product_out[26]          
+    0:01:31    5047.5      1.07      22.2       0.0 product_out[31]          
+    0:01:31    5050.6      1.07      22.2       0.0 product_out[26]          
+    0:01:32    5055.3      1.07      22.2       0.0 product_out[27]          
+    0:01:32    5055.3      1.07      22.2       0.0 product_out[31]          
+    0:01:33    5055.9      1.07      22.2       0.0 product_out[27]          
+    0:01:33    5055.9      1.07      22.2       0.0 product_out[31]          
+    0:01:33    5057.7      1.07      22.2       0.0 product_out[31]          
+    0:01:33    5057.7      1.07      22.2       0.0                          
+    0:01:33    5057.7      1.07      22.2       0.0                          
+    0:01:33    5066.7      1.06      22.2       0.0 product_out[31]          
+    0:01:33    5073.9      1.06      22.2       0.0 product_out[31]          
+    0:01:33    5071.8      1.06      22.2       0.0 product_out[30]          
+    0:01:34    5072.3      1.06      22.2       0.0 product_out[31]          
+    0:01:34    5071.8      1.06      22.2       0.0 product_out[31]          
+    0:01:34    5071.8      1.06      22.2       0.0                          
+    0:01:34    5071.5      1.06      22.2       0.0                          
+    0:01:35    5066.6      1.06      22.1       0.0                          
+    0:01:35    5066.6      1.06      22.1       0.0                          
+    0:01:35    5068.2      1.06      22.1       0.0                          
+    0:01:35    5070.9      1.06      22.1       0.0                          
+    0:01:35    5071.0      1.06      22.1       0.0                          
+    0:01:35    5072.1      1.06      22.1       0.0                          
+    0:01:35    5075.1      1.06      22.0       0.0                          
+    0:01:35    5078.1      1.06      22.0       0.0                          
+    0:01:35    5077.8      1.06      22.0       0.0                          
+    0:01:35    5076.2      1.06      22.0       0.0                          
+    0:01:35    5079.0      1.06      21.9       0.0                          
+    0:01:35    5078.2      1.06      21.9       0.0                          
+    0:01:36    5081.1      1.06      21.9       0.0                          
+    0:01:36    5079.4      1.06      21.9       0.0                          
+    0:01:36    5080.3      1.06      21.9       0.0                          
+    0:01:36    5078.2      1.06      21.9       0.0                          
+    0:01:36    5078.0      1.06      21.8       0.0                          
+    0:01:36    5078.9      1.06      21.6       0.0                          
+    0:01:36    5083.5      1.06      21.6       0.0                          
+    0:01:36    5084.9      1.06      21.4       0.0                          
+    0:01:36    5086.2      1.06      21.4       0.0                          
+    0:01:36    5086.7      1.06      21.4       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -1745,174 +1087,123 @@ Information: The register 'if_id/valid_q_reg' is a constant and will be removed.
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:01:34   12937.7      0.06       1.6       0.0                          
-    0:01:34   12937.7      0.06       1.6       0.0                          
-    0:01:34   12525.0      0.06       1.7       0.0                          
-    0:01:34   12360.6      0.06       1.7       0.0                          
-    0:01:34   12297.8      0.06       1.8       0.0                          
-    0:01:35   12266.4      0.07       1.8       0.0                          
-    0:01:35   12256.4      0.07       1.8       0.0                          
-    0:01:35   12241.4      0.07       1.8       0.0                          
-    0:01:35   12226.0      0.07       1.8       0.0                          
-    0:01:35   12220.6      0.07       1.8       0.0                          
-    0:01:35   12212.9      0.07       1.8       0.0                          
-    0:01:35   12209.9      0.07       1.8       0.0                          
-    0:01:35   12205.1      0.07       1.8       0.0                          
-    0:01:35   12200.5      0.07       1.8       0.0                          
-    0:01:35   12194.6      0.07       1.8       0.0                          
-    0:01:35   12187.6      0.07       1.8       0.0                          
-    0:01:35   12181.5      0.07       1.8       0.0                          
-    0:01:35   12180.7      0.07       1.8       0.0                          
-    0:01:35   12180.7      0.07       1.8       0.0                          
-    0:01:35   12180.5      0.06       1.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:35   12178.9      0.06       1.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:35   12183.2      0.06       1.7       0.0 ex_mem/aluRes_q_reg[21]/D
-    0:01:36   12182.1      0.06       1.7       0.0 ex_mem/aluRes_q_reg[6]/D 
-    0:01:36   12181.7      0.06       1.7       0.0                          
-    0:01:36   12180.1      0.06       1.7       0.0                          
-    0:01:36   12180.9      0.06       1.7       0.0                          
-    0:01:36   12179.1      0.06       1.7       0.0                          
-    0:01:36   12177.9      0.06       1.7       0.0                          
-    0:01:36   12180.0      0.06       1.6       0.0                          
-    0:01:36   12179.7      0.06       1.6       0.0                          
-    0:01:36   12179.7      0.06       1.6       0.0                          
-    0:01:36   12181.1      0.06       1.6       0.0                          
-    0:01:37   12181.6      0.06       1.6       0.0                          
-    0:01:37   12179.5      0.06       1.6       0.0                          
-    0:01:37   12183.1      0.06       1.6       0.0                          
-    0:01:37   12184.0      0.06       1.6       0.0                          
-    0:01:37   12185.6      0.06       1.5       0.0                          
-    0:01:37   12191.2      0.06       1.5       0.0                          
-    0:01:37   12190.6      0.06       1.4       0.0                          
-    0:01:37   12190.1      0.06       1.4       0.0                          
-    0:01:37   12195.5      0.06       1.4       0.0                          
-    0:01:37   12195.5      0.06       1.4       0.0                          
-    0:01:37   11956.1      0.08       2.1       0.0                          
-    0:01:38   11881.3      0.08       2.0       0.0                          
-    0:01:38   11865.6      0.08       2.0       0.0                          
-    0:01:38   11865.6      0.08       2.0       0.0                          
-    0:01:38   11865.6      0.08       2.0       0.0                          
-    0:01:38   11865.6      0.08       2.0       0.0                          
-    0:01:38   11865.6      0.08       2.0       0.0                          
-    0:01:38   11865.6      0.08       2.0       0.0                          
-    0:01:38   11869.6      0.06       2.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:38   11871.5      0.06       1.9       0.0 ex_mem/aluRes_q_reg[2]/D 
-    0:01:38   11876.3      0.06       1.9       0.0                          
-    0:01:38   11879.0      0.06       1.9       0.0                          
-    0:01:39   11879.0      0.06       1.9       0.0                          
-    0:01:39   11882.5      0.06       1.9       0.0                          
-    0:01:39   11882.2      0.06       1.9       0.0                          
-    0:01:39   11887.2      0.06       1.9       0.0                          
-    0:01:39   11892.5      0.06       1.9       0.0                          
-    0:01:39   11894.9      0.06       1.9       0.0                          
-    0:01:39   11896.0      0.05       1.8       0.0                          
-    0:01:39   11901.7      0.05       1.8       0.0                          
-    0:01:39   11902.7      0.05       1.8       0.0                          
-    0:01:39   11907.4      0.05       1.8       0.0                          
-    0:01:39   11905.3      0.05       1.8       0.0                          
-    0:01:39   11908.6      0.05       1.8       0.0                          
-    0:01:40   11907.7      0.05       1.8       0.0                          
-    0:01:40   11905.3      0.05       1.7       0.0                          
-    0:01:40   11905.3      0.05       1.7       0.0                          
-    0:01:40   11904.5      0.05       1.7       0.0                          
-    0:01:40   11904.8      0.05       1.7       0.0                          
-    0:01:40   11905.2      0.05       1.7       0.0                          
-    0:01:40   11907.6      0.05       1.4       0.0                          
-    0:01:40   11911.1      0.05       1.4       0.0                          
-    0:01:40   11913.3      0.05       1.4       0.0                          
-    0:01:40   11914.9      0.05       1.4       0.0                          
-    0:01:40   11915.9      0.05       1.4       0.0                          
-    0:01:40   11917.1      0.05       1.3       0.0                          
-    0:01:40   11920.7      0.05       1.3       0.0                          
-    0:01:40   11923.6      0.05       1.3       0.0                          
-    0:01:40   11926.1      0.05       1.3       0.0                          
-    0:01:40   11931.1      0.05       1.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:41   11933.1      0.05       1.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:41   11932.9      0.05       1.3       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:41   11935.4      0.05       1.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:41   11935.7      0.05       1.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:41   11936.8      0.05       1.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:41   11936.4      0.05       1.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:41   11934.8      0.05       1.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:41   11933.2      0.05       1.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:41   11934.3      0.05       1.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:41   11937.0      0.05       1.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:41   11942.0      0.05       1.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:41   11941.5      0.05       1.2       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:42   11942.5      0.05       1.2       0.0                          
-    0:01:42   11940.9      0.05       1.2       0.0                          
-    0:01:42   11934.2      0.05       1.2       0.0                          
-    0:01:42   11926.8      0.05       1.2       0.0                          
-    0:01:42   11918.3      0.05       1.2       0.0                          
-    0:01:42   11913.4      0.05       1.2       0.0                          
-    0:01:42   11901.9      0.05       1.2       0.0                          
-    0:01:42   11900.1      0.05       1.2       0.0                          
-
-
-  Beginning Critical Range Optimization
-  -------------------------------------
-
-   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
-    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
-  --------- --------- --------- --------- --------- -------------------------
-    0:01:42   11900.1      0.05       1.2       0.0                          
-    0:01:42   11898.6      0.05       1.2       0.0                          
-    0:01:42   11899.1      0.05       1.2       0.0                          
-    0:01:42   11899.1      0.05       1.2       0.0                          
-    0:01:42   11899.9      0.05       1.2       0.0                          
-    0:01:43   11899.9      0.05       1.2       0.0                          
-    0:01:43   11903.2      0.05       1.2       0.0                          
-    0:01:43   11904.5      0.05       1.1       0.0                          
-    0:01:43   11905.0      0.05       1.1       0.0                          
-    0:01:43   11906.1      0.05       1.1       0.0                          
-    0:01:43   11909.7      0.05       1.1       0.0                          
-    0:01:43   11909.7      0.05       1.1       0.0                          
-    0:01:43   11912.2      0.05       1.1       0.0                          
-    0:01:43   11914.9      0.05       1.1       0.0                          
-    0:01:43   11915.2      0.05       1.1       0.0                          
-    0:01:43   11915.7      0.05       1.1       0.0                          
-    0:01:43   11918.3      0.05       1.0       0.0                          
-    0:01:43   11920.4      0.05       1.0       0.0                          
-    0:01:43   11924.2      0.05       1.0       0.0                          
-    0:01:44   11924.2      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:44   11924.9      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:44   11929.1      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:44   11931.1      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:44   11931.9      0.05       1.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:44   11937.8      0.05       1.1       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:44   11942.9      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:44   11944.3      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:44   11945.0      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:45   11953.0      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:45   11952.8      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:45   11954.5      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:45   11955.7      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:45   11956.0      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:45   11956.9      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:45   11956.7      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:45   11957.3      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:45   11958.8      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:45   11961.0      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:45   11960.9      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:45   11963.0      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:45   11966.6      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:45   11964.1      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:46   11965.5      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:46   11965.5      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:46   11964.4      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:46   11963.0      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:46   11966.3      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:46   11967.0      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:46   11973.8      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:46   11974.6      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:46   11980.9      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:46   11984.9      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:46   11984.4      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:46   11983.6      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:46   11986.0      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:47   11986.2      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:47   11988.0      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:01:47   11988.4      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
+    0:01:36    5086.7      1.06      21.4       0.0                          
+    0:01:36    5086.7      1.06      21.4       0.0                          
+    0:01:36    5012.8      1.07      21.5       0.0                          
+    0:01:36    4995.6      1.07      21.5       0.0                          
+    0:01:36    4994.5      1.07      21.5       0.0                          
+    0:01:36    4994.5      1.07      21.5       0.0                          
+    0:01:36    4994.5      1.07      21.5       0.0                          
+    0:01:36    4994.5      1.07      21.5       0.0                          
+    0:01:36    4994.5      1.07      21.5       0.0                          
+    0:01:37    4947.9      1.07      21.6       0.0                          
+    0:01:37    4934.9      1.07      21.6       0.0                          
+    0:01:37    4932.0      1.07      21.6       0.0                          
+    0:01:37    4932.0      1.07      21.6       0.0                          
+    0:01:37    4932.0      1.07      21.6       0.0                          
+    0:01:37    4932.0      1.07      21.6       0.0                          
+    0:01:37    4932.0      1.07      21.6       0.0                          
+    0:01:37    4932.0      1.07      21.6       0.0                          
+    0:01:37    4941.2      1.07      21.6       0.0 product_out[29]          
+    0:01:37    4944.4      1.07      21.6       0.0 product_out[31]          
+    0:01:37    4949.1      1.06      21.5       0.0 product_out[31]          
+    0:01:37    4955.8      1.06      21.5       0.0 product_out[31]          
+    0:01:37    4965.1      1.06      21.5       0.0 product_out[29]          
+    0:01:37    4965.1      1.06      21.5       0.0 product_out[31]          
+    0:01:38    4965.7      1.06      21.5       0.0 product_out[31]          
+    0:01:38    4970.1      1.06      21.5       0.0 product_out[25]          
+    0:01:38    4973.9      1.06      21.5       0.0 product_out[31]          
+    0:01:38    4975.0      1.06      21.4       0.0 product_out[31]          
+    0:01:38    4981.5      1.06      21.4       0.0 product_out[29]          
+    0:01:38    4981.8      1.06      21.4       0.0 product_out[31]          
+    0:01:38    4985.4      1.06      21.4       0.0 product_out[31]          
+    0:01:38    4988.0      1.05      21.4       0.0 product_out[31]          
+    0:01:38    4988.6      1.05      21.4       0.0 product_out[29]          
+    0:01:39    4989.6      1.05      21.4       0.0 product_out[31]          
+    0:01:39    4993.4      1.05      21.4       0.0 product_out[25]          
+    0:01:39    4993.4      1.05      21.4       0.0 product_out[31]          
+    0:01:39    4993.5      1.05      21.3       0.0 product_out[31]          
+    0:01:39    4997.5      1.05      21.3       0.0 product_out[31]          
+    0:01:39    4996.4      1.05      21.3       0.0 product_out[31]          
+    0:01:39    5004.2      1.05      21.3       0.0 product_out[31]          
+    0:01:39    5005.4      1.05      21.3       0.0 product_out[31]          
+    0:01:39    5006.2      1.05      21.3       0.0 product_out[31]          
+    0:01:39    5007.6      1.05      21.3       0.0 product_out[31]          
+    0:01:40    5014.1      1.05      21.3       0.0 product_out[30]          
+    0:01:40    5025.5      1.05      21.3       0.0 product_out[28]          
+    0:01:40    5027.9      1.05      21.3       0.0 product_out[31]          
+    0:01:40    5029.7      1.05      21.3       0.0 product_out[29]          
+    0:01:40    5035.6      1.05      21.2       0.0 product_out[30]          
+    0:01:40    5036.0      1.05      21.3       0.0 product_out[31]          
+    0:01:40    5036.4      1.05      21.2       0.0 product_out[27]          
+    0:01:40    5038.6      1.05      21.2       0.0 product_out[31]          
+    0:01:40    5038.7      1.04      21.2       0.0 product_out[27]          
+    0:01:40    5041.0      1.04      21.2       0.0 product_out[25]          
+    0:01:40    5052.8      1.04      21.2       0.0 product_out[29]          
+    0:01:40    5053.1      1.04      21.2       0.0 product_out[25]          
+    0:01:41    5051.3      1.04      21.2       0.0                          
+    0:01:41    5038.3      1.04      21.2       0.0                          
+    0:01:41    5032.1      1.04      21.2       0.0                          
+    0:01:41    5028.3      1.04      21.2       0.0                          
+    0:01:41    5021.5      1.04      21.2       0.0                          
+    0:01:41    5012.0      1.04      21.2       0.0                          
+    0:01:41    5004.3      1.04      21.2       0.0                          
+    0:01:41    5002.5      1.04      21.2       0.0                          
+    0:01:41    5003.4      1.04      21.2       0.0                          
+    0:01:41    5003.4      1.04      21.2       0.0                          
+    0:01:41    5004.5      1.04      21.1       0.0                          
+    0:01:41    5004.5      1.04      21.1       0.0                          
+    0:01:41    5008.9      1.04      21.1       0.0                          
+    0:01:41    5010.7      1.04      21.1       0.0                          
+    0:01:41    5012.1      1.04      21.1       0.0                          
+    0:01:42    5012.6      1.04      21.1       0.0                          
+    0:01:42    5012.6      1.04      21.1       0.0                          
+    0:01:42    5012.6      1.04      21.1       0.0                          
+    0:01:42    5012.6      1.04      21.1       0.0                          
+    0:01:42    5014.9      1.04      21.1       0.0                          
+    0:01:42    5014.9      1.04      21.1       0.0                          
+    0:01:42    5013.7      1.04      21.1       0.0                          
+    0:01:42    5017.1      1.04      21.1       0.0                          
+    0:01:42    5017.4      1.04      21.1       0.0                          
+    0:01:42    5016.3      1.04      21.1       0.0                          
+    0:01:42    5016.3      1.04      21.1       0.0                          
+    0:01:42    5017.1      1.04      21.1       0.0                          
+    0:01:42    5017.7      1.04      21.1       0.0                          
+    0:01:42    5016.2      1.04      20.9       0.0                          
+    0:01:42    5015.7      1.04      20.8       0.0                          
+    0:01:42    5016.7      1.04      20.8       0.0                          
+    0:01:42    5018.7      1.04      20.7       0.0                          
+    0:01:42    5019.7      1.04      20.9       0.0 product_out[31]          
+    0:01:43    5020.5      1.04      20.9       0.0 product_out[31]          
+    0:01:43    5027.3      1.04      20.8       0.0 product_out[31]          
+    0:01:43    5035.4      1.04      20.8       0.0 product_out[31]          
+    0:01:43    5034.9      1.04      20.8       0.0 product_out[31]          
+    0:01:43    5035.1      1.04      20.8       0.0 product_out[31]          
+    0:01:43    5034.3      1.04      20.7       0.0 product_out[31]          
+    0:01:43    5035.7      1.04      20.7       0.0 product_out[31]          
+    0:01:43    5034.9      1.04      20.7       0.0 product_out[31]          
+    0:01:43    5038.3      1.04      20.7       0.0 product_out[31]          
+    0:01:43    5039.7      1.04      20.7       0.0 product_out[31]          
+    0:01:43    5041.0      1.04      20.8       0.0 product_out[31]          
+    0:01:44    5041.9      1.03      20.8       0.0 product_out[31]          
+    0:01:44    5043.4      1.03      20.8       0.0 product_out[31]          
+    0:01:44    5044.5      1.03      20.8       0.0 product_out[31]          
+    0:01:44    5042.8      1.03      20.7       0.0 product_out[27]          
+    0:01:44    5048.9      1.03      20.7       0.0 product_out[31]          
+    0:01:44    5051.0      1.03      20.7       0.0 product_out[31]          
+    0:01:44    5049.6      1.03      20.7       0.0 product_out[27]          
+    0:01:44    5051.9      1.03      20.7       0.0 product_out[27]          
+    0:01:44    5051.9      1.03      20.7       0.0 product_out[31]          
+    0:01:44    5052.3      1.03      20.7       0.0 product_out[31]          
+    0:01:44    5052.2      1.03      20.7       0.0 product_out[31]          
+    0:01:44    5054.4      1.03      20.7       0.0 product_out[27]          
+    0:01:44    5056.1      1.03      20.7       0.0 product_out[31]          
+    0:01:44    5058.0      1.03      20.7       0.0 product_out[27]          
+    0:01:45    5058.0      1.03      20.7       0.0 product_out[31]          
+    0:01:45    5056.5      1.03      20.7       0.0 product_out[31]          
+    0:01:45    5056.5      1.03      20.7       0.0 product_out[31]          
+    0:01:45    5058.8      1.03      20.7       0.0 product_out[31]          
+    0:01:45    5059.1      1.03      20.7       0.0                          
 Loading db file '/home/byy911/Documents/eecs362/synth/NangateOpenCellLibrary.db'
 
   Optimization Complete
@@ -1925,7 +1216,7 @@ if {$dc_shell_status == 0} {
       quit
    }
 sh date
-Thu Mar 17 02:34:27 CDT 2016
+Thu Mar 17 12:43:18 CDT 2016
 ###########################################################################
 # 5e. Insert Scan - Hook up the scan chain.
 ###########################################################################
@@ -1990,103 +1281,156 @@ if {[info exists project_sparc_cfg] && ($project_sparc_cfg == 1) } {
 
 ### section 5e. will be skipped if user want to use PC flow
 }
-Current design is 'pipeline'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'dffa'.
+Current design is 'multiplier'.
+Current design is 'multiplier'.
+Information: Updating graph... (UID-83)
+Current design is 'adder'.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 Information: Updating graph... (UID-83)
-Information: Attribute 'scanned_by_test_compiler' is set on 32 objects. (UID-186)
-Current design is 'nand_gate'.
+Current design is 'fa'.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 Information: Updating graph... (UID-83)
-Current design is 'nor_gate'.
+Current design is 'alu'.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'mux2to1'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'mux4to1'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'mux8to1'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Building the design 'mux4to1' instantiated from design 'mux8to1' with
-	the parameters "32". (HDL-193)
+Information: Building the design 'and_32'. (HDL-193)
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Presto compilation completed successfully.
+Information: Building the design 'or_32'. (HDL-193)
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Presto compilation completed successfully.
+Information: Building the design 'xor_32'. (HDL-193)
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Presto compilation completed successfully.
+Information: Building the design 'nor32to1'. (HDL-193)
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Presto compilation completed successfully.
+Information: Building the design 'mux2to1' instantiated from design 'setter' with
+	the parameters "3". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'xor_gate'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'and_gate'. (HDL-193)
 Presto compilation completed successfully.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 Information: Updating graph... (UID-83)
-Current design is 'mux16to1'.
+Current design is 'bitwise'.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 Information: Updating graph... (UID-83)
-Current design is 'mux32to1'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Building the design 'mux16to1' instantiated from design 'mux32to1' with
-	the parameters "32". (HDL-193)
-Presto compilation completed successfully.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'pipeline'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Information: Attribute 'scanned_by_test_compiler' is set on 575 objects. (UID-186)
-Current design is 'regfile'.
+Current design is 'flag_setter'.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 Information: Updating graph... (UID-83)
-Warning: Design 'regfile' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Warning: Design 'regfile' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
-Information: Attribute 'scanned_by_test_compiler' is set on 1088 objects. (UID-186)
-Current design is 'fpregfile'.
+Current design is 'setter'.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 Information: Updating graph... (UID-83)
-Warning: Design 'fpregfile' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
-Information: Attribute 'scanned_by_test_compiler' is set on 1024 objects. (UID-186)
+Current design is 'shifter'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Information: Updating graph... (UID-83)
+Current design is 'mux4to1_N_BITS32'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Information: Updating graph... (UID-83)
 Current design is 'mux2to1_N_BITS32'.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 Information: Updating graph... (UID-83)
-Current design is 'pipeline'.
+Current design is 'mux2to1_N_BITS1'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Information: Updating graph... (UID-83)
+Current design is 'or32to1'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Information: Updating graph... (UID-83)
+Current design is 'mux2to1_32'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Information: Updating graph... (UID-83)
+Current design is 'not_32'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Information: Updating graph... (UID-83)
+Current design is 'mux16to1_32'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Information: Updating graph... (UID-83)
+Current design is 'mux16to1_N_BITS1'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Information: Updating graph... (UID-83)
+Current design is 'fa_nbit'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Information: Updating graph... (UID-83)
+Current design is 'or_gate'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Information: Updating graph... (UID-83)
+Current design is 'not_gate'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Information: Updating graph... (UID-83)
+Current design is 'mux16to1_N_BITS32'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Information: Updating graph... (UID-83)
+Current design is 'mux4to1_N_BITS1'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Information: Updating graph... (UID-83)
+Current design is 'multiplier'.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 Accepted scan configuration for modes: all_dft
-Current design is 'dffa'.
+Current design is 'multiplier'.
+Current design is 'adder'.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'nand_gate'.
+Current design is 'fa'.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'nor_gate'.
+Current design is 'alu'.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'mux2to1'.
+Current design is 'bitwise'.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'mux4to1'.
+Current design is 'flag_setter'.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'mux8to1'.
+Current design is 'setter'.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'mux16to1'.
+Current design is 'shifter'.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'mux32to1'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'pipeline'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'regfile'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'fpregfile'.
+Current design is 'mux4to1_N_BITS32'.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 Current design is 'mux2to1_N_BITS32'.
-Current design is 'mux4to1_N_BITS32'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Current design is 'mux2to1_N_BITS1'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Current design is 'or32to1'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Current design is 'mux2to1_32'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Current design is 'not_32'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Current design is 'mux16to1_32'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Current design is 'mux16to1_N_BITS1'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Current design is 'fa_nbit'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Current design is 'or_gate'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Current design is 'not_gate'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
 Current design is 'mux16to1_N_BITS32'.
-Current design is 'pipeline'.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'pipeline'.
+Current design is 'mux4to1_N_BITS1'.
+Current design is 'and_32'.
+Current design is 'or_32'.
+Current design is 'xor_32'.
+Current design is 'nor32to1'.
+Current design is 'mux2to1_N_BITS3'.
+Current design is 'xor_gate'.
+Current design is 'and_gate'.
+Current design is 'multiplier'.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
-
-Information: There are 33 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
-
+Current design is 'multiplier'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
 
 
   Beginning Pass 1 Mapping  (Incremental)
@@ -2108,133 +1452,87 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:01   11988.4      0.05       1.0       0.0                          
-    0:00:01   11990.1      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:01   11991.9      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:01   11990.3      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:01   11990.3      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:02   11994.9      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:02   11997.6      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:02   11997.9      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:02   11995.4      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:03   11995.8      0.05       1.0       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:03   11995.8      0.05       1.0       0.0                          
-    0:00:05   11986.8      0.05       1.5       0.0                          
-    0:00:06   11985.3      0.05       1.5       0.0                          
-    0:00:06   11986.2      0.05       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:06   11988.4      0.05       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:06   11987.1      0.05       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:06   11986.7      0.05       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:06   11994.8      0.05       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:07   11998.8      0.05       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:07   11999.4      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:07   12001.7      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:07   12003.8      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:07   12003.5      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:07   12005.4      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:07   12009.9      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:07   12011.6      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:07   12013.5      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:07   12016.3      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:07   12018.9      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:07   12024.7      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:07   12024.2      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:08   12024.9      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:08   12030.8      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:08   12031.4      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:08   12030.3      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:08   12030.3      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:08   12035.5      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:08   12035.0      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:08   12040.0      0.04       1.5       0.0 ex_mem/aluRes_q_reg[8]/D 
-    0:00:08   12040.4      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:08   12042.9      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:08   12046.0      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:08   12048.0      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:09   12053.1      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:09   12056.0      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:09   12056.3      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:09   12056.3      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:09   12058.5      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:09   12057.9      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:09   12061.0      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:09   12061.0      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:09   12056.5      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:09   12056.5      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:09   12056.7      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:09   12057.0      0.04       1.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:09   12058.2      0.04       1.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:09   12057.6      0.04       1.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:10   12059.0      0.04       1.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:10   12058.4      0.04       1.6       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:10   12063.6      0.04       1.5       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:10   12062.5      0.04       1.5       0.0                          
-
-
-  Beginning Critical Range Optimization
-  -------------------------------------
-
-   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
-    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
-  --------- --------- --------- --------- --------- -------------------------
-    0:00:10   12062.5      0.04       1.5       0.0                          
-    0:00:10   12062.0      0.04       1.5       0.0                          
-    0:00:10   12063.0      0.04       1.5       0.0                          
-    0:00:10   12063.7      0.04       1.5       0.0                          
-    0:00:10   12063.7      0.04       1.5       0.0                          
-    0:00:11   12063.7      0.04       1.5       0.0                          
-    0:00:11   12065.4      0.04       1.5       0.0                          
-    0:00:11   12069.2      0.04       1.5       0.0                          
-    0:00:11   12070.2      0.04       1.4       0.0                          
-    0:00:11   12070.6      0.04       1.4       0.0                          
-    0:00:11   12068.2      0.04       1.4       0.0                          
-    0:00:11   12069.5      0.04       1.3       0.0                          
-    0:00:11   12069.1      0.04       1.3       0.0                          
-    0:00:11   12069.3      0.04       1.3       0.0                          
-    0:00:11   12070.4      0.04       1.1       0.0                          
-    0:00:11   12071.6      0.04       1.1       0.0                          
-    0:00:11   12073.1      0.04       1.1       0.0                          
-    0:00:11   12074.0      0.04       1.1       0.0                          
-    0:00:12   12073.9      0.04       0.9       0.0                          
-    0:00:12   12075.1      0.04       0.9       0.0                          
-    0:00:12   12078.7      0.04       0.9       0.0                          
-    0:00:12   12079.4      0.04       0.9       0.0                          
-
-
-  Beginning Critical Range Optimization
-  -------------------------------------
-
-   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
-    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
-  --------- --------- --------- --------- --------- -------------------------
-    0:00:12   12079.4      0.04       0.9       0.0                          
-    0:00:12   12079.4      0.04       0.9       0.0                          
-    0:00:12   12079.4      0.04       0.9       0.0                          
-    0:00:12   12079.4      0.04       0.9       0.0                          
-    0:00:12   12080.7      0.04       0.9       0.0                          
-    0:00:12   12078.1      0.04       0.9       0.0                          
-    0:00:12   12078.4      0.04       0.9       0.0                          
-    0:00:12   12078.9      0.04       0.9       0.0                          
-    0:00:12   12079.5      0.04       0.9       0.0                          
-    0:00:13   12078.3      0.04       0.9       0.0                          
-    0:00:13   12077.2      0.04       0.9       0.0                          
-    0:00:13   12074.9      0.04       0.9       0.0                          
-    0:00:13   12077.5      0.04       0.8       0.0                          
-    0:00:13   12077.5      0.04       0.8       0.0                          
-    0:00:13   12078.6      0.04       0.8       0.0                          
-    0:00:13   12077.3      0.04       0.8       0.0                          
-    0:00:13   12082.3      0.04       0.8       0.0                          
-    0:00:13   12082.8      0.04       0.8       0.0                          
-    0:00:13   12086.1      0.04       0.8       0.0                          
-    0:00:13   12085.8      0.04       0.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:13   12085.7      0.04       0.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:13   12087.1      0.04       0.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:14   12088.5      0.04       0.8       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:14   12088.5      0.04       0.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:14   12088.5      0.04       0.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:14   12087.9      0.04       0.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:14   12089.8      0.04       0.9       0.0 ex_mem/aluRes_q_reg[0]/D 
-    0:00:14   12088.5      0.04       0.9       0.0 ex_mem/aluRes_q_reg[0]/D 
+    0:00:00    5059.1      1.03      20.7       0.0                          
+    0:00:01    5058.1      1.03      20.7       0.0 product_out[31]          
+    0:00:02    5057.0      1.03      20.7       0.0 product_out[31]          
+    0:00:02    5057.0      1.03      20.7       0.0 product_out[31]          
+    0:00:03    5059.6      1.03      20.7       0.0                          
+    0:00:03    5059.6      1.03      20.7       0.0                          
+    0:00:03    5062.4      1.03      20.7       0.0                          
+    0:00:03    5062.9      1.03      20.7       0.0                          
+    0:00:03    5065.5      1.03      20.7       0.0                          
+    0:00:03    5065.8      1.03      20.7       0.0                          
+    0:00:03    5066.6      1.03      20.7       0.0                          
+    0:00:03    5071.0      1.03      20.7       0.0                          
+    0:00:03    5071.3      1.03      20.7       0.0                          
+    0:00:04    5075.5      1.03      20.6       0.0                          
+    0:00:04    5078.1      1.03      20.7       0.0                          
+    0:00:04    5086.8      1.03      20.7       0.0                          
+    0:00:04    5086.8      1.03      20.7       0.0                          
+    0:00:04    5086.8      1.03      20.7       0.0                          
+    0:00:04    5087.7      1.03      20.7       0.0                          
+    0:00:04    5089.1      1.02      20.7       0.0                          
+    0:00:04    5091.1      1.02      20.7       0.0                          
+    0:00:04    5092.6      1.02      20.6       0.0                          
+    0:00:04    5094.1      1.02      20.6       0.0                          
+    0:00:04    5095.5      1.02      20.6       0.0                          
+    0:00:04    5095.5      1.02      20.6       0.0                          
+    0:00:04    5099.2      1.02      20.6       0.0                          
+    0:00:04    5101.1      1.02      20.6       0.0                          
+    0:00:04    5103.2      1.02      20.6       0.0                          
+    0:00:04    5104.5      1.02      20.6       0.0                          
+    0:00:05    5108.0      1.02      20.6       0.0                          
+    0:00:05    5108.9      1.02      20.6       0.0                          
+    0:00:05    5107.1      1.02      20.6       0.0                          
+    0:00:05    5109.6      1.02      20.6       0.0                          
+    0:00:05    5109.3      1.02      20.6       0.0                          
+    0:00:05    5111.0      1.02      20.6       0.0                          
+    0:00:05    5111.6      1.02      20.6       0.0                          
+    0:00:05    5113.4      1.02      20.6       0.0                          
+    0:00:05    5112.3      1.02      20.6       0.0                          
+    0:00:05    5111.7      1.02      20.5       0.0                          
+    0:00:05    5112.2      1.02      20.5       0.0                          
+    0:00:05    5110.3      1.02      20.5       0.0                          
+    0:00:05    5112.2      1.02      20.5       0.0                          
+    0:00:05    5112.4      1.02      20.5       0.0                          
+    0:00:05    5113.7      1.02      20.5       0.0                          
+    0:00:05    5113.7      1.02      20.5       0.0                          
+    0:00:05    5115.0      1.02      20.5       0.0                          
+    0:00:06    5116.1      1.02      20.5       0.0                          
+    0:00:06    5116.9      1.02      20.5       0.0                          
+    0:00:06    5116.7      1.02      20.5       0.0                          
+    0:00:06    5116.9      1.02      20.5       0.0                          
+    0:00:06    5117.2      1.02      20.5       0.0                          
+    0:00:06    5117.2      1.02      20.5       0.0                          
+    0:00:06    5116.9      1.02      20.5       0.0                          
+    0:00:06    5117.7      1.02      20.5       0.0                          
+    0:00:06    5125.5      1.02      20.7       0.0                          
+    0:00:06    5124.9      1.02      20.6       0.0                          
+    0:00:06    5126.6      1.02      20.6       0.0 product_out[29]          
+    0:00:06    5129.0      1.02      20.6       0.0 product_out[29]          
+    0:00:07    5128.4      1.02      20.6       0.0 product_out[31]          
+    0:00:07    5133.6      1.02      20.6       0.0 product_out[31]          
+    0:00:07    5133.3      1.02      20.6       0.0 product_out[29]          
+    0:00:07    5133.3      1.02      20.6       0.0 product_out[31]          
+    0:00:07    5134.8      1.02      20.6       0.0 product_out[31]          
+    0:00:07    5135.4      1.02      20.6       0.0 product_out[31]          
+    0:00:07    5137.2      1.02      20.7       0.0 product_out[31]          
+    0:00:07    5142.8      1.02      20.7       0.0 product_out[31]          
+    0:00:07    5142.6      1.02      20.7       0.0 product_out[31]          
+    0:00:07    5151.8      1.02      20.7       0.0 product_out[29]          
+    0:00:07    5162.9      1.02      20.7       0.0 product_out[29]          
+    0:00:07    5161.8      1.02      20.7       0.0 product_out[31]          
+    0:00:08    5164.2      1.02      20.7       0.0 product_out[31]          
+    0:00:08    5165.3      1.02      20.7       0.0 product_out[31]          
+    0:00:08    5166.7      1.02      20.6       0.0 product_out[31]          
+    0:00:08    5165.6      1.02      20.6       0.0 product_out[31]          
+    0:00:08    5166.3      1.02      20.6       0.0 product_out[31]          
+    0:00:08    5163.7      1.02      20.6       0.0 product_out[31]          
+    0:00:08    5161.7      1.02      20.6       0.0 product_out[26]          
+    0:00:08    5165.4      1.02      20.6       0.0 product_out[26]          
+    0:00:08    5166.8      1.02      20.6       0.0 product_out[29]          
+    0:00:08    5168.8      1.02      20.6       0.0 product_out[31]          
+    0:00:09    5168.2      1.02      20.6       0.0                          
 Loading db file '/home/byy911/Documents/eecs362/synth/NangateOpenCellLibrary.db'
 
   Optimization Complete
@@ -2249,13 +1547,13 @@ define_name_rules afara_rules -map {{ {"\\*cell\\*", "UDW_"}}}
 change_names -rule afara_rules -hierarchy
 1
 sh date
-Thu Mar 17 02:34:44 CDT 2016
+Thu Mar 17 12:43:29 CDT 2016
 if {[info exists use_physopt] && ($use_physopt == 1)} {
    write -format verilog -hier -output [format "%s%s%s" gate/ $top_module _hier_fromdc.v]
 } else {
    write -format verilog -hier -output [format "%s%s%s" gate/ $top_module _hier.v]
 }
-Writing verilog file '/home/byy911/Documents/eecs362/synth/gate/pipeline_hier.v'.
+Writing verilog file '/home/byy911/Documents/eecs362/synth/gate/multiplier_hier.v'.
 Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
 1
 ###########################################################################
@@ -2268,14 +1566,14 @@ redirect [format "%s%s%s" log/ $top_module _hier_timing.rep] { report_timing -ma
 # 8. Flatten hierarchy for backend tools
 ###########################################################################
 sh date
-Thu Mar 17 02:34:45 CDT 2016
+Thu Mar 17 12:43:30 CDT 2016
 # remove dont_touch attribute before flattening the design
 if { [get_designs -hier $dont_touch_modules] != {} } {
    set_dont_touch $dont_touch_modules false
 }
 current_design $top_module
-Current design is 'pipeline'.
-{pipeline}
+Current design is 'multiplier'.
+{multiplier}
 ungroup -all -flatten
 Warning: Design has no hierarchy.  No cells can be ungrouped. (UID-228)
 0
@@ -2296,7 +1594,7 @@ if {[info exists project_io_cfg] && ($project_io_cfg == 1) } {
 } else {
    write -format verilog -output [format "%s%s%s"  gate/ $top_module _flat.v]
 }
-Writing verilog file '/home/byy911/Documents/eecs362/synth/gate/pipeline_flat.v'.
+Writing verilog file '/home/byy911/Documents/eecs362/synth/gate/multiplier_flat.v'.
 1
 # Report flattened results
 redirect [format "%s%s%s" log/ $top_module _area.rep] { report_area }
@@ -2330,7 +1628,7 @@ if {  [sizeof_collection $unmapped_designs] != 0 } {
 # 11. Done
 ###########################################################################
 sh date
-Thu Mar 17 02:34:47 CDT 2016
+Thu Mar 17 12:43:31 CDT 2016
 echo "run.scr completed successfully"
 run.scr completed successfully
 quit

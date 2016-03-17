@@ -5,9 +5,9 @@
 # Variables
 
 # Project-specific stuff
-VERILOG_FILES = $(filter-out ../verilog/pipeline/topLevel.v, $(wildcard ../verilog/alu/*.v ../verilog/pipeline/*.v ../verilog/single_cycle/lib/*.v ../verilog/gates/*.v))
-#VERILOG_FILES = ../verilog/gates/gates.v ../verilog/alu/adder.v
-TOPLEVEL = pipeline
+#VERILOG_FILES = $(filter-out ../verilog/pipeline/topLevel.v, $(wildcard ../verilog/alu/*.v ../verilog/pipeline/*.v ../verilog/single_cycle/lib/*.v ../verilog/gates/*.v))
+VERILOG_FILES = ../Multiplier/multiplier.v ../verilog/gates/gates.v $(wildcard ../verilog/alu/*.v)
+TOPLEVEL = multiplier
 # Freq in MHz
 CLKFREQ = 1000
 
