@@ -8,6 +8,9 @@ module multiplier_fsm(
     output reg [1:0] next_state
 );
 
-    
+case(cur_state)
+    IDLE: if (aluCtrl == 4'b1111) begin
+        
+CYCLE0, CYCLE1, CYCLE2, IDLE
 
 endmodule

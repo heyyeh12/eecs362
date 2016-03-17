@@ -5,7 +5,7 @@ TEST_DIR = ./
 BUILD_DIR = ./
 LIB_PATH = ../gates/gates.v
 
-SOURCES = shifter adder
+SOURCES = lshift adder
 SOURCES_PATH = $(LIB_PATH) $(addprefix $(SOURCE_DIR), $(addsuffix .v, $(SOURCES)))
 SOURCES_VVP = $(addsuffix .vvp, $(SOURCES))
 
