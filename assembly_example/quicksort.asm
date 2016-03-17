@@ -6,10 +6,10 @@
 
 .align 2
 _A:
-.byte 65
-.byte 71
-.byte 102
-.byte 19
+.byte 65	;41 hex
+.byte 71	;47 hex
+.byte 102	;66 hex
+.byte 19	;13 hex
 .byte 111
 .byte 4
 .byte 122
@@ -270,27 +270,27 @@ L15_LF0:
 L13_LF0:
 	lw	r1,-12(r30)
 	lw	r2,-16(r30)
-	slt	r1,r1,r2
-	beqz	r1,L16_LF0
+	slt	r1,r1,r2	; compare neighboring words at M[r30-12] and M[r30-16]
+	beqz	r1,L16_LF0 ; r1 < r2
 	nop; delay slot nop
-	lw	r1,(r30)
-	lw	r2,-16(r30)
-	add	r1,r1,r2
-	lb	r2,(r1)
-	sb	-18(r30),r2
-	lw	r1,(r30)
-	lw	r2,-16(r30)
-	add	r1,r1,r2
-	lw	r2,(r30)
-	lw	r3,-12(r30)
-	add	r2,r2,r3
-	lb	r3,(r2)
-	sb	(r1),r3
-	lw	r1,(r30)
-	lw	r2,-12(r30)
-	add	r1,r1,r2
-	lb	r2,-18(r30)
-	sb	(r1),r2
+	lw	r1,(r30)	; r1 <- M[r30] 
+	lw	r2,-16(r30) ; r2 <- M[r30-16] -- 4 words before r1
+	add	r1,r1,r2	; r1 <- r1 + r2 -- added words?? are these addreesses?
+	lb	r2,(r1)		; r2 <- {h000000, M[r1]}
+	sb	-18(r30),r2 ; M[r30-18] <- r2[3:0] -- put byte into 3rd byte address of 5 words away
+	lw	r1,(r30)	; r1 <- M[r30]
+	lw	r2,-16(r30) ; r2 <- M[r30-16] -- 4 words before r1
+	add	r1,r1,r2	; r1 <- r1 + r2 -- added words?? are these addresses?
+	lw	r2,(r30)	; r2 <- M[r30]
+	lw	r3,-12(r30) ; r3 <- M[r30-12] -- 3 words before r1
+	add	r2,r2,r3	; r2 <- r2 + r3 -- added words
+	lb	r3,(r2)		; r3 <- {h000000, M[r2]}
+	sb	(r1),r3		; M[r1] <- r3[3:0]
+	lw	r1,(r30)	; r1 <- M[r30]
+	lw	r2,-12(r30) ; r2 <- M[r30-12] -- 3 words before r1
+	add	r1,r1,r2	; r1 <- r1 + r2
+	lb	r2,-18(r30)	; r2 <- {h000000, M[30-18]} -- 3rd byte address 5 words before r30 
+	sb	(r1),r2		; r2 <- r1[3:0]
 	j	L17_LF0
 	nop; delay slot nop
 L16_LF0:

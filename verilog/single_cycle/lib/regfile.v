@@ -19,9 +19,9 @@ module regfile(rs1, rs2, rd, rData1, rData2, wData, regWr, clk);
    
    integer i;
    initial begin
-     for (i = 0; i < 32; i = i + 1)
-            mem[i] = 32'b0;
-    
+     for (i = 0; i < 32; i = i + 1) begin
+            mem[i] = 32'd0;
+     end
     end
 
     // Write
@@ -36,7 +36,8 @@ module regfile(rs1, rs2, rd, rData1, rData2, wData, regWr, clk);
                 mem[rd] <= wData[31:0];
             end
         end
-        
+        $write("reading val %x from reg %x\n", rData1, rs1);
+        $write("reading val %x from reg %x\n", rData2, rs2);
         // DEBUG
         // $display("===============REGISTER DUMP===============");
         // $display("reg %x: %x \t reg %x: %x", 0, mem[0],  4, mem[4]);
@@ -49,11 +50,12 @@ module regfile(rs1, rs2, rd, rData1, rData2, wData, regWr, clk);
     
         // Read
      always @ (negedge clk) begin
-        if (rd == rs1) begin
+        
+        if (rd == rs1 & regWr == 1) begin 
             rData1 <= wData;
             rData2 <= mem[rs2];
         end
-        else if(rd == rs2) begin
+        else if(rd == rs2 & regWr == 1) begin
             rData2 <= wData;
             rData1 <= mem[rs1];
         end 
@@ -61,8 +63,7 @@ module regfile(rs1, rs2, rd, rData1, rData2, wData, regWr, clk);
             rData1 <= mem[rs1];
             rData2 <= mem[rs2];
         end
-         $write("reading val %x from reg %x\n", rData1, rs1);
-         $write("reading val %x from reg %x\n", rData2, rs2);
+        
      end
     
 endmodule // regfile

@@ -25,11 +25,12 @@ module dmem(addr, rData, wData, writeEnable, dsize, clk);
     // Write
     always @ (posedge clk) begin
         if (writeEnable) begin
-            $display("writing to mem at %x val %x size %2d", addr, wData, dsize);
+            // $display("writing to mem at %x val %x size %2d", addr, wData, dsize);
             case (dsize)
               2'b11: begin
                  // word
                  {mem[addr], mem[addr+1], mem[addr+2], mem[addr+3]} <= wData[0:31];
+                 $display("writing word to mem at %x val %x", addr, wData[0:31]);
               end
               2'b10: begin
                  // bad
@@ -38,10 +39,12 @@ module dmem(addr, rData, wData, writeEnable, dsize, clk);
               2'b01: begin
                  // halfword
                  {mem[addr], mem[addr+1]} <= wData[16:31];
+                 $display("writing halfword to mem at %x val %x", addr, wData[16:31]);
               end
               2'b00: begin
                  // byte
                  mem[addr] <= wData[24:31];
+                 $display("writing byte to mem at %x val %x", addr, wData[24:31]);
               end
               default: $display("Invalid dsize: %x", dsize);
             endcase
