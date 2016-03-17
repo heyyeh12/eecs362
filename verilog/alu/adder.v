@@ -12,7 +12,7 @@ module adder(a, b, ctrl, res, cout);
     wire carry_int;
     
     not_32 not_map(.a(b), .z(b_not));
-    mux16to1 #(32) mux_map1(.src0(b), 
+    mux16to1_32 mux_map1(.src0(b), 
                            .src1(b),
                            .src2(b),
                            .src3(b),
