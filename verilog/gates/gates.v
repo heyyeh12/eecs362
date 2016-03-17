@@ -364,6 +364,26 @@ endmodule // mux16to1
 
 /////////////////////////////
 
+module mux16to1_32 (src0, src1, src2, src3,
+                 src4, src5, src6, src7,
+                 src8, src9, src10, src11,
+                 src12, src13, src14, src15,
+                 sel, z); // synopsys template
+     input [31:0] src0, src1, src2, src3,
+                       src4, src5, src6, src7,
+                       src8, src9, src10, src11,
+                       src12, src13, src14, src15;
+    input [3:0] sel;
+    output [31:0] z;
+    mux16to1 #(32) M1 (src0, src1, src2, src3,
+                 src4, src5, src6, src7,
+                 src8, src9, src10, src11,
+                 src12, src13, src14, src15,
+                 sel, z);
+endmodule // mux16to1_32
+
+/////////////////////////////
+
 // /* 32 to 1 mux for N_BITS sources */
 module mux32to1 (src0, src1, src2, src3, src4, src5, src6, src7,
                  src8, src9, src10, src11, src12, src13, src14, src15,
