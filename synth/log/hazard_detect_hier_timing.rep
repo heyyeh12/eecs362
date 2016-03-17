@@ -1,0 +1,438 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 100
+Design : hazard_detect
+Version: D-2010.03-SP5
+Date   : Wed Mar 16 23:23:20 2016
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: ex_rd[4] (input port clocked by clk)
+  Endpoint: id_ex_ctrl[0]
+            (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  hazard_detect      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  ex_rd[4] (in)                            0.00       0.00 f
+  U114/ZN (INV_X1)                         0.06       0.06 r
+  U113/ZN (XNOR2_X1)                       0.08       0.14 r
+  U111/ZN (NOR3_X1)                        0.04       0.18 f
+  U110/ZN (NAND4_X1)                       0.10       0.27 r
+  U75/ZN (AOI21_X1)                        0.05       0.32 f
+  U74/ZN (NOR2_X1)                         0.06       0.38 r
+  U130/Z (BUF_X4)                          0.04       0.42 r
+  id_ex_ctrl[0] (out)                      0.00       0.42 r
+  data arrival time                                   0.42
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.42
+  -----------------------------------------------------------
+  slack (MET)                                         0.58
+
+
+  Startpoint: ex_rd[4] (input port clocked by clk)
+  Endpoint: pc_enable (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  hazard_detect      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  ex_rd[4] (in)                            0.00       0.00 f
+  U114/ZN (INV_X1)                         0.06       0.06 r
+  U113/ZN (XNOR2_X1)                       0.08       0.14 r
+  U111/ZN (NOR3_X1)                        0.04       0.18 f
+  U110/ZN (NAND4_X1)                       0.10       0.27 r
+  U75/ZN (AOI21_X1)                        0.05       0.32 f
+  U45/ZN (NAND2_X1)                        0.04       0.36 r
+  U129/Z (BUF_X4)                          0.04       0.40 r
+  pc_enable (out)                          0.00       0.40 r
+  data arrival time                                   0.40
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.40
+  -----------------------------------------------------------
+  slack (MET)                                         0.60
+
+
+  Startpoint: ex_rd[4] (input port clocked by clk)
+  Endpoint: memWrData_sel[1]
+            (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  hazard_detect      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  ex_rd[4] (in)                            0.00       0.00 f
+  U114/ZN (INV_X1)                         0.06       0.06 r
+  U66/Z (XOR2_X1)                          0.09       0.16 r
+  U64/ZN (NAND2_X1)                        0.03       0.18 f
+  U60/ZN (NOR4_X1)                         0.05       0.24 r
+  U59/ZN (NAND4_X1)                        0.04       0.28 f
+  U48/ZN (NOR4_X1)                         0.09       0.37 r
+  U46/ZN (NAND2_X1)                        0.03       0.40 f
+  memWrData_sel[1] (out)                   0.00       0.40 f
+  data arrival time                                   0.40
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.40
+  -----------------------------------------------------------
+  slack (MET)                                         0.60
+
+
+  Startpoint: ex_rd[4] (input port clocked by clk)
+  Endpoint: id_ex_ctrl[1]
+            (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  hazard_detect      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  ex_rd[4] (in)                            0.00       0.00 f
+  U114/ZN (INV_X1)                         0.06       0.06 r
+  U113/ZN (XNOR2_X1)                       0.08       0.14 r
+  U111/ZN (NOR3_X1)                        0.04       0.18 f
+  U110/ZN (NAND4_X1)                       0.10       0.27 r
+  U75/ZN (AOI21_X1)                        0.05       0.32 f
+  U74/ZN (NOR2_X1)                         0.06       0.38 r
+  id_ex_ctrl[1] (out)                      0.00       0.38 r
+  data arrival time                                   0.38
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.38
+  -----------------------------------------------------------
+  slack (MET)                                         0.62
+
+
+  Startpoint: ex_rd[4] (input port clocked by clk)
+  Endpoint: busA_sel[1]
+            (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  hazard_detect      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  ex_rd[4] (in)                            0.00       0.00 f
+  U114/ZN (INV_X1)                         0.06       0.06 r
+  U113/ZN (XNOR2_X1)                       0.08       0.14 r
+  U111/ZN (NOR3_X1)                        0.04       0.18 f
+  U110/ZN (NAND4_X1)                       0.10       0.27 r
+  U98/ZN (NAND2_X1)                        0.03       0.31 f
+  U94/ZN (NOR4_X1)                         0.07       0.38 r
+  busA_sel[1] (out)                        0.00       0.38 r
+  data arrival time                                   0.38
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.38
+  -----------------------------------------------------------
+  slack (MET)                                         0.62
+
+
+  Startpoint: ex_rd[4] (input port clocked by clk)
+  Endpoint: busB_sel[1]
+            (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  hazard_detect      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  ex_rd[4] (in)                            0.00       0.00 f
+  U114/ZN (INV_X1)                         0.06       0.06 r
+  U89/ZN (XNOR2_X1)                        0.08       0.14 r
+  U87/ZN (NOR3_X1)                         0.04       0.18 f
+  U86/ZN (NAND4_X1)                        0.10       0.27 r
+  U79/ZN (NAND2_X1)                        0.03       0.30 f
+  U77/ZN (NOR4_X1)                         0.07       0.38 r
+  busB_sel[1] (out)                        0.00       0.38 r
+  data arrival time                                   0.38
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.38
+  -----------------------------------------------------------
+  slack (MET)                                         0.62
+
+
+  Startpoint: ex_rd[4] (input port clocked by clk)
+  Endpoint: memWrData_sel[0]
+            (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  hazard_detect      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  ex_rd[4] (in)                            0.00       0.00 f
+  U114/ZN (INV_X1)                         0.06       0.06 r
+  U66/Z (XOR2_X1)                          0.09       0.16 r
+  U64/ZN (NAND2_X1)                        0.03       0.18 f
+  U60/ZN (NOR4_X1)                         0.05       0.24 r
+  U59/ZN (NAND4_X1)                        0.04       0.28 f
+  U48/ZN (NOR4_X1)                         0.09       0.37 r
+  memWrData_sel[0] (out)                   0.00       0.37 r
+  data arrival time                                   0.37
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.37
+  -----------------------------------------------------------
+  slack (MET)                                         0.63
+
+
+  Startpoint: ex_rd[4] (input port clocked by clk)
+  Endpoint: if_id_ctrl[1]
+            (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  hazard_detect      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  ex_rd[4] (in)                            0.00       0.00 f
+  U114/ZN (INV_X1)                         0.06       0.06 r
+  U113/ZN (XNOR2_X1)                       0.08       0.14 r
+  U111/ZN (NOR3_X1)                        0.04       0.18 f
+  U110/ZN (NAND4_X1)                       0.10       0.27 r
+  U75/ZN (AOI21_X1)                        0.05       0.32 f
+  U45/ZN (NAND2_X1)                        0.04       0.36 r
+  if_id_ctrl[1] (out)                      0.00       0.36 r
+  data arrival time                                   0.36
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.36
+  -----------------------------------------------------------
+  slack (MET)                                         0.64
+
+
+  Startpoint: ex_rd[4] (input port clocked by clk)
+  Endpoint: busA_sel[0]
+            (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  hazard_detect      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  ex_rd[4] (in)                            0.00       0.00 f
+  U114/ZN (INV_X1)                         0.06       0.06 r
+  U113/ZN (XNOR2_X1)                       0.08       0.14 r
+  U111/ZN (NOR3_X1)                        0.04       0.18 f
+  U110/ZN (NAND4_X1)                       0.10       0.27 r
+  U107/ZN (NOR3_X1)                        0.03       0.30 f
+  busA_sel[0] (out)                        0.00       0.30 f
+  data arrival time                                   0.30
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.30
+  -----------------------------------------------------------
+  slack (MET)                                         0.70
+
+
+  Startpoint: ex_rd[4] (input port clocked by clk)
+  Endpoint: busB_sel[0]
+            (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  hazard_detect      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  ex_rd[4] (in)                            0.00       0.00 f
+  U114/ZN (INV_X1)                         0.06       0.06 r
+  U89/ZN (XNOR2_X1)                        0.08       0.14 r
+  U87/ZN (NOR3_X1)                         0.04       0.18 f
+  U86/ZN (NAND4_X1)                        0.10       0.27 r
+  U85/ZN (NOR3_X1)                         0.03       0.30 f
+  busB_sel[0] (out)                        0.00       0.30 f
+  data arrival time                                   0.30
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.30
+  -----------------------------------------------------------
+  slack (MET)                                         0.70
+
+
+  Startpoint: takeLeap (input port clocked by clk)
+  Endpoint: ex_mem_ctrl[0]
+            (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  hazard_detect      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  takeLeap (in)                            0.00       0.00 f
+  U97/ZN (INV_X1)                          0.05       0.05 r
+  U131/Z (BUF_X4)                          0.04       0.09 r
+  ex_mem_ctrl[0] (out)                     0.00       0.09 r
+  data arrival time                                   0.09
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.09
+  -----------------------------------------------------------
+  slack (MET)                                         0.91
+
+
+  Startpoint: takeLeap (input port clocked by clk)
+  Endpoint: ex_mem_ctrl[1]
+            (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  hazard_detect      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  takeLeap (in)                            0.00       0.00 f
+  U97/ZN (INV_X1)                          0.05       0.05 r
+  ex_mem_ctrl[1] (out)                     0.00       0.05 r
+  data arrival time                                   0.05
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.05
+  -----------------------------------------------------------
+  slack (MET)                                         0.95
+
+
+1

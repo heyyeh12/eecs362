@@ -1,0 +1,45 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 100
+Design : and_gate
+Version: D-2010.03-SP5
+Date   : Wed Mar 16 23:22:19 2016
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: a (input port clocked by clk)
+  Endpoint: z (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_gate           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a (in)                                   0.00       0.00 f
+  U1/ZN (AND2_X2)                          0.04       0.04 f
+  z (out)                                  0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+1

@@ -1,0 +1,3856 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10000
+        -max_paths 1000
+Design : and_32
+Version: D-2010.03-SP5
+Date   : Wed Mar 16 23:22:47 2016
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: a[0] (input port clocked by clk)
+  Endpoint: z[0] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[0] (in)                                0.00       0.00 f
+  U32/ZN (AND2_X2)                         0.04       0.04 f
+  z[0] (out)                               0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[1] (input port clocked by clk)
+  Endpoint: z[1] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[1] (in)                                0.00       0.00 f
+  U21/ZN (AND2_X2)                         0.04       0.04 f
+  z[1] (out)                               0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[2] (input port clocked by clk)
+  Endpoint: z[2] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[2] (in)                                0.00       0.00 f
+  U10/ZN (AND2_X2)                         0.04       0.04 f
+  z[2] (out)                               0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[3] (input port clocked by clk)
+  Endpoint: z[3] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[3] (in)                                0.00       0.00 f
+  U7/ZN (AND2_X2)                          0.04       0.04 f
+  z[3] (out)                               0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[4] (input port clocked by clk)
+  Endpoint: z[4] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[4] (in)                                0.00       0.00 f
+  U6/ZN (AND2_X2)                          0.04       0.04 f
+  z[4] (out)                               0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[5] (input port clocked by clk)
+  Endpoint: z[5] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[5] (in)                                0.00       0.00 f
+  U5/ZN (AND2_X2)                          0.04       0.04 f
+  z[5] (out)                               0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[6] (input port clocked by clk)
+  Endpoint: z[6] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[6] (in)                                0.00       0.00 f
+  U4/ZN (AND2_X2)                          0.04       0.04 f
+  z[6] (out)                               0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[7] (input port clocked by clk)
+  Endpoint: z[7] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[7] (in)                                0.00       0.00 f
+  U3/ZN (AND2_X2)                          0.04       0.04 f
+  z[7] (out)                               0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[8] (input port clocked by clk)
+  Endpoint: z[8] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[8] (in)                                0.00       0.00 f
+  U2/ZN (AND2_X2)                          0.04       0.04 f
+  z[8] (out)                               0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[9] (input port clocked by clk)
+  Endpoint: z[9] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[9] (in)                                0.00       0.00 f
+  U1/ZN (AND2_X2)                          0.04       0.04 f
+  z[9] (out)                               0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[10] (input port clocked by clk)
+  Endpoint: z[10] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[10] (in)                               0.00       0.00 f
+  U31/ZN (AND2_X2)                         0.04       0.04 f
+  z[10] (out)                              0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[11] (input port clocked by clk)
+  Endpoint: z[11] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[11] (in)                               0.00       0.00 f
+  U30/ZN (AND2_X2)                         0.04       0.04 f
+  z[11] (out)                              0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[12] (input port clocked by clk)
+  Endpoint: z[12] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[12] (in)                               0.00       0.00 f
+  U29/ZN (AND2_X2)                         0.04       0.04 f
+  z[12] (out)                              0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[13] (input port clocked by clk)
+  Endpoint: z[13] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[13] (in)                               0.00       0.00 f
+  U28/ZN (AND2_X2)                         0.04       0.04 f
+  z[13] (out)                              0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[14] (input port clocked by clk)
+  Endpoint: z[14] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[14] (in)                               0.00       0.00 f
+  U27/ZN (AND2_X2)                         0.04       0.04 f
+  z[14] (out)                              0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[15] (input port clocked by clk)
+  Endpoint: z[15] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[15] (in)                               0.00       0.00 f
+  U26/ZN (AND2_X2)                         0.04       0.04 f
+  z[15] (out)                              0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[16] (input port clocked by clk)
+  Endpoint: z[16] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[16] (in)                               0.00       0.00 f
+  U25/ZN (AND2_X2)                         0.04       0.04 f
+  z[16] (out)                              0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[17] (input port clocked by clk)
+  Endpoint: z[17] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[17] (in)                               0.00       0.00 f
+  U24/ZN (AND2_X2)                         0.04       0.04 f
+  z[17] (out)                              0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[18] (input port clocked by clk)
+  Endpoint: z[18] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[18] (in)                               0.00       0.00 f
+  U23/ZN (AND2_X2)                         0.04       0.04 f
+  z[18] (out)                              0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[19] (input port clocked by clk)
+  Endpoint: z[19] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[19] (in)                               0.00       0.00 f
+  U22/ZN (AND2_X2)                         0.04       0.04 f
+  z[19] (out)                              0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[20] (input port clocked by clk)
+  Endpoint: z[20] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[20] (in)                               0.00       0.00 f
+  U20/ZN (AND2_X2)                         0.04       0.04 f
+  z[20] (out)                              0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[21] (input port clocked by clk)
+  Endpoint: z[21] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[21] (in)                               0.00       0.00 f
+  U19/ZN (AND2_X2)                         0.04       0.04 f
+  z[21] (out)                              0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[22] (input port clocked by clk)
+  Endpoint: z[22] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[22] (in)                               0.00       0.00 f
+  U18/ZN (AND2_X2)                         0.04       0.04 f
+  z[22] (out)                              0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[23] (input port clocked by clk)
+  Endpoint: z[23] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[23] (in)                               0.00       0.00 f
+  U17/ZN (AND2_X2)                         0.04       0.04 f
+  z[23] (out)                              0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[24] (input port clocked by clk)
+  Endpoint: z[24] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[24] (in)                               0.00       0.00 f
+  U16/ZN (AND2_X2)                         0.04       0.04 f
+  z[24] (out)                              0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[25] (input port clocked by clk)
+  Endpoint: z[25] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[25] (in)                               0.00       0.00 f
+  U15/ZN (AND2_X2)                         0.04       0.04 f
+  z[25] (out)                              0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[26] (input port clocked by clk)
+  Endpoint: z[26] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[26] (in)                               0.00       0.00 f
+  U14/ZN (AND2_X2)                         0.04       0.04 f
+  z[26] (out)                              0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[27] (input port clocked by clk)
+  Endpoint: z[27] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[27] (in)                               0.00       0.00 f
+  U13/ZN (AND2_X2)                         0.04       0.04 f
+  z[27] (out)                              0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[28] (input port clocked by clk)
+  Endpoint: z[28] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[28] (in)                               0.00       0.00 f
+  U12/ZN (AND2_X2)                         0.04       0.04 f
+  z[28] (out)                              0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[29] (input port clocked by clk)
+  Endpoint: z[29] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[29] (in)                               0.00       0.00 f
+  U11/ZN (AND2_X2)                         0.04       0.04 f
+  z[29] (out)                              0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[30] (input port clocked by clk)
+  Endpoint: z[30] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[30] (in)                               0.00       0.00 f
+  U9/ZN (AND2_X2)                          0.04       0.04 f
+  z[30] (out)                              0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[31] (input port clocked by clk)
+  Endpoint: z[31] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  a[31] (in)                               0.00       0.00 f
+  U8/ZN (AND2_X2)                          0.04       0.04 f
+  z[31] (out)                              0.00       0.04 f
+  data arrival time                                   0.04
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.04
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[0] (input port clocked by clk)
+  Endpoint: z[0] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[0] (in)                                0.00       0.00 f
+  U32/ZN (AND2_X2)                         0.03       0.03 f
+  z[0] (out)                               0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[1] (input port clocked by clk)
+  Endpoint: z[1] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[1] (in)                                0.00       0.00 f
+  U21/ZN (AND2_X2)                         0.03       0.03 f
+  z[1] (out)                               0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[2] (input port clocked by clk)
+  Endpoint: z[2] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[2] (in)                                0.00       0.00 f
+  U10/ZN (AND2_X2)                         0.03       0.03 f
+  z[2] (out)                               0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[3] (input port clocked by clk)
+  Endpoint: z[3] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[3] (in)                                0.00       0.00 f
+  U7/ZN (AND2_X2)                          0.03       0.03 f
+  z[3] (out)                               0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[4] (input port clocked by clk)
+  Endpoint: z[4] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[4] (in)                                0.00       0.00 f
+  U6/ZN (AND2_X2)                          0.03       0.03 f
+  z[4] (out)                               0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[5] (input port clocked by clk)
+  Endpoint: z[5] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[5] (in)                                0.00       0.00 f
+  U5/ZN (AND2_X2)                          0.03       0.03 f
+  z[5] (out)                               0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[6] (input port clocked by clk)
+  Endpoint: z[6] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[6] (in)                                0.00       0.00 f
+  U4/ZN (AND2_X2)                          0.03       0.03 f
+  z[6] (out)                               0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[7] (input port clocked by clk)
+  Endpoint: z[7] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[7] (in)                                0.00       0.00 f
+  U3/ZN (AND2_X2)                          0.03       0.03 f
+  z[7] (out)                               0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[8] (input port clocked by clk)
+  Endpoint: z[8] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[8] (in)                                0.00       0.00 f
+  U2/ZN (AND2_X2)                          0.03       0.03 f
+  z[8] (out)                               0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[9] (input port clocked by clk)
+  Endpoint: z[9] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[9] (in)                                0.00       0.00 f
+  U1/ZN (AND2_X2)                          0.03       0.03 f
+  z[9] (out)                               0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[10] (input port clocked by clk)
+  Endpoint: z[10] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[10] (in)                               0.00       0.00 f
+  U31/ZN (AND2_X2)                         0.03       0.03 f
+  z[10] (out)                              0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[11] (input port clocked by clk)
+  Endpoint: z[11] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[11] (in)                               0.00       0.00 f
+  U30/ZN (AND2_X2)                         0.03       0.03 f
+  z[11] (out)                              0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[12] (input port clocked by clk)
+  Endpoint: z[12] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[12] (in)                               0.00       0.00 f
+  U29/ZN (AND2_X2)                         0.03       0.03 f
+  z[12] (out)                              0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[13] (input port clocked by clk)
+  Endpoint: z[13] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[13] (in)                               0.00       0.00 f
+  U28/ZN (AND2_X2)                         0.03       0.03 f
+  z[13] (out)                              0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[14] (input port clocked by clk)
+  Endpoint: z[14] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[14] (in)                               0.00       0.00 f
+  U27/ZN (AND2_X2)                         0.03       0.03 f
+  z[14] (out)                              0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[15] (input port clocked by clk)
+  Endpoint: z[15] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[15] (in)                               0.00       0.00 f
+  U26/ZN (AND2_X2)                         0.03       0.03 f
+  z[15] (out)                              0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[16] (input port clocked by clk)
+  Endpoint: z[16] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[16] (in)                               0.00       0.00 f
+  U25/ZN (AND2_X2)                         0.03       0.03 f
+  z[16] (out)                              0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[17] (input port clocked by clk)
+  Endpoint: z[17] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[17] (in)                               0.00       0.00 f
+  U24/ZN (AND2_X2)                         0.03       0.03 f
+  z[17] (out)                              0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[18] (input port clocked by clk)
+  Endpoint: z[18] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[18] (in)                               0.00       0.00 f
+  U23/ZN (AND2_X2)                         0.03       0.03 f
+  z[18] (out)                              0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[19] (input port clocked by clk)
+  Endpoint: z[19] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[19] (in)                               0.00       0.00 f
+  U22/ZN (AND2_X2)                         0.03       0.03 f
+  z[19] (out)                              0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[20] (input port clocked by clk)
+  Endpoint: z[20] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[20] (in)                               0.00       0.00 f
+  U20/ZN (AND2_X2)                         0.03       0.03 f
+  z[20] (out)                              0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[21] (input port clocked by clk)
+  Endpoint: z[21] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[21] (in)                               0.00       0.00 f
+  U19/ZN (AND2_X2)                         0.03       0.03 f
+  z[21] (out)                              0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[22] (input port clocked by clk)
+  Endpoint: z[22] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[22] (in)                               0.00       0.00 f
+  U18/ZN (AND2_X2)                         0.03       0.03 f
+  z[22] (out)                              0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[23] (input port clocked by clk)
+  Endpoint: z[23] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[23] (in)                               0.00       0.00 f
+  U17/ZN (AND2_X2)                         0.03       0.03 f
+  z[23] (out)                              0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[24] (input port clocked by clk)
+  Endpoint: z[24] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[24] (in)                               0.00       0.00 f
+  U16/ZN (AND2_X2)                         0.03       0.03 f
+  z[24] (out)                              0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[25] (input port clocked by clk)
+  Endpoint: z[25] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[25] (in)                               0.00       0.00 f
+  U15/ZN (AND2_X2)                         0.03       0.03 f
+  z[25] (out)                              0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[26] (input port clocked by clk)
+  Endpoint: z[26] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[26] (in)                               0.00       0.00 f
+  U14/ZN (AND2_X2)                         0.03       0.03 f
+  z[26] (out)                              0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[27] (input port clocked by clk)
+  Endpoint: z[27] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[27] (in)                               0.00       0.00 f
+  U13/ZN (AND2_X2)                         0.03       0.03 f
+  z[27] (out)                              0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[28] (input port clocked by clk)
+  Endpoint: z[28] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[28] (in)                               0.00       0.00 f
+  U12/ZN (AND2_X2)                         0.03       0.03 f
+  z[28] (out)                              0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[29] (input port clocked by clk)
+  Endpoint: z[29] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[29] (in)                               0.00       0.00 f
+  U11/ZN (AND2_X2)                         0.03       0.03 f
+  z[29] (out)                              0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[30] (input port clocked by clk)
+  Endpoint: z[30] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[30] (in)                               0.00       0.00 f
+  U9/ZN (AND2_X2)                          0.03       0.03 f
+  z[30] (out)                              0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: b[31] (input port clocked by clk)
+  Endpoint: z[31] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  b[31] (in)                               0.00       0.00 f
+  U8/ZN (AND2_X2)                          0.03       0.03 f
+  z[31] (out)                              0.00       0.03 f
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.96
+
+
+  Startpoint: a[0] (input port clocked by clk)
+  Endpoint: z[0] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[0] (in)                                0.00       0.00 r
+  U32/ZN (AND2_X2)                         0.03       0.03 r
+  z[0] (out)                               0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[1] (input port clocked by clk)
+  Endpoint: z[1] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[1] (in)                                0.00       0.00 r
+  U21/ZN (AND2_X2)                         0.03       0.03 r
+  z[1] (out)                               0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[2] (input port clocked by clk)
+  Endpoint: z[2] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[2] (in)                                0.00       0.00 r
+  U10/ZN (AND2_X2)                         0.03       0.03 r
+  z[2] (out)                               0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[3] (input port clocked by clk)
+  Endpoint: z[3] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[3] (in)                                0.00       0.00 r
+  U7/ZN (AND2_X2)                          0.03       0.03 r
+  z[3] (out)                               0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[4] (input port clocked by clk)
+  Endpoint: z[4] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[4] (in)                                0.00       0.00 r
+  U6/ZN (AND2_X2)                          0.03       0.03 r
+  z[4] (out)                               0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[5] (input port clocked by clk)
+  Endpoint: z[5] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[5] (in)                                0.00       0.00 r
+  U5/ZN (AND2_X2)                          0.03       0.03 r
+  z[5] (out)                               0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[6] (input port clocked by clk)
+  Endpoint: z[6] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[6] (in)                                0.00       0.00 r
+  U4/ZN (AND2_X2)                          0.03       0.03 r
+  z[6] (out)                               0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[7] (input port clocked by clk)
+  Endpoint: z[7] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[7] (in)                                0.00       0.00 r
+  U3/ZN (AND2_X2)                          0.03       0.03 r
+  z[7] (out)                               0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[8] (input port clocked by clk)
+  Endpoint: z[8] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[8] (in)                                0.00       0.00 r
+  U2/ZN (AND2_X2)                          0.03       0.03 r
+  z[8] (out)                               0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[9] (input port clocked by clk)
+  Endpoint: z[9] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[9] (in)                                0.00       0.00 r
+  U1/ZN (AND2_X2)                          0.03       0.03 r
+  z[9] (out)                               0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[10] (input port clocked by clk)
+  Endpoint: z[10] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[10] (in)                               0.00       0.00 r
+  U31/ZN (AND2_X2)                         0.03       0.03 r
+  z[10] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[11] (input port clocked by clk)
+  Endpoint: z[11] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[11] (in)                               0.00       0.00 r
+  U30/ZN (AND2_X2)                         0.03       0.03 r
+  z[11] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[12] (input port clocked by clk)
+  Endpoint: z[12] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[12] (in)                               0.00       0.00 r
+  U29/ZN (AND2_X2)                         0.03       0.03 r
+  z[12] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[13] (input port clocked by clk)
+  Endpoint: z[13] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[13] (in)                               0.00       0.00 r
+  U28/ZN (AND2_X2)                         0.03       0.03 r
+  z[13] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[14] (input port clocked by clk)
+  Endpoint: z[14] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[14] (in)                               0.00       0.00 r
+  U27/ZN (AND2_X2)                         0.03       0.03 r
+  z[14] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[15] (input port clocked by clk)
+  Endpoint: z[15] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[15] (in)                               0.00       0.00 r
+  U26/ZN (AND2_X2)                         0.03       0.03 r
+  z[15] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[16] (input port clocked by clk)
+  Endpoint: z[16] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[16] (in)                               0.00       0.00 r
+  U25/ZN (AND2_X2)                         0.03       0.03 r
+  z[16] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[17] (input port clocked by clk)
+  Endpoint: z[17] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[17] (in)                               0.00       0.00 r
+  U24/ZN (AND2_X2)                         0.03       0.03 r
+  z[17] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[18] (input port clocked by clk)
+  Endpoint: z[18] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[18] (in)                               0.00       0.00 r
+  U23/ZN (AND2_X2)                         0.03       0.03 r
+  z[18] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[19] (input port clocked by clk)
+  Endpoint: z[19] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[19] (in)                               0.00       0.00 r
+  U22/ZN (AND2_X2)                         0.03       0.03 r
+  z[19] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[20] (input port clocked by clk)
+  Endpoint: z[20] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[20] (in)                               0.00       0.00 r
+  U20/ZN (AND2_X2)                         0.03       0.03 r
+  z[20] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[21] (input port clocked by clk)
+  Endpoint: z[21] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[21] (in)                               0.00       0.00 r
+  U19/ZN (AND2_X2)                         0.03       0.03 r
+  z[21] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[22] (input port clocked by clk)
+  Endpoint: z[22] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[22] (in)                               0.00       0.00 r
+  U18/ZN (AND2_X2)                         0.03       0.03 r
+  z[22] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[23] (input port clocked by clk)
+  Endpoint: z[23] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[23] (in)                               0.00       0.00 r
+  U17/ZN (AND2_X2)                         0.03       0.03 r
+  z[23] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[24] (input port clocked by clk)
+  Endpoint: z[24] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[24] (in)                               0.00       0.00 r
+  U16/ZN (AND2_X2)                         0.03       0.03 r
+  z[24] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[25] (input port clocked by clk)
+  Endpoint: z[25] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[25] (in)                               0.00       0.00 r
+  U15/ZN (AND2_X2)                         0.03       0.03 r
+  z[25] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[26] (input port clocked by clk)
+  Endpoint: z[26] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[26] (in)                               0.00       0.00 r
+  U14/ZN (AND2_X2)                         0.03       0.03 r
+  z[26] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[27] (input port clocked by clk)
+  Endpoint: z[27] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[27] (in)                               0.00       0.00 r
+  U13/ZN (AND2_X2)                         0.03       0.03 r
+  z[27] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[28] (input port clocked by clk)
+  Endpoint: z[28] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[28] (in)                               0.00       0.00 r
+  U12/ZN (AND2_X2)                         0.03       0.03 r
+  z[28] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[29] (input port clocked by clk)
+  Endpoint: z[29] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[29] (in)                               0.00       0.00 r
+  U11/ZN (AND2_X2)                         0.03       0.03 r
+  z[29] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[30] (input port clocked by clk)
+  Endpoint: z[30] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[30] (in)                               0.00       0.00 r
+  U9/ZN (AND2_X2)                          0.03       0.03 r
+  z[30] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: a[31] (input port clocked by clk)
+  Endpoint: z[31] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  a[31] (in)                               0.00       0.00 r
+  U8/ZN (AND2_X2)                          0.03       0.03 r
+  z[31] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[0] (input port clocked by clk)
+  Endpoint: z[0] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[0] (in)                                0.00       0.00 r
+  U32/ZN (AND2_X2)                         0.03       0.03 r
+  z[0] (out)                               0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[1] (input port clocked by clk)
+  Endpoint: z[1] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[1] (in)                                0.00       0.00 r
+  U21/ZN (AND2_X2)                         0.03       0.03 r
+  z[1] (out)                               0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[2] (input port clocked by clk)
+  Endpoint: z[2] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[2] (in)                                0.00       0.00 r
+  U10/ZN (AND2_X2)                         0.03       0.03 r
+  z[2] (out)                               0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[3] (input port clocked by clk)
+  Endpoint: z[3] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[3] (in)                                0.00       0.00 r
+  U7/ZN (AND2_X2)                          0.03       0.03 r
+  z[3] (out)                               0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[4] (input port clocked by clk)
+  Endpoint: z[4] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[4] (in)                                0.00       0.00 r
+  U6/ZN (AND2_X2)                          0.03       0.03 r
+  z[4] (out)                               0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[5] (input port clocked by clk)
+  Endpoint: z[5] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[5] (in)                                0.00       0.00 r
+  U5/ZN (AND2_X2)                          0.03       0.03 r
+  z[5] (out)                               0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[6] (input port clocked by clk)
+  Endpoint: z[6] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[6] (in)                                0.00       0.00 r
+  U4/ZN (AND2_X2)                          0.03       0.03 r
+  z[6] (out)                               0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[7] (input port clocked by clk)
+  Endpoint: z[7] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[7] (in)                                0.00       0.00 r
+  U3/ZN (AND2_X2)                          0.03       0.03 r
+  z[7] (out)                               0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[8] (input port clocked by clk)
+  Endpoint: z[8] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[8] (in)                                0.00       0.00 r
+  U2/ZN (AND2_X2)                          0.03       0.03 r
+  z[8] (out)                               0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[9] (input port clocked by clk)
+  Endpoint: z[9] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[9] (in)                                0.00       0.00 r
+  U1/ZN (AND2_X2)                          0.03       0.03 r
+  z[9] (out)                               0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[10] (input port clocked by clk)
+  Endpoint: z[10] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[10] (in)                               0.00       0.00 r
+  U31/ZN (AND2_X2)                         0.03       0.03 r
+  z[10] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[11] (input port clocked by clk)
+  Endpoint: z[11] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[11] (in)                               0.00       0.00 r
+  U30/ZN (AND2_X2)                         0.03       0.03 r
+  z[11] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[12] (input port clocked by clk)
+  Endpoint: z[12] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[12] (in)                               0.00       0.00 r
+  U29/ZN (AND2_X2)                         0.03       0.03 r
+  z[12] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[13] (input port clocked by clk)
+  Endpoint: z[13] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[13] (in)                               0.00       0.00 r
+  U28/ZN (AND2_X2)                         0.03       0.03 r
+  z[13] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[14] (input port clocked by clk)
+  Endpoint: z[14] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[14] (in)                               0.00       0.00 r
+  U27/ZN (AND2_X2)                         0.03       0.03 r
+  z[14] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[15] (input port clocked by clk)
+  Endpoint: z[15] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[15] (in)                               0.00       0.00 r
+  U26/ZN (AND2_X2)                         0.03       0.03 r
+  z[15] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[16] (input port clocked by clk)
+  Endpoint: z[16] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[16] (in)                               0.00       0.00 r
+  U25/ZN (AND2_X2)                         0.03       0.03 r
+  z[16] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[17] (input port clocked by clk)
+  Endpoint: z[17] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[17] (in)                               0.00       0.00 r
+  U24/ZN (AND2_X2)                         0.03       0.03 r
+  z[17] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[18] (input port clocked by clk)
+  Endpoint: z[18] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[18] (in)                               0.00       0.00 r
+  U23/ZN (AND2_X2)                         0.03       0.03 r
+  z[18] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[19] (input port clocked by clk)
+  Endpoint: z[19] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[19] (in)                               0.00       0.00 r
+  U22/ZN (AND2_X2)                         0.03       0.03 r
+  z[19] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[20] (input port clocked by clk)
+  Endpoint: z[20] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[20] (in)                               0.00       0.00 r
+  U20/ZN (AND2_X2)                         0.03       0.03 r
+  z[20] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[21] (input port clocked by clk)
+  Endpoint: z[21] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[21] (in)                               0.00       0.00 r
+  U19/ZN (AND2_X2)                         0.03       0.03 r
+  z[21] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[22] (input port clocked by clk)
+  Endpoint: z[22] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[22] (in)                               0.00       0.00 r
+  U18/ZN (AND2_X2)                         0.03       0.03 r
+  z[22] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[23] (input port clocked by clk)
+  Endpoint: z[23] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[23] (in)                               0.00       0.00 r
+  U17/ZN (AND2_X2)                         0.03       0.03 r
+  z[23] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[24] (input port clocked by clk)
+  Endpoint: z[24] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[24] (in)                               0.00       0.00 r
+  U16/ZN (AND2_X2)                         0.03       0.03 r
+  z[24] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[25] (input port clocked by clk)
+  Endpoint: z[25] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[25] (in)                               0.00       0.00 r
+  U15/ZN (AND2_X2)                         0.03       0.03 r
+  z[25] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[26] (input port clocked by clk)
+  Endpoint: z[26] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[26] (in)                               0.00       0.00 r
+  U14/ZN (AND2_X2)                         0.03       0.03 r
+  z[26] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[27] (input port clocked by clk)
+  Endpoint: z[27] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[27] (in)                               0.00       0.00 r
+  U13/ZN (AND2_X2)                         0.03       0.03 r
+  z[27] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[28] (input port clocked by clk)
+  Endpoint: z[28] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[28] (in)                               0.00       0.00 r
+  U12/ZN (AND2_X2)                         0.03       0.03 r
+  z[28] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[29] (input port clocked by clk)
+  Endpoint: z[29] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[29] (in)                               0.00       0.00 r
+  U11/ZN (AND2_X2)                         0.03       0.03 r
+  z[29] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[30] (input port clocked by clk)
+  Endpoint: z[30] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[30] (in)                               0.00       0.00 r
+  U9/ZN (AND2_X2)                          0.03       0.03 r
+  z[30] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+  Startpoint: b[31] (input port clocked by clk)
+  Endpoint: z[31] (output port clocked by clk)
+  Path Group: in2out
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  and_32             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 r
+  b[31] (in)                               0.00       0.00 r
+  U8/ZN (AND2_X2)                          0.03       0.03 r
+  z[31] (out)                              0.00       0.03 r
+  data arrival time                                   0.03
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                    0.00       1.00
+  data required time                                  1.00
+  -----------------------------------------------------------
+  data required time                                  1.00
+  data arrival time                                  -0.03
+  -----------------------------------------------------------
+  slack (MET)                                         0.97
+
+
+1

@@ -5,8 +5,8 @@
 # Variables
 
 # Project-specific stuff
-VERILOG_FILES = $(wildcard ../verilog/pipeline/id.v ../verilog/gates/*.v)
-TOPLEVEL = id
+VERILOG_FILES = ../verilog/alu/adder.v
+TOPLEVEL = adder
 # Freq in MHz
 CLKFREQ = 1000
 

@@ -46,11 +46,11 @@ Initializing...
 # 
 # ========== Copyright Header End ============================================
 sh date
-Wed Mar 16 23:12:01 CDT 2016
+Wed Mar 16 23:41:38 CDT 2016
 sh hostname
 ras.ece.northwestern.edu
 sh uptime
- 23:12:01 up 2 days, 10:51,  2 users,  load average: 0.32, 0.14, 0.11
+ 23:41:38 up 2 days, 11:20,  3 users,  load average: 0.35, 0.22, 0.13
 remove_design -all
 1
 if {[file exists template]} {
@@ -196,11 +196,11 @@ set num_of_path 1000
 set compile_flatten_all 0
 0
 0
-set rtl_files { /home/byy911/Documents/eecs362/verilog/pipeline/id.v /home/byy911/Documents/eecs362/verilog/gates/dff.v /home/byy911/Documents/eecs362/verilog/gates/gates.v }
- /home/byy911/Documents/eecs362/verilog/pipeline/id.v /home/byy911/Documents/eecs362/verilog/gates/dff.v /home/byy911/Documents/eecs362/verilog/gates/gates.v 
+set rtl_files { /home/byy911/Documents/eecs362/verilog/alu/adder.v /home/byy911/Documents/eecs362/verilog/gates/gates.v }
+ /home/byy911/Documents/eecs362/verilog/alu/adder.v /home/byy911/Documents/eecs362/verilog/gates/gates.v 
 set mix_files {}
-set top_module id
-id
+set top_module adder
+adder
 set include_paths { design/sys/iop/include }
  design/sys/iop/include 
 set black_box_libs {}
@@ -269,7 +269,7 @@ foreach include_path $include_paths {
    set search_path [concat $search_path $dv_root/$include_path]
 }
 sh date
-Wed Mar 16 23:12:01 CDT 2016
+Wed Mar 16 23:41:38 CDT 2016
 set link_library [concat $link_library                          $mem_libs                          $black_box_designs 		      NangateOpenCellLibrary.db]
 * your_library.db NangateOpenCellLibrary.db
 #/homes/gho705/fault/synthesis-stuff/lib/FreePDK45/osu_soc/lib/files/gscl45nm.db]
@@ -307,38 +307,18 @@ Loading db file '/vol/eecs362/synopsys/dc/libraries/syn/gtech.db'
 Loading db file '/vol/eecs362/synopsys/dc/libraries/syn/standard.sldb'
   Loading link library 'NangateOpenCellLibrary'
   Loading link library 'gtech'
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/pipeline/id.v'
+Loading verilog file '/home/byy911/Documents/eecs362/verilog/alu/adder.v'
 Detecting input file type automatically (-rtl or -netlist).
 Running DC verilog reader
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/pipeline/id.v
+Compiling source file /home/byy911/Documents/eecs362/verilog/alu/adder.v
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
 Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/pipeline/id.db:id'
-Loaded 1 design.
-Current design is 'id'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/gates/dff.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/gates/dff.v
-Warning:  /home/byy911/Documents/eecs362/verilog/gates/dff.v:15: 'aload' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
-
-Inferred memory devices in process
-	in routine dffa line 12 in file
-		'/home/byy911/Documents/eecs362/verilog/gates/dff.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|        q_reg        | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/gates/dffa.db:dffa'
-Loaded 1 design.
-Current design is 'dffa'.
+Current design is now '/home/byy911/Documents/eecs362/verilog/alu/adder.db:adder'
+Loaded 3 designs.
+Current design is 'adder'.
 Loading verilog file '/home/byy911/Documents/eecs362/verilog/gates/gates.v'
 Detecting input file type automatically (-rtl or -netlist).
 Running DC verilog reader
@@ -369,37 +349,31 @@ foreach_in_collection design_object [get_designs] {
    lappend design_list $design_name
 }
 sh date
-Wed Mar 16 23:12:02 CDT 2016
+Wed Mar 16 23:41:38 CDT 2016
 current_design $top_module
-Current design is 'id'.
-{id}
+Current design is 'adder'.
+{adder}
 echo $top_module
-id
+adder
 # if {[get_designs -hier $dont_touch_modules] != {}} {
 #    set_dont_touch $dont_touch_modules
 # }
 set dc_shell_status [ link ]
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 
-  Linking design 'id'
+  Linking design 'adder'
   Using the following designs and libraries:
   --------------------------------------------------------------------------
-  * (20 designs)              /home/byy911/Documents/eecs362/verilog/pipeline/id.db, etc
+  * (21 designs)              /home/byy911/Documents/eecs362/verilog/alu/adder.db, etc
   NangateOpenCellLibrary (library) /home/byy911/Documents/eecs362/synth/NangateOpenCellLibrary.db
 
-Information: Building the design 'control'. (HDL-193)
-Warning: Cannot find the design 'control' in the library 'WORK'. (LBR-1)
-Information: Building the design 'mux2to1' instantiated from design 'id' with
-	the parameters "5". (HDL-193)
-Warning: Cannot find the design 'mux2to1' in the library 'WORK'. (LBR-1)
-Information: Building the design 'sign_extender'. (HDL-193)
-Warning: Cannot find the design 'sign_extender' in the library 'WORK'. (LBR-1)
-Information: Building the design 'mux2to1' instantiated from design 'id' with
+Information: Building the design 'mux16to1' instantiated from design 'adder' with
 	the parameters "32". (HDL-193)
-Warning: Cannot find the design 'mux2to1' in the library 'WORK'. (LBR-1)
-Warning: Unable to resolve reference 'control' in 'id'. (LINK-5)
-Warning: Unable to resolve reference 'mux2to1' in 'id'. (LINK-5)
-Warning: Unable to resolve reference 'sign_extender' in 'id'. (LINK-5)
+Warning: Cannot find the design 'mux16to1' in the library 'WORK'. (LBR-1)
+Information: Building the design 'mux16to1' instantiated from design 'adder' with
+	the parameters "1". (HDL-193)
+Warning: Cannot find the design 'mux16to1' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'mux16to1' in 'adder'. (LINK-5)
 0
 if {$dc_shell_status == 0} {
    echo "****************************************************"

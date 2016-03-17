@@ -20,10 +20,10 @@
 # ========== Copyright Header End ============================================
 source -echo -verbose project_sparc_cfg.tcl
 
-set rtl_files { /home/byy911/Documents/eecs362/verilog/pipeline/id.v /home/byy911/Documents/eecs362/verilog/gates/dff.v /home/byy911/Documents/eecs362/verilog/gates/gates.v }
+set rtl_files { /home/byy911/Documents/eecs362/verilog/alu/adder.v /home/byy911/Documents/eecs362/verilog/gates/gates.v }
 
 set mix_files {}
-set top_module id
+set top_module adder
 set include_paths { design/sys/iop/include }
 
 set black_box_libs {}

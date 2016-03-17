@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version D-2010.03-SP5 for amd64 -- Oct 18, 2010
-#@ # Date:   %sWed Mar 16 23:12:00 2016
+#@ # Date:   %sWed Mar 16 23:41:37 2016
 #@ # Run by: byy911@ras.ece.northwestern.edu
 #@ 
 
@@ -4848,10 +4848,10 @@ source -echo -verbose /home/byy911/Documents/eecs362/synth/run.tcl
 #@ # -- End source project_sparc_cfg.tcl
 
 #@ 
-#@ set rtl_files { /home/byy911/Documents/eecs362/verilog/pipeline/id.v /home/byy911/Documents/eecs362/verilog/gates/dff.v /home/byy911/Documents/eecs362/verilog/gates/gates.v }
+#@ set rtl_files { /home/byy911/Documents/eecs362/verilog/alu/adder.v /home/byy911/Documents/eecs362/verilog/gates/gates.v }
 #@ 
 #@ set mix_files {}
-#@ set top_module id
+#@ set top_module adder
 #@ set include_paths { design/sys/iop/include }
 #@ 
 #@ set black_box_libs {}

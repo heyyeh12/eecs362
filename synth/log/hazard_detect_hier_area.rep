@@ -1,0 +1,80 @@
+Information: Updating graph... (UID-83)
+ 
+****************************************
+Report : area
+Design : hazard_detect
+Version: D-2010.03-SP5
+Date   : Wed Mar 16 23:23:20 2016
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/byy911/Documents/eecs362/synth/NangateOpenCellLibrary.db)
+
+Number of ports:              143
+Number of nets:               144
+Number of cells:               84
+Number of references:          15
+
+Combinational area:         95.493999
+Noncombinational area:       0.000000
+Net Interconnect area:      32.384690  
+
+Total cell area:            95.493999
+Total area:                127.878689
+1
+ 
+****************************************
+Report : reference
+Design : hazard_detect
+Version: D-2010.03-SP5
+Date   : Wed Mar 16 23:23:20 2016
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND3_X1            NangateOpenCellLibrary
+                                  1.330000       1      1.330000  
+AOI21_X1           NangateOpenCellLibrary
+                                  1.064000       1      1.064000  
+BUF_X4             NangateOpenCellLibrary
+                                  0.798000       3      2.394000  
+INV_X1             NangateOpenCellLibrary
+                                  0.532000      10      5.320000  
+INV_X4             NangateOpenCellLibrary
+                                  0.532000       3      1.596000  
+NAND2_X1           NangateOpenCellLibrary
+                                  0.798000       6      4.788000  
+NAND4_X1           NangateOpenCellLibrary
+                                  1.330000       8     10.640000  
+NOR2_X1            NangateOpenCellLibrary
+                                  0.798000       7      5.586000  
+NOR3_X1            NangateOpenCellLibrary
+                                  1.064000      11     11.704000  
+NOR4_X1            NangateOpenCellLibrary
+                                  1.330000       5      6.650000  
+OAI21_X1           NangateOpenCellLibrary
+                                  1.064000       1      1.064000  
+OR2_X1             NangateOpenCellLibrary
+                                  1.064000       2      2.128000  
+OR3_X1             NangateOpenCellLibrary
+                                  1.330000       1      1.330000  
+XNOR2_X1           NangateOpenCellLibrary
+                                  1.596000      15     23.939999  
+XOR2_X1            NangateOpenCellLibrary
+                                  1.596000      10     15.960000  
+-----------------------------------------------------------------------------
+Total 15 references                                    95.493999
+1
