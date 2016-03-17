@@ -1,6 +1,8 @@
+`ifdef _dff_v_
+`define _dff_v_
 // D - Flip Flop A
 
-module dffa (d, clk, rst, enable, q, aload, arst);
+module dffa (d, clk, rst, enable, q, aload, arst); // synopsys template
 
 // Ports : d, q, clk
     parameter N_BITS = 32;
@@ -16,4 +18,5 @@ module dffa (d, clk, rst, enable, q, aload, arst);
     else if (enable == 1) q <= d;
    end
  
-endmodule
+endmodule // dffa
+`endif

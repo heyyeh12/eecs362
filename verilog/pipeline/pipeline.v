@@ -41,8 +41,8 @@ module pipeline(
    
 ////// IF Module
     // New outputs of module
-    wire [31:0] incPC_0;
-    wire pc_enable, not_trap_3, nextPC_3, takeLeap;
+    wire [31:0] incPC_0, nextPC_3;
+    wire pc_enable, not_trap_3, takeLeap;
     
     ifetch ifetch(
     // Inputs

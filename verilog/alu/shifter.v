@@ -28,7 +28,7 @@ module shifter (a, shamt, ctrl, res, cout);
     genvar i;
 
 // select - 0: logical, 1: arithemtic
-    mux2to1 #(1) MUX_LA(.src0(0), .src1(a[31]), .sel(ctrl[0]), .z(msb));
+    mux2to1 #(1) MUX_LA(.src0(1'b0), .src1(a[31]), .sel(ctrl[0]), .z(msb));
 
 // data reversal - 0: right shift, 1: left shift
     generate

@@ -1,0 +1,623 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 100
+Design : dffa_N_BITS32
+Version: D-2010.03-SP5
+Date   : Thu Mar 17 02:13:29 2016
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: q_reg[0] (rising edge-triggered flip-flop)
+  Endpoint: q[0] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[0]/CK (DFFRS_X1)                   0.00       0.00 r
+  q_reg[0]/Q (DFFRS_X1)                    0.15       0.15 f
+  q[0] (out)                               0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[1] (rising edge-triggered flip-flop)
+  Endpoint: q[1] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[1]/CK (DFFRS_X1)                   0.00       0.00 r
+  q_reg[1]/Q (DFFRS_X1)                    0.15       0.15 f
+  q[1] (out)                               0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[2] (rising edge-triggered flip-flop)
+  Endpoint: q[2] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[2]/CK (DFFRS_X1)                   0.00       0.00 r
+  q_reg[2]/Q (DFFRS_X1)                    0.15       0.15 f
+  q[2] (out)                               0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[3] (rising edge-triggered flip-flop)
+  Endpoint: q[3] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[3]/CK (DFFRS_X1)                   0.00       0.00 r
+  q_reg[3]/Q (DFFRS_X1)                    0.15       0.15 f
+  q[3] (out)                               0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[4] (rising edge-triggered flip-flop)
+  Endpoint: q[4] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[4]/CK (DFFRS_X1)                   0.00       0.00 r
+  q_reg[4]/Q (DFFRS_X1)                    0.15       0.15 f
+  q[4] (out)                               0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[5] (rising edge-triggered flip-flop)
+  Endpoint: q[5] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[5]/CK (DFFRS_X1)                   0.00       0.00 r
+  q_reg[5]/Q (DFFRS_X1)                    0.15       0.15 f
+  q[5] (out)                               0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[6] (rising edge-triggered flip-flop)
+  Endpoint: q[6] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[6]/CK (DFFRS_X1)                   0.00       0.00 r
+  q_reg[6]/Q (DFFRS_X1)                    0.15       0.15 f
+  q[6] (out)                               0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[7] (rising edge-triggered flip-flop)
+  Endpoint: q[7] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[7]/CK (DFFRS_X1)                   0.00       0.00 r
+  q_reg[7]/Q (DFFRS_X1)                    0.15       0.15 f
+  q[7] (out)                               0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[8] (rising edge-triggered flip-flop)
+  Endpoint: q[8] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[8]/CK (DFFRS_X1)                   0.00       0.00 r
+  q_reg[8]/Q (DFFRS_X1)                    0.15       0.15 f
+  q[8] (out)                               0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[9] (rising edge-triggered flip-flop)
+  Endpoint: q[9] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[9]/CK (DFFRS_X1)                   0.00       0.00 r
+  q_reg[9]/Q (DFFRS_X1)                    0.15       0.15 f
+  q[9] (out)                               0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[10] (rising edge-triggered flip-flop)
+  Endpoint: q[10] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[10]/CK (DFFRS_X1)                  0.00       0.00 r
+  q_reg[10]/Q (DFFRS_X1)                   0.15       0.15 f
+  q[10] (out)                              0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[11] (rising edge-triggered flip-flop)
+  Endpoint: q[11] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[11]/CK (DFFRS_X1)                  0.00       0.00 r
+  q_reg[11]/Q (DFFRS_X1)                   0.15       0.15 f
+  q[11] (out)                              0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[12] (rising edge-triggered flip-flop)
+  Endpoint: q[12] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[12]/CK (DFFRS_X1)                  0.00       0.00 r
+  q_reg[12]/Q (DFFRS_X1)                   0.15       0.15 f
+  q[12] (out)                              0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[13] (rising edge-triggered flip-flop)
+  Endpoint: q[13] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[13]/CK (DFFRS_X1)                  0.00       0.00 r
+  q_reg[13]/Q (DFFRS_X1)                   0.15       0.15 f
+  q[13] (out)                              0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[14] (rising edge-triggered flip-flop)
+  Endpoint: q[14] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[14]/CK (DFFRS_X1)                  0.00       0.00 r
+  q_reg[14]/Q (DFFRS_X1)                   0.15       0.15 f
+  q[14] (out)                              0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[15] (rising edge-triggered flip-flop)
+  Endpoint: q[15] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[15]/CK (DFFRS_X1)                  0.00       0.00 r
+  q_reg[15]/Q (DFFRS_X1)                   0.15       0.15 f
+  q[15] (out)                              0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[16] (rising edge-triggered flip-flop)
+  Endpoint: q[16] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[16]/CK (DFFRS_X1)                  0.00       0.00 r
+  q_reg[16]/Q (DFFRS_X1)                   0.15       0.15 f
+  q[16] (out)                              0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[17] (rising edge-triggered flip-flop)
+  Endpoint: q[17] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[17]/CK (DFFRS_X1)                  0.00       0.00 r
+  q_reg[17]/Q (DFFRS_X1)                   0.15       0.15 f
+  q[17] (out)                              0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[18] (rising edge-triggered flip-flop)
+  Endpoint: q[18] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[18]/CK (DFFRS_X1)                  0.00       0.00 r
+  q_reg[18]/Q (DFFRS_X1)                   0.15       0.15 f
+  q[18] (out)                              0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[19] (rising edge-triggered flip-flop)
+  Endpoint: q[19] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[19]/CK (DFFRS_X1)                  0.00       0.00 r
+  q_reg[19]/Q (DFFRS_X1)                   0.15       0.15 f
+  q[19] (out)                              0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[20] (rising edge-triggered flip-flop)
+  Endpoint: q[20] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[20]/CK (DFFRS_X1)                  0.00       0.00 r
+  q_reg[20]/Q (DFFRS_X1)                   0.15       0.15 f
+  q[20] (out)                              0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[21] (rising edge-triggered flip-flop)
+  Endpoint: q[21] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[21]/CK (DFFRS_X1)                  0.00       0.00 r
+  q_reg[21]/Q (DFFRS_X1)                   0.15       0.15 f
+  q[21] (out)                              0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[22] (rising edge-triggered flip-flop)
+  Endpoint: q[22] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[22]/CK (DFFRS_X1)                  0.00       0.00 r
+  q_reg[22]/Q (DFFRS_X1)                   0.15       0.15 f
+  q[22] (out)                              0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[23] (rising edge-triggered flip-flop)
+  Endpoint: q[23] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[23]/CK (DFFRS_X1)                  0.00       0.00 r
+  q_reg[23]/Q (DFFRS_X1)                   0.15       0.15 f
+  q[23] (out)                              0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[24] (rising edge-triggered flip-flop)
+  Endpoint: q[24] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[24]/CK (DFFRS_X1)                  0.00       0.00 r
+  q_reg[24]/Q (DFFRS_X1)                   0.15       0.15 f
+  q[24] (out)                              0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[25] (rising edge-triggered flip-flop)
+  Endpoint: q[25] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[25]/CK (DFFRS_X1)                  0.00       0.00 r
+  q_reg[25]/Q (DFFRS_X1)                   0.15       0.15 f
+  q[25] (out)                              0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[26] (rising edge-triggered flip-flop)
+  Endpoint: q[26] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[26]/CK (DFFRS_X1)                  0.00       0.00 r
+  q_reg[26]/Q (DFFRS_X1)                   0.15       0.15 f
+  q[26] (out)                              0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[27] (rising edge-triggered flip-flop)
+  Endpoint: q[27] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[27]/CK (DFFRS_X1)                  0.00       0.00 r
+  q_reg[27]/Q (DFFRS_X1)                   0.15       0.15 f
+  q[27] (out)                              0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[28] (rising edge-triggered flip-flop)
+  Endpoint: q[28] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[28]/CK (DFFRS_X1)                  0.00       0.00 r
+  q_reg[28]/Q (DFFRS_X1)                   0.15       0.15 f
+  q[28] (out)                              0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[29] (rising edge-triggered flip-flop)
+  Endpoint: q[29] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[29]/CK (DFFRS_X1)                  0.00       0.00 r
+  q_reg[29]/Q (DFFRS_X1)                   0.15       0.15 f
+  q[29] (out)                              0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[30] (rising edge-triggered flip-flop)
+  Endpoint: q[30] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[30]/CK (DFFRS_X1)                  0.00       0.00 r
+  q_reg[30]/Q (DFFRS_X1)                   0.15       0.15 f
+  q[30] (out)                              0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: q_reg[31] (rising edge-triggered flip-flop)
+  Endpoint: q[31] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dffa_N_BITS32      5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg[31]/CK (DFFRS_X1)                  0.00       0.00 r
+  q_reg[31]/Q (DFFRS_X1)                   0.15       0.15 f
+  q[31] (out)                              0.00       0.15 f
+  data arrival time                                   0.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

@@ -31,22 +31,22 @@ module adder(a, b, ctrl, res, cout);
                            .sel(ctrl[3:0]), 
                            .z(b_int));
                            
-        mux16to1 #(1) mux_map2(.src0(0), 
-                           .src1(0),
-                           .src2(0),
-                           .src3(0),
-                           .src4(0),
-                           .src5(1),
-                           .src6(0),
-                           .src7(0),
-                           .src8(0),
-                           .src9(0),
-                           .src10(0),
-                           .src11(0),
-                           .src12(1),
-                           .src13(1),
-                           .src14(1),
-                           .src15(1),
+        mux16to1 #(1) mux_map2(.src0(1'b0), 
+                           .src1(1'b0),
+                           .src2(1'b0),
+                           .src3(1'b0),
+                           .src4(1'b0),
+                           .src5(1'b1),
+                           .src6(1'b0),
+                           .src7(1'b0),
+                           .src8(1'b0),
+                           .src9(1'b0),
+                           .src10(1'b0),
+                           .src11(1'b0),
+                           .src12(1'b1),
+                           .src13(1'b1),
+                           .src14(1'b1),
+                           .src15(1'b1),
                            .sel(ctrl[3:0]), 
                            .z(carry_int));
                            
@@ -64,7 +64,7 @@ module fa(a, b, cin, sum, cout);
 endmodule // fa
 
 // Simple n-bit ripple-carry adder
-module fa_nbit(A, B, cin, sum, cout);
+module fa_nbit(A, B, cin, sum, cout); // synopsys template
     parameter WIDTH=32;
     input [0:(WIDTH-1)] A, B;
     input cin;
@@ -92,4 +92,4 @@ module fa_nbit(A, B, cin, sum, cout);
     // cin & cout wiring
     assign cout = carry[0];
     assign carry[WIDTH] = cin;
-endmodule
+endmodule // fa_nbit

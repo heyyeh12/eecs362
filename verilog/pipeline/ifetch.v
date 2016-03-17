@@ -15,11 +15,11 @@ module ifetch(
     
     and_gate and_gate (.a(enable), .b(not_trap), .z(enable_PC)); // put back not_trap
     // PC Register
-    dffa #(32) dffa (.d(PC_d), .clk(clk), .rst(1), .enable(enable_PC), .q(PC_q), .aload(initPC), .arst(rst));
+    dffa #(32) dffa (.d(PC_d), .clk(clk), .rst(1'b1), .enable(enable_PC), .q(PC_q), .aload(initPC), .arst(rst));
    
     
      // assign curPC
-    mux2to1 mux2to1 (.src0(PC_q), .src1(nextPC), .sel(takeLeap), .z(curPC));
+    mux2to1 #(32) mux2to1 (.src0(PC_q), .src1(nextPC), .sel(takeLeap), .z(curPC));
     
      // PC + 4
     adder add4 (.a(32'b0100), .b(curPC), .ctrl(4'b0000), .res(PC_d));
