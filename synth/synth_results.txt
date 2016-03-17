@@ -1,0 +1,463 @@
+
+                        DC Professional (TM)
+                           DC Expert (TM)
+                            DC Ultra (TM)
+                       FloorPlan Manager (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                        Library Compiler (TM)
+                      DesignWare Developer (TM)
+                          DFT Compiler (TM)
+                            BSD Compiler
+                         Power Compiler (TM)
+
+           Version D-2010.03-SP5 for amd64 -- Oct 18, 2010
+              Copyright (c) 1988-2010 by Synopsys, Inc.
+                         ALL RIGHTS RESERVED
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+The above trademark notice does not imply that you are licensed to use 
+all of the listed products. You are licensed to use only those products 
+for which you have lawfully obtained a valid license key.
+
+Initializing...
+# ========== Copyright Header Begin ==========================================
+# 
+# OpenSPARC T1 Processor File: run.scr
+# Copyright (c) 2006 Sun Microsystems, Inc.  All Rights Reserved.
+# DO NOT ALTER OR REMOVE COPYRIGHT NOTICES.
+# 
+# The above named program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public
+# License version 2 as published by the Free Software Foundation.
+# 
+# The above named program is distributed in the hope that it will be 
+# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public
+# License along with this work; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+# 
+# ========== Copyright Header End ============================================
+sh date
+Wed Mar 16 23:12:01 CDT 2016
+sh hostname
+ras.ece.northwestern.edu
+sh uptime
+ 23:12:01 up 2 days, 10:51,  2 users,  load average: 0.32, 0.14, 0.11
+remove_design -all
+1
+if {[file exists template]} {
+   sh rm -rf template
+}
+sh mkdir template
+if {![file exists gate]} {
+   sh mkdir gate
+}
+if {![file exists log]} {
+   sh mkdir log
+}
+###########################################################################
+# Setup from environment variables
+###########################################################################
+set dv_root [sh echo \$DV_ROOT]
+set syn_home [sh echo \$SYN_LIB]
+source -echo -verbose user_cfg.tcl
+# ========== Copyright Header Begin ==========================================
+# 
+# OpenSPARC T1 Processor File: user_cfg.scr
+# Copyright (c) 2006 Sun Microsystems, Inc.  All Rights Reserved.
+# DO NOT ALTER OR REMOVE COPYRIGHT NOTICES.
+# 
+# The above named program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public
+# License version 2 as published by the Free Software Foundation.
+# 
+# The above named program is distributed in the hope that it will be 
+# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public
+# License along with this work; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+# 
+# ========== Copyright Header End ============================================
+source -echo -verbose project_sparc_cfg.tcl
+# ========== Copyright Header Begin ==========================================
+# 
+# OpenSPARC T1 Processor File: project_sparc_cfg.scr
+# Copyright (c) 2006 Sun Microsystems, Inc.  All Rights Reserved.
+# DO NOT ALTER OR REMOVE COPYRIGHT NOTICES.
+# 
+# The above named program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public
+# License version 2 as published by the Free Software Foundation.
+# 
+# The above named program is distributed in the hope that it will be 
+# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public
+# License along with this work; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+# 
+# ========== Copyright Header End ============================================
+###########################################################################
+# Need to define in this file
+###########################################################################
+# Include target library
+# Include Synopsys Designware
+#
+# clk_list (name + freq/MHz)
+# default_clk
+#
+# setup_skew  (all timing in ns)
+# hold_skew
+# clk_transition
+# max_transition
+# max_fanout
+#
+# This variable indicates we are synthesizing cmp blocks
+set project_sparc_cfg	1
+1
+###########################################################################
+# Specify target library specific variables
+###########################################################################
+#source $dv_root/design/sys/synopsys/script/target_lib.tcl
+###########################################################################
+# Include Synopsys Designware library
+###########################################################################
+# Designware will not be used in sparc control blocks
+set synthetic_library {}
+set link_path [concat  $link_library $synthetic_library]
+* your_library.db
+###########################################################################
+# Sparc/IO clocks
+###########################################################################
+# Name				Freq	Comment
+# cpu_clk			1400.0	CPU clock
+# cmp_gclk			1400.0	CPU clock
+# clk				240.0   BSC clock 200 + 20%
+# The script will NOT automatically pad 20% (1.2x) to these
+# frequencies  mhz,setup_skew  ns,hold_skew  ns,clk_transition  ns
+set clk_list {                                          {cpu_clk   1204.82   0.130   0.130   0.040}                     {cmp_gclk  1204.82   0.130   0.130   0.040}                     {clk       1204.82   0.086   0.086   0.040}                     {rclk      1204.82   0.086   0.086   0.040}     }
+                                          {cpu_clk   1204.82   0.130   0.130   0.040}                     {cmp_gclk  1204.82   0.130   0.130   0.040}                     {clk       1204.82   0.086   0.086   0.040}                     {rclk      1204.82   0.086   0.086   0.040}     
+# setup_skew = local skew (60ps) + jitter (36ps)
+set default_clk rclk
+rclk
+set default_clk_freq 1204.82
+1204.82
+set default_setup_skew       0.086
+0.086
+set default_hold_skew        0.086
+0.086
+set default_clock_transition 0.040
+0.040
+# More parameters
+# setup_skew = local skew (125ps) + jitter (250ps)
+set default_clk clk
+clk
+set default_clk_freq	240
+240
+set default_setup_skew       0.375
+0.375
+set default_hold_skew        0.080
+0.080
+set default_clock_transition 0.050
+0.050
+set max_transition   0.110
+0.110
+set max_fanout         6
+6
+# default input/output delays
+#set default_input_delay  0.15
+#set default_output_delay 0.2 
+#set critical_range       0.30
+set default_input_delay  0.001
+Information: Use of Variable 'default_input_delay' is not recommended. This variable will be obsolete in a future release. (INFO-101)
+0.001
+set default_output_delay 0.001 
+Information: Use of Variable 'default_output_delay' is not recommended. This variable will be obsolete in a future release. (INFO-101)
+0.001
+set critical_range       0.30
+0.30
+# default number of worst path reported
+set num_of_path 1000
+1000
+#default compile style for io is to not flatten the whole design
+set compile_flatten_all 0
+0
+0
+set rtl_files { /home/byy911/Documents/eecs362/verilog/pipeline/id.v /home/byy911/Documents/eecs362/verilog/gates/dff.v /home/byy911/Documents/eecs362/verilog/gates/gates.v }
+ /home/byy911/Documents/eecs362/verilog/pipeline/id.v /home/byy911/Documents/eecs362/verilog/gates/dff.v /home/byy911/Documents/eecs362/verilog/gates/gates.v 
+set mix_files {}
+set top_module id
+id
+set include_paths { design/sys/iop/include }
+ design/sys/iop/include 
+set black_box_libs {}
+set black_box_designs {}
+set mem_libs {}
+set compile_effort   "high"
+high
+set area_effort "low"
+low
+set compile_flatten_all 1
+1
+set compile_no_new_cells_at_top_level false
+false
+set default_clk clk
+clk
+set default_clk_freq 1000
+1000
+set default_setup_skew  0.00
+0.00
+set default_hold_skew  0.00
+0.00
+set default_clk_transition  0.00
+0.00
+set clk_list {                                {clk     1000.0    0.0    0.0    0.0}        }
+                                {clk     1000.0    0.0    0.0    0.0}        
+set ideal_net_list {}
+set false_path_list {}
+set enforce_input_fanout_one     0
+0
+set allow_outport_drive_innodes  1
+1
+set skip_scan            0
+0
+set add_lockup_latch     false
+false
+set chain_count          1
+1
+set scanin_port_list     {}
+set scanout_port_list    {}
+set scanenable_port      global_shift_enable
+global_shift_enable
+set has_test_stub        1
+1
+set scanenable_pin       test_stub_no_bist/se
+test_stub_no_bist/se
+set long_chain_so_0_net  long_chain_so_0
+long_chain_so_0
+set short_chain_so_0_net short_chain_so_0
+short_chain_so_0
+set so_0_net             so_0
+so_0
+set insert_extra_lockup_latch 0
+0
+set extra_lockup_latch_clk_list {}
+set dont_use_cells 0
+0
+set dont_touch_modules []
+set search_path [concat $search_path script/]
+. /vol/eecs362/synopsys/dc/libraries/syn /vol/eecs362/synopsys/dc/dw/syn_ver /vol/eecs362/synopsys/dc/dw/sim_ver script/
+set search_path [concat $syn_home    $search_path ]
+. /vol/eecs362/synopsys/dc/libraries/syn /vol/eecs362/synopsys/dc/dw/syn_ver /vol/eecs362/synopsys/dc/dw/sim_ver script/
+#set search_path [concat $search_path /homes/gho705/fault/synthesis-stuff/src/s1_core/trunk/hdl/rtl/sparc_core /homes/gho705/fault/synthesis-stuff/src/a5-syn ]
+set search_path [concat $search_path a5-dev ]
+. /vol/eecs362/synopsys/dc/libraries/syn /vol/eecs362/synopsys/dc/dw/syn_ver /vol/eecs362/synopsys/dc/dw/sim_ver script/ a5-dev
+foreach include_path $include_paths {
+   set search_path [concat $search_path $dv_root/$include_path]
+}
+sh date
+Wed Mar 16 23:12:01 CDT 2016
+set link_library [concat $link_library                          $mem_libs                          $black_box_designs 		      NangateOpenCellLibrary.db]
+* your_library.db NangateOpenCellLibrary.db
+#/homes/gho705/fault/synthesis-stuff/lib/FreePDK45/osu_soc/lib/files/gscl45nm.db]
+# set link_library ["*", /homes/gho705/fault/synthesis-stuff/lib/FreePDK45/osu_soc/lib/files/gscl45nm.db]
+#set target_library $syn_home/lsi_10k.db 
+#set target_library /homes/gho705/fault/synthesis-stuff/lib/FreePDK45/osu_soc/lib/files/gscl45nm.db
+set target_library NangateOpenCellLibrary.db
+NangateOpenCellLibrary.db
+#set target_library /homes/rjoseph/research/mmx-synth/lib/NangateOpenCellLibrary.db
+set target_library [concat $target_library                            $mem_libs]
+NangateOpenCellLibrary.db
+set hdlin_enable_vpp true
+Information: Variable 'hdlin_enable_vpp' is obsolete and is being ignored. (INFO-100)
+true
+set hdlin_auto_save_templates false
+false
+define_design_lib WORK -path .template
+1
+set verilogout_single_bit false
+false
+set hdlout_internal_busses true
+true
+set bus_naming_style {%s[%d]}
+%s[%d]
+set bus_inference_style $bus_naming_style
+%s[%d]
+echo $search_path
+. /vol/eecs362/synopsys/dc/libraries/syn /vol/eecs362/synopsys/dc/dw/syn_ver /vol/eecs362/synopsys/dc/dw/sim_ver script/ a5-dev /design/sys/iop/include
+foreach rtl_file $rtl_files {
+    #read_file -format verilog -define RUNDC $dv_root/$rtl_file
+    read_file -format verilog -define RUNDC $rtl_file
+}
+Loading db file '/home/byy911/Documents/eecs362/synth/NangateOpenCellLibrary.db'
+Loading db file '/vol/eecs362/synopsys/dc/libraries/syn/gtech.db'
+Loading db file '/vol/eecs362/synopsys/dc/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Loading verilog file '/home/byy911/Documents/eecs362/verilog/pipeline/id.v'
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Compiling source file /home/byy911/Documents/eecs362/verilog/pipeline/id.v
+Presto compilation completed successfully.
+Current design is now '/home/byy911/Documents/eecs362/verilog/pipeline/id.db:id'
+Loaded 1 design.
+Current design is 'id'.
+Loading verilog file '/home/byy911/Documents/eecs362/verilog/gates/dff.v'
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Compiling source file /home/byy911/Documents/eecs362/verilog/gates/dff.v
+Warning:  /home/byy911/Documents/eecs362/verilog/gates/dff.v:15: 'aload' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Inferred memory devices in process
+	in routine dffa line 12 in file
+		'/home/byy911/Documents/eecs362/verilog/gates/dff.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/byy911/Documents/eecs362/verilog/gates/dffa.db:dffa'
+Loaded 1 design.
+Current design is 'dffa'.
+Loading verilog file '/home/byy911/Documents/eecs362/verilog/gates/gates.v'
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Compiling source file /home/byy911/Documents/eecs362/verilog/gates/gates.v
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Presto compilation completed successfully.
+Current design is now '/home/byy911/Documents/eecs362/verilog/gates/and_gate.db:and_gate'
+Loaded 18 designs.
+Current design is 'and_gate'.
+if {[info exists mix_files] && ($mix_files != {}) } {
+   foreach mix_file $mix_files {
+      set index_beg [expr {[string last "/" $mix_file] + 1}]
+      set mix_file_name [string range $mix_file $index_beg end]
+      read_file -format verilog -define RUNDC gate/${mix_file_name}.exp
+   }
+}
+set design_list [list]
+foreach_in_collection design_object [get_designs] {
+   set design_name [get_object_name $design_object]
+   lappend design_list $design_name
+}
+sh date
+Wed Mar 16 23:12:02 CDT 2016
+current_design $top_module
+Current design is 'id'.
+{id}
+echo $top_module
+id
+# if {[get_designs -hier $dont_touch_modules] != {}} {
+#    set_dont_touch $dont_touch_modules
+# }
+set dc_shell_status [ link ]
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+
+  Linking design 'id'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (20 designs)              /home/byy911/Documents/eecs362/verilog/pipeline/id.db, etc
+  NangateOpenCellLibrary (library) /home/byy911/Documents/eecs362/synth/NangateOpenCellLibrary.db
+
+Information: Building the design 'control'. (HDL-193)
+Warning: Cannot find the design 'control' in the library 'WORK'. (LBR-1)
+Information: Building the design 'mux2to1' instantiated from design 'id' with
+	the parameters "5". (HDL-193)
+Warning: Cannot find the design 'mux2to1' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sign_extender'. (HDL-193)
+Warning: Cannot find the design 'sign_extender' in the library 'WORK'. (LBR-1)
+Information: Building the design 'mux2to1' instantiated from design 'id' with
+	the parameters "32". (HDL-193)
+Warning: Cannot find the design 'mux2to1' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'control' in 'id'. (LINK-5)
+Warning: Unable to resolve reference 'mux2to1' in 'id'. (LINK-5)
+Warning: Unable to resolve reference 'sign_extender' in 'id'. (LINK-5)
+0
+if {$dc_shell_status == 0} {
+   echo "****************************************************"
+   echo "* ERROR!!!! Failed to Link...exiting prematurely.  *"
+   echo "****************************************************"
+   quit
+}
+****************************************************
+* ERROR!!!! Failed to Link...exiting prematurely.  *
+****************************************************
+Information: Defining new variable 'allow_outport_drive_innodes'. (CMD-041)
+Information: Defining new variable 'default_clk_transition'. (CMD-041)
+Information: Defining new variable 'critical_range'. (CMD-041)
+Information: Defining new variable 'mix_files'. (CMD-041)
+Information: Defining new variable 'false_path_list'. (CMD-041)
+Information: Defining new variable 'long_chain_so_0_net'. (CMD-041)
+Information: Defining new variable 'default_clk_freq'. (CMD-041)
+Information: Defining new variable 'num_of_path'. (CMD-041)
+Information: Defining new variable 'enforce_input_fanout_one'. (CMD-041)
+Information: Defining new variable 'default_hold_skew'. (CMD-041)
+Information: Defining new variable 'compile_flatten_all'. (CMD-041)
+Information: Defining new variable 'so_0_net'. (CMD-041)
+Information: Defining new variable 'max_fanout'. (CMD-041)
+Information: Defining new variable 'include_paths'. (CMD-041)
+Information: Defining new variable 'area_effort'. (CMD-041)
+Information: Defining new variable 'max_transition'. (CMD-041)
+Information: Defining new variable 'dont_use_cells'. (CMD-041)
+Information: Defining new variable 'dont_touch_modules'. (CMD-041)
+Information: Defining new variable 'project_sparc_cfg'. (CMD-041)
+Information: Defining new variable 'extra_lockup_latch_clk_list'. (CMD-041)
+Information: Defining new variable 'mem_libs'. (CMD-041)
+Information: Defining new variable 'black_box_designs'. (CMD-041)
+Information: Defining new variable 'clk_list'. (CMD-041)
+Information: Defining new variable 'default_clock_transition'. (CMD-041)
+Information: Defining new variable 'top_module'. (CMD-041)
+Information: Defining new variable 'has_test_stub'. (CMD-041)
+Information: Defining new variable 'default_clk'. (CMD-041)
+Information: Defining new variable 'default_setup_skew'. (CMD-041)
+Information: Defining new variable 'add_lockup_latch'. (CMD-041)
+Information: Defining new variable 'design_name'. (CMD-041)
+Information: Defining new variable 'ideal_net_list'. (CMD-041)
+Information: Defining new variable 'dv_root'. (CMD-041)
+Information: Defining new variable 'dc_shell_status'. (CMD-041)
+Information: Defining new variable 'skip_scan'. (CMD-041)
+Information: Defining new variable 'rtl_file'. (CMD-041)
+Information: Defining new variable 'design_object'. (CMD-041)
+Information: Defining new variable 'syn_home'. (CMD-041)
+Information: Defining new variable 'compile_effort'. (CMD-041)
+Information: Defining new variable 'include_path'. (CMD-041)
+Information: Defining new variable 'scanenable_pin'. (CMD-041)
+Information: Defining new variable 'scanenable_port'. (CMD-041)
+Information: Defining new variable 'scanin_port_list'. (CMD-041)
+Information: Defining new variable 'rtl_files'. (CMD-041)
+Information: Defining new variable 'insert_extra_lockup_latch'. (CMD-041)
+Information: Defining new variable 'black_box_libs'. (CMD-041)
+Information: Defining new variable 'scanout_port_list'. (CMD-041)
+Information: Defining new variable 'short_chain_so_0_net'. (CMD-041)
+Information: Defining new variable 'design_list'. (CMD-041)
+Information: Defining new variable 'chain_count'. (CMD-041)
+
+Thank you...

@@ -1,0 +1,66 @@
+ 
+****************************************
+Report : area
+Design : id_ex
+Version: D-2010.03-SP5
+Date   : Wed Mar 16 22:56:31 2016
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/byy911/Documents/eecs362/synth/NangateOpenCellLibrary.db)
+
+Number of ports:              453
+Number of nets:               823
+Number of cells:              627
+Number of references:           9
+
+Combinational area:        386.764009
+Noncombinational area:    1071.447994
+Net Interconnect area:     388.148490  
+
+Total cell area:          1458.212003
+Total area:               1846.360493
+1
+ 
+****************************************
+Report : reference
+Design : id_ex
+Version: D-2010.03-SP5
+Date   : Wed Mar 16 22:56:31 2016
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary
+                                  1.330000     188    250.040008  
+AOI221_X1          NangateOpenCellLibrary
+                                  1.596000       4      6.384000  
+DFFR_X1            NangateOpenCellLibrary
+                                  5.586000     188   1050.167994  n
+DFFS_X1            NangateOpenCellLibrary
+                                  5.320000       4     21.280001  n
+INV_X1             NangateOpenCellLibrary
+                                  0.532000     193    102.676001  
+INV_X4             NangateOpenCellLibrary
+                                  0.532000      47     25.004000  
+NAND2_X1           NangateOpenCellLibrary
+                                  0.798000       1      0.798000  
+NOR2_X1            NangateOpenCellLibrary
+                                  0.798000       1      0.798000  
+OAI21_X1           NangateOpenCellLibrary
+                                  1.064000       1      1.064000  
+-----------------------------------------------------------------------------
+Total 9 references                                   1458.212003
+1
