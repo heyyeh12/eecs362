@@ -53,6 +53,9 @@ module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regW
         casex(opcode)
             6'b010001 : begin //TRAP
                 not_trap = 0;
+                aluCtrl = 4'b0100;
+                jump = 1;
+                signExt = 0;
             end
             6'b00000? : begin // R - Type Insructions
                 regDst = 1;
