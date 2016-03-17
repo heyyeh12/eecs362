@@ -20,10 +20,10 @@
 # ========== Copyright Header End ============================================
 source -echo -verbose project_sparc_cfg.tcl
 
-set rtl_files { /home/byy911/Documents/eecs362/Multiplier/multiplier.v /home/byy911/Documents/eecs362/verilog/gates/gates.v /home/byy911/Documents/eecs362/verilog/alu/adder.v /home/byy911/Documents/eecs362/verilog/alu/alu.v /home/byy911/Documents/eecs362/verilog/alu/bitwise.v /home/byy911/Documents/eecs362/verilog/alu/flag_setter.v /home/byy911/Documents/eecs362/verilog/alu/setter.v /home/byy911/Documents/eecs362/verilog/alu/shifter.v }
+set rtl_files { /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v }
 
 set mix_files {}
-set top_module multiplier
+set top_module regfile
 set include_paths { design/sys/iop/include }
 
 set black_box_libs {}

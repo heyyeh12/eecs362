@@ -46,11 +46,11 @@ Initializing...
 # 
 # ========== Copyright Header End ============================================
 sh date
-Thu Mar 17 14:01:31 CDT 2016
+Thu Mar 17 15:40:04 CDT 2016
 sh hostname
 batgirl.ece.northwestern.edu
 sh uptime
- 14:01:31 up 2 days, 23:55,  7 users,  load average: 0.47, 0.24, 0.19
+ 15:40:04 up 3 days,  1:33,  8 users,  load average: 0.82, 0.61, 0.52
 remove_design -all
 1
 if {[file exists template]} {
@@ -196,11 +196,11 @@ set num_of_path 1000
 set compile_flatten_all 0
 0
 0
-set rtl_files { /home/byy911/Documents/eecs362/Multiplier/multiplier.v /home/byy911/Documents/eecs362/verilog/gates/gates.v /home/byy911/Documents/eecs362/verilog/alu/adder.v /home/byy911/Documents/eecs362/verilog/alu/alu.v /home/byy911/Documents/eecs362/verilog/alu/bitwise.v /home/byy911/Documents/eecs362/verilog/alu/flag_setter.v /home/byy911/Documents/eecs362/verilog/alu/setter.v /home/byy911/Documents/eecs362/verilog/alu/shifter.v }
- /home/byy911/Documents/eecs362/Multiplier/multiplier.v /home/byy911/Documents/eecs362/verilog/gates/gates.v /home/byy911/Documents/eecs362/verilog/alu/adder.v /home/byy911/Documents/eecs362/verilog/alu/alu.v /home/byy911/Documents/eecs362/verilog/alu/bitwise.v /home/byy911/Documents/eecs362/verilog/alu/flag_setter.v /home/byy911/Documents/eecs362/verilog/alu/setter.v /home/byy911/Documents/eecs362/verilog/alu/shifter.v 
+set rtl_files { /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v }
+ /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v 
 set mix_files {}
-set top_module multiplier
-multiplier
+set top_module regfile
+regfile
 set include_paths { design/sys/iop/include }
  design/sys/iop/include 
 set black_box_libs {}
@@ -269,7 +269,7 @@ foreach include_path $include_paths {
    set search_path [concat $search_path $dv_root/$include_path]
 }
 sh date
-Thu Mar 17 14:01:31 CDT 2016
+Thu Mar 17 15:40:04 CDT 2016
 set link_library [concat $link_library                          $mem_libs                          $black_box_designs 		      NangateOpenCellLibrary.db]
 * your_library.db NangateOpenCellLibrary.db
 #/homes/gho705/fault/synthesis-stuff/lib/FreePDK45/osu_soc/lib/files/gscl45nm.db]
@@ -307,111 +307,146 @@ Loading db file '/vol/eecs362/synopsys/dc/libraries/syn/gtech.db'
 Loading db file '/vol/eecs362/synopsys/dc/libraries/syn/standard.sldb'
   Loading link library 'NangateOpenCellLibrary'
   Loading link library 'gtech'
-Loading verilog file '/home/byy911/Documents/eecs362/Multiplier/multiplier.v'
+Loading verilog file '/home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v'
 Detecting input file type automatically (-rtl or -netlist).
 Running DC verilog reader
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/Multiplier/multiplier.v
-Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/Multiplier/multiplier.db:multiplier'
-Loaded 1 design.
-Current design is 'multiplier'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/gates/gates.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/gates/gates.v
-Module 'and_gate' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'and_32' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'or_gate' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'or32to1' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'or_32' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'xor_gate' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'xor_32' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'not_gate' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'not_32' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'nand_gate' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'nor_gate' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'nor32to1' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'mux2to1' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'mux2to1_32' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'mux4to1' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'mux8to1' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'mux16to1' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'mux16to1_32' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Module 'mux32to1' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-No designs were read
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/alu/adder.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/alu/adder.v
-Module 'fa_nbit' was not elaborated because it contains the 'template' attribute.  Instead, it has been saved as a template.
-Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/alu/adder.db:adder'
-Loaded 2 designs.
-Current design is 'adder'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/alu/alu.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Performing 'read' command.
-Compiling source file /home/byy911/Documents/eecs362/verilog/alu/alu.v
-Reading with netlist reader (equivalent to -netlist option).
-Verilog netlist reader completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/alu/alu.db:alu'
-Loaded 1 design.
-Current design is 'alu'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/alu/bitwise.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/alu/bitwise.v
-Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/alu/bitwise.db:bitwise'
-Loaded 1 design.
-Current design is 'bitwise'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/alu/flag_setter.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/alu/flag_setter.v
-Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/alu/flag_setter.db:flag_setter'
-Loaded 1 design.
-Current design is 'flag_setter'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/alu/setter.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/alu/setter.v
-Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/alu/setter.db:setter'
-Loaded 1 design.
-Current design is 'setter'.
-Loading verilog file '/home/byy911/Documents/eecs362/verilog/alu/shifter.v'
-Detecting input file type automatically (-rtl or -netlist).
-Running DC verilog reader
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Compiling source file /home/byy911/Documents/eecs362/verilog/alu/shifter.v
+Compiling source file /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v
+Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:35: Invalid escape sequence '\x' in call to '$display'. (VER-941)
+Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:35: Invalid escape sequence '\x' in call to '$display'. (VER-941)
+Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:39: Invalid escape sequence '\x' in call to '$display'. (VER-941)
+Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:39: Invalid escape sequence '\x' in call to '$display'. (VER-941)
+Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:40: Invalid escape sequence '\x' in call to '$display'. (VER-941)
+Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:40: Invalid escape sequence '\x' in call to '$display'. (VER-941)
+Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:28: The statements in initial blocks are ignored. (VER-281)
+Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:106: Invalid escape sequence '\x' in call to '$display'. (VER-941)
+Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:106: Invalid escape sequence '\x' in call to '$display'. (VER-941)
+Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:93: The statements in initial blocks are ignored. (VER-281)
+Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:101: The statements in initial blocks are ignored. (VER-281)
 Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:35: Invalid escape sequence '\x' in call to '$display'. (VER-941)
+Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:35: Invalid escape sequence '\x' in call to '$display'. (VER-941)
+Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:39: Invalid escape sequence '\x' in call to '$display'. (VER-941)
+Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:39: Invalid escape sequence '\x' in call to '$display'. (VER-941)
+Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:40: Invalid escape sequence '\x' in call to '$display'. (VER-941)
+Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:40: Invalid escape sequence '\x' in call to '$display'. (VER-941)
+$display output: don't write to register 0!!!
+$display output: writing val  to register 
+??$display output: reading val  from reg 
+??$display output: reading val  from reg 
+??
+Inferred memory devices in process
+	in routine regfile line 28 in file
+		'/home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine regfile line 52 in file
+		'/home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rData1_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     rData2_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+|    regfile/56    |   32   |   32    |      5       | N  |
+|    regfile/60    |   32   |   32    |      5       | N  |
+===========================================================
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:106: Invalid escape sequence '\x' in call to '$display'. (VER-941)
+Warning:  /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v:106: Invalid escape sequence '\x' in call to '$display'. (VER-941)
+$display output: writing val  to fp register  ??
+
+Inferred memory devices in process
+	in routine fpregfile line 104 in file
+		'/home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+|  fpregfile/101   |   32   |   32    |      5       | N  |
+===========================================================
 Presto compilation completed successfully.
-Current design is now '/home/byy911/Documents/eecs362/verilog/alu/shifter.db:shifter'
-Loaded 1 design.
-Current design is 'shifter'.
+Current design is now '/home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.db:regfile'
+Loaded 2 designs.
+Current design is 'regfile'.
 if {[info exists mix_files] && ($mix_files != {}) } {
    foreach mix_file $mix_files {
       set index_beg [expr {[string last "/" $mix_file] + 1}]
@@ -425,65 +460,24 @@ foreach_in_collection design_object [get_designs] {
    lappend design_list $design_name
 }
 sh date
-Thu Mar 17 14:01:32 CDT 2016
+Thu Mar 17 15:40:05 CDT 2016
 current_design $top_module
-Current design is 'multiplier'.
-{multiplier}
+Current design is 'regfile'.
+{regfile}
 echo $top_module
-multiplier
+regfile
 # if {[get_designs -hier $dont_touch_modules] != {}} {
 #    set_dont_touch $dont_touch_modules
 # }
 set dc_shell_status [ link ]
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 
-  Linking design 'multiplier'
+  Linking design 'regfile'
   Using the following designs and libraries:
   --------------------------------------------------------------------------
-  * (8 designs)               /home/byy911/Documents/eecs362/Multiplier/multiplier.db, etc
+  * (2 designs)               /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.db, etc
   NangateOpenCellLibrary (library) /home/byy911/Documents/eecs362/synth/NangateOpenCellLibrary.db
 
-Information: Building the design 'mux4to1' instantiated from design 'multiplier' with
-	the parameters "8". (HDL-193)
-Presto compilation completed successfully.
-Information: Building the design 'mux4to1' instantiated from design 'multiplier' with
-	the parameters "32". (HDL-193)
-Presto compilation completed successfully.
-Information: Building the design 'mux2to1' instantiated from design 'multiplier' with
-	the parameters "32". (HDL-193)
-Presto compilation completed successfully.
-Information: Building the design 'mux2to1' instantiated from design 'mux4to1_N_BITS8' with
-	the parameters "8". (HDL-193)
-Presto compilation completed successfully.
-Information: Building the design 'mux2to1' instantiated from design 'shifter' with
-	the parameters "1". (HDL-193)
-Presto compilation completed successfully.
-Information: Building the design 'or32to1'. (HDL-193)
-Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
-Presto compilation completed successfully.
-Information: Building the design 'mux2to1_32'. (HDL-193)
-Presto compilation completed successfully.
-Information: Building the design 'not_32'. (HDL-193)
-Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
-Presto compilation completed successfully.
-Information: Building the design 'mux16to1_32'. (HDL-193)
-Presto compilation completed successfully.
-Information: Building the design 'mux16to1' instantiated from design 'adder' with
-	the parameters "1". (HDL-193)
-Presto compilation completed successfully.
-Information: Building the design 'fa_nbit'. (HDL-193)
-Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
-Presto compilation completed successfully.
-Information: Building the design 'or_gate'. (HDL-193)
-Presto compilation completed successfully.
-Information: Building the design 'not_gate'. (HDL-193)
-Presto compilation completed successfully.
-Information: Building the design 'mux16to1' instantiated from design 'mux16to1_32' with
-	the parameters "32". (HDL-193)
-Presto compilation completed successfully.
-Information: Building the design 'mux4to1' instantiated from design 'mux16to1_N_BITS1' with
-	the parameters "1". (HDL-193)
-Presto compilation completed successfully.
 1
 if {$dc_shell_status == 0} {
    echo "****************************************************"
@@ -492,15 +486,15 @@ if {$dc_shell_status == 0} {
    quit
 }
 current_design $top_module
-Current design is 'multiplier'.
-{multiplier}
+Current design is 'regfile'.
+{regfile}
 echo $top_module
-multiplier
+regfile
 current_design $top_module
-Current design is 'multiplier'.
-{multiplier}
+Current design is 'regfile'.
+{regfile}
 echo $top_module
-multiplier
+regfile
 set clk_name_list [list]
 set ideal_inputs [list]
 foreach clk_spec $clk_list {
@@ -556,7 +550,6 @@ foreach clk_spec $clk_list {
    }
 }
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Warning: Can't find port 'clk' in design 'multiplier'. (UID-95)
 if {$clk_name_list == {} } {
    echo "\[WARNING\] No clock is defined,create a virtual one -- $default_clk..."
    set clk_name $default_clk
@@ -570,9 +563,6 @@ if {$clk_name_list == {} } {
    set_clock_uncertainty -setup $setup_skew $clk_name
    set_clock_uncertainty -hold $hold_skew $clk_name
 }
-[WARNING] No clock is defined,create a virtual one -- clk...
-Warning: Creating virtual clock named 'clk' with no sources. (UID-348)
-1
 set non_ideal_inputs [list]
 foreach_in_collection input_object [all_inputs] {
    set input_name [get_object_name $input_object]
@@ -584,9 +574,9 @@ foreach_in_collection input_object [all_inputs] {
    }
 }
 echo $ideal_inputs
-
+clk
 echo $non_ideal_inputs
-{a[31]} {a[30]} {a[29]} {a[28]} {a[27]} {a[26]} {a[25]} {a[24]} {a[23]} {a[22]} {a[21]} {a[20]} {a[19]} {a[18]} {a[17]} {a[16]} {a[15]} {a[14]} {a[13]} {a[12]} {a[11]} {a[10]} {a[9]} {a[8]} {a[7]} {a[6]} {a[5]} {a[4]} {a[3]} {a[2]} {a[1]} {a[0]} {b[31]} {b[30]} {b[29]} {b[28]} {b[27]} {b[26]} {b[25]} {b[24]} {b[23]} {b[22]} {b[21]} {b[20]} {b[19]} {b[18]} {b[17]} {b[16]} {b[15]} {b[14]} {b[13]} {b[12]} {b[11]} {b[10]} {b[9]} {b[8]} {b[7]} {b[6]} {b[5]} {b[4]} {b[3]} {b[2]} {b[1]} {b[0]} {control[1]} {control[0]} {product_in[31]} {product_in[30]} {product_in[29]} {product_in[28]} {product_in[27]} {product_in[26]} {product_in[25]} {product_in[24]} {product_in[23]} {product_in[22]} {product_in[21]} {product_in[20]} {product_in[19]} {product_in[18]} {product_in[17]} {product_in[16]} {product_in[15]} {product_in[14]} {product_in[13]} {product_in[12]} {product_in[11]} {product_in[10]} {product_in[9]} {product_in[8]} {product_in[7]} {product_in[6]} {product_in[5]} {product_in[4]} {product_in[3]} {product_in[2]} {product_in[1]} {product_in[0]}
+{rs1[4]} {rs1[3]} {rs1[2]} {rs1[1]} {rs1[0]} {rs2[4]} {rs2[3]} {rs2[2]} {rs2[1]} {rs2[0]} {rd[4]} {rd[3]} {rd[2]} {rd[1]} {rd[0]} {wData[31]} {wData[30]} {wData[29]} {wData[28]} {wData[27]} {wData[26]} {wData[25]} {wData[24]} {wData[23]} {wData[22]} {wData[21]} {wData[20]} {wData[19]} {wData[18]} {wData[17]} {wData[16]} {wData[15]} {wData[14]} {wData[13]} {wData[12]} {wData[11]} {wData[10]} {wData[9]} {wData[8]} {wData[7]} {wData[6]} {wData[5]} {wData[4]} {wData[3]} {wData[2]} {wData[1]} {wData[0]} regWr clk
 set_input_delay $default_input_delay -clock $default_clk $non_ideal_inputs
 1
 set_output_delay $default_output_delay -clock $default_clk [all_outputs]
@@ -596,6 +586,17 @@ if {$clk_name_list != {} } {
    group_path -name "in2reg"  -from $non_ideal_inputs -to [ all_registers -data_pins ]
    group_path -name "reg2out" -from [ all_registers -clock_pins ] -to [all_outputs]
 }
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Information: Updating graph... (UID-83)
+Warning: Design 'regfile' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Information: Updating graph... (UID-83)
+Warning: Design 'regfile' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Information: Updating graph... (UID-83)
+Warning: Design 'regfile' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Information: Updating graph... (UID-83)
+Warning: Design 'regfile' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+1
 group_path -name "in2out"  -from $non_ideal_inputs -to [all_outputs]
 1
 if {[info exists false_path_list] && ($false_path_list != {}) } {
@@ -634,9 +635,9 @@ if {$dont_use_cells != 0} {
    }
 }
 sh date
-Thu Mar 17 14:01:34 CDT 2016
+Thu Mar 17 15:40:05 CDT 2016
 sh uptime
- 14:01:34 up 2 days, 23:55,  7 users,  load average: 0.51, 0.26, 0.20
+ 15:40:05 up 3 days,  1:33,  8 users,  load average: 0.82, 0.61, 0.52
 # Switch off the dont_touch attribute globally for set_size_only cells
 set dont_touch_nets_with_size_only_cells false
 false
@@ -645,9 +646,8 @@ false
 if {[info exists compile_flatten_all] && ($compile_flatten_all  == 1)} {
       ungroup -flatten -all
    }
-Information: Updating design information... (UID-85)
-Warning: Design 'multiplier' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
-1
+Warning: Design has no hierarchy.  No cells can be ungrouped. (UID-228)
+0
 # compile !!
 if {[info exists project_io_cfg] && ($project_io_cfg == 1) } {
       set dc_shell_status [ compile -boundary_optimization -exact_map -map_effort $compile_effort -area_effort $area_effort]
@@ -669,123 +669,30 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 ============================================================================
 
 
-Information: There are 8 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
-
-
 
   Beginning Pass 1 Mapping
   ------------------------
-  Processing 'multiplier'
+  Processing 'regfile'
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 
   Updating timing information
 Information: Updating design information... (UID-85)
 
+  Beginning Implementation Selection
+  ----------------------------------
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+  Processing 'regfile_DW01_cmp6_0'
+  Processing 'regfile_DW01_cmp6_1'
+
   Beginning Mapping Optimizations  (High effort)
   -------------------------------
   Mapping Optimization (Phase 1)
-  Mapping Optimization (Phase 2)
-  Mapping Optimization (Phase 3)
-  Mapping Optimization (Phase 4)
-  Mapping Optimization (Phase 5)
-  Mapping Optimization (Phase 6)
-  Mapping Optimization (Phase 7)
-  Mapping Optimization (Phase 8)
-  Mapping Optimization (Phase 9)
-  Mapping Optimization (Phase 10)
-  Mapping Optimization (Phase 11)
-  Mapping Optimization (Phase 12)
-  Mapping Optimization (Phase 13)
-  Mapping Optimization (Phase 14)
-  Mapping Optimization (Phase 15)
-  Mapping Optimization (Phase 16)
-  Mapping Optimization (Phase 17)
-  Mapping Optimization (Phase 18)
-  Mapping Optimization (Phase 19)
-  Mapping Optimization (Phase 20)
-  Mapping Optimization (Phase 21)
-  Mapping Optimization (Phase 22)
-  Mapping Optimization (Phase 23)
-  Mapping Optimization (Phase 24)
-  Mapping Optimization (Phase 25)
-  Mapping Optimization (Phase 26)
-  Mapping Optimization (Phase 27)
-  Mapping Optimization (Phase 28)
-  Mapping Optimization (Phase 29)
-  Mapping Optimization (Phase 30)
-  Mapping Optimization (Phase 31)
-  Mapping Optimization (Phase 32)
-  Mapping Optimization (Phase 33)
-  Mapping Optimization (Phase 34)
-  Mapping Optimization (Phase 35)
-  Mapping Optimization (Phase 36)
-  Mapping Optimization (Phase 37)
-  Mapping Optimization (Phase 38)
-  Mapping Optimization (Phase 39)
-  Mapping Optimization (Phase 40)
-  Mapping Optimization (Phase 41)
-  Mapping Optimization (Phase 42)
-  Mapping Optimization (Phase 43)
-  Mapping Optimization (Phase 44)
-  Mapping Optimization (Phase 45)
-  Mapping Optimization (Phase 46)
-  Mapping Optimization (Phase 47)
-  Mapping Optimization (Phase 48)
-  Mapping Optimization (Phase 49)
-  Mapping Optimization (Phase 50)
-  Mapping Optimization (Phase 51)
-  Mapping Optimization (Phase 52)
-  Mapping Optimization (Phase 53)
-  Mapping Optimization (Phase 54)
-  Mapping Optimization (Phase 55)
-  Mapping Optimization (Phase 56)
-  Mapping Optimization (Phase 57)
-  Mapping Optimization (Phase 58)
-  Mapping Optimization (Phase 59)
-  Mapping Optimization (Phase 60)
-  Mapping Optimization (Phase 61)
-  Mapping Optimization (Phase 62)
-  Mapping Optimization (Phase 63)
-  Mapping Optimization (Phase 64)
-  Mapping Optimization (Phase 65)
-  Mapping Optimization (Phase 66)
-  Mapping Optimization (Phase 67)
-  Mapping Optimization (Phase 68)
-  Mapping Optimization (Phase 69)
-  Mapping Optimization (Phase 70)
-  Mapping Optimization (Phase 71)
-  Mapping Optimization (Phase 72)
-  Mapping Optimization (Phase 73)
-  Mapping Optimization (Phase 74)
-  Mapping Optimization (Phase 75)
-  Mapping Optimization (Phase 76)
-  Mapping Optimization (Phase 77)
-  Mapping Optimization (Phase 78)
-  Mapping Optimization (Phase 79)
-  Mapping Optimization (Phase 80)
-  Mapping Optimization (Phase 81)
-  Mapping Optimization (Phase 82)
-  Mapping Optimization (Phase 83)
-  Mapping Optimization (Phase 84)
-  Mapping Optimization (Phase 85)
-  Mapping Optimization (Phase 86)
-  Mapping Optimization (Phase 87)
-  Mapping Optimization (Phase 88)
-  Mapping Optimization (Phase 89)
-  Mapping Optimization (Phase 90)
-  Mapping Optimization (Phase 91)
-  Mapping Optimization (Phase 92)
-  Mapping Optimization (Phase 93)
-  Mapping Optimization (Phase 94)
-  Mapping Optimization (Phase 95)
-  Mapping Optimization (Phase 96)
-  Mapping Optimization (Phase 97)
 
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:49    4221.4      1.10      20.4       0.0                          
-    0:00:49    4221.4      1.10      20.4       0.0                          
+    0:00:19   17865.0      0.00      -0.0       0.0                          
+    0:00:19   17865.0      0.00      -0.0       0.0                          
 
   Beginning Delay Optimization Phase
   ----------------------------------
@@ -793,353 +700,18 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:49    4221.4      1.10      20.4       0.0                          
-    0:00:49    4223.2      1.10      20.2       0.0 product_out[31]          
-    0:00:49    4228.8      1.09      20.0       0.0 product_out[31]          
-    0:00:49    4236.7      1.08      19.9       0.0 product_out[31]          
-    0:00:50    4238.6      1.08      19.8       0.0 product_out[29]          
-    0:00:50    4241.1      1.07      19.7       0.0 product_out[31]          
-    0:00:50    4245.8      1.07      19.7       0.0 product_out[29]          
-    0:00:50    4245.2      1.07      19.6       0.0 product_out[29]          
-    0:00:50    4244.5      1.06      19.6       0.0 product_out[31]          
-    0:00:50    4245.9      1.06      19.5       0.0 product_out[31]          
-    0:00:50    4246.3      1.06      19.5       0.0 product_out[31]          
-    0:00:51    4249.7      1.06      19.4       0.0 product_out[31]          
-    0:00:51    4254.9      1.05      19.3       0.0 product_out[29]          
-    0:00:51    4262.9      1.05      19.3       0.0 product_out[29]          
-    0:00:51    4264.0      1.05      19.2       0.0 product_out[29]          
-    0:00:51    4268.0      1.05      19.2       0.0 product_out[31]          
-    0:00:51    4276.8      1.04      19.1       0.0 product_out[29]          
-    0:00:51    4283.0      1.04      19.1       0.0 product_out[31]          
-    0:00:52    4284.5      1.04      19.1       0.0 product_out[31]          
-    0:00:52    4285.3      1.04      19.0       0.0 product_out[31]          
-    0:00:52    4292.5      1.04      19.0       0.0 product_out[28]          
-    0:00:52    4292.5      1.03      18.9       0.0 product_out[31]          
-    0:00:52    4294.1      1.03      18.9       0.0 product_out[31]          
-    0:00:52    4293.8      1.03      18.9       0.0 product_out[31]          
-    0:00:52    4303.9      1.03      18.8       0.0 product_out[31]          
-    0:00:52    4308.8      1.03      18.8       0.0 product_out[28]          
-    0:00:52    4313.5      1.03      18.7       0.0 product_out[31]          
-    0:00:53    4316.6      1.02      18.6       0.0 product_out[31]          
-    0:00:53    4316.7      1.02      18.6       0.0 product_out[30]          
-    0:00:53    4325.8      1.02      18.6       0.0 product_out[31]          
-    0:00:53    4329.8      1.02      18.6       0.0 product_out[31]          
-    0:00:53    4335.3      1.02      18.5       0.0 product_out[28]          
-    0:00:53    4338.9      1.02      18.5       0.0 product_out[31]          
-    0:00:53    4340.6      1.02      18.5       0.0 product_out[31]          
-    0:00:53    4347.2      1.01      18.4       0.0 product_out[30]          
-    0:00:53    4349.6      1.01      18.4       0.0 product_out[30]          
-    0:00:53    4352.5      1.01      18.3       0.0 product_out[29]          
-    0:00:53    4357.2      1.01      18.3       0.0 product_out[30]          
-    0:00:53    4358.8      1.01      18.3       0.0 product_out[29]          
-    0:00:53    4364.2      1.01      18.2       0.0 product_out[30]          
-    0:00:53    4371.0      1.01      18.2       0.0 product_out[29]          
-    0:00:54    4373.8      1.00      18.1       0.0 product_out[30]          
-    0:00:54    4375.5      1.00      18.1       0.0 product_out[31]          
-    0:00:54    4383.2      1.00      18.1       0.0 product_out[28]          
-    0:00:54    4388.5      1.00      18.1       0.0 product_out[30]          
-    0:00:54    4387.9      1.00      18.0       0.0 product_out[30]          
-    0:00:54    4397.6      1.00      18.0       0.0 product_out[28]          
-    0:00:54    4400.6      0.99      18.0       0.0 product_out[30]          
-    0:00:54    4400.7      0.99      18.0       0.0 product_out[30]          
-    0:00:54    4399.1      0.99      17.9       0.0 product_out[30]          
-    0:00:54    4399.2      0.99      17.9       0.0 product_out[30]          
-    0:00:54    4399.6      0.99      17.9       0.0 product_out[28]          
-    0:00:54    4403.8      0.99      17.9       0.0 product_out[31]          
-    0:00:54    4404.0      0.99      17.9       0.0 product_out[28]          
-    0:00:54    4406.4      0.99      17.9       0.0 product_out[29]          
-    0:00:54    4409.3      0.99      17.9       0.0 product_out[30]          
-    0:00:55    4412.2      0.99      17.9       0.0 product_out[31]          
-    0:00:55    4413.5      0.99      17.9       0.0 product_out[30]          
-    0:00:55    4420.3      0.99      17.9       0.0 product_out[31]          
-    0:00:55    4426.2      0.99      17.8       0.0 product_out[31]          
-    0:00:55    4431.0      0.98      17.8       0.0 product_out[30]          
-    0:00:55    4435.8      0.98      17.8       0.0 product_out[31]          
-    0:00:55    4437.8      0.98      17.8       0.0 product_out[31]          
-    0:00:55    4439.5      0.98      17.8       0.0 product_out[31]          
-    0:00:55    4445.3      0.98      17.7       0.0 product_out[31]          
-    0:00:55    4449.5      0.98      17.7       0.0 product_out[31]          
-    0:00:55    4451.6      0.98      17.6       0.0 product_out[31]          
-    0:00:55    4452.8      0.97      17.6       0.0 product_out[28]          
-    0:00:55    4458.4      0.97      17.5       0.0 product_out[31]          
-    0:00:55    4459.6      0.97      17.5       0.0 product_out[31]          
-    0:00:55    4454.4      0.97      17.5       0.0 product_out[31]          
-    0:00:55    4453.8      0.97      17.5       0.0 product_out[31]          
-    0:00:56    4451.7      0.97      17.5       0.0 product_out[31]          
-    0:00:56    4454.7      0.97      17.5       0.0 product_out[27]          
-    0:00:56    4458.9      0.97      17.5       0.0 product_out[31]          
-    0:00:56    4462.8      0.97      17.5       0.0 product_out[31]          
-    0:00:56    4464.7      0.97      17.5       0.0 product_out[31]          
-    0:00:56    4466.9      0.97      17.5       0.0 product_out[31]          
-    0:00:56    4475.9      0.97      17.4       0.0 product_out[31]          
-    0:00:56    4478.9      0.96      17.4       0.0 product_out[29]          
-    0:00:56    4479.5      0.96      17.4       0.0 product_out[29]          
-    0:00:56    4484.5      0.96      17.4       0.0 product_out[31]          
-    0:00:56    4487.3      0.96      17.4       0.0 product_out[31]          
-    0:00:56    4490.7      0.96      17.4       0.0 product_out[29]          
-    0:00:56    4489.8      0.96      17.4       0.0 product_out[31]          
-    0:00:56    4491.5      0.96      17.4       0.0 product_out[31]          
-    0:00:56    4493.9      0.96      17.3       0.0 product_out[31]          
-    0:00:57    4496.8      0.96      17.3       0.0 product_out[29]          
-    0:00:57    4505.4      0.96      17.3       0.0 product_out[31]          
-    0:00:57    4507.7      0.96      17.3       0.0 product_out[31]          
-    0:00:57    4511.2      0.96      17.3       0.0 product_out[31]          
-    0:00:57    4506.7      0.96      17.3       0.0 product_out[31]          
-    0:00:57    4507.2      0.96      17.3       0.0 product_out[28]          
-    0:00:57    4510.7      0.95      17.3       0.0 product_out[31]          
-    0:00:57    4511.3      0.95      17.2       0.0 product_out[31]          
-    0:00:57    4514.7      0.95      17.2       0.0 product_out[31]          
-    0:00:57    4516.3      0.95      17.2       0.0 product_out[31]          
-    0:00:57    4517.8      0.95      17.2       0.0 product_out[29]          
-    0:00:57    4521.1      0.95      17.2       0.0 product_out[31]          
-    0:00:57    4522.7      0.95      17.2       0.0 product_out[31]          
-    0:00:58    4523.8      0.95      17.2       0.0 product_out[28]          
-    0:00:58    4525.2      0.95      17.2       0.0 product_out[31]          
-    0:00:58    4528.9      0.95      17.2       0.0 product_out[31]          
-    0:00:58    4533.2      0.95      17.2       0.0 product_out[28]          
-    0:00:58    4533.4      0.95      17.2       0.0 product_out[28]          
-    0:00:58    4537.6      0.95      17.2       0.0 product_out[28]          
-    0:00:58    4540.7      0.95      17.1       0.0 product_out[28]          
-    0:00:58    4542.0      0.94      17.1       0.0 product_out[31]          
-    0:00:58    4543.0      0.94      17.1       0.0 product_out[31]          
-    0:00:58    4543.4      0.94      17.1       0.0 product_out[31]          
-    0:00:58    4543.5      0.94      17.1       0.0 product_out[31]          
-    0:00:58    4550.0      0.94      17.1       0.0 product_out[31]          
-    0:00:58    4548.8      0.94      17.0       0.0 product_out[28]          
-    0:00:58    4552.5      0.94      17.2       0.0 product_out[31]          
-    0:00:59    4559.9      0.94      17.2       0.0 product_out[31]          
-    0:00:59    4558.3      0.94      17.2       0.0 product_out[28]          
-    0:00:59    4560.2      0.94      17.1       0.0 product_out[31]          
-    0:00:59    4559.7      0.94      17.1       0.0 product_out[28]          
-    0:00:59    4564.9      0.94      17.1       0.0 product_out[31]          
-    0:00:59    4563.9      0.94      17.1       0.0 product_out[29]          
-    0:00:59    4566.7      0.94      17.1       0.0 product_out[30]          
-    0:00:59    4569.6      0.94      17.1       0.0 product_out[28]          
-    0:00:59    4570.4      0.94      17.1       0.0 product_out[31]          
-    0:00:59    4570.9      0.94      17.1       0.0 product_out[29]          
-    0:00:59    4573.6      0.93      17.0       0.0 product_out[31]          
-    0:00:59    4575.9      0.93      17.0       0.0 product_out[31]          
-    0:00:59    4578.8      0.93      17.0       0.0 product_out[31]          
-    0:00:59    4579.6      0.93      17.0       0.0 product_out[29]          
-    0:00:59    4581.2      0.93      17.0       0.0 product_out[28]          
-    0:01:00    4580.8      0.93      17.0       0.0 product_out[31]          
-    0:01:00    4581.4      0.93      17.0       0.0 product_out[29]          
-    0:01:00    4582.2      0.93      17.0       0.0 product_out[31]          
-    0:01:00    4583.7      0.93      17.0       0.0 product_out[29]          
-    0:01:00    4585.0      0.93      17.0       0.0 product_out[31]          
-    0:01:00    4588.9      0.93      17.0       0.0 product_out[31]          
-    0:01:00    4588.9      0.93      16.9       0.0 product_out[31]          
-    0:01:00    4589.4      0.93      16.9       0.0 product_out[31]          
-    0:01:00    4589.9      0.93      16.9       0.0 product_out[31]          
-    0:01:00    4592.3      0.93      16.9       0.0 product_out[31]          
-    0:01:00    4593.5      0.93      16.9       0.0 product_out[31]          
-    0:01:00    4594.2      0.93      16.9       0.0 product_out[30]          
-    0:01:00    4595.3      0.93      16.9       0.0 product_out[31]          
-    0:01:00    4595.9      0.92      16.9       0.0 product_out[31]          
-    0:01:00    4598.9      0.92      17.2       0.0 product_out[31]          
-    0:01:01    4601.9      0.92      17.2       0.0 product_out[31]          
-    0:01:01    4603.7      0.92      17.2       0.0 product_out[31]          
-    0:01:01    4600.7      0.92      17.2       0.0 product_out[28]          
-    0:01:01    4604.6      0.92      17.2       0.0 product_out[30]          
-    0:01:01    4612.4      0.92      17.1       0.0 product_out[31]          
-    0:01:01    4614.0      0.92      17.1       0.0 product_out[30]          
-    0:01:01    4619.6      0.92      17.1       0.0 product_out[30]          
-    0:01:01    4625.4      0.92      17.1       0.0 product_out[29]          
-    0:01:01    4629.7      0.92      17.1       0.0 product_out[30]          
-    0:01:01    4628.6      0.92      17.1       0.0 product_out[28]          
-    0:01:01    4635.0      0.92      17.0       0.0 product_out[31]          
-    0:01:01    4639.5      0.92      17.0       0.0 product_out[31]          
-    0:01:01    4640.0      0.92      17.0       0.0 product_out[31]          
-    0:01:01    4645.1      0.92      17.0       0.0 product_out[29]          
-    0:01:01    4648.3      0.91      17.0       0.0 product_out[30]          
-    0:01:02    4650.1      0.91      17.0       0.0 product_out[31]          
-    0:01:02    4648.8      0.91      17.0       0.0 product_out[31]          
-    0:01:02    4650.5      0.91      16.9       0.0 product_out[28]          
-    0:01:02    4651.7      0.91      16.9       0.0 product_out[31]          
-    0:01:02    4660.3      0.91      16.9       0.0 product_out[31]          
-    0:01:02    4661.7      0.91      16.9       0.0 product_out[31]          
-    0:01:02    4660.9      0.91      16.9       0.0 product_out[28]          
-    0:01:02    4660.9      0.91      16.9       0.0 product_out[31]          
-    0:01:02    4665.1      0.91      16.9       0.0 product_out[31]          
-    0:01:02    4667.1      0.91      16.8       0.0 product_out[31]          
-    0:01:02    4667.7      0.91      16.8       0.0 product_out[30]          
-    0:01:02    4668.6      0.91      16.8       0.0 product_out[31]          
-    0:01:03    4670.3      0.91      16.8       0.0 product_out[30]          
-    0:01:03    4671.7      0.91      16.8       0.0 product_out[31]          
-    0:01:03    4671.9      0.91      16.8       0.0 product_out[31]          
-    0:01:03    4674.2      0.91      16.8       0.0 product_out[30]          
-    0:01:03    4675.3      0.91      16.8       0.0 product_out[31]          
-    0:01:03    4678.1      0.91      16.8       0.0 product_out[30]          
-    0:01:03    4681.2      0.91      16.8       0.0 product_out[28]          
-    0:01:03    4682.0      0.91      16.8       0.0 product_out[31]          
-    0:01:03    4685.4      0.91      16.8       0.0 product_out[31]          
-    0:01:03    4688.3      0.91      16.8       0.0 product_out[31]          
-    0:01:03    4688.6      0.91      16.8       0.0 product_out[31]          
-    0:01:03    4694.2      0.90      16.8       0.0 product_out[31]          
-    0:01:03    4694.4      0.90      16.8       0.0 product_out[31]          
-    0:01:03    4697.1      0.90      16.8       0.0 product_out[31]          
-    0:01:03    4697.1      0.90      16.8       0.0 product_out[31]          
-    0:01:03    4698.4      0.90      16.8       0.0 product_out[31]          
-    0:01:04    4697.9      0.90      16.8       0.0 product_out[31]          
-    0:01:04    4696.3      0.90      16.8       0.0 product_out[31]          
-    0:01:04    4696.8      0.90      16.8       0.0 product_out[31]          
-    0:01:04    4700.4      0.90      16.8       0.0 product_out[31]          
-    0:01:04    4700.2      0.90      16.8       0.0 product_out[31]          
-    0:01:04    4700.3      0.90      16.8       0.0 product_out[31]          
-    0:01:04    4701.0      0.90      16.8       0.0 product_out[30]          
-    0:01:04    4701.8      0.90      16.8       0.0 product_out[31]          
-    0:01:04    4700.5      0.90      16.8       0.0 product_out[31]          
-    0:01:04    4703.1      0.90      16.8       0.0 product_out[31]          
-    0:01:04    4705.8      0.90      16.8       0.0 product_out[31]          
-    0:01:04    4705.5      0.90      16.8       0.0 product_out[31]          
-    0:01:04    4705.5      0.90      16.8       0.0 product_out[31]          
-    0:01:04    4707.9      0.90      16.8       0.0 product_out[31]          
-    0:01:04    4709.3      0.90      16.8       0.0 product_out[31]          
-    0:01:04    4711.7      0.90      16.7       0.0 product_out[30]          
-    0:01:04    4712.3      0.90      16.7       0.0 product_out[28]          
-    0:01:05    4715.7      0.90      16.7       0.0 product_out[31]          
-    0:01:05    4718.0      0.90      16.7       0.0 product_out[28]          
-    0:01:05    4719.3      0.90      16.7       0.0 product_out[31]          
-    0:01:05    4724.7      0.90      16.7       0.0 product_out[31]          
-    0:01:05    4724.7      0.90      16.7       0.0 product_out[30]          
-    0:01:05    4727.2      0.90      16.7       0.0 product_out[30]          
-    0:01:05    4728.3      0.90      16.7       0.0 product_out[31]          
-    0:01:05    4731.4      0.90      16.7       0.0 product_out[30]          
-    0:01:05    4731.4      0.90      16.7       0.0 product_out[30]          
-    0:01:05    4733.5      0.90      16.7       0.0 product_out[31]          
-    0:01:05    4734.8      0.90      16.7       0.0 product_out[31]          
-    0:01:05    4734.0      0.90      16.7       0.0 product_out[31]          
-    0:01:05    4734.0      0.90      16.7       0.0 product_out[31]          
-    0:01:05    4733.1      0.90      16.7       0.0 product_out[30]          
-    0:01:05    4732.8      0.90      16.7       0.0 product_out[31]          
-    0:01:05    4732.7      0.90      16.7       0.0 product_out[27]          
-    0:01:05    4734.5      0.90      16.7       0.0 product_out[30]          
-    0:01:06    4734.5      0.90      16.7       0.0 product_out[31]          
-    0:01:06    4739.4      0.90      16.7       0.0 product_out[30]          
-    0:01:06    4739.4      0.90      16.7       0.0 product_out[30]          
-    0:01:06    4739.9      0.90      16.7       0.0 product_out[30]          
-    0:01:06    4740.4      0.89      16.7       0.0 product_out[30]          
-    0:01:06    4741.0      0.89      16.7       0.0 product_out[30]          
-    0:01:06    4739.9      0.89      16.7       0.0 product_out[31]          
-    0:01:06    4740.1      0.89      16.7       0.0 product_out[31]          
-    0:01:06    4742.2      0.89      16.7       0.0 product_out[31]          
-    0:01:06    4744.5      0.89      16.7       0.0 product_out[30]          
-    0:01:06    4742.1      0.89      16.7       0.0 product_out[30]          
-    0:01:06    4742.3      0.89      16.7       0.0 product_out[30]          
-    0:01:06    4746.7      0.89      16.6       0.0 product_out[31]          
-    0:01:06    4747.1      0.89      16.6       0.0 product_out[30]          
-    0:01:06    4747.1      0.89      16.6       0.0 product_out[31]          
-    0:01:06    4747.9      0.89      16.6       0.0 product_out[31]          
-    0:01:16    4751.2      0.89      16.6       0.0 product_out[31]          
-    0:01:16    4753.6      0.89      16.6       0.0 product_out[26]          
-    0:01:16    4753.7      0.89      16.6       0.0 product_out[29]          
-    0:01:16    4758.9      0.89      16.6       0.0 product_out[26]          
-    0:01:16    4771.4      0.89      16.6       0.0 product_out[30]          
-    0:01:17    4775.1      0.89      16.6       0.0 product_out[29]          
-    0:01:17    4776.2      0.89      16.6       0.0 product_out[29]          
-    0:01:17    4781.7      0.89      16.5       0.0 product_out[31]          
-    0:01:17    4784.1      0.89      16.5       0.0 product_out[30]          
-    0:01:17    4783.5      0.89      16.5       0.0 product_out[29]          
-    0:01:17    4786.2      0.89      16.5       0.0 product_out[31]          
-    0:01:17    4788.4      0.89      16.5       0.0 product_out[30]          
-    0:01:17    4793.9      0.89      16.5       0.0 product_out[30]          
-    0:01:17    4796.2      0.89      16.5       0.0 product_out[31]          
-    0:01:17    4797.2      0.89      16.5       0.0 product_out[30]          
-    0:01:17    4804.2      0.89      16.5       0.0 product_out[29]          
-    0:01:18    4810.1      0.89      16.4       0.0 product_out[29]          
-    0:01:18    4812.4      0.89      16.4       0.0 product_out[30]          
-    0:01:18    4813.5      0.89      16.4       0.0 product_out[30]          
-    0:01:18    4823.1      0.89      16.4       0.0 product_out[30]          
-    0:01:18    4829.0      0.89      16.4       0.0 product_out[30]          
-    0:01:18    4828.0      0.89      16.4       0.0 product_out[30]          
-    0:01:18    4837.3      0.88      16.4       0.0 product_out[30]          
-    0:01:18    4844.4      0.88      16.3       0.0 product_out[30]          
-    0:01:18    4844.7      0.88      16.3       0.0 product_out[31]          
-    0:01:18    4854.4      0.88      16.3       0.0 product_out[30]          
-    0:01:18    4856.6      0.88      16.3       0.0 product_out[30]          
-    0:01:18    4859.8      0.88      16.2       0.0 product_out[29]          
-    0:01:19    4864.7      0.88      16.2       0.0 product_out[31]          
-    0:01:19    4865.7      0.88      16.2       0.0 product_out[30]          
-    0:01:19    4869.6      0.88      16.2       0.0 product_out[31]          
-    0:01:19    4869.1      0.88      16.2       0.0 product_out[30]          
-    0:01:19    4869.9      0.88      16.2       0.0 product_out[27]          
-    0:01:19    4872.7      0.88      16.2       0.0 product_out[30]          
-    0:01:19    4875.2      0.88      16.2       0.0 product_out[31]          
-    0:01:19    4884.4      0.88      16.2       0.0 product_out[30]          
-    0:01:19    4885.2      0.88      16.2       0.0 product_out[30]          
-    0:01:19    4885.7      0.88      16.2       0.0 product_out[30]          
-    0:01:19    4887.3      0.88      16.2       0.0 product_out[31]          
-    0:01:19    4887.0      0.88      16.2       0.0 product_out[31]          
-    0:01:19    4888.5      0.88      16.2       0.0 product_out[30]          
-    0:01:19    4897.0      0.88      16.2       0.0 product_out[31]          
-    0:01:20    4902.0      0.88      16.2       0.0 product_out[29]          
-    0:01:20    4902.5      0.88      16.1       0.0 product_out[31]          
-    0:01:20    4903.4      0.88      16.1       0.0 product_out[31]          
-    0:01:20    4910.7      0.88      16.1       0.0 product_out[30]          
-    0:01:20    4918.0      0.88      16.1       0.0 product_out[31]          
-    0:01:20    4921.6      0.88      16.1       0.0 product_out[31]          
-    0:01:20    4921.9      0.88      16.1       0.0 product_out[26]          
-    0:01:20    4924.8      0.88      16.1       0.0 product_out[31]          
-    0:01:20    4933.6      0.87      16.1       0.0 product_out[30]          
-    0:01:20    4932.8      0.87      16.1       0.0 product_out[31]          
-    0:01:20    4932.4      0.87      16.1       0.0 product_out[30]          
-    0:01:21    4931.9      0.87      16.1       0.0 product_out[31]          
-    0:01:21    4932.5      0.87      16.1       0.0 product_out[31]          
-    0:01:22    4936.0      0.87      16.1       0.0 product_out[29]          
-    0:01:22    4940.5      0.87      16.1       0.0 product_out[31]          
-    0:01:23    4941.5      0.87      16.1       0.0 product_out[31]          
-    0:01:23    4944.6      0.87      16.1       0.0 product_out[29]          
-    0:01:24    4947.0      0.87      16.1       0.0 product_out[29]          
-    0:01:25    4944.2      0.87      16.1       0.0 product_out[29]          
-    0:01:25    4944.2      0.87      16.1       0.0 product_out[31]          
-    0:01:25    4943.9      0.87      16.1       0.0 product_out[31]          
-    0:01:25    4945.0      0.87      16.1       0.0 product_out[31]          
-    0:01:25    4948.7      0.87      16.1       0.0 product_out[29]          
-    0:01:26    4949.8      0.87      16.1       0.0 product_out[31]          
-    0:01:26    4950.0      0.87      16.1       0.0 product_out[31]          
-    0:01:26    4950.6      0.87      16.1       0.0 product_out[30]          
-    0:01:26    4952.2      0.87      16.1       0.0 product_out[31]          
-    0:01:26    4951.6      0.87      16.0       0.0 product_out[31]          
-    0:01:27    4954.1      0.87      16.0       0.0 product_out[31]          
-    0:01:27    4953.3      0.87      16.0       0.0 product_out[31]          
-    0:01:27    4955.9      0.87      16.0       0.0 product_out[31]          
-    0:01:27    4958.8      0.87      16.0       0.0 product_out[31]          
-    0:01:27    4959.6      0.87      16.0       0.0 product_out[30]          
-    0:01:27    4961.7      0.87      16.0       0.0 product_out[31]          
-    0:01:27    4961.7      0.87      16.0       0.0 product_out[29]          
-    0:01:28    4963.9      0.87      16.0       0.0 product_out[31]          
-    0:01:28    4964.2      0.87      16.0       0.0 product_out[31]          
-    0:01:28    4964.7      0.87      16.0       0.0 product_out[31]          
-    0:01:28    4964.4      0.87      16.0       0.0 product_out[31]          
-    0:01:28    4965.5      0.87      16.1       0.0 product_out[30]          
-    0:01:28    4966.6      0.87      16.1       0.0 product_out[31]          
-    0:01:30    4966.6      0.87      16.1       0.0                          
-    0:01:30    4966.6      0.87      16.1       0.0                          
-    0:01:30    4966.6      0.87      16.1       0.0                          
-    0:01:30    4967.9      0.87      16.1       0.0                          
-    0:01:30    4971.2      0.87      16.1       0.0                          
-    0:01:30    4972.4      0.87      16.0       0.0                          
-    0:01:30    4971.6      0.87      16.0       0.0                          
-    0:01:30    4971.3      0.87      16.0       0.0                          
-    0:01:31    4973.3      0.87      16.0       0.0                          
-    0:01:31    4973.2      0.87      16.0       0.0                          
-    0:01:31    4973.3      0.87      16.0       0.0                          
-    0:01:31    4973.6      0.87      16.0       0.0                          
-    0:01:31    4974.1      0.87      16.0       0.0                          
-    0:01:31    4977.6      0.87      16.0       0.0                          
-    0:01:31    4978.8      0.87      16.0       0.0                          
-    0:01:31    4985.5      0.87      16.0       0.0                          
-    0:01:31    4985.8      0.87      16.0       0.0                          
-    0:01:31    4985.4      0.87      16.0       0.0                          
-    0:01:31    4985.4      0.87      16.0       0.0                          
-    0:01:31    4987.0      0.87      15.9       0.0                          
-    0:01:31    4985.5      0.87      15.9       0.0                          
-    0:01:31    4985.8      0.87      15.9       0.0                          
-    0:01:32    4984.2      0.87      15.9       0.0                          
-    0:01:32    4984.6      0.87      15.9       0.0                          
-    0:01:32    4983.3      0.87      15.9       0.0                          
-    0:01:32    4983.3      0.87      15.7       0.0                          
-    0:01:32    4986.9      0.87      15.6       0.0                          
+    0:00:19   17865.0      0.00      -0.0       0.0                          
+    0:00:20   17865.0      0.00      -0.0       0.0                          
+    0:00:20   17865.0      0.00      -0.0       0.0                          
+
+
+  Beginning Critical Range Optimization
+  -------------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:20   17865.0      0.00      -0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -1148,202 +720,42 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:01:32    4986.9      0.87      15.6       0.0                          
-    0:01:32    4986.9      0.87      15.6       0.0                          
-    0:01:32    4917.5      0.87      15.6       0.0                          
-    0:01:32    4895.6      0.88      15.7       0.0                          
-    0:01:32    4891.9      0.88      15.7       0.0                          
-    0:01:32    4891.9      0.88      15.7       0.0                          
-    0:01:32    4891.9      0.88      15.7       0.0                          
-    0:01:32    4891.9      0.88      15.7       0.0                          
-    0:01:32    4891.9      0.88      15.7       0.0                          
-    0:01:32    4860.0      0.88      15.8       0.0                          
-    0:01:32    4847.7      0.88      15.8       0.0                          
-    0:01:32    4844.8      0.88      15.8       0.0                          
-    0:01:32    4844.8      0.88      15.8       0.0                          
-    0:01:32    4844.8      0.88      15.8       0.0                          
-    0:01:32    4844.8      0.88      15.8       0.0                          
-    0:01:32    4844.8      0.88      15.8       0.0                          
-    0:01:32    4844.8      0.88      15.8       0.0                          
-    0:01:33    4858.6      0.87      15.8       0.0 product_out[30]          
-    0:01:33    4860.2      0.87      15.8       0.0 product_out[30]          
-    0:01:33    4860.3      0.87      15.8       0.0 product_out[31]          
-    0:01:33    4864.8      0.87      15.7       0.0 product_out[30]          
-    0:01:33    4867.4      0.87      15.8       0.0 product_out[30]          
-    0:01:33    4867.4      0.87      15.8       0.0 product_out[31]          
-    0:01:33    4871.3      0.87      15.8       0.0 product_out[31]          
-    0:01:33    4874.1      0.87      15.8       0.0 product_out[30]          
-    0:01:33    4885.2      0.87      15.7       0.0 product_out[31]          
-    0:01:33    4888.2      0.87      15.7       0.0 product_out[31]          
-    0:01:34    4888.8      0.87      15.7       0.0 product_out[30]          
-    0:01:34    4892.6      0.86      15.7       0.0 product_out[31]          
-    0:01:34    4893.1      0.86      15.7       0.0 product_out[30]          
-    0:01:34    4896.6      0.86      15.7       0.0 product_out[30]          
-    0:01:34    4902.4      0.86      15.6       0.0 product_out[30]          
-    0:01:34    4907.0      0.86      15.7       0.0 product_out[31]          
-    0:01:34    4905.5      0.86      15.7       0.0 product_out[31]          
-    0:01:34    4910.2      0.86      15.6       0.0 product_out[31]          
-    0:01:34    4910.2      0.86      15.6       0.0 product_out[31]          
-    0:01:35    4914.1      0.86      15.6       0.0 product_out[31]          
-    0:01:35    4920.1      0.86      15.8       0.0 product_out[30]          
-    0:01:35    4928.2      0.86      15.8       0.0 product_out[30]          
-    0:01:35    4931.0      0.86      15.7       0.0 product_out[31]          
-    0:01:35    4930.5      0.86      15.7       0.0 product_out[30]          
-    0:01:35    4931.0      0.86      15.7       0.0 product_out[30]          
-    0:01:35    4930.5      0.86      15.7       0.0 product_out[30]          
-    0:01:35    4930.2      0.86      15.7       0.0 product_out[31]          
-    0:01:35    4933.7      0.86      15.7       0.0 product_out[31]          
-    0:01:35    4936.8      0.86      15.7       0.0 product_out[30]          
-    0:01:35    4941.4      0.86      15.7       0.0 product_out[31]          
-    0:01:36    4946.4      0.86      15.7       0.0 product_out[30]          
-    0:01:36    4950.1      0.86      15.6       0.0 product_out[30]          
-    0:01:36    4954.7      0.86      15.6       0.0 product_out[31]          
-    0:01:36    4956.0      0.85      15.6       0.0 product_out[31]          
-    0:01:36    4960.3      0.85      15.6       0.0 product_out[26]          
-    0:01:36    4963.4      0.85      15.6       0.0 product_out[29]          
-    0:01:36    4963.1      0.85      15.6       0.0 product_out[31]          
-    0:01:36    4965.0      0.85      15.6       0.0 product_out[29]          
-    0:01:36    4965.0      0.85      15.6       0.0 product_out[31]          
-    0:01:36    4966.6      0.85      15.6       0.0 product_out[30]          
-    0:01:36    4970.9      0.85      15.6       0.0 product_out[31]          
-    0:01:37    4972.9      0.85      15.6       0.0 product_out[30]          
-    0:01:37    4976.4      0.85      15.6       0.0 product_out[31]          
-    0:01:37    4978.5      0.85      15.6       0.0 product_out[31]          
-    0:01:37    4978.5      0.85      15.6       0.0 product_out[31]          
-    0:01:37    4978.5      0.85      15.6       0.0 product_out[30]          
-    0:01:37    4985.1      0.85      15.6       0.0 product_out[30]          
-    0:01:37    4984.9      0.85      15.6       0.0 product_out[31]          
-    0:01:37    4986.1      0.85      15.6       0.0 product_out[30]          
-    0:01:37    4985.3      0.85      15.6       0.0 product_out[29]          
-    0:01:37    4985.3      0.85      15.6       0.0 product_out[31]          
-    0:01:37    4984.7      0.85      15.6       0.0 product_out[29]          
-    0:01:37    4986.2      0.85      15.6       0.0 product_out[30]          
-    0:01:37    4991.7      0.85      15.6       0.0 product_out[31]          
-    0:01:38    4991.1      0.85      15.5       0.0 product_out[29]          
-    0:01:38    4992.2      0.85      15.5       0.0 product_out[31]          
-    0:01:38    4997.6      0.85      15.5       0.0 product_out[31]          
-    0:01:38    5005.6      0.85      15.5       0.0 product_out[30]          
-    0:01:38    5009.2      0.85      15.5       0.0 product_out[31]          
-    0:01:38    5011.6      0.85      15.5       0.0 product_out[30]          
-    0:01:38    5016.0      0.85      15.7       0.0 product_out[31]          
-    0:01:38    5018.0      0.85      15.7       0.0 product_out[31]          
-    0:01:38    5019.3      0.85      15.7       0.0 product_out[30]          
-    0:01:38    5020.6      0.85      15.7       0.0 product_out[30]          
-    0:01:38    5025.8      0.85      15.7       0.0 product_out[30]          
-    0:01:38    5028.0      0.85      15.6       0.0 product_out[31]          
-    0:01:38    5028.0      0.85      15.6       0.0 product_out[31]          
-    0:01:39    5029.9      0.85      15.6       0.0 product_out[29]          
-    0:01:39    5031.7      0.85      15.6       0.0 product_out[30]          
-    0:01:39    5031.5      0.85      15.6       0.0 product_out[31]          
-    0:01:39    5036.7      0.85      15.6       0.0 product_out[31]          
-    0:01:39    5037.2      0.85      15.6       0.0 product_out[31]          
-    0:01:39    5036.7      0.85      15.6       0.0 product_out[31]          
-    0:01:39    5043.8      0.84      15.6       0.0 product_out[30]          
-    0:01:39    5043.8      0.84      15.6       0.0 product_out[31]          
-    0:01:39    5047.4      0.84      15.5       0.0 product_out[31]          
-    0:01:39    5049.5      0.84      15.5       0.0 product_out[31]          
-    0:01:39    5049.4      0.84      15.5       0.0 product_out[31]          
-    0:01:39    5050.6      0.84      15.5       0.0 product_out[29]          
-    0:01:40    5054.9      0.84      15.5       0.0 product_out[30]          
-    0:01:40    5062.9      0.84      15.5       0.0 product_out[31]          
-    0:01:40    5063.2      0.84      15.5       0.0 product_out[31]          
-    0:01:40    5067.5      0.84      15.5       0.0 product_out[31]          
-    0:01:40    5066.1      0.84      15.5       0.0 product_out[30]          
-    0:01:40    5066.9      0.84      15.5       0.0 product_out[30]          
-    0:01:40    5070.8      0.84      15.5       0.0 product_out[31]          
-    0:01:40    5071.7      0.84      15.5       0.0 product_out[29]          
-    0:01:40    5072.1      0.84      15.5       0.0 product_out[30]          
-    0:01:40    5076.5      0.84      15.5       0.0 product_out[30]          
-    0:01:40    5076.5      0.84      15.5       0.0 product_out[30]          
-    0:01:41    5081.8      0.84      15.5       0.0 product_out[30]          
-    0:01:41    5081.5      0.84      15.5       0.0 product_out[30]          
-    0:01:41    5080.4      0.84      15.5       0.0 product_out[30]          
-    0:01:41    5080.6      0.84      15.5       0.0 product_out[29]          
-    0:01:41    5087.1      0.84      15.5       0.0 product_out[31]          
-    0:01:41    5093.8      0.84      15.5       0.0 product_out[30]          
-    0:01:41    5093.4      0.84      15.5       0.0 product_out[31]          
-    0:01:41    5094.0      0.84      15.5       0.0 product_out[31]          
-    0:01:41    5098.6      0.84      15.4       0.0 product_out[29]          
-    0:01:41    5100.4      0.84      15.4       0.0 product_out[31]          
-    0:01:41    5102.5      0.84      15.4       0.0 product_out[31]          
-    0:01:42    5104.0      0.84      15.4       0.0 product_out[29]          
-    0:01:42    5106.5      0.84      15.4       0.0 product_out[31]          
-    0:01:42    5107.2      0.84      15.4       0.0 product_out[31]          
-    0:01:42    5105.5      0.84      15.4       0.0 product_out[31]          
-    0:01:42    5110.1      0.83      15.4       0.0 product_out[31]          
-    0:01:42    5113.9      0.83      15.4       0.0 product_out[31]          
-    0:01:42    5113.6      0.83      15.4       0.0 product_out[31]          
-    0:01:42    5115.5      0.83      15.4       0.0 product_out[31]          
-    0:01:42    5115.5      0.83      15.4       0.0 product_out[26]          
-    0:01:42    5115.8      0.83      15.4       0.0 product_out[29]          
-    0:01:42    5117.2      0.83      15.3       0.0 product_out[26]          
-    0:01:43    5117.2      0.83      15.3       0.0 product_out[30]          
-    0:01:43    5122.5      0.83      15.3       0.0 product_out[31]          
-    0:01:43    5122.8      0.83      15.3       0.0 product_out[31]          
-    0:01:43    5124.3      0.83      15.3       0.0 product_out[31]          
-    0:01:43    5127.0      0.83      15.3       0.0 product_out[31]          
-    0:01:43    5128.9      0.83      15.3       0.0 product_out[31]          
-    0:01:43    5132.7      0.83      15.3       0.0 product_out[31]          
-    0:01:43    5136.9      0.83      15.3       0.0 product_out[28]          
-    0:01:43    5137.0      0.83      15.3       0.0 product_out[29]          
-    0:01:43    5137.0      0.83      15.3       0.0 product_out[31]          
-    0:01:43    5136.5      0.83      15.3       0.0 product_out[28]          
-    0:01:43    5136.3      0.83      15.3       0.0 product_out[29]          
-    0:01:43    5138.1      0.83      15.3       0.0 product_out[29]          
-    0:01:44    5139.5      0.83      15.3       0.0 product_out[31]          
-    0:01:44    5149.4      0.83      15.3       0.0 product_out[31]          
-    0:01:44    5149.4      0.83      15.3       0.0 product_out[31]          
-    0:01:44    5160.5      0.83      15.3       0.0 product_out[29]          
-    0:01:44    5162.7      0.83      15.3       0.0                          
-    0:01:44    5151.8      0.83      15.3       0.0                          
-    0:01:44    5139.2      0.83      15.3       0.0                          
-    0:01:44    5130.6      0.83      15.3       0.0                          
-    0:01:44    5124.5      0.83      15.3       0.0                          
-    0:01:44    5114.7      0.83      15.3       0.0                          
-    0:01:45    5108.3      0.83      15.3       0.0                          
-    0:01:45    5099.8      0.83      15.3       0.0                          
-    0:01:45    5102.2      0.83      15.2       0.0                          
-    0:01:45    5101.1      0.83      15.2       0.0                          
-    0:01:45    5099.5      0.83      15.2       0.0                          
-    0:01:45    5100.8      0.83      15.2       0.0                          
-    0:01:45    5101.9      0.83      15.2       0.0                          
-    0:01:45    5103.4      0.83      15.2       0.0                          
-    0:01:45    5101.8      0.83      15.2       0.0                          
-    0:01:45    5105.1      0.83      15.1       0.0                          
-    0:01:45    5104.2      0.83      15.1       0.0                          
-    0:01:45    5104.5      0.83      15.1       0.0                          
-    0:01:45    5106.1      0.83      15.0       0.0                          
-    0:01:46    5105.5      0.83      14.9       0.0                          
-    0:01:46    5105.5      0.83      14.9       0.0                          
-    0:01:46    5105.5      0.83      14.9       0.0 product_out[31]          
-    0:01:46    5105.3      0.83      14.9       0.0 product_out[31]          
-    0:01:46    5106.9      0.83      14.9       0.0 product_out[31]          
-    0:01:46    5105.3      0.83      14.9       0.0 product_out[31]          
-    0:01:46    5109.7      0.83      14.9       0.0 product_out[30]          
-    0:01:46    5111.1      0.83      14.9       0.0 product_out[30]          
-    0:01:46    5112.8      0.83      14.9       0.0 product_out[31]          
-    0:01:46    5112.0      0.83      14.9       0.0 product_out[31]          
-    0:01:46    5117.6      0.83      14.8       0.0 product_out[31]          
-    0:01:47    5117.4      0.83      14.8       0.0 product_out[31]          
-    0:01:47    5116.8      0.83      14.8       0.0 product_out[31]          
-    0:01:47    5119.0      0.83      14.8       0.0 product_out[31]          
-    0:01:47    5121.3      0.83      14.8       0.0 product_out[31]          
-    0:01:47    5124.6      0.83      14.8       0.0 product_out[31]          
-    0:01:47    5122.9      0.83      14.9       0.0 product_out[30]          
-    0:01:47    5123.7      0.83      14.9       0.0 product_out[31]          
-    0:01:47    5125.3      0.83      14.9       0.0 product_out[30]          
-    0:01:47    5125.3      0.83      14.9       0.0 product_out[31]          
-    0:01:47    5124.8      0.83      14.9       0.0 product_out[30]          
-    0:01:47    5124.8      0.82      14.9       0.0 product_out[31]          
-    0:01:47    5126.8      0.82      14.9       0.0 product_out[31]          
-    0:01:47    5126.8      0.82      14.9       0.0 product_out[31]          
-    0:01:48    5127.3      0.82      14.9       0.0 product_out[31]          
-    0:01:48    5127.5      0.82      14.9       0.0 product_out[30]          
-    0:01:48    5128.3      0.82      14.9       0.0 product_out[31]          
+    0:00:20   17865.0      0.00      -0.0       0.0                          
+    0:00:20   17865.0      0.00      -0.0       0.0                          
+    0:00:20   17172.2      0.03       1.1       0.0                          
+    0:00:20   16761.1      0.01       0.1       0.0                          
+    0:00:20   16671.6      0.05       0.3       0.0                          
+    0:00:21   16600.6      0.05       0.3       0.0                          
+    0:00:21   16531.2      0.04       0.2       0.0                          
+    0:00:21   16506.7      0.03       0.2       0.0                          
+    0:00:21   16506.7      0.03       0.2       0.0                          
+    0:00:22   16475.1      0.00       0.0       0.0                          
+    0:00:22   16474.1      0.00       0.0       0.0                          
+    0:00:22   15340.6      0.05       0.7       0.0                          
+    0:00:23   14799.9      0.22       1.9       0.0                          
+    0:00:23   14728.0      0.19       2.5       0.0                          
+    0:00:23   14723.0      0.19       2.3       0.0                          
+    0:00:23   14723.0      0.19       2.3       0.0                          
+    0:00:23   14723.0      0.19       2.3       0.0                          
+    0:00:23   14723.0      0.19       2.3       0.0                          
+    0:00:23   14723.0      0.19       2.3       0.0                          
+    0:00:23   14794.9      0.00       0.0       0.0 rData2_reg[31]/D         
+    0:00:24   14796.0      0.00      -0.0       0.0                          
+
+
+  Beginning Critical Range Optimization
+  -------------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:24   14796.0      0.00      -0.0       0.0                          
 Loading db file '/home/byy911/Documents/eecs362/synth/NangateOpenCellLibrary.db'
 
   Optimization Complete
   ---------------------
+Warning: Design 'regfile' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'clk': 1025 load(s), 1 driver(s)
 1
 if {$dc_shell_status == 0} {
       echo "*******************************************************"
@@ -1352,7 +764,7 @@ if {$dc_shell_status == 0} {
       quit
    }
 sh date
-Thu Mar 17 14:03:24 CDT 2016
+Thu Mar 17 15:40:29 CDT 2016
 ###########################################################################
 # 5e. Insert Scan - Hook up the scan chain.
 ###########################################################################
@@ -1417,155 +829,26 @@ if {[info exists project_sparc_cfg] && ($project_sparc_cfg == 1) } {
 
 ### section 5e. will be skipped if user want to use PC flow
 }
-Current design is 'multiplier'.
-Current design is 'multiplier'.
+Current design is 'regfile'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Current design is 'regfile'.
 Information: Updating graph... (UID-83)
-Current design is 'adder'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'fa'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'alu'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Building the design 'and_32'. (HDL-193)
-Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
-Presto compilation completed successfully.
-Information: Building the design 'or_32'. (HDL-193)
-Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
-Presto compilation completed successfully.
-Information: Building the design 'xor_32'. (HDL-193)
-Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
-Presto compilation completed successfully.
-Information: Building the design 'nor32to1'. (HDL-193)
-Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
-Presto compilation completed successfully.
-Information: Building the design 'mux2to1' instantiated from design 'setter' with
-	the parameters "3". (HDL-193)
-Presto compilation completed successfully.
-Information: Building the design 'xor_gate'. (HDL-193)
-Presto compilation completed successfully.
-Information: Building the design 'and_gate'. (HDL-193)
-Presto compilation completed successfully.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'bitwise'.
+Warning: Design 'regfile' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Information: Attribute 'scanned_by_test_compiler' is set on 1088 objects. (UID-186)
+Current design is 'fpregfile'.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 Information: Updating graph... (UID-83)
-Current design is 'flag_setter'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'setter'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'shifter'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'mux4to1_N_BITS32'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'mux2to1_N_BITS32'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'mux2to1_N_BITS1'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'or32to1'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'mux2to1_32'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'not_32'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'mux16to1_32'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'mux16to1_N_BITS1'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'fa_nbit'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'or_gate'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'not_gate'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'mux16to1_N_BITS32'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'mux4to1_N_BITS1'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Information: Updating graph... (UID-83)
-Current design is 'multiplier'.
+Warning: Design 'fpregfile' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Information: Attribute 'scanned_by_test_compiler' is set on 1024 objects. (UID-186)
+Current design is 'regfile'.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 Accepted scan configuration for modes: all_dft
-Current design is 'multiplier'.
-Current design is 'adder'.
+Current design is 'regfile'.
+Current design is 'fpregfile'.
+Current design is 'regfile'.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'fa'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'alu'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'bitwise'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'flag_setter'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'setter'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'shifter'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'mux4to1_N_BITS32'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'mux2to1_N_BITS32'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'mux2to1_N_BITS1'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'or32to1'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'mux2to1_32'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'not_32'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'mux16to1_32'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'mux16to1_N_BITS1'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'fa_nbit'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'or_gate'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'not_gate'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'mux16to1_N_BITS32'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'mux4to1_N_BITS1'.
-Current design is 'and_32'.
-Current design is 'or_32'.
-Current design is 'xor_32'.
-Current design is 'nor32to1'.
-Current design is 'mux2to1_N_BITS3'.
-Current design is 'xor_gate'.
-Current design is 'and_gate'.
-Current design is 'multiplier'.
-Warning: Can't read link_library file 'your_library.db'. (UID-3)
-Current design is 'multiplier'.
+Current design is 'regfile'.
 Warning: Can't read link_library file 'your_library.db'. (UID-3)
 
 
@@ -1588,46 +871,33 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:00    5128.3      0.82      14.9       0.0                          
-    0:00:01    5128.0      0.82      14.9       0.0 product_out[31]          
-    0:00:01    5127.2      0.82      14.9       0.0 product_out[30]          
-    0:00:02    5126.5      0.82      14.9       0.0 product_out[30]          
-    0:00:03    5127.9      0.82      14.9       0.0                          
-    0:00:03    5127.9      0.82      14.9       0.0                          
-    0:00:03    5129.5      0.82      14.9       0.0                          
-    0:00:03    5129.5      0.82      14.9       0.0                          
-    0:00:03    5131.5      0.82      14.8       0.0                          
-    0:00:03    5132.5      0.82      14.8       0.0                          
-    0:00:03    5132.0      0.82      14.8       0.0                          
-    0:00:03    5132.3      0.82      14.8       0.0                          
-    0:00:03    5135.6      0.82      14.8       0.0                          
-    0:00:03    5137.0      0.82      14.8       0.0                          
-    0:00:03    5137.9      0.82      14.8       0.0                          
-    0:00:03    5138.6      0.82      14.8       0.0                          
-    0:00:03    5137.2      0.82      14.8       0.0                          
-    0:00:03    5137.1      0.82      14.8       0.0                          
-    0:00:03    5137.1      0.82      14.8       0.0                          
-    0:00:03    5138.4      0.82      14.8       0.0                          
-    0:00:04    5138.4      0.82      14.7       0.0                          
-    0:00:04    5138.1      0.82      14.7       0.0                          
-    0:00:04    5137.5      0.82      14.7       0.0                          
-    0:00:04    5138.9      0.82      14.7       0.0                          
-    0:00:04    5139.2      0.82      14.7       0.0                          
-    0:00:04    5139.2      0.82      14.7       0.0                          
-    0:00:04    5139.8      0.82      14.7       0.0                          
-    0:00:04    5140.0      0.82      14.7       0.0                          
-    0:00:04    5140.1      0.82      14.7       0.0                          
-    0:00:04    5143.7      0.82      14.7       0.0                          
-    0:00:04    5143.2      0.82      14.7       0.0                          
-    0:00:04    5144.0      0.82      14.7       0.0                          
-    0:00:04    5143.8      0.82      14.7       0.0 product_out[31]          
-    0:00:05    5144.7      0.82      14.7       0.0 product_out[31]          
-    0:00:05    5144.7      0.82      14.7       0.0 product_out[31]          
-    0:00:05    5144.7      0.82      14.7       0.0 product_out[31]          
+    0:00:00   14796.0      0.00       0.0       0.0                          
+    0:00:01   14796.0      0.00       0.0       0.0                          
+    0:00:01   14795.2      0.00       0.0       0.0                          
+
+
+  Beginning Critical Range Optimization
+  -------------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01   14795.2      0.00       0.0       0.0                          
+
+
+  Beginning Critical Range Optimization
+  -------------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01   14795.2      0.00       0.0       0.0                          
 Loading db file '/home/byy911/Documents/eecs362/synth/NangateOpenCellLibrary.db'
 
   Optimization Complete
   ---------------------
+Warning: Design 'regfile' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'clk': 1025 load(s), 1 driver(s)
 1
 ###########################################################################
 # 6. Write Out Design
@@ -1638,13 +908,13 @@ define_name_rules afara_rules -map {{ {"\\*cell\\*", "UDW_"}}}
 change_names -rule afara_rules -hierarchy
 1
 sh date
-Thu Mar 17 14:03:33 CDT 2016
+Thu Mar 17 15:40:32 CDT 2016
 if {[info exists use_physopt] && ($use_physopt == 1)} {
    write -format verilog -hier -output [format "%s%s%s" gate/ $top_module _hier_fromdc.v]
 } else {
    write -format verilog -hier -output [format "%s%s%s" gate/ $top_module _hier.v]
 }
-Writing verilog file '/home/byy911/Documents/eecs362/synth/gate/multiplier_hier.v'.
+Writing verilog file '/home/byy911/Documents/eecs362/synth/gate/regfile_hier.v'.
 Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
 1
 ###########################################################################
@@ -1657,14 +927,14 @@ redirect [format "%s%s%s" log/ $top_module _hier_timing.rep] { report_timing -ma
 # 8. Flatten hierarchy for backend tools
 ###########################################################################
 sh date
-Thu Mar 17 14:03:33 CDT 2016
+Thu Mar 17 15:40:32 CDT 2016
 # remove dont_touch attribute before flattening the design
 if { [get_designs -hier $dont_touch_modules] != {} } {
    set_dont_touch $dont_touch_modules false
 }
 current_design $top_module
-Current design is 'multiplier'.
-{multiplier}
+Current design is 'regfile'.
+{regfile}
 ungroup -all -flatten
 Warning: Design has no hierarchy.  No cells can be ungrouped. (UID-228)
 0
@@ -1685,7 +955,7 @@ if {[info exists project_io_cfg] && ($project_io_cfg == 1) } {
 } else {
    write -format verilog -output [format "%s%s%s"  gate/ $top_module _flat.v]
 }
-Writing verilog file '/home/byy911/Documents/eecs362/synth/gate/multiplier_flat.v'.
+Writing verilog file '/home/byy911/Documents/eecs362/synth/gate/regfile_flat.v'.
 1
 # Report flattened results
 redirect [format "%s%s%s" log/ $top_module _area.rep] { report_area }
@@ -1719,7 +989,7 @@ if {  [sizeof_collection $unmapped_designs] != 0 } {
 # 11. Done
 ###########################################################################
 sh date
-Thu Mar 17 14:03:34 CDT 2016
+Thu Mar 17 15:40:34 CDT 2016
 echo "run.scr completed successfully"
 run.scr completed successfully
 quit
