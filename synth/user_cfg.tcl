@@ -20,10 +20,10 @@
 # ========== Copyright Header End ============================================
 source -echo -verbose project_sparc_cfg.tcl
 
-set rtl_files { /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v }
+set rtl_files { /home/byy911/Documents/eecs362/verilog/alu/adder.v /home/byy911/Documents/eecs362/verilog/alu/alu.v /home/byy911/Documents/eecs362/verilog/alu/bitwise.v /home/byy911/Documents/eecs362/verilog/alu/flag_setter.v /home/byy911/Documents/eecs362/verilog/alu/lshift.v /home/byy911/Documents/eecs362/verilog/alu/setter.v /home/byy911/Documents/eecs362/verilog/alu/shifter.v /home/byy911/Documents/eecs362/verilog/pipeline/ex_mem.v /home/byy911/Documents/eecs362/verilog/pipeline/ex.v /home/byy911/Documents/eecs362/verilog/pipeline/hazard_detect.v /home/byy911/Documents/eecs362/verilog/pipeline/id_ex.v /home/byy911/Documents/eecs362/verilog/pipeline/id.v /home/byy911/Documents/eecs362/verilog/pipeline/ifetch.v /home/byy911/Documents/eecs362/verilog/pipeline/if_id.v /home/byy911/Documents/eecs362/verilog/pipeline/mem.v /home/byy911/Documents/eecs362/verilog/pipeline/mem_wb.v /home/byy911/Documents/eecs362/verilog/pipeline/pipeline.v /home/byy911/Documents/eecs362/verilog/pipeline/wb.v /home/byy911/Documents/eecs362/verilog/single_cycle/lib/control.v /home/byy911/Documents/eecs362/verilog/single_cycle/lib/regfile.v /home/byy911/Documents/eecs362/verilog/single_cycle/lib/sign_extender.v /home/byy911/Documents/eecs362/verilog/gates/dffa.v /home/byy911/Documents/eecs362/verilog/gates/dff.v /home/byy911/Documents/eecs362/verilog/gates/gates.v /home/byy911/Documents/eecs362/verilog/multiplier/multiplier.v /home/byy911/Documents/eecs362/verilog/multiplier/multiplier_fsm.v }
 
 set mix_files {}
-set top_module regfile
+set top_module pipeline
 set include_paths { design/sys/iop/include }
 
 set black_box_libs {}
@@ -38,12 +38,12 @@ set compile_flatten_all 1
 set compile_no_new_cells_at_top_level false
 
 set default_clk clk
-set default_clk_freq 800
+set default_clk_freq 410
 set default_setup_skew  0.00
 set default_hold_skew  0.00
 set default_clk_transition  0.00
 set clk_list {                        \
-        {clk     800.0    0.0    0.0    0.0}        \
+        {clk     410.0    0.0    0.0    0.0}        \
 }
 set ideal_net_list {}
 set false_path_list {}

@@ -5,14 +5,14 @@
 # Variables
 
 # Project-specific stuff
-#VERILOG_FILES = $(filter-out ../verilog/pipeline/topLevel.v, $(wildcard ../verilog/alu/*.v ../verilog/pipeline/*.v ../verilog/single_cycle/lib/*.v ../verilog/gates/*.v))
-#TOPLEVEL = pipeline
-#VERILOG_FILES = ../Multiplier/multiplier.v ../verilog/gates/gates.v $(wildcard ../verilog/alu/*.v)
+VERILOG_FILES = $(filter-out ../verilog/pipeline/topLevel.v, $(wildcard ../verilog/alu/*.v ../verilog/pipeline/*.v ../verilog/single_cycle/lib/*.v ../verilog/gates/*.v ../verilog/multiplier/multiplier.v ../verilog/multiplier/multiplier_fsm.v))
+TOPLEVEL = pipeline
+#VERILOG_FILES = ../verilog/multiplier/multiplier.v ../verilog/gates/gates.v $(wildcard ../verilog/alu/*.v)
 #TOPLEVEL = multiplier
-VERILOG_FILES = ../verilog/single_cycle/lib/regfile.v
-TOPLEVEL = regfile
+#VERILOG_FILES = ../verilog/single_cycle/lib/regfile.v
+#TOPLEVEL = fpregfile
 # Freq in MHz
-CLKFREQ = 800
+CLKFREQ = 410
 
 # Constants
 SYNTHESIS_DIR = /vol/eecs362/synthesis/

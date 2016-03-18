@@ -1,0 +1,68 @@
+Information: Updating graph... (UID-83)
+Warning: Design 'fpregfile' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : area
+Design : fpregfile
+Version: D-2010.03-SP5
+Date   : Thu Mar 17 22:32:51 2016
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'fpregfile' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/byy911/Documents/eecs362/synth/NangateOpenCellLibrary.db)
+
+Number of ports:               77
+Number of nets:              4450
+Number of cells:             4405
+Number of references:           8
+
+Combinational area:       3971.379976
+Noncombinational area:    4630.527832
+Net Interconnect area:    2335.273752  
+
+Total cell area:          8601.907808
+Total area:               10937.181560
+1
+ 
+****************************************
+Report : reference
+Design : fpregfile
+Version: D-2010.03-SP5
+Date   : Thu Mar 17 22:32:51 2016
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X2            NangateOpenCellLibrary
+                                  1.064000      10     10.640000  
+BUF_X4             NangateOpenCellLibrary
+                                  0.798000      75     59.849998  
+DFF_X2             NangateOpenCellLibrary
+                                  4.522000    1024   4630.527832  n
+INV_X4             NangateOpenCellLibrary
+                                  0.532000     215    114.380001  
+MUX2_X2            NangateOpenCellLibrary
+                                  1.862000     992   1847.103989  
+NAND2_X2           NangateOpenCellLibrary
+                                  0.798000    1057    843.485977  
+NOR2_X2            NangateOpenCellLibrary
+                                  0.798000       8      6.384000  
+OAI21_X2           NangateOpenCellLibrary
+                                  1.064000    1024   1089.536011  
+-----------------------------------------------------------------------------
+Total 8 references                                   8601.907808
+1

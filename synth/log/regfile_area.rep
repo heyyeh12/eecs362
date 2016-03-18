@@ -3,7 +3,7 @@
 Report : area
 Design : regfile
 Version: D-2010.03-SP5
-Date   : Thu Mar 17 15:40:33 2016
+Date   : Thu Mar 17 22:18:46 2016
 ****************************************
 
 Library(s) Used:
@@ -27,7 +27,7 @@ Total area:               14795.153421
 Report : reference
 Design : regfile
 Version: D-2010.03-SP5
-Date   : Thu Mar 17 15:40:33 2016
+Date   : Thu Mar 17 22:18:46 2016
 ****************************************
 
 Attributes:

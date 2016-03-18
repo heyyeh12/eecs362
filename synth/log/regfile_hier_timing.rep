@@ -6,7 +6,7 @@ Report : timing
         -max_paths 100
 Design : regfile
 Version: D-2010.03-SP5
-Date   : Thu Mar 17 15:40:32 2016
+Date   : Thu Mar 17 22:18:45 2016
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
