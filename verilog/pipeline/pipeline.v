@@ -75,7 +75,7 @@ module pipeline(
     // New outputs of module
     wire [3:0] aluCtrl_1;
     wire aluSrc_1, setInv_1,
-        regDst_1, memRd_1, memWr_1, regWr_1, signExt_1,
+        regDst_1, memRd_1, memWr_1, regWr_1, signExt_1, zeroExt_1,
         branch_1, jr_1, jump_1, link_1, op0_1, fp_1, not_trap_1;
     wire [1:0] dSize_1;
     wire [31:0] imm32_1;
@@ -128,7 +128,6 @@ wire [3:0] aluCtrl_2;
         branch_2, jr_2, jump_2, link_2, op0_2, fp_2, zeroExt_2, not_trap_2;
     wire [1:0] dSize_2;
     wire [31:0] imm32_2;
-t
     wire [1:0] busA_sel_2, busB_sel_2, memWrData_sel_2;
     
 
