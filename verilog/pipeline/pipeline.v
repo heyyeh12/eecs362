@@ -128,7 +128,7 @@ wire [3:0] aluCtrl_2;
         branch_2, jr_2, jump_2, link_2, op0_2, fp_2, zeroExt_2, not_trap_2;
     wire [1:0] dSize_2;
     wire [31:0] imm32_2;
-
+t
     wire [1:0] busA_sel_2, busB_sel_2, memWrData_sel_2;
     
 
@@ -159,7 +159,7 @@ wire [3:0] aluCtrl_2;
 ////// EX Module
     // New outputs of module
     wire [31:0] busA_in, busB_in; //inputs into ex
-    wire [31:0] aluRes_2, aluRes_3;
+    wire [31:0] aluRes_2, aluRes_3, product_in_3;
     wire isZero_2;
     
         // Forwarding busA MUX
@@ -183,7 +183,7 @@ wire [3:0] aluCtrl_2;
 
 ////// EX/MEM Register (in = 2, out = 3)
     // New outputs of register
-    wire [31:0] incPC_3, busA_3, busB_3, imm32_3, busFP_3, product_in_3;
+    wire [31:0] incPC_3, busA_3, busB_3, imm32_3, busFP_3;
     wire regDst_3, memWr_3, regWr_3,
                 branch_3, jr_3, jump_3, link_3, op0_3, fp_3, isZero_3;
     wire [1:0] dSize_3;
@@ -239,7 +239,7 @@ wire [3:0] aluCtrl_2;
     wire regDst_0, regWr, link_0, fp_0;
     wire [1:0] dSize_0;
     wire [4:0] rd_0;
-    wire valid_0;
+    wire valid_0, memRd_0;
     
     mem_wb mem_wb(
         .clk(clk), .rst(rst), .ctrl(mem_wb_ctrl),
