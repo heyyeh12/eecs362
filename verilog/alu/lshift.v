@@ -2,7 +2,6 @@ module lshift(a, shamt, res);
 
 // Interface
     input [31:0] a, shamt;
-    input ctrl;
     output [31:0] res;
     
     wire [31:0] shift_4, shift_3, shift_2, shift_1;
