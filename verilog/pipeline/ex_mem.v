@@ -3,7 +3,7 @@
 module ex_mem(
    clk, rst, ctrl, valid_d,
    //Inputs
-   instr_d, incPC_d, busA_d, busB_d, imm32_d, busFP_d, aluRes_d,
+   instr_d, incPC_d, busA_d, busB_d, imm32_d, busFP_d, aluRes_d, product_in_d,
    regDst_d, memRd_d, memWr_d, regWr_d,
    branch_d, jr_d, jump_d, link_d, op0_d, fp_d,
    dSize_d,
@@ -11,7 +11,7 @@ module ex_mem(
    memWrData_sel_d,
    isZero_d, not_trap_d,
    //Outputs
-   instr_q, incPC_q, busA_q, busB_q, imm32_q, busFP_q, aluRes_q,
+   instr_q, incPC_q, busA_q, busB_q, imm32_q, busFP_q, aluRes_q, product_in_q,
    regDst_q, memRd_q, memWr_q, regWr_q,
    branch_q, jr_q, jump_q, link_q, op0_q, fp_q,
    dSize_q,
@@ -23,7 +23,7 @@ module ex_mem(
    input          clk, rst, valid_d;
    input [1:0]    ctrl;
    
-   input [31:0]   instr_d, incPC_d, busA_d, busB_d, imm32_d, busFP_d, aluRes_d;
+   input [31:0]   instr_d, incPC_d, busA_d, busB_d, imm32_d, busFP_d, aluRes_d, product_in_d;
    input          regDst_d, memRd_d, memWr_d, regWr_d,
                   branch_d, jr_d, jump_d, link_d, op0_d, fp_d;
    input [1:0]    dSize_d;
@@ -31,7 +31,7 @@ module ex_mem(
    input [1:0]    memWrData_sel_d;
    input          isZero_d, not_trap_d;
    
-   output reg [31:0]  instr_q, incPC_q, busA_q, busB_q, imm32_q, busFP_q, aluRes_q;
+   output reg [31:0]  instr_q, incPC_q, busA_q, busB_q, imm32_q, busFP_q, aluRes_q, product_in_q;
    output reg         regDst_q, memRd_q, memWr_q, regWr_q,
                       branch_q, jr_q, jump_q, link_q, op0_q, fp_q;
    output reg [1:0]   dSize_q;
@@ -68,6 +68,7 @@ module ex_mem(
             valid_q <= 1'b0;
             not_trap_q <= 1'b1;
             rd_q <= 5'b0;
+            product_in_q <= 32'b0;
          end
             
         else begin
@@ -98,6 +99,7 @@ module ex_mem(
             valid_q <= 1'b0;
             not_trap_q <= 1'b1;
             rd_q <= 5'b0;
+            product_in_q <= 32'b0;
                // TODO: figure out what else matters
             end
             // 2. proceed as normal
@@ -128,6 +130,8 @@ module ex_mem(
                not_trap_q <= not_trap_d;
             end
             // 3. stall (don't update)
+            // except keep updating multiplier register
+            product_in_q <= product_in_d;
         end
 
 endmodule

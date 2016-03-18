@@ -6,7 +6,7 @@ BUILD_DIR = ../bin/
 
 LIB_PATH = ../../verilog/gates/gates.v ../../verilog/alu/alu_const.vh
 
-SOURCES = shifter flag_setter bitwise adder setter# add additional alu dependencies here
+SOURCES = shifter flag_setter bitwise adder setter lshift# add additional alu dependencies here
 SOURCES_PATH = $(LIB_PATH) $(addprefix $(SOURCE_DIR), $(addsuffix .v, $(SOURCES)))
 SOURCES_VVP = $(addsuffix .vvp, $(SOURCES))
 
@@ -19,6 +19,10 @@ alu.vvp : $(LIB_PATH) $(SOURCES_PATH) $(addprefix $(SOURCE_DIR), alu.v) $(addpre
 
 # e.g. iverilog -o shifter.vvp gates.v shifter.v shifter_tb.v
 $(SOURCES_VVP) : %.vvp : $(LIB_PATH) $(addprefix $(SOURCE_DIR), %.v) $(addprefix $(TEST_DIR), %_tb.v)
+	$(IVERILOG) -o $(addprefix $(BUILD_DIR), $@) $^
+
+lshift: lshift.vvp
+lshift.vvp : $(LIB_PATH) $(addprefix $(SOURCE_DIR), lshift.v)
 	$(IVERILOG) -o $(addprefix $(BUILD_DIR), $@) $^
 
 .PHONY: clean

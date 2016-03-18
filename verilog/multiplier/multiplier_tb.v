@@ -10,10 +10,12 @@ module testbench;
     
     initial begin
 
-        $monitoro("@%0dns a=%d b=%d product_out=%d",
+        $monitoro("@%0dns a=%h b=%h product_out=%h",
                     $time, a, b,product_out);
         $display("--MULTIPLICATION First Cycle--");
-        #0 a = 32'd9813; b = 32'd3075;
+        #0 a = 32'd1; b = 32'hffffffff;
+        #10 a = 32'hfffffffc; b = 32'hfffffffc;
+        //#10 finish;
     end
 
 endmodule

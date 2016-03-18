@@ -20,4 +20,10 @@
 `define FROM_MEM    2'b10
 `define FROM_WB     2'b11
 
+// 4 Cycle Multiplier
+`define CYCLE0      2'b11
+`define CYCLE1      2'b10
+`define CYCLE2      2'b01
+`define IDLE        2'b00
+
 `endif //_constants_vh_

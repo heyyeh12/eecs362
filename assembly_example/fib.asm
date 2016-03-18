@@ -23,6 +23,7 @@ _fib:
     addui r3, r3, #8 ; i=2      ; 24 63 00 08
 fibr1:
     addu r1, r1, r2 ; a=(a+b)   ; 00 22 08 2
+    mult r16, r1, r2 ; multiplier test 0422800e
     sw _f(r3), r1   ; f[i] = a  ; ac 61 20 00 
     addui r3, r3, #4 ; i++      ; 24 63 00 04 
     addu r2, r1, r2 ; b=(a+b)   ; 00 22 10 21 

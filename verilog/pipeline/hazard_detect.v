@@ -1,6 +1,7 @@
 `include "constants.vh"
 
 module hazard_detect(
+    input clk, rst,
     input [31:0] id_instr, // current instruction
     input [31:0] ex_instr, // previous instruction
     input [31:0] mem_instr,
@@ -16,18 +17,30 @@ module hazard_detect(
     input mem_memRd,
     input ex_memWr,
     input takeLeap,
+    input [3:0] aluCtrl1, aluCtrl2,
     
+    output reg [1:0] multCtrl,
     output reg [1:0] busA_sel, // (00 -> busA (ID), 01 -> aluRes (EX), 10 -> memWrData (MEM))
     output reg [1:0] busB_sel, //(00 -> busB (ID), 01 -> aluRes (EX), 10 -> memWrData (MEM))
     output reg [1:0] memWrData_sel, // (00 -> memWrData (MEM), 01 -> aluRes (EX), 11 -> memRdData(WB))
     output reg [1:0] if_id_ctrl, id_ex_ctrl, ex_mem_ctrl, mem_wb_ctrl,
     output reg pc_enable
+); 
     
-    
-    );
+    wire pc_mult_ctrl;
+    wire [1:0] if_id_mult_ctrl, id_ex_mult_ctrl, ex_mem_mult_ctrl, mem_wb_mult_ctrl, mult_multCtrl;
 
-//if (busA_sel_in = `FROM_ID) -- come back to this!
-   // begin
+    
+    multiplier_fsm multiplier_fsm(
+        .clk(clk), .rst(rst),
+        .aluCtrl(aluCtrl1),
+        .cur_state(mult_multCtrl),
+        .pc_mult_ctrl(pc_mult_ctrl),
+        .if_id_mult_ctrl(if_id_mult_ctrl),
+        .id_ex_mult_ctrl(id_ex_mult_ctrl),
+        .ex_mem_mult_ctrl(ex_mem_mult_ctrl),
+        .mem_wb_mult_ctrl(mem_wb_mult_ctrl)
+    );
 
 always @* begin 
     
@@ -36,7 +49,10 @@ always @* begin
      memWrData_sel = `FROM_MEM;
      if_id_ctrl = `GO;  id_ex_ctrl = `GO;  ex_mem_ctrl = `GO;  mem_wb_ctrl = `GO;
      pc_enable = 1'b1;
-     
+     multCtrl = `IDLE;
+    
+    ///////// JUMP DETECT
+    
     if (takeLeap)
     begin
         //if_id_ctrl = `FLUSH;
@@ -44,8 +60,21 @@ always @* begin
         ex_mem_ctrl = `FLUSH;
     end
     
-    ///////////// REWRITE ///////////////////
+    ///////// MULTIPLIER DETECT
+    
+    else if (aluCtrl2 == 4'b1111)
+    begin
+        pc_enable = pc_mult_ctrl;
+        if_id_ctrl = if_id_mult_ctrl;
+        id_ex_ctrl = id_ex_mult_ctrl;
+        ex_mem_ctrl = ex_mem_mult_ctrl;
+        mem_wb_ctrl = mem_wb_mult_ctrl;
+        multCtrl = mult_multCtrl;
         
+    end
+    
+    ///////// HAZARD DETECT
+    
     else
     begin
     

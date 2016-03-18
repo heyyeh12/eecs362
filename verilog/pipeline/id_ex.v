@@ -2,7 +2,7 @@
 `include "constants.vh"
 
 module id_ex(
-    clk, rst, ctrl, valid_d,
+    clk, rst, ctrl, multCtrl, valid_d,
     // Inputs
     instr_d, incPC_d, busA_d, busB_d, busFP_d,
     aluCtrl_d, aluSrc_d, setInv_d,
@@ -23,7 +23,7 @@ module id_ex(
 );
 
     input           clk, rst;
-    input [1:0]     ctrl;
+    input [1:0]     ctrl, multCtrl;
     input           valid_d, not_trap_d;
     
     input [31:0]    instr_d, incPC_d, busA_d, busB_d, busFP_d;
@@ -94,7 +94,7 @@ module id_ex(
                 //inc_q <= initPC;
             end
             // 2. proceed as normal
-            else if (ctrl == `GO) begin
+            else if (ctrl == `GO)  begin
                 instr_q <= instr_d;
                 incPC_q <= incPC_d;
                 busA_q <= busA_d;

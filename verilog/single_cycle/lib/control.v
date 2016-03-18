@@ -57,7 +57,7 @@ module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regW
                 jump = 1;
                 signExt = 0;
             end
-            6'b00000? : begin // R - Type Insructions
+            6'b000000 : begin // R - Type Insructions
                 regDst = 1;
                 aluSrc = 0;
                 casex(func) 
@@ -172,6 +172,7 @@ module control (instruction, aluCtrl, aluSrc, setInv, regDst, memRd, memWr, regW
                 endcase
             end
             6'b000001 : begin // mult, multu
+                aluCtrl = 4'b1111;
                 aluSrc = 0;
                 regDst = 1;
             end

@@ -13,6 +13,7 @@ wire [31:0] a_one, a_two, a_three, a_four, a_five, a_six, a_seven;
 wire [31:0] product_zero, product_one, product_two, product_three, product_four, product_five, product_six, product_seven;
 wire [7:0] b_seven_to_zero, b_fifteen_to_eight, b_twentyThree_to_sixteen, b_thirtyOne_to_twentyFour, partial_b;
 
+
 // Get shift amount according to the control signal
     // control 11: shamt = 0
     // control 10: shamt = 8
@@ -37,11 +38,11 @@ mux4to1 #(32) set_product_in_sig(.src0(product_in), .src1(product_in), .src2(pro
 // Product of (a << 0) * b[0]
 mux2to1 #(32) get_product_zero(.src0(32'b0), .src1(a), .sel(partial_b[0]), .z(product_zero));
 
-
 //Product of (a << 1) * b[1]
 //shifter shift_product_by_one(.a(a), .shamt(32'b00000000000000000000000000000001), .ctrl(2'b10), .res(a_one), .cout());
 lshift shift_product_by_one(.a(a), .shamt(32'd1), .res(a_one));
 mux2to1 #(32) get_product_one(.src0(32'b0), .src1(a_one), .sel(partial_b[1]), .z(product_one));
+
 
 // Sum product zero and product one
 //adder get_sum_zero_one(.a(product_zero), .b(product_one), .ctrl(4'b0000), .res(sum_zero_one), .cout());
@@ -85,7 +86,7 @@ mux2to1 #(32) get_product_five(.src0(32'b0), .src1(a_five), .sel(partial_b[5]), 
 
 // Update Summation
 //adder get_sum_four_five(.a(sum_three_four), .b(product_five), .ctrl(4'b0000), .res(sum_four_five), .cout());
-fa_nbit get_sum_four_five(.A(sum_three_four), .B(product_five), .cin(1'b0), .sum(sum_four_five), .cout());
+fa_nbit get_sum_four_five(.A(sum_three_four), .B(product_five), .cin(4'b0), .sum(sum_four_five), .cout());
 
 
 //Product of (a << 6) * b[6]
@@ -126,5 +127,11 @@ lshift shift_partial_sum(.a(partial_product_unshifted), .shamt(shamt), .res(part
 
 //adder update_product(.a(product_in_sig), .b(partial_product), .ctrl(4'b0000), .res(product_out), .cout());
 fa_nbit update_product(.A(product_in_sig), .B(partial_product), .cin(1'b0), .sum(product_out), .cout());
+
+
+
+
+
+
 
 endmodule

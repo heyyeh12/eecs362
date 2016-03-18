@@ -32,8 +32,9 @@ module pipeline(
     input [31:0] busFP;             // data read from fpregfile port
     output fp;                      // will tell FP regfile wheter or not to write (!regWr && fp = write enabled)
     
-    // TEMP: Pipeline Reg Control
-    wire [1:0] ctrl = 2'b11;
+    // Multiplier FSM
+    wire [1:0] multCtrl;
+   // 
     
 ///////////////////////////////////////////////////////////////////
     
@@ -103,26 +104,25 @@ wire [1:0] id_ex_ctrl, ex_mem_ctrl, mem_wb_ctrl;
 wire [31:0] instr_2,  instr_3;
 wire valid_2, memWr_2,  memRd_3, valid_3;
 wire [4:0] rd_2, rd_3;
+wire [3:0] aluCtrl_2;
 
-// no wires fro rs1 rs2, problem?
+// no wires for rs1 rs2, problem?
 
     hazard_detect hazard_detect(
+        .clk(clk), .rst(rst),
         .id_instr(instr_1), .ex_instr(instr_2), 
         .mem_instr(instr_3), .id_rs1(rs1), .id_rs2(rs2), .ex_rd(rd_2), 
         .mem_rd(rd_3), .id_regDst(regDst_1), .ex_valid(valid_2), .mem_valid(valid_3), .ex_memWr(memWr_2), .mem_memRd(memRd_3),
         .busA_sel(busA_sel), .busB_sel(busB_sel), .memWrData_sel(memWrData_sel), 
         .if_id_ctrl(if_id_ctrl), .id_ex_ctrl(id_ex_ctrl), .ex_mem_ctrl(ex_mem_ctrl), .mem_wb_ctrl(mem_wb_ctrl),
-        .pc_enable(pc_enable), .takeLeap(takeLeap)
+        .pc_enable(pc_enable), .takeLeap(takeLeap), .aluCtrl1(aluCtrl_1), .aluCtrl2(aluCtrl_2), .multCtrl(multCtrl)
     );
-
-
 
 ///////////////////////////////////////////////////////////////////
      
 ////// ID/EX Register (in = 1, out = 2)
     // New outputs of register
     wire [31:0] incPC_2, busA_2, busB_2, busFP_2;
-    wire [3:0] aluCtrl_2;
     wire aluSrc_2, setInv_2,
         regDst_2, memRd_2, regWr_2, signExt_2,
         branch_2, jr_2, jump_2, link_2, op0_2, fp_2, zeroExt_2, not_trap_2;
@@ -153,7 +153,7 @@ wire [4:0] rd_2, rd_3;
         .rd_q(rd_2), .instr_q(instr_2), .valid_q(valid_2),
         .busA_sel_q(busA_sel_2), .busB_sel_q(busB_sel_2), .memWrData_sel_q(memWrData_sel_2),
         .not_trap_q(not_trap_2)
-    );
+    );    // multiplier_fsm multipli );
     
     
 ////// EX Module
@@ -174,16 +174,16 @@ wire [4:0] rd_2, rd_3;
     ex ex(
         .aluSrc(aluSrc_2), .aluCtrl(aluCtrl_2), .setInv(setInv_2), 
         .busA(busA_in), .busB(busB_in), .imm32(imm32_2),
-        .aluRes(aluRes_2), .isZero(isZero_2), .fp(fp_2), .zeroExt(zeroExt_2)
+        .aluRes(aluRes_2), .isZero(isZero_2), .fp(fp_2), .zeroExt(zeroExt_2),
+        .multCtrl(multCtrl), .product_in(product_in_3)
     );
-    
 
 
 /////////////////////////////////////////////////////////////////// 
 
 ////// EX/MEM Register (in = 2, out = 3)
     // New outputs of register
-    wire [31:0] incPC_3, busA_3, busB_3, imm32_3, busFP_3;
+    wire [31:0] incPC_3, busA_3, busB_3, imm32_3, busFP_3, product_in_3;
     wire regDst_3, memWr_3, regWr_3,
                 branch_3, jr_3, jump_3, link_3, op0_3, fp_3, isZero_3;
     wire [1:0] dSize_3;
@@ -192,14 +192,14 @@ wire [4:0] rd_2, rd_3;
     ex_mem ex_mem(
         .clk(clk), .rst(rst), .ctrl(ex_mem_ctrl),
     //Inputs
-        .incPC_d(incPC_2), .busA_d(busA_in), .busB_d(busB_in), .imm32_d(imm32_2), .busFP_d(busFP_2), .aluRes_d(aluRes_2),
+        .incPC_d(incPC_2), .busA_d(busA_in), .busB_d(busB_in), .imm32_d(imm32_2), .busFP_d(busFP_2), .aluRes_d(aluRes_2), .product_in_d(aluRes_2),
         .regDst_d(regDst_2), .memRd_d(memRd_2), .memWr_d(memWr_2), .regWr_d(regWr_2),
         .branch_d(branch_2), .jr_d(jr_2), .jump_d(jump_2), .link_d(link_2), .op0_d(op0_2),.fp_d(fp_2), 
         .dSize_d(dSize_2),
         .rd_d(rd_2), .instr_d(instr_2), .memWrData_sel_d(memWrData_sel_2),
         .valid_d(valid_2), .isZero_d(isZero_2), .not_trap_d(not_trap_2),
     //Outputs
-        .incPC_q(incPC_3), .busA_q(busA_3), .busB_q(busB_3), .imm32_q(imm32_3), .busFP_q(busFP_3), .aluRes_q(aluRes_3), 
+        .incPC_q(incPC_3), .busA_q(busA_3), .busB_q(busB_3), .imm32_q(imm32_3), .busFP_q(busFP_3), .aluRes_q(aluRes_3), .product_in_q(product_in_3),
         .regDst_q(regDst_3), .memRd_q(memRd_3), .memWr_q(memWr_3), .regWr_q(regWr_3),
         .branch_q(branch_3), .jr_q(jr_3), .jump_q(jump_3), .link_q(link_3), .op0_q(op0_3), .fp_q(fp_3), 
         .dSize_q(dSize_3),

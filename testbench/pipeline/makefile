@@ -7,7 +7,7 @@ SRC_FILES = $(wildcard $(addprefix $(SRC_DIR), pipeline/*.v))
 BUILD_FILES = $(SRC_FILES:.v=.vvp)
 BUILD_NAMES = $(notdir $(BUILD_FILES))
 
-LIB_SUBDIRS = gates memory single_cycle/lib alu
+LIB_SUBDIRS = gates memory single_cycle/lib alu multiplier
 LIB = $(foreach dir, $(addprefix $(SRC_DIR), $(LIB_SUBDIRS)), $(wildcard $(dir)/*.v))
 # LIB = $(addprefix $(SRC_DIR), constants.vh gates/gates.v gates/dff.v memory/memory.v alu/alu.v)
 SRC = $(wildcard $(addprefix $(SRC_DIR), pipeline/*.v))
@@ -84,6 +84,16 @@ topLevel : topLevel.vvp
 
 topLevel.vvp : ../../verilog/pipeline/topLevel.v $(SRC_FILES) $(LIB)
 	$(IVERILOG) -o $(addprefix $(BUILD_DIR), $@) $^
+
+###########################################################
+
+############### MULTIPLIER ###############
+
+multiplier_fsm : multiplier_fsm.vvp
+
+multiplier_fsm.vvp : ../../verilog/multiplier/multiplier_fsm.v
+	$(IVERILOG) -o $(addprefix $(BUILD_DIR), $@) $^
+
 
 # can check each src file for syntax e.g. make ../../verilog/pipeline/ifetch.v
 # $(BUILD_FILES) : %.vvp : %.v $(LIB)

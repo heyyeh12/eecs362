@@ -3,7 +3,7 @@ module topLevel();
 
 //  implement interface between pipeline & data memory & instruction memory
 // this is directly copied from memory.v - memload_example()
-    parameter IMEMFILE = "instr.hex";
+    parameter IMEMFILE = "mult.hex";
     parameter DMEMFILE = "data.hex";
     reg [8*80-1:0] filename;
     
@@ -57,7 +57,7 @@ module topLevel();
             filename = DMEMFILE;
         end
         $readmemh(filename, DMEM.mem);
-        $writememh("dmem_initial", DMEM.mem);
+        // $writememh("dmem_initial", DMEM.mem);
    
         clk = 1; rst = 0;
         
@@ -65,7 +65,7 @@ module topLevel();
     
         #0
         #7 rst = 1;
-        // #5000 $writememh("dmem_final_19500", DMEM.mem); $finish;
+        // #1600 $writememh("dmem_final_19500", DMEM.mem); $finish;
         
 
     end // initial
@@ -92,6 +92,7 @@ module topLevel();
         $display("\n===============REGISTER DUMP===============");
         $display("reg %x: %x \t reg %x: %x", 1, regfile.mem[1],  2, regfile.mem[2]);
         $display("reg %x: %x \t reg %x: %x", 3, regfile.mem[3],  4, regfile.mem[4]);
+        $display("reg %x: %x", 16, regfile.mem[16]);
         $display("===========================================");
         
         // // QUICKSORT DEMO
@@ -144,7 +145,7 @@ module topLevel();
         // $display("nextPC=%x", CPU.ifetch.nextPC);
         // $display("takeLeap=%x", CPU.ifetch.takeLeap);
         // $display("enable_PC=%x", CPU.ifetch.enable_PC);
-        // $display("ctrl if_id=%x", CPU.if_id_ctrl);
+        $display("ctrl if_id=%x", CPU.if_id_ctrl);
         
         $display("----------ID-----------");
         $display("instr=%x", CPU.instr_1);
@@ -159,19 +160,31 @@ module topLevel();
        // $display("aluCtrl(ctrl)=%b", CPU.id.control.aluCtrl);
         
         // // $display("memWr=%x", CPU.memWr_1);
-        // $display("ctrl id_ex=%x", CPU.id_ex_ctrl);
+        $display("ctrl id_ex=%x", CPU.id_ex_ctrl);
         
-        // $display("----------HAZARD DETECTION-----------")
-        // $display("busA_sel=%x", CPU.busA_sel);
-        // $display("busB_sel=%x", CPU.busB_sel);
-        // $display("memWrData_sel=%x", CPU.memWrData_sel);
-        // $display("id_rs1=%x", CPU.hazard_detect.id_rs1);
-        // $display("id_rs2=%x", CPU.hazard_detect.id_rs2);
-        // $display("ex_valid=%x", CPU.hazard_detect.ex_valid);
-        // $display("ex_rd=%x", CPU.hazard_detect.ex_rd);
-        // $display("ex_instr=%x", CPU.hazard_detect.ex_instr);
-        // $display("mem_valid=%x", CPU.hazard_detect.mem_valid);
-        // $display("mem_rd=%x", CPU.hazard_detect.mem_rd);
+        $display("----------HAZARD DETECTION-----------");
+        $display("id_ex_ctrl=%x", CPU.id_ex_ctrl);
+        $display("ex_mem_ctrl=%x", CPU.ex_mem_ctrl);
+        $display("mem_wb_ctrl=%x", CPU.mem_wb_ctrl);
+        $display("aluCtrl1=%x", CPU.hazard_detect.aluCtrl1);
+         $display("aluCtr2=%x", CPU.hazard_detect.aluCtrl2);
+        
+        $display("mult_multCtrl=%x", CPU.hazard_detect.mult_multCtrl);
+        $display("mult_id_ex_ctrl=%x", CPU.hazard_detect.id_ex_mult_ctrl);
+        $display("mult_ex_mem_ctrl=%x", CPU.hazard_detect.ex_mem_mult_ctrl);
+        $display("mult_mem_wb_ctrl=%x", CPU.hazard_detect.mem_wb_mult_ctrl);
+        $display("mult_aluCtrl=%x", CPU.hazard_detect.multiplier_fsm.aluCtrl);
+       
+        //$display("busA_sel=%x", CPU.busA_sel);
+        //$display("busB_sel=%x", CPU.busB_sel);
+        //$display("memWrData_sel=%x", CPU.memWrData_sel);
+        //$display("id_rs1=%x", CPU.hazard_detect.id_rs1);
+        //$display("id_rs2=%x", CPU.hazard_detect.id_rs2);
+        //$display("ex_valid=%x", CPU.hazard_detect.ex_valid);
+        //$display("ex_rd=%x", CPU.hazard_detect.ex_rd);
+        //$display("ex_instr=%x", CPU.hazard_detect.ex_instr);
+        //$display("mem_valid=%x", CPU.hazard_detect.mem_valid);
+        //$display("mem_rd=%x", CPU.hazard_detect.mem_rd);
         
         
         $display("----------EX-----------");
@@ -183,12 +196,22 @@ module topLevel();
         // $display("rd=%x", CPU.rd_2);
         // $display("alu=%x", CPU.aluRes_2);
         // $display("aluRes_int=%x", CPU.ex.aluRes_int);
-        // $display("aluCtrl=%b", CPU.ex.aluCtrl);
+        $display("aluCtrl=%b", CPU.ex.aluCtrl);
         // // $display("memWr=%x", CPU.memWr_2);
-        // $display("ctrl ex_mem=%x", CPU.ex_mem_ctrl);
+        $display("ctrl ex_mem=%x", CPU.ex_mem_ctrl);
+        
+        $display("--MULTIPLIER_FSM: %x--", CPU.multCtrl);
+        $display("pc: %x, if_id: %x, id_ex: %x, ex_mem: %x, mem_wb: %x",
+            CPU.hazard_detect.pc_mult_ctrl,
+            CPU.hazard_detect.if_id_mult_ctrl,
+            CPU.hazard_detect.id_ex_mult_ctrl,
+            CPU.hazard_detect.ex_mem_ctrl,
+            CPU.hazard_detect.mem_wb_ctrl
+        );
         
         $display("----------MEM-----------");
         $display("instr=%x", CPU.instr_3);
+        
         // $display("busB=%x", CPU.busB_3);
         // $display("jr=%x", CPU.mem.jr);
         // $display("alu=%x", CPU.aluRes_3);
@@ -201,7 +224,7 @@ module topLevel();
         // $display("incPC=%x", CPU.mem.incPC);
         // $display("leapPC=%x", CPU.mem.leapPC);
         // $display("nextPC=%x", CPU.mem.nextPC);
-        // $display("ctrl mem_wb=%x", CPU.mem_wb_ctrl);
+        $display("ctrl mem_wb=%x", CPU.mem_wb_ctrl);
         
         $display("----------WB-----------");
         $display("instr=%x", CPU.instr_0);
